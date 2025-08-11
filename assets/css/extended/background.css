@@ -1,0 +1,30 @@
+:root {
+    --theme: #f8f5ec; /* Main background */
+    --entry: #faf8f0; /* Slightly lighter for entry backgrounds */
+    --code-bg: #f5f2e8; /* Slightly darker for code backgrounds */
+}
+
+.dark {
+    --theme: #2a2a2a; /* Dark background for dark mode */
+    --entry: #3a3a3a; /* Darker for entry backgrounds in dark mode */
+    --code-bg: #323232; /* Darker for code backgrounds in dark mode */
+}
+
+/* Ensure the body and main content areas use the custom background */
+body {
+    background-color: var(--theme) !important;
+}
+
+.main {
+    background-color: var(--theme) !important;
+}
+
+/* Override any other background elements */
+.list {
+    background: var(--code-bg) !important;
+}
+
+.dark.list {
+    background: var(--theme) !important;
+}
+  
