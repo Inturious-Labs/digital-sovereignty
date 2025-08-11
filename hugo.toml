@@ -1,7 +1,7 @@
 baseURL = "/"
 title = "Digital Sovereignty Chronicle"
 languageCode = "en"
-theme = "PaperMod"
+theme = "paper"
 enableRobotsTXT = true
 
 [label]
@@ -12,33 +12,19 @@ enableRobotsTXT = true
   pagerSize = 10
 
 [params]
-  env = "production"
-  defaultTheme = "auto"   # auto | dark | light
-  showReadingTime = true
-  showPostNavLinks = true
-  showShareButtons = true
-  showBreadCrumbs = true
-  disableSpecial1stPost = true
-  comments = false
-  description = "I break down complex crypto concepts into simple terms, explore data hacks toward digital sovereignty, analyze little-known tech breakthroughs, and share my notes from tech podcasts"
-
-  # Home page: simple intro card (optional)
-  [params.homeInfoParams]
-    Title = "Digital Sovereignty Chronicle"
-    Content = "Notes on decentralization, policy, and Internet infrastructure."
-
-[params.assets]
-  disableHLJS = false
+  # Color style for Paper theme
+  color = 'linen'  # Options: 'linen', 'wheat', 'gray', 'light'
+  
+  # Your information
+  name = 'Herbert Yang'
+  bio = 'Notes on decentralization, policy, and Internet infrastructure.'
+  
+  # Favicon settings (Paper theme uses different param names)
   favicon = "img/favicon.ico"
-  favicon16x16 = "img/favicon-16x16.png"
-  favicon32x32 = "img/favicon-32x32.png"
-  apple_touch_icon = "img/apple-touch-icon.png"
-
-[params.schema]
-  publisherType = "Person"
-
-[params.author]
-  name = "Herbert Yang"
+  appleTouchIcon = "img/apple-touch-icon.png"
+  
+  # Description
+  description = "I break down complex crypto concepts into simple terms, explore data hacks toward digital sovereignty, analyze little-known tech breakthroughs, and share my notes from tech podcasts"
 
 # Main menu
 [menu]
