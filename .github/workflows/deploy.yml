@@ -61,6 +61,9 @@ jobs:
         # Verify dfx installation
         $HOME/.local/share/dfx/versions/0.24.3/dfx --version
         
+        # Set DFX path for subsequent steps
+        echo "DFX_PATH=$HOME/.local/share/dfx/versions/0.24.3" >> $GITHUB_ENV
+        
     - name: Build Hugo Site
       run: |
         # Set environment for production build
@@ -73,7 +76,7 @@ jobs:
         
     - name: Import DFX Identity
       run: |
-        export PATH="$HOME/.local/share/dfx/versions/0.24.3:$PATH"
+        export PATH="$DFX_PATH:$PATH"
         echo "${{ secrets.DFX_IDENTITY_GUIZISHANREN_PEM }}" > identity.pem
         dfx identity import guizishanren identity.pem --disable-encryption || true
         dfx identity use guizishanren
@@ -81,6 +84,7 @@ jobs:
     - name: Deploy to IC
       env:
         DFX_NETWORK: ic
+        PATH: ${{ env.DFX_PATH }}:${{ env.PATH }}
       run: |        
         # Deploy to IC 
         dfx deploy --network ic --yes 
