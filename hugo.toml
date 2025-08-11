@@ -1,4 +1,4 @@
-baseURL = "https://digitalsovereignty.herbertyang.xyz/"
+baseURL = "/"
 title = "Digital Sovereignty Chronicle"
 languageCode = "en"
 theme = "PaperMod"
@@ -20,7 +20,7 @@ enableRobotsTXT = true
   showBreadCrumbs = true
   disableSpecial1stPost = true
   comments = false
-  description = "As a seasoned web3 investor and evangelist, I break down complex crypto concepts into simple terms, explore data hacks toward digital sovereignty, analyze little-known tech breakthroughs, and share my notes from tech podcasts"
+  description = "I break down complex crypto concepts into simple terms, explore data hacks toward digital sovereignty, analyze little-known tech breakthroughs, and share my notes from tech podcasts"
 
   # Home page: simple intro card (optional)
   [params.homeInfoParams]
@@ -29,7 +29,16 @@ enableRobotsTXT = true
 
 [params.assets]
   disableHLJS = false
+  favicon = "img/favicon.ico"
+  favicon16x16 = "img/favicon-16x16.png"
+  favicon32x32 = "img/favicon-32x32.png"
+  apple_touch_icon = "img/apple-touch-icon.png"
 
+[params.schema]
+  publisherType = "Person"
+
+[params.author]
+  name = "Herbert Yang"
 
 # Main menu
 [menu]
