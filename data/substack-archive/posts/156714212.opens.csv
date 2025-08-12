@@ -1,0 +1,7 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+156714212,2025-02-10T01:48:22.739Z,herbert.yang@proton.me,newsletter,everyone,false,TW,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+156714212,2025-02-10T04:42:04.415Z,brandon.yang.2022@icloud.com,newsletter,everyone,true,CN,,,,,,Mozilla/5.0
+156714212,2025-02-11T13:39:22.228Z,martinklimmek@gmail.com,newsletter,everyone,true,DE,,,,,,Mozilla/5.0
+156714212,2025-02-12T14:10:42.386Z,yy286@nyu.edu,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156714212,2025-02-12T14:11:12.225Z,yy286@nyu.edu,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156714212,2025-02-12T14:12:42.246Z,yy286@nyu.edu,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)

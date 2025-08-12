@@ -1,0 +1,20 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+156787451,2025-02-15T15:05:16.752Z,kostiner@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156787451,2025-02-15T15:08:19.902Z,yeqing76@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156787451,2025-02-15T15:11:25.168Z,yuema71@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
+156787451,2025-02-15T15:31:34.478Z,niandongwang@gmail.com,newsletter,everyone,false,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156787451,2025-02-15T15:31:40.107Z,niandongwang@gmail.com,newsletter,everyone,false,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156787451,2025-02-15T15:47:51.982Z,aonghusom@yahoo.co.uk,newsletter,everyone,true,GB,,,,,,YahooMailProxy; https://help.yahoo.com/kb/yahoo-mail-proxy-SLN28749.html
+156787451,2025-02-15T16:13:33.665Z,steveyang99@hotmail.com,newsletter,everyone,false,US,,,,,,Mozilla/5.0
+156787451,2025-02-15T17:05:15.649Z,kostiner@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156787451,2025-02-15T17:12:03.008Z,aonghusom@yahoo.co.uk,newsletter,everyone,true,CH,,,,,,Mozilla/5.0
+156787451,2025-02-15T19:49:07.777Z,aonghusom@yahoo.co.uk,newsletter,everyone,true,IE,,,,,,YahooMailProxy; https://help.yahoo.com/kb/yahoo-mail-proxy-SLN28749.html
+156787451,2025-02-15T23:41:57.661Z,steveyang99@hotmail.com,newsletter,everyone,false,US,,,,,,Mozilla/5.0
+156787451,2025-02-16T08:51:42.771Z,Niqing@hotmail.com,newsletter,everyone,true,GB,,,,,,Mozilla/5.0
+156787451,2025-02-16T10:28:35.155Z,Niqing@hotmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
+156787451,2025-02-16T11:45:03.241Z,brandon.yang.2022@icloud.com,newsletter,everyone,true,CN,,,,,,Mozilla/5.0
+156787451,2025-02-16T14:06:18.845Z,Niqing@hotmail.com,newsletter,everyone,true,CN,,,,,,Mozilla/5.0
+156787451,2025-02-17T07:06:07.930Z,martinklimmek@gmail.com,newsletter,everyone,true,DE,,,,,,Mozilla/5.0
+156787451,2025-02-19T10:30:25.549Z,alanchiu@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
+156787451,2025-02-22T17:52:02.046Z,aonghusom@yahoo.co.uk,newsletter,everyone,true,CH,,,,,,Mozilla/5.0
+156787451,2025-03-07T20:42:33.813Z,yuema71@gmail.com,newsletter,everyone,true,NL,,,,,,Mozilla/5.0
