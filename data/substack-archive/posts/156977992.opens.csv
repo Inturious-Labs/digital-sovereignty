@@ -1,0 +1,22 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+156977992,2025-02-24T15:24:56.143Z,joelcurado@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156977992,2025-02-24T15:26:54.161Z,steveyang99@hotmail.com,newsletter,everyone,false,CN,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+156977992,2025-02-24T15:27:05.687Z,steveyang99@hotmail.com,newsletter,everyone,false,CN,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+156977992,2025-02-24T16:11:51.437Z,yuema71@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
+156977992,2025-02-24T17:22:43.411Z,aonghusom@yahoo.co.uk,newsletter,everyone,true,CH,,,,,,Mozilla/5.0
+156977992,2025-02-24T18:31:52.856Z,arnaudrenejoseph@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156977992,2025-02-24T18:31:56.524Z,arnaudrenejoseph@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156977992,2025-02-24T18:38:11.334Z,arnaudrenejoseph@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156977992,2025-02-24T19:10:53.747Z,aonghusom@yahoo.co.uk,newsletter,everyone,true,NL,,,,,,YahooMailProxy; https://help.yahoo.com/kb/yahoo-mail-proxy-SLN28749.html
+156977992,2025-02-24T19:11:08.689Z,aonghusom@yahoo.co.uk,newsletter,everyone,true,NL,,,,,,YahooMailProxy; https://help.yahoo.com/kb/yahoo-mail-proxy-SLN28749.html
+156977992,2025-02-24T23:14:46.080Z,yeqing76@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156977992,2025-02-25T07:24:31.724Z,alanchiu@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
+156977992,2025-02-25T11:01:53.930Z,Niqing@hotmail.com,newsletter,everyone,true,CN,,,,,,Mozilla/5.0
+156977992,2025-02-25T13:30:50.402Z,yuema71@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
+156977992,2025-02-25T16:31:20.543Z,steveyang99@hotmail.com,newsletter,everyone,false,CN,,,,,,Mozilla/5.0
+156977992,2025-02-26T12:01:42.579Z,steveyang99@hotmail.com,newsletter,everyone,false,CN,,,,,,Mozilla/5.0
+156977992,2025-02-26T22:33:54.410Z,aonghusom@yahoo.co.uk,newsletter,everyone,true,CH,,,,,,Mozilla/5.0
+156977992,2025-02-28T13:54:23.337Z,Niqing@hotmail.com,newsletter,everyone,true,CN,,,,,,Mozilla/5.0
+156977992,2025-03-01T07:16:15.385Z,Niqing@hotmail.com,newsletter,everyone,true,GB,,,,,,Mozilla/5.0
+156977992,2025-03-02T01:39:29.458Z,brandon.yang.2022@icloud.com,newsletter,everyone,true,CN,,,,,,Mozilla/5.0
+156977992,2025-03-13T10:35:31.087Z,alanchiu@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
