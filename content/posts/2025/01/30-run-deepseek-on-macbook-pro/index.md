@@ -10,7 +10,7 @@ categories:
 
 A few days ago Chinese AI startup DeepSeek released its latest R1 large language model (“LLM”) and took the whole world by surprise. It uses only a tiny fraction of the GPU machine cost of its much bigger rivals like chatGPT from OpenAI, but delivers the same or even better result. It’s open source too, so everyone can use its service for free. The world’s most valuable company NVIDIA lost nearly 17% of its market cap overnight, as R1’s superb performance suggested that piling up NVIDIA’s GPU machines to train LLMs with brute force might not the only way to advance AI.
 
-[![](./98252351-50dd-4286-9fd5-dce7a9b95633_2082x1118.jpeg)](https://substackcdn.com/image/fetch/$s_!8JeV!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F98252351-50dd-4286-9fd5-dce7a9b95633_2082x1118.jpeg)
+![](././98252351-50dd-4286-9fd5-dce7a9b95633_2082x1118.jpeg))
 
 Yesterday I managed to deploy DeepSeek on my MacBook Pro. Here’s how I did it. It’s actually quite simple. The advantage of running an LLM on your home computer is that you can use it without relying on the servers of DeepSeek, which are currently humming full speed ahead and frequently can’t connect due to high traffic. Another benefit is that the questions you throw to DeepSeek - the prompts, will not be sent to the server and potentially be exposed to others. Your prompts reveal a lot about who you are and what you do. It’s best to keep them private on your own local machine.
 
@@ -42,7 +42,7 @@ $ ollama serve
 
 It looks something like this:
 
-[![](./7ba8553c-9f64-42a7-9c9f-999e61346107_1050x243.heic)](https://substackcdn.com/image/fetch/$s_!FVko!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7ba8553c-9f64-42a7-9c9f-999e61346107_1050x243.heic)
+[![](./7ba8553c-9f64-42a7-9c9f-999e61346107_1050x243.webp)](./7ba8553c-9f64-42a7-9c9f-999e61346107_1050x243.webp)
 
 You can pick a model that your Mac’s memory and hard disk allow. The bigger the number in front of “B” (for billion of parameters), the more accurate the model is. I’ve downloaded 1.5B, 8B and 14B model.
 
@@ -58,15 +58,15 @@ $ ollama run deepseek-r1:1.5b
 
 If your network is slow, this downloading process may take a few tries, but don’t worry, the download will resume where you left it off. If you have a VPN service that can route your machine through a US IP address, it will speed up the download quite a bit.
 
-[![](./e4f99be6-ffc5-40a4-ac77-45b7988780ae_929x428.png)](https://substackcdn.com/image/fetch/$s_!7n8W!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe4f99be6-ffc5-40a4-ac77-45b7988780ae_929x428.png)
+![](././e4f99be6-ffc5-40a4-ac77-45b7988780ae_929x428.png))
 
 Once the download/installation is successful, you will see a prompt. Time to fire away your questions! You can now play around with a local copy of DeepSeek, the most advanced AI that resides on your laptop.
 
-[![](./7c0c9f37-f22e-4e9e-9856-5e324541ef4f_712x496.png)](https://substackcdn.com/image/fetch/$s_!JgyO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7c0c9f37-f22e-4e9e-9856-5e324541ef4f_712x496.png)
+![](././7c0c9f37-f22e-4e9e-9856-5e324541ef4f_712x496.png))
 
 Type /? to see the prompt menu
 
-[![](./1de3dc25-b504-4d33-817d-e6ffd83f0bbb_381x701.png)](https://substackcdn.com/image/fetch/$s_!WZe_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1de3dc25-b504-4d33-817d-e6ffd83f0bbb_381x701.png)
+![](././1de3dc25-b504-4d33-817d-e6ffd83f0bbb_381x701.png))
 
 Two useful prompts:
 
@@ -90,6 +90,6 @@ $ ollama run deepseek-r1:14b
 
 Experience DeepSeek’s famous “chain-of-thought (COT)” yourself. It’s quite amusing, though the locally run, distilled model is much slower than what you can get straight out of <https://chat.deepseek.com>. This is the price for privacy.
 
-[![](./26e60ca9-9353-43c7-a809-ed088c5479e7_1012x805.png)](https://substackcdn.com/image/fetch/$s_!KWcL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26e60ca9-9353-43c7-a809-ed088c5479e7_1012x805.png)
+![](././26e60ca9-9353-43c7-a809-ed088c5479e7_1012x805.png))
 
 To run DeepSeek R1’s undistilled model will [require 768 GB memory and quite a few M4 Mac machines](https://x.com/carrigmat/status/1884244369907278106), which is beyond the reach for most consumers. Running the distilled model is a lot easier and could be done by just anyone. Try it out!
