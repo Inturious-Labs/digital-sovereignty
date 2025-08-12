@@ -17,7 +17,7 @@ This newsletter is a journal of the tools and web services I use on my mission t
 > 3. My data works for me and makes money for me
 > 4. My data can persist for a long time, even in perpetuity if needed
 
-[![](./00ca8765-b982-461c-8976-c7d81543f012_1356x668.heic)](https://substackcdn.com/image/fetch/$s_!KWTa!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F00ca8765-b982-461c-8976-c7d81543f012_1356x668.heic)
+[![](./00ca8765-b982-461c-8976-c7d81543f012_1356x668.webp)](./00ca8765-b982-461c-8976-c7d81543f012_1356x668.webp)
 
 This is very hard to achieve right now. Nobody can claim ownership of their own data as that resides on centralized monopolistic platforms built by giant tech companies such as AWS, Google, Microsoft, Meta, Apple, ByteDance, Alibaba and Tencent. They control all your data and profit from your data. You get nothing (and they thank you for watching the ads). OpenAI is accelerating that process. We are increasingly spending more time on daily basis on two things: to prove I am NOT a bot, and to prove I am a DIFFERENT person from others on social media platforms.
 
