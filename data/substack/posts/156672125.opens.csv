@@ -1,0 +1,5 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+156672125,2025-02-07T17:36:36.158Z,martinklimmek@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
+156672125,2025-02-08T13:58:09.379Z,martinklimmek@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156672125,2025-02-08T13:58:39.154Z,martinklimmek@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+156672125,2025-02-10T03:55:38.730Z,brandon.yang.2022@icloud.com,newsletter,everyone,true,CN,,,,,,Mozilla/5.0
