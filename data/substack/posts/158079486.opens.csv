@@ -1,0 +1,24 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+158079486,2025-03-02T23:04:49.632Z,joelcurado@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+158079486,2025-03-02T23:07:52.005Z,steveyang99@hotmail.com,newsletter,everyone,false,CN,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+158079486,2025-03-02T23:16:27.074Z,yeqing76@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+158079486,2025-03-02T23:33:20.437Z,aonghusom@yahoo.co.uk,newsletter,everyone,true,CH,,,,,,Mozilla/5.0
+158079486,2025-03-02T23:38:07.214Z,Niqing@hotmail.com,newsletter,everyone,true,CN,,,,,,Mozilla/5.0
+158079486,2025-03-02T23:46:10.565Z,Niqing@hotmail.com,newsletter,everyone,true,GB,,,,,,Mozilla/5.0
+158079486,2025-03-03T00:01:02.330Z,martinklimmek@gmail.com,newsletter,everyone,true,DE,,,,,,Mozilla/5.0
+158079486,2025-03-03T00:56:18.933Z,alextan823@hotmail.com,newsletter,everyone,true,SG,,,,,,Mozilla/5.0
+158079486,2025-03-03T03:36:21.871Z,yuema71@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
+158079486,2025-03-03T06:12:52.107Z,steveyang99@hotmail.com,newsletter,everyone,false,CN,,,,,,Mozilla/5.0
+158079486,2025-03-03T07:20:15.589Z,Niqing@hotmail.com,newsletter,everyone,true,CN,,,,,,Mozilla/5.0
+158079486,2025-03-03T08:33:28.687Z,alanchiu@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
+158079486,2025-03-03T09:51:34.659Z,yjianfeng@hotmail.com,newsletter,everyone,true,CN,,,,,,Mozilla/5.0
+158079486,2025-03-03T11:16:58.734Z,steveyang99@hotmail.com,newsletter,everyone,false,CN,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+158079486,2025-03-03T12:00:35.147Z,steveyang99@hotmail.com,newsletter,everyone,false,CN,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+158079486,2025-03-03T12:00:38.163Z,steveyang99@hotmail.com,newsletter,everyone,false,CN,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+158079486,2025-03-03T13:07:59.567Z,woniu2010woniu@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+158079486,2025-03-03T14:40:34.967Z,aonghusom@yahoo.co.uk,newsletter,everyone,true,CH,,,,,,Mozilla/5.0
+158079486,2025-03-06T01:17:27.176Z,yuema71@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
+158079486,2025-03-07T00:27:43.228Z,steveyang99@hotmail.com,newsletter,everyone,false,CN,,,,,,Mozilla/5.0
+158079486,2025-03-07T20:23:39.025Z,yuema71@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
+158079486,2025-03-08T06:37:41.703Z,brandon.yang.2022@icloud.com,newsletter,everyone,true,CN,,,,,,Mozilla/5.0
+158079486,2025-03-13T09:09:55.523Z,alanchiu@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0
