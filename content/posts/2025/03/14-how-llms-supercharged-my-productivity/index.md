@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./3df61cde-7543-4206-9b4e-b4d8bd24cf75_1280x720.heic)](https://substackcdn.com/image/fetch/$s_!2qdf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3df61cde-7543-4206-9b4e-b4d8bd24cf75_1280x720.heic)
+[![](./3df61cde-7543-4206-9b4e-b4d8bd24cf75_1280x720.webp)](./3df61cde-7543-4206-9b4e-b4d8bd24cf75_1280x720.webp)
 
 I was slightly skeptical about how LLMs (large language models) could find real-life use cases.
 
@@ -22,7 +22,7 @@ What I found firsthand in the last two months about LLMs is fascinating. They ha
 
 ## Compile a storybook
 
-[![](./a3080bbd-a71e-4832-b784-2fed9cd5e980_1117x532.heic)](https://substackcdn.com/image/fetch/$s_!tc7N!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa3080bbd-a71e-4832-b784-2fed9cd5e980_1117x532.heic)
+[![](./a3080bbd-a71e-4832-b784-2fed9cd5e980_1117x532.webp)](./a3080bbd-a71e-4832-b784-2fed9cd5e980_1117x532.webp)
 
 My son was getting interested in global affairs, but I couldn't find good-quality English news media for his age. So I created a weekly storybook for his reading pleasure of 15-20 minutes on the weekend, which usually sparks a spirited discussion on various social and technological topics in the house. I use **DeepSeek** R1, **chatGPT** 4o, **Grok** 3, and **Perplexity** (a wrapper for DeepSeek) to get a list of trending news stories in the last seven days, pick some good stories, and then,
 
@@ -38,7 +38,7 @@ My son was getting interested in global affairs, but I couldn't find good-qualit
 
 ## Rebuild Obsidian library
 
-[![](./42a3a34a-6ce6-494e-bcd4-f7b416ea2e4a_1280x720.heic)](https://substackcdn.com/image/fetch/$s_!P-ix!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F42a3a34a-6ce6-494e-bcd4-f7b416ea2e4a_1280x720.heic)
+[![](./42a3a34a-6ce6-494e-bcd4-f7b416ea2e4a_1280x720.webp)](./42a3a34a-6ce6-494e-bcd4-f7b416ea2e4a_1280x720.webp)
 
 I was an early **Roam Research** OG (5-year diamond membership) in 2019 and very into the whole second brain and **Zettelkasten** way of life. I switched to **Obsidian** a few years ago and wanted to restart building my digital garden. Obsidian would be an important first step toward my goal of digital sovereignty. Its digital vault could eventually feed into an LLM served locally or via a decentralized platform (like the Internet Computer). I can then create my own digital twin, metaverse avatar, or AI agent, and all that jazz.
 
@@ -50,7 +50,7 @@ Now I have a streamlined, meticulously organized library of a few thousand daily
 
 ## Download Twitter files
 
-[![](./86a8e355-c422-4bfb-a9e0-8d4efcb531fd_1200x630.heic)](https://substackcdn.com/image/fetch/$s_!73g3!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F86a8e355-c422-4bfb-a9e0-8d4efcb531fd_1200x630.heic)
+[![](./86a8e355-c422-4bfb-a9e0-8d4efcb531fd_1200x630.webp)](./86a8e355-c422-4bfb-a9e0-8d4efcb531fd_1200x630.webp)
 
 I do public speeches on web3, crypto, startups, and AI. Many of those happen on Twitter Spaces - a kind of public Zoom call with only voices. I've developed a workflow of downloading the audio files from those Twitter Spaces and uploading them to my podcast "**Web3 Tech in Asia**" for sharing with a much broader audience beyond just crypto Twitter.
 
@@ -64,7 +64,7 @@ My fledgling podcaster's career is now back on track.
 
 ## Control a Twitter bot
 
-[![](./85fc35db-f614-4c9d-952f-4c69644fce64_2000x1000.heic)](https://substackcdn.com/image/fetch/$s_!Pc2a!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F85fc35db-f614-4c9d-952f-4c69644fce64_2000x1000.heic)
+[![](./85fc35db-f614-4c9d-952f-4c69644fce64_2000x1000.webp)](./85fc35db-f614-4c9d-952f-4c69644fce64_2000x1000.webp)
 
 AI agent is all the rage in 2025. For Web3, an aspiring AI agent would be a Twitter bot that can interface with the APIs of an LLM to have more human-like conversations. The Twitter bot needs to be hosted in a virtual machine environment like AWS, Google Cloud, Microsoft Azure, or a blockchain like Internet Computer ("ICP"). Alternatively I can also control this bot from my personal Macbook using Python scripts.
 
@@ -78,7 +78,7 @@ This can lead to so many interesting creations.
 
 ## Scrape website data
 
-[![](./88dc8228-72e7-477d-96e7-144d99a3e3c3_1400x824.heic)](https://substackcdn.com/image/fetch/$s_!Rz9T!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F88dc8228-72e7-477d-96e7-144d99a3e3c3_1400x824.heic)
+[![](./88dc8228-72e7-477d-96e7-144d99a3e3c3_1400x824.webp)](./88dc8228-72e7-477d-96e7-144d99a3e3c3_1400x824.webp)
 
 After realizing LLMs all know Python inside out, I started experimenting with scraping website data - a bit of geeky fantasy for me. A lot of useful data on the Internet is trapped in dead-end corners. In my line of work, a lot of technologies are open source and a lot of data is available on blockchains. I'm good at analyzing and interpreting data, and I can further elevate myself to synthesize data directly from the source, curate data selectively, and present data in a smart way that can resonate with different audiences.
 
@@ -94,7 +94,7 @@ In the end, I switched to **chatGPT**, which seemed to be a slightly better code
 
 ## Takeaways
 
-[![](./c5a8e975-3d23-4064-bc41-87a7aa9a070a_720x720.heic)](https://substackcdn.com/image/fetch/$s_!iY0W!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5a8e975-3d23-4064-bc41-87a7aa9a070a_720x720.heic)
+[![](./c5a8e975-3d23-4064-bc41-87a7aa9a070a_720x720.webp)](./c5a8e975-3d23-4064-bc41-87a7aa9a070a_720x720.webp)
 
 I am blown away by how LLMs have helped me become so much more capable and productive. For a creator, builder, and writer like me, these emerging LLMs hand me Thor's hammer - **Stormbreaker**. Its magnificent power has no boundary. I can wield it and smash anything blocking my way. I'm no longer just "the idea guy". I can now build many tools, apps, and websites. I can learn to use a new tool in the same fashion and speed as Neo learns Kung Fu when plugged into the Matrix. How far I can go is only limited by my imagination. The building part doesn't seem to be a show-stopper anymore.
 

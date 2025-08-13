@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./c90db8cc-ce4e-4a7c-977d-6ae7a9702bde_1748x1240.heic)](https://substackcdn.com/image/fetch/$s_!38MP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc90db8cc-ce4e-4a7c-977d-6ae7a9702bde_1748x1240.heic)
+[![](./c90db8cc-ce4e-4a7c-977d-6ae7a9702bde_1748x1240.webp)](./c90db8cc-ce4e-4a7c-977d-6ae7a9702bde_1748x1240.webp)
 
 Apparently, Substack doesn’t want to bring too much attention to [its league tables of top writers](https://substack.com/leaderboard/culture/paid). This link is hidden in an obscure corner. So I took a tour and a snapshot of all the bestselling writers that are topping the 29 categories.
 

@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./8611a6f5-c6a5-4318-ba1e-381c167da3e0_1280x853.jpeg)](https://substackcdn.com/image/fetch/$s_!5_Jt!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8611a6f5-c6a5-4318-ba1e-381c167da3e0_1280x853.jpeg)
+![](././8611a6f5-c6a5-4318-ba1e-381c167da3e0_1280x853.jpeg))
 
 **GPG** stands for GNU Privacy Guard. It is a free and open-source implementation of the OpenPGP standard, used for encryption and signing of data and communications. **PGP** is “Pretty Good Privacy”, an encryption program that provides cryptographic privacy and authentication for data transmission. PGP was originally created by Phil Zimmermann in 1991.
 
@@ -94,7 +94,7 @@ Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit?
 
 Enter **o(kay)** to confirm the choice.
 
-[![](./52c7d025-cb69-46c3-91a7-67080f8ad0da_1081x534.png)](https://substackcdn.com/image/fetch/$s_!krqN!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F52c7d025-cb69-46c3-91a7-67080f8ad0da_1081x534.png)
+![](././52c7d025-cb69-46c3-91a7-67080f8ad0da_1081x534.png))
 
 This is the fun part. You need to set up a passphrase for using this GPG key. Passphrase is **DIFFERENT** from password. While password should be randomized, specific to each website/application, and impossible for human brain to memorize, a good passphrase should fulfill this set of criteria:
 

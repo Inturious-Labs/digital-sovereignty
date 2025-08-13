@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./cbdb28da-3964-4e02-bb1d-8cff03f22a40_1200x800.heic)](https://substackcdn.com/image/fetch/$s_!u5Qd!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcbdb28da-3964-4e02-bb1d-8cff03f22a40_1200x800.heic)
+[![](./cbdb28da-3964-4e02-bb1d-8cff03f22a40_1200x800.webp)](./cbdb28da-3964-4e02-bb1d-8cff03f22a40_1200x800.webp)
 
 It's confusing to look at these three terms. They seem to talk about the same thing, or do they? Sometimes they are used almost interchangeably. What's the difference then?
 
