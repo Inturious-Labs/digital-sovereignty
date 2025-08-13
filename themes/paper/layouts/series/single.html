@@ -1,0 +1,36 @@
+{{- define "main" -}}
+
+<header class="mb-14">
+  <h1 class="my-0! pb-2.5">Series: {{- .Title -}}</h1>
+  <div class="text-sm antialiased opacity-60">
+    {{- len .Pages -}} post{{- if ne (len .Pages) 1 -}}s{{- end -}} in this series
+  </div>
+</header>
+
+<section class="space-y-8">
+  {{- range .Pages.ByDate -}}
+  <article class="rounded-xl bg-black/[3%] p-6 dark:bg-white/[8%]">
+    <header class="mb-4">
+      <h2 class="mb-2 text-xl font-medium">
+        <a href="{{- .Permalink -}}" class="no-underline hover:opacity-80">
+          {{- .Title -}}
+        </a>
+      </h2>
+      <div class="text-sm antialiased opacity-60">
+        <time>{{- .Date | time.Format ":date_medium" -}}</time>
+        {{- if .Description -}}
+        <span class="mx-1">&middot;</span>
+        <span>{{- .Description -}}</span>
+        {{- end -}}
+      </div>
+    </header>
+    {{- if .Summary -}}
+    <div class="text-sm leading-relaxed">
+      {{- .Summary -}}
+    </div>
+    {{- end -}}
+  </article>
+  {{- end -}}
+</section>
+
+{{- end -}}
