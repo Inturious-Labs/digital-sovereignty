@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./58e8eebd-4f98-4145-b8ab-9622f6ab28fa_1200x630.heic)](https://substackcdn.com/image/fetch/$s_!8Z7T!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F58e8eebd-4f98-4145-b8ab-9622f6ab28fa_1200x630.heic)
+[![](./58e8eebd-4f98-4145-b8ab-9622f6ab28fa_1200x630.webp)](./58e8eebd-4f98-4145-b8ab-9622f6ab28fa_1200x630.webp)
 
 One of my takeaways from listening to the recent [5-hour podcast episode of](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on) **[Lex Fridman](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on)** [interviewing](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on) **[Marc Andreessen](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on)** is that **Reddit** matters and has become even more important than ever because all the LLMs crawl its vast public archives of subreddit discussions. Goold old BBS still rocks.
 
@@ -22,7 +22,7 @@ Go to this URL,
 
 > <https://old.reddit.com/subreddits>
 
-[![](./7cc0a48a-107e-46ac-979c-11ab2da3e3cc_1261x1286.heic)](https://substackcdn.com/image/fetch/$s_!YxBi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7cc0a48a-107e-46ac-979c-11ab2da3e3cc_1261x1286.heic)
+[![](./7cc0a48a-107e-46ac-979c-11ab2da3e3cc_1261x1286.webp)](./7cc0a48a-107e-46ac-979c-11ab2da3e3cc_1261x1286.webp)
 
 You’ll see that all your subscribed subreddits are listed on the right. Now you can just click the “leave” button one by one, but on the same page, to finish this job in one go.
 

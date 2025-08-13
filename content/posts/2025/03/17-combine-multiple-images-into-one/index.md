@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./2cdedc25-6174-43f6-98cf-b52e9c79a9c9_1200x675.heic)](https://substackcdn.com/image/fetch/$s_!a-cs!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2cdedc25-6174-43f6-98cf-b52e9c79a9c9_1200x675.heic)
+[![](./2cdedc25-6174-43f6-98cf-b52e9c79a9c9_1200x675.webp)](./2cdedc25-6174-43f6-98cf-b52e9c79a9c9_1200x675.webp)
 
 We nowadays take many screenshots. Sharing those images is a hassle. It would be easier to merge the images into a single PDF file. This can be done for free with a command-line tool [ImageMagick](https://imagemagick.org/index.php) on masOS, following this original guide from Stack Overflow[1](#footnote-1).
 
@@ -36,7 +36,7 @@ $ brew install imagemagick
 
 First, rename the images with serialized standard names:
 
-[![](./3d403a57-0040-4adc-868b-98c55282f93b_817x91.heic)](https://substackcdn.com/image/fetch/$s_!ipG4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3d403a57-0040-4adc-868b-98c55282f93b_817x91.heic)
+[![](./3d403a57-0040-4adc-868b-98c55282f93b_817x91.webp)](./3d403a57-0040-4adc-868b-98c55282f93b_817x91.webp)
 
 Then move them into a separate folder. Enter that folder. Convert them into a single PDF file. Use ***\**** sign as a wild card to select all the images.
 
@@ -44,7 +44,7 @@ Then move them into a separate folder. Enter that folder. Convert them into a si
 
 There you go. Hello, ***demo.pdf***!
 
-[![](./7f8c0a6c-f2a4-4e96-a081-14ed5bbd56ce_822x111.heic)](https://substackcdn.com/image/fetch/$s_!ihvz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7f8c0a6c-f2a4-4e96-a081-14ed5bbd56ce_822x111.heic)
+[![](./7f8c0a6c-f2a4-4e96-a081-14ed5bbd56ce_822x111.webp)](./7f8c0a6c-f2a4-4e96-a081-14ed5bbd56ce_822x111.webp)
 
 Now you can share this demo.pdf with your other devices or another friend. It’s much easier to deal with than a bunch of image files.
 

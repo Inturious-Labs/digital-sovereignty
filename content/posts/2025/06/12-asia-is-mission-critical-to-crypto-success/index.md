@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./b6553a02-9df6-4c78-8381-0c4da54e4053_1200x686.heic)](https://substackcdn.com/image/fetch/$s_!1D5F!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6553a02-9df6-4c78-8381-0c4da54e4053_1200x686.heic)
+[![](./b6553a02-9df6-4c78-8381-0c4da54e4053_1200x686.webp)](./b6553a02-9df6-4c78-8381-0c4da54e4053_1200x686.webp)
 
 This is the first issue of a new series - ***Asia Crypto Ecosystem***. I will cover the importance of Asia, the challenges, tips for non-Asia teams, tips for Asia teams, and close the series with some practical suggestions for anyone interested in doing crypto in Asia.
 
@@ -36,7 +36,7 @@ Asia is critical to the success of every blockchain ecosystem in crypto. If an e
 
 [L1 blockchain](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains) is where the alpha lies in crypto. It is where technology innovations (decentralization and smart contracts) precipitate. While trendy dApps come and go, blockchains will persist for a long time. They're the backbones of the crypto industry.
 
-[![Layer 1 blockchains ranked by market cap on CoinMarketCap](./0cf7c6c4-0af1-433f-b90b-35454c121b23_1240x1110.heic "Layer 1 blockchains ranked by market cap on CoinMarketCap")](https://coinmarketcap.com)
+[![Layer 1 blockchains ranked by market cap on CoinMarketCap](./0cf7c6c4-0af1-433f-b90b-35454c121b23_1240x1110.webp "Layer 1 blockchains ranked by market cap on CoinMarketCap")](https://coinmarketcap.com)
 
 *（This chart does not include memecoins like Dogecoin, stablecoins like USDT, exchange-based tokens like BNB, single application blockchains like Ripple or Monero, application tokens like Hyperliquid or Uniswap, infrastructure protocols like Chainlink, inactive blockchains with no developer activities, like Bitcoin Cash)*
 
@@ -96,7 +96,7 @@ Developers build applications using smart contracts that are developed by L1 blo
 
 According to Statista, there are about ~28 million developers in 2024 globally, and that number would grow to ~35 million in 2025. Nearly half of that is in China-India. Asia not only far exceeds the US and Europe in the number of developers, but also growth rate.
 
-[![developer count by region, 2025, by Statista](./065dc1e5-7ead-4bff-95de-0184f1ff1c31_1240x910.heic "developer count by region, 2025, by Statista")](https://substackcdn.com/image/fetch/$s_!cIos!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F065dc1e5-7ead-4bff-95de-0184f1ff1c31_1240x910.heic)
+[![developer count by region, 2025, by Statista](./065dc1e5-7ead-4bff-95de-0184f1ff1c31_1240x910.webp "developer count by region, 2025, by Statista")](./065dc1e5-7ead-4bff-95de-0184f1ff1c31_1240x910.webp)
 
 Asia's developers are also much younger. Crypto is a young punk's game. Too much experience or knowledge from the old world of tech tends to create a barrier to understanding crypto.
 
@@ -108,13 +108,13 @@ Many major blockchains did exactly that in 2024/2025. Solana moved its global de
 
 The ultimate measure of success for an emerging technology would be adoption among users in retail/enterprise (though they may not necessarily be aware of the underlying infrastructure technology that is powering the applications they are using). Asia has such a significant share of the world's population pie that one could argue that, at least for Internet technology that is born without a border, this is the final and the most crucial battlefield.
 
-[![](./f132f481-7884-4757-8f31-54bef45e3a14_1240x746.heic)](https://substackcdn.com/image/fetch/$s_!a0Xd!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff132f481-7884-4757-8f31-54bef45e3a14_1240x746.heic)
+[![](./f132f481-7884-4757-8f31-54bef45e3a14_1240x746.webp)](./f132f481-7884-4757-8f31-54bef45e3a14_1240x746.webp)
 
 ### Applications
 
 Users are amassed through applications. Asia accounts for 31% of all the unicorns (tech startups with at least $1 billion valuation) in the world in 2023, according to CB Insights.
 
-[![](./c519f0da-8abd-4365-a520-23c7e2508803_1240x926.heic)](https://substackcdn.com/image/fetch/$s_!-RhP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc519f0da-8abd-4365-a520-23c7e2508803_1240x926.heic)
+[![](./c519f0da-8abd-4365-a520-23c7e2508803_1240x926.webp)](./c519f0da-8abd-4365-a520-23c7e2508803_1240x926.webp)
 
 Developers in Europe and America are very good at synthesizing multi-disciplinary domains of knowledge and creating highly abstract protocols. Most of the developer labs of L1 blockchains found their early engineers and architects in Europe and America.
 

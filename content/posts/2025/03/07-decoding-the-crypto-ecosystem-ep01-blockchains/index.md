@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./606f3dbc-fc46-4dbb-b912-1f308ce3ffb5_4096x2738.heic)](https://substackcdn.com/image/fetch/$s_!ZQVm!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F606f3dbc-fc46-4dbb-b912-1f308ce3ffb5_4096x2738.heic)
+[![](./606f3dbc-fc46-4dbb-b912-1f308ce3ffb5_4096x2738.webp)](./606f3dbc-fc46-4dbb-b912-1f308ce3ffb5_4096x2738.webp)
 
 ## Background
 
@@ -28,7 +28,7 @@ But they play a critical role in crypto that's even more influential than what t
 
 Imagine the crypto industry is a vast Amazon jungle. There are several extremely large and tall banyan trees that lord over all the animals and plants in the jungle even from afar. These trees continuously grow and evolve every minute, even branching out into smaller trees. They absorb the lion's share of the sun and the rainfall in the jungle. They become bigger and taller ("longer") as time goes by. Each of these gigantic banyan trees is an ecosystem of its own.
 
-[![](./a8bdd433-a372-499a-a4fe-2e7c1c3883e0_5000x2813.heic)](https://substackcdn.com/image/fetch/$s_!ZI4B!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8bdd433-a372-499a-a4fe-2e7c1c3883e0_5000x2813.heic)
+[![](./a8bdd433-a372-499a-a4fe-2e7c1c3883e0_5000x2813.webp)](./a8bdd433-a372-499a-a4fe-2e7c1c3883e0_5000x2813.webp)
 
 Many plants thrive under the banyan tree and even become symbiosis with it. Most of them won't survive without the cozy shadow of the banyan or its protection from gusty winds. These smaller plants grow into bigger plants, attract bees and other animals, and further fuel the growth of the banyan.
 
@@ -52,7 +52,7 @@ On the other hand, a blockchain ecosystem without a growing developer base and b
 
 ## Blockchain vs blockchain
 
-[![](./2a1719f7-c537-4562-ba8b-3367af0a6263_1250x833.heic)](https://substackcdn.com/image/fetch/$s_!1wYk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2a1719f7-c537-4562-ba8b-3367af0a6263_1250x833.heic)
+[![](./2a1719f7-c537-4562-ba8b-3367af0a6263_1250x833.webp)](./2a1719f7-c537-4562-ba8b-3367af0a6263_1250x833.webp)
 
 As blockchains try to grow their ecosystems, they compete with each other for developers to build dApps, for investors to inject liquidity, for media coverage to drive mindshare, and for users to buy their tokens. It's quite rare for them to collaborate. Unlike traditional industries such as airlines or real estate where players can join hands to conquer a higher mountain together, in crypto your loss is my gain.
 
@@ -68,7 +68,7 @@ But sometimes the foundation feels it has to do this because no one from the com
 
 ## Public vs consortium
 
-[![](./59ff960e-94b9-4a67-a18a-72c16dc51ffe_495x330.heic)](https://substackcdn.com/image/fetch/$s_!5LlQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59ff960e-94b9-4a67-a18a-72c16dc51ffe_495x330.heic)
+[![](./59ff960e-94b9-4a67-a18a-72c16dc51ffe_495x330.webp)](./59ff960e-94b9-4a67-a18a-72c16dc51ffe_495x330.webp)
 
 Broadly speaking, blockchains fall into two types, public chains and consortium (or private) chains. A public chain allows anyone to access and participate in the network, while a consortium/private chain is a permissioned network where only pre-approved entities can access and validate transactions.
 
@@ -86,7 +86,7 @@ Bitcoin now also has hundreds of L2s that try to enhance Bitcoin L1's scalabilit
 
 ## New vs old
 
-[![](./9246097a-56ef-4268-a88e-ff21057284a4_3264x2448.heic)](https://substackcdn.com/image/fetch/$s_!wDmK!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9246097a-56ef-4268-a88e-ff21057284a4_3264x2448.heic)
+[![](./9246097a-56ef-4268-a88e-ff21057284a4_3264x2448.webp)](./9246097a-56ef-4268-a88e-ff21057284a4_3264x2448.webp)
 
 Many new L1s are emerging every month. They burst into the scene with a lot of fanfare, record-breaking fund-raising urban legends, and sexy new narratives with no shortage of KOLs singing the praise.
 
@@ -98,7 +98,7 @@ The most stupid mistake people can make is to compare a new chain not yet in pro
 
 [CoinMarketCap](https://coinmarketcap.com) is the Bloomberg for crypto. It has all the tokens listed by their market cap. As of March 05, 2025, the 20th largest blockchain is Cosmos ($ATOM) with a market cap of $1.6 billion. This list does not include stable coins (USDT/USDC), animal/meme coins (Doge, Trump), L2s (POL), dApp coins (Uniswap, DAI, BGB), non-L1 infrastructure coins (Chainlink) or blockchains that have long become dormant (Hedera, Stellar, Litecoin, Monero, etc).
 
-[![](./eb900a4e-b1cd-41ec-907e-378b3b9d8aa2_1214x1350.heic)](https://substackcdn.com/image/fetch/$s_!4VW6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feb900a4e-b1cd-41ec-907e-378b3b9d8aa2_1214x1350.heic)
+[![](./eb900a4e-b1cd-41ec-907e-378b3b9d8aa2_1214x1350.webp)](./eb900a4e-b1cd-41ec-907e-378b3b9d8aa2_1214x1350.webp)
 
 These are the essential ones to watch. Other blockchains are too small to matter.
 
