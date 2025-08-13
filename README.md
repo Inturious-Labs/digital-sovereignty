@@ -135,3 +135,50 @@ This project includes several utility scripts for managing content and convertin
 
 **Note**: Always run these scripts from the project root directory (`digital-sovereignty/`).
 
+## Configure Custom Domains
+
+1. Follow this guide to create `ALIAS`, `CNAME`, and `TXT` records on the domain registrar for the domain or subdomain:
+
+https://internetcomputer.org/docs/building-apps/frontends/custom-domains/dns-setup
+
+Note: for the subdomain `example`, this record `example.ic-domain.live.icp1.io` can only be created with a `CNAME` record, NOT the `ALIAS` record that the guide suggests.
+
+2. Follow this guide to create `.well-known` folder,  `id-domains` file, and `.ic-assets.json5` file on the dfx folder. For a hugo site, the output folder is `public/`, which is regenerated every time hugo deploys. So these dfx-specific files should be placed in `static/` folder. All contents in `static/` are copied directly into `public/` when hugo re-deploys the site. 
+
+https://internetcomputer.org/docs/building-apps/frontends/custom-domains/using-custom-domains
+
+3. Deploy the canister
+
+4. Register the domain with the HTTP gateways by issuing the following command and replacing CUSTOM_DOMAIN with your custom domain:
+
+```
+curl -sL -X POST \
+    -H 'Content-Type: application/json' \
+    https://icp0.io/registrations \
+    --data @- <<EOF
+    {
+      "name": "CUSTOM_DOMAIN"
+    }
+EOF
+```
+
+5. If the call is successful, you'll get a JSON response:
+
+```
+{"id":"REQUEST_ID"}
+```
+
+6. Track the progress of your registration with this command:
+
+```
+curl -sL -X GET \
+    https://icp0.io/registrations/REQUEST_ID
+```
+
+7. Check the DNS record for the domain:
+
+```
+dig yourdomain.xyz CNAME
+dig yourdomain.xyz TXT
+dig yourdomain.xyz ALIAS
+```
