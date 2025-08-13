@@ -33,6 +33,10 @@ enableRobotsTXT = true
     url = "/posts/"
     weight = 10
   [[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 15
+  [[menu.main]]
     name = "About"
     url = "/about/"
     weight = 20
@@ -50,3 +54,9 @@ enableRobotsTXT = true
 # Define URL links
 [permalinks]
   posts = "/p/:slug"
+
+# Enable taxonomies (categories, tags, series)
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
