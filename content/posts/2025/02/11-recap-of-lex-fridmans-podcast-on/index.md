@@ -6,6 +6,8 @@ draft: false
 description: "key takeaways from Lex Fridman's 5-hour podcast on February 3 with Dylan Patel and Nathan Lambert on all things DeepSeek, AI, OpenAI, NVIDIA, xAI, TSMC, Stargate and AI Megaclusters"
 categories:
   - "newsletter"
+series:
+  - "Podcast Recaps"
 ---
 
 [![](./20694118-7678-4333-9b42-0b999f2bec71_1280x720.webp)](./20694118-7678-4333-9b42-0b999f2bec71_1280x720.webp)
