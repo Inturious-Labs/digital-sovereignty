@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./f2340fa2-de8b-433a-a4a2-fc21c0fe6c59_3000x2250.heic)](https://substackcdn.com/image/fetch/$s_!e0qr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff2340fa2-de8b-433a-a4a2-fc21c0fe6c59_3000x2250.heic)
+[![](./f2340fa2-de8b-433a-a4a2-fc21c0fe6c59_3000x2250.webp)](./f2340fa2-de8b-433a-a4a2-fc21c0fe6c59_3000x2250.webp)
 
 Crypto miners, in very broad strokes, keep blockchains alive.
 

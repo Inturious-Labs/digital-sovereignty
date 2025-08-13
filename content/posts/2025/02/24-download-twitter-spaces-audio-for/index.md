@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./5b3cde01-43c8-41ee-8cfe-8f20380cc109_1884x845.heic)](https://substackcdn.com/image/fetch/$s_!h8RH!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5b3cde01-43c8-41ee-8cfe-8f20380cc109_1884x845.heic)
+[![](./5b3cde01-43c8-41ee-8cfe-8f20380cc109_1884x845.webp)](./5b3cde01-43c8-41ee-8cfe-8f20380cc109_1884x845.webp)
 
 Since its launch to the general public in May 2021, which as-a-matter-of-factly crushed one-hit wonder Clubhouse, **Twitter Spaces** has become a very popular tool for KOLs and communities to host panel discussions, town fall meetings, AMA (Ask-Me-Anything), or even public debates. The top spaces often draw millions of listeners.
 
@@ -37,7 +37,7 @@ $ youtube-dl --version
 
 ## 2. Find Twitter Spaces URL
 
-[![](./2d65d514-99f7-4045-880e-b4b48bd0f351_2306x1670.heic)](https://substackcdn.com/image/fetch/$s_!UTVP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2d65d514-99f7-4045-880e-b4b48bd0f351_2306x1670.heic)
+[![](./2d65d514-99f7-4045-880e-b4b48bd0f351_2306x1670.webp)](./2d65d514-99f7-4045-880e-b4b48bd0f351_2306x1670.webp)
 
 Open Firefox[2](#footnote-2) browser. Go to **Tools/Browser Tools/** and open “**Web Developer Tools**”
 
@@ -47,7 +47,7 @@ Go to the Twitter Spaces’ URL, for example,
 
 In the developer console that opens up at the bottom of the window, go to “**Network**” tab and play the Twitter Spaces.
 
-[![](./b5fc2c63-0d02-47c7-914b-5f49ea6db890_2310x1918.heic)](https://substackcdn.com/image/fetch/$s_!yKjD!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb5fc2c63-0d02-47c7-914b-5f49ea6db890_2310x1918.heic)
+[![](./b5fc2c63-0d02-47c7-914b-5f49ea6db890_2310x1918.webp)](./b5fc2c63-0d02-47c7-914b-5f49ea6db890_2310x1918.webp)
 
 Type “**m3u**” in the filter field in the console. The console will filter out all other assets and display only the m3u list file. Copy its URL. It’s a very long URL and that’s normal.
 
@@ -65,11 +65,11 @@ Or in this case:
 $ youtube-dl “https://prod-fastly-ap-northeast-1.video.pscp.tv/Transcoding/v1/hls/rYPyO8vMirREg7n-5rhdt5E_nbtP4XXumHrI0DXbCNAtl0pP1DP6hew8SQXM0IMlGdvCPwQ-2fNKAIngFlvDLg/non_transcode/ap-northeast-1/periscope-replay-direct-prod-ap-northeast-1-public/audio-space/playlist_16710828688056387844.m3u8?type=replay”
 ```
 
-[![](./3265dc95-7006-4cb0-be77-6e9dee70b7f4_1696x974.heic)](https://substackcdn.com/image/fetch/$s_!_ITE!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3265dc95-7006-4cb0-be77-6e9dee70b7f4_1696x974.heic)
+[![](./3265dc95-7006-4cb0-be77-6e9dee70b7f4_1696x974.webp)](./3265dc95-7006-4cb0-be77-6e9dee70b7f4_1696x974.webp)
 
 This would try to download an **mp4** video file. For a one-hour Spaces event, the mp4 is about 40-50 MB in size; for a three-hour event, it’s about 80-120 MB. Youtube-dl breaks up the destination file into many smaller chunks and downloads them one by one. This process is slower than a typical straight download from website and could take 10-30 minutes. It’s pretty steady though.
 
-[![](./c3c7fd51-dbba-4eb9-a57e-0670a4d832dc_1688x284.heic)](https://substackcdn.com/image/fetch/$s_!aU1R!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc3c7fd51-dbba-4eb9-a57e-0670a4d832dc_1688x284.heic)
+[![](./c3c7fd51-dbba-4eb9-a57e-0670a4d832dc_1688x284.webp)](./c3c7fd51-dbba-4eb9-a57e-0670a4d832dc_1688x284.webp)
 
 ## 4. Convert Video into Audio
 
@@ -89,7 +89,7 @@ Run this in Terminal,
 $ ffmpeg -i "playlist_16710828688056387844-playlist_16710828688056387844.mp4" -vn -acodec copy your-audio-file-name.aac
 ```
 
-[![](./ff920079-04b0-4ac4-b3e4-3ee541cd6904_2252x1538.heic)](https://substackcdn.com/image/fetch/$s_!6DfT!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fff920079-04b0-4ac4-b3e4-3ee541cd6904_2252x1538.heic)
+[![](./ff920079-04b0-4ac4-b3e4-3ee541cd6904_2252x1538.webp)](./ff920079-04b0-4ac4-b3e4-3ee541cd6904_2252x1538.webp)
 
 This will result in an **.aac** audio file, which is slightly smaller than its original video container form.
 

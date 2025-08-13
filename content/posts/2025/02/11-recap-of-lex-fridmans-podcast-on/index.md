@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./20694118-7678-4333-9b42-0b999f2bec71_1280x720.heic)](https://substackcdn.com/image/fetch/$s_!Rnkv!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F20694118-7678-4333-9b42-0b999f2bec71_1280x720.heic)
+[![](./20694118-7678-4333-9b42-0b999f2bec71_1280x720.webp)](./20694118-7678-4333-9b42-0b999f2bec71_1280x720.webp)
 
 This 5-hour interview must be the longest podcast episode I’ve listened to, but it’s still worth it. Below are my notes. They’re not meant to be a verbatim summary to capture every word they uttered. I only took what I found useful. You can find the full transcript [here](https://lexfridman.com/deepseek-dylan-patel-nathan-lambert-transcript).
 
