@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Script to update all Substack image URLs to local file references
-# Usage: ./update_substack_urls.sh
+# Usage: ./update_substack_urls.sh <folder_path>
+# Example: ./update_substack_urls.sh content/posts/2025/01
+# Example: ./update_substack_urls.sh content/posts/2025/02
 
 set -e  # Exit on any error
 
@@ -77,9 +79,20 @@ process_directory() {
 
 # Main execution
 main() {
+    # Check command line arguments
+    if [ $# -eq 0 ]; then
+        echo -e "${RED}Error: No folder path specified.${NC}"
+        echo "Usage: $0 <folder_path>"
+        echo "Example: $0 content/posts/2025/01"
+        echo "Example: $0 content/posts/2025/02"
+        exit 1
+    fi
+    
+    local target_folder="$1"
+    
     echo -e "${BLUE}=== Substack URL to Local File Converter ===${NC}"
     echo "This script will:"
-    echo "1. Find all index.md files in content/posts/2025/01/"
+    echo "1. Find all index.md files in: ${target_folder}"
     echo "2. Update Substack image URLs to local file references"
     echo "3. Create backup files for all modified markdown files"
     echo ""
@@ -91,23 +104,23 @@ main() {
         exit 1
     fi
     
-    # Check if January folder exists
-    if [ ! -d "content/posts/2025/01" ]; then
-        echo -e "${RED}Error: content/posts/2025/01 directory not found.${NC}"
-        echo "Please check if the January folder exists."
+    # Check if target folder exists
+    if [ ! -d "$target_folder" ]; then
+        echo -e "${RED}Error: Target folder '${target_folder}' not found.${NC}"
+        echo "Please check if the folder exists."
         exit 1
     fi
     
-    # Find all directories containing index.md files in January
-    markdown_dirs=$(find content/posts/2025/01 -name "index.md" -exec dirname {} \; | sort -u)
+    # Find all directories containing index.md files in target folder
+    markdown_dirs=$(find "$target_folder" -name "index.md" -exec dirname {} \; | sort -u)
     
     if [ -z "$markdown_dirs" ]; then
-        echo -e "${YELLOW}No index.md files found in content/posts/2025/01/${NC}"
+        echo -e "${YELLOW}No index.md files found in ${target_folder}${NC}"
         exit 0
     fi
     
     markdown_count=$(echo "$markdown_dirs" | wc -l)
-    echo -e "${GREEN}Found index.md files in ${markdown_count} directories in January${NC}"
+    echo -e "${GREEN}Found index.md files in ${markdown_count} directories in ${target_folder}${NC}"
     echo ""
     
     # Process each directory
@@ -124,7 +137,7 @@ main() {
     echo -e "${GREEN}Total markdown files updated: ${total_updated}${NC}"
     echo ""
     echo -e "${YELLOW}Note: Backup files (.backup) were created for all modified markdown files.${NC}"
-    echo -e "${BLUE}This was a test run on January folder only.${NC}"
+    echo -e "${BLUE}Processed folder: ${target_folder}${NC}"
 }
 
 # Run main function
