@@ -17,7 +17,7 @@ enableRobotsTXT = true
   
   # Your information
   name = 'Herbert Yang'
-  bio = 'Notes on decentralization, policy, and Internet infrastructure.'
+  bio = 'front-row view on decentralization, crypto dApps, web3 innovation, blockchain technology, ecosystem growth, AI, and digital sovereignty'
   
   # Favicon settings (Paper theme uses different param names)
   favicon = "img/favicon.ico"
