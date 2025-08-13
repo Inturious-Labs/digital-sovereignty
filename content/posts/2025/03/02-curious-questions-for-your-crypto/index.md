@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./44308e9e-82f7-4823-86ae-b30b89da3a25_1024x768.heic)](https://substackcdn.com/image/fetch/$s_!YDfh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44308e9e-82f7-4823-86ae-b30b89da3a25_1024x768.heic)
+[![](./44308e9e-82f7-4823-86ae-b30b89da3a25_1024x768.webp)](./44308e9e-82f7-4823-86ae-b30b89da3a25_1024x768.webp)
 
 So you've heard that your friend Joe just joined a crypto company. You are with him now at a dinner party, or an alumni event, or just catching up over a beer at a bar. What kind of questions could you ask Joe that would come across as interesting, non-imposing and smart?
 

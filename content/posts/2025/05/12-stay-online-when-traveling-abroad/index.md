@@ -8,13 +8,13 @@ categories:
   - "newsletter"
 ---
 
-[![](./05f05383-194f-4d9b-8e38-6d084ade3b0f_1300x867.heic)](https://substackcdn.com/image/fetch/$s_!NJuH!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F05f05383-194f-4d9b-8e38-6d084ade3b0f_1300x867.heic)
+[![](./05f05383-194f-4d9b-8e38-6d084ade3b0f_1300x867.webp)](./05f05383-194f-4d9b-8e38-6d084ade3b0f_1300x867.webp)
 
 I travel a lot, mostly for short trips of 3-5 days in one destination country. I found that the best way to stay online on such short trips is to rent a wi-fi roaming station at the departing airport.
 
 For example, if my home base is China, I should just get such a device from one of the several vendors, such as [Roaming Man](https://www.roamingman.cn) (漫游超人). It’s the size of your typical phone.
 
-[![](./fa309951-0de0-4164-9e6b-d07b8190981e_800x800.heic)](https://substackcdn.com/image/fetch/$s_!bkIT!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffa309951-0de0-4164-9e6b-d07b8190981e_800x800.heic)
+[![](./fa309951-0de0-4164-9e6b-d07b8190981e_800x800.webp)](./fa309951-0de0-4164-9e6b-d07b8190981e_800x800.webp)
 
 ### What it provides
 
@@ -33,11 +33,11 @@ For example, if my home base is China, I should just get such a device from one 
 
 ### Pick-up and return
 
-[![](./8137c04e-6ec0-4301-8167-9b0173e4df59_4243x2928.heic)](https://substackcdn.com/image/fetch/$s_!2U0t!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8137c04e-6ec0-4301-8167-9b0173e4df59_4243x2928.heic)
+[![](./8137c04e-6ec0-4301-8167-9b0173e4df59_4243x2928.webp)](./8137c04e-6ec0-4301-8167-9b0173e4df59_4243x2928.webp)
 
 It’s super simple. Rent the device at the Roaming Man’s counter **BEFORE** you enter the gate/customs section. It’s usually right beside the entrance. No need to make a reservation. Just provide your cell phone number and pick up one with the maximum speed.
 
-[![](./1dec56dc-3815-4ce5-8a2a-c41cbed3876e_4250x2807.heic)](https://substackcdn.com/image/fetch/$s_!QkfE!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1dec56dc-3815-4ce5-8a2a-c41cbed3876e_4250x2807.heic)
+[![](./1dec56dc-3815-4ce5-8a2a-c41cbed3876e_4250x2807.webp)](./1dec56dc-3815-4ce5-8a2a-c41cbed3876e_4250x2807.webp)
 
 To return the station, drop it at the counter BEFORE you get to the carousel. If you miss that, you can just mail it back (no charge if within 48 hours).
 

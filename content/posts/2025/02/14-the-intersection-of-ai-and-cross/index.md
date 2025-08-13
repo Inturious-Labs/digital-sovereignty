@@ -8,7 +8,7 @@ categories:
   - "podcast"
 ---
 
-[![](./6abe7e0d-4afa-4d23-955c-bccaead1c629_2720x1520.heic)](https://x.com/i/spaces/1eaKbaaALNYxX)
+[![](./6abe7e0d-4afa-4d23-955c-bccaead1c629_2720x1520.webp)](https://x.com/i/spaces/1eaKbaaALNYxX)
 
 Spaces Link: <https://x.com/i/spaces/1eaKbaaALNYxX>
 
@@ -16,4 +16,4 @@ Run-Time: 1h:07m
 
 Total Tune-in: 11.4K
 
-[![](./9d1ef319-0780-458d-a700-ff16fd2c606e_585x974.heic)](https://x.com/NodeLab_/status/1882060893535748120)
+[![](./9d1ef319-0780-458d-a700-ff16fd2c606e_585x974.webp)](https://x.com/NodeLab_/status/1882060893535748120)

@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./f8207e8d-fda6-4b56-91f1-dd1d84a1c385_2000x1000.heic)](https://substackcdn.com/image/fetch/$s_!fEd9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff8207e8d-fda6-4b56-91f1-dd1d84a1c385_2000x1000.heic)
+[![](./f8207e8d-fda6-4b56-91f1-dd1d84a1c385_2000x1000.webp)](./f8207e8d-fda6-4b56-91f1-dd1d84a1c385_2000x1000.webp)
 
 Marc Andreessen has been on a roll lately, from Joe Rogan to Lex Fridman to Patrick O'Shaughnessy. This episode on Fridman recorded on January 27 is the longest one, clocking at 5h:16m. It talks about America’s new spirit, Wokeness, “thought criminals”, DEI, problems at universities, affirmative action, and AI. Andreessen is very bullish on America’s future. I took down some notes that I found useful and insightful. The original, full transcript can be found [here](https://lexfridman.com/marc-andreessen-2-transcript).
 

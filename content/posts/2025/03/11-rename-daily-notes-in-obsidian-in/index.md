@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./8a022066-b14e-469e-aaa8-5b16ff6ee7db_940x314.heic)](https://substackcdn.com/image/fetch/$s_!pMni!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8a022066-b14e-469e-aaa8-5b16ff6ee7db_940x314.heic)
+[![](./8a022066-b14e-469e-aaa8-5b16ff6ee7db_940x314.webp)](./8a022066-b14e-469e-aaa8-5b16ff6ee7db_940x314.webp)
 
 I migrated from **Roam Research** to **Obsidian** a few years ago. Both second-brain productivity tools follow the **Zettelkasten** method to organize daily notes. So my library contains several thousand notes that are organized by dates. Roam uses the month-day-year filename convention that’s more prevalent in the United States, like “January 25th, 2023.md”.
 
@@ -34,7 +34,7 @@ $ cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/KunNotes
 
 My vault looks like this (from VS Code):
 
-[![](./67337e64-ea26-4c17-bc2e-54be7200919a_303x459.heic)](https://substackcdn.com/image/fetch/$s_!EU8e!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F67337e64-ea26-4c17-bc2e-54be7200919a_303x459.heic)
+[![](./67337e64-ea26-4c17-bc2e-54be7200919a_303x459.webp)](./67337e64-ea26-4c17-bc2e-54be7200919a_303x459.webp)
 
 ## 3. Install tools
 
@@ -61,7 +61,7 @@ It would be prudent to back up the entire Obsidian vault (“KunNotes” in my c
 
 Go into the directory within the Obsidian vault where you have all the daily notes. In my case, that would be the ‘‘00-daily” folder. I have my daily notes organized by YYYY folders, then MM folders.
 
-[![](./3e097ab8-2165-45d2-b5f2-c3d7abc0d2f7_913x620.heic)](https://substackcdn.com/image/fetch/$s_!gyDO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3e097ab8-2165-45d2-b5f2-c3d7abc0d2f7_913x620.heic)
+[![](./3e097ab8-2165-45d2-b5f2-c3d7abc0d2f7_913x620.webp)](./3e097ab8-2165-45d2-b5f2-c3d7abc0d2f7_913x620.webp)
 
 Create a script file **rename.sh** with the following code:
 
@@ -112,7 +112,7 @@ $ ./rename.sh
 
 Bang! All +5,000 files have just been renamed. Isn’t this beautiful (from my Obsidian window)?
 
-[![](./8b93a23c-ba47-4145-970d-6441c71701cf_387x591.heic)](https://substackcdn.com/image/fetch/$s_!LlNC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8b93a23c-ba47-4145-970d-6441c71701cf_387x591.heic)
+[![](./8b93a23c-ba47-4145-970d-6441c71701cf_387x591.webp)](./8b93a23c-ba47-4145-970d-6441c71701cf_387x591.webp)
 
 ## 6. Tips
 

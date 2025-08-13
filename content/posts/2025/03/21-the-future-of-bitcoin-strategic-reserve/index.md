@@ -8,7 +8,7 @@ categories:
   - "podcast"
 ---
 
-[![](./d18d494c-0f3d-47cf-ae15-5d5635cb4c81_4096x2304.heic)](https://substackcdn.com/image/fetch/$s_!5GFc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd18d494c-0f3d-47cf-ae15-5d5635cb4c81_4096x2304.heic)
+[![](./d18d494c-0f3d-47cf-ae15-5d5635cb4c81_4096x2304.webp)](./d18d494c-0f3d-47cf-ae15-5d5635cb4c81_4096x2304.webp)
 
 ## Editor’s Note
 

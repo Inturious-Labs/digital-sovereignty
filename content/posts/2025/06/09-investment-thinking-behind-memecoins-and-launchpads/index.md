@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-[![](./07d2265e-84a8-4765-9fc1-09c63fafd185_512x512.heic)](https://substackcdn.com/image/fetch/$s_!DJue!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F07d2265e-84a8-4765-9fc1-09c63fafd185_512x512.heic)
+[![](./07d2265e-84a8-4765-9fc1-09c63fafd185_512x512.webp)](./07d2265e-84a8-4765-9fc1-09c63fafd185_512x512.webp)
 
 ### About Web3 101
 

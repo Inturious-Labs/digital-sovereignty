@@ -8,13 +8,13 @@ categories:
   - "newsletter"
 ---
 
-[![](./a2b857c9-7d98-4c78-bf00-eea3cdd62245_637x657.heic)](https://substackcdn.com/image/fetch/$s_!RONQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa2b857c9-7d98-4c78-bf00-eea3cdd62245_637x657.heic)
+[![](./a2b857c9-7d98-4c78-bf00-eea3cdd62245_637x657.webp)](./a2b857c9-7d98-4c78-bf00-eea3cdd62245_637x657.webp)
 
 Here are some of my recent tweets with high engagement, as of Feb 7, 2025.
 
 [![](./e5c84a7d-9e20-47df-99d6-54df33a46dc8_882x1056.png)](https://x.com/herbertyang/status/1884291285235949957)
 
-[![](./ab2dc7a9-7be9-4ce9-84a3-9bbf008ea914_894x666.heic)](https://x.com/herbertyang/status/1883871483224842565)
+[![](./ab2dc7a9-7be9-4ce9-84a3-9bbf008ea914_894x666.webp)](https://x.com/herbertyang/status/1883871483224842565)
 
 ---
 
@@ -22,7 +22,7 @@ Here are some of my recent tweets with high engagement, as of Feb 7, 2025.
 
 ---
 
-[![](./f3a0c609-f5be-4973-9b60-c066325ae5cf_914x596.heic)](https://x.com/herbertyang/status/1877187533353656497)
+[![](./f3a0c609-f5be-4973-9b60-c066325ae5cf_914x596.webp)](https://x.com/herbertyang/status/1877187533353656497)
 
 ---
 
