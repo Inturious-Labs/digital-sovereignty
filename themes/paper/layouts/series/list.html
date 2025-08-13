@@ -1,0 +1,44 @@
+{{- define "main" -}}
+
+<header class="mb-14">
+  <h1 class="my-0! pb-2.5">Series</h1>
+  <div class="text-sm antialiased opacity-60">
+    Browse posts by series - related content grouped by topic
+  </div>
+</header>
+
+<section class="space-y-8">
+  {{- range .Site.Taxonomies.series -}}
+  <div class="rounded-xl bg-black/[3%] p-6 dark:bg-white/[8%]">
+    <h2 class="mb-4 text-xl font-medium">
+      <a href="{{- .Page.Permalink -}}" class="no-underline hover:opacity-80">
+        {{- .Page.Title -}}
+      </a>
+    </h2>
+    <div class="text-sm opacity-60 mb-3">
+      {{- len . -}} post{{- if ne (len .) 1 -}}s{{- end -}} in series
+    </div>
+    <div class="space-y-2">
+      {{- range first 5 . -}}
+      <div>
+        <a href="{{- .Permalink -}}" class="no-underline hover:opacity-80">
+          {{- .Title -}}
+        </a>
+        <span class="text-xs opacity-60 ml-2">
+          {{- .Date | time.Format "Jan 2, 2006" -}}
+        </span>
+      </div>
+      {{- end -}}
+      {{- if gt (len .) 5 -}}
+      <div class="text-sm opacity-60">
+        <a href="{{- .Page.Permalink -}}" class="no-underline hover:opacity-80">
+          View all {{- len . -}} posts in series →
+        </a>
+      </div>
+      {{- end -}}
+    </div>
+  </div>
+  {{- end -}}
+</section>
+
+{{- end -}}

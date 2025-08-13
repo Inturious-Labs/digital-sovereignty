@@ -6,6 +6,8 @@ draft: false
 description: "Anna Cafe Chat Series Episode 4 on March 7, 2025 on all things Odin.fun"
 categories:
   - "podcast"
+series:
+  - "Anna Cafe Chat Series"
 ---
 
 [![](./755930e7-1fe7-409a-9eee-152495df2c22_1920x1080.webp)](./755930e7-1fe7-409a-9eee-152495df2c22_1920x1080.webp)

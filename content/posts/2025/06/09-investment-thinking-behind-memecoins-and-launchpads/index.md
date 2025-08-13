@@ -6,6 +6,8 @@ draft: false
 description: "notes from podcast Web3 101's interview of Pima, a legendary crypto OG"
 categories:
   - "newsletter"
+series:
+  - "Web3 101 Insights"
 ---
 
 [![](./07d2265e-84a8-4765-9fc1-09c63fafd185_512x512.webp)](./07d2265e-84a8-4765-9fc1-09c63fafd185_512x512.webp)
