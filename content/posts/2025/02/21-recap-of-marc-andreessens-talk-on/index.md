@@ -6,6 +6,8 @@ draft: false
 description: "my notes from this 5-hour electrifying conversation on Jan 27"
 categories:
   - "newsletter"
+series:
+  - "Podcast Recaps"
 ---
 
 [![](./f8207e8d-fda6-4b56-91f1-dd1d84a1c385_2000x1000.webp)](./f8207e8d-fda6-4b56-91f1-dd1d84a1c385_2000x1000.webp)

@@ -6,6 +6,8 @@ draft: false
 description: "a primer to understand layer 1 blockchains for non-web3 folks"
 categories:
   - "newsletter"
+series:
+  - "Decoding the Crypto Ecosystem"
 ---
 
 [![](./606f3dbc-fc46-4dbb-b912-1f308ce3ffb5_4096x2738.webp)](./606f3dbc-fc46-4dbb-b912-1f308ce3ffb5_4096x2738.webp)

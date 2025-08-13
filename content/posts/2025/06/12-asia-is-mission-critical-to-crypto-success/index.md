@@ -6,6 +6,8 @@ draft: false
 description: "Asia Crypto Ecosystem EP01 - if you cannot succeed in Asia, you cannot succeed globally"
 categories:
   - "newsletter"
+series:
+  - "Asia Crypto Ecosystem"
 ---
 
 [![](./b6553a02-9df6-4c78-8381-0c4da54e4053_1200x686.webp)](./b6553a02-9df6-4c78-8381-0c4da54e4053_1200x686.webp)

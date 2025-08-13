@@ -6,6 +6,8 @@ draft: false
 description: "who are the crypto miners and what do they do?"
 categories:
   - "newsletter"
+series:
+  - "Decoding the Crypto Ecosystem"
 ---
 
 [![](./f2340fa2-de8b-433a-a4a2-fc21c0fe6c59_3000x2250.webp)](./f2340fa2-de8b-433a-a4a2-fc21c0fe6c59_3000x2250.webp)
