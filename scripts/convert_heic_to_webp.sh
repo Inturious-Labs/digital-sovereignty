@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Script to convert HEIC images to WebP and update markdown references
-# Usage: ./convert_heic_to_webp.sh
+# Usage: ./convert_heic_to_webp.sh <folder_path>
+# Example: ./convert_heic_to_webp.sh content/posts/2025/01
+# Example: ./convert_heic_to_webp.sh content/posts/2025/02
 
 set -e  # Exit on any error
 
@@ -114,9 +116,20 @@ process_directory() {
 
 # Main execution
 main() {
-    echo -e "${BLUE}=== HEIC to WebP Converter (January Test) ===${NC}"
+    # Check command line arguments
+    if [ $# -eq 0 ]; then
+        echo -e "${RED}Error: No folder path specified.${NC}"
+        echo "Usage: $0 <folder_path>"
+        echo "Example: $0 content/posts/2025/01"
+        echo "Example: $0 content/posts/2025/02"
+        exit 1
+    fi
+    
+    local target_folder="$1"
+    
+    echo -e "${BLUE}=== HEIC to WebP Converter ===${NC}"
     echo "This script will:"
-    echo "1. Find all HEIC images in content/posts/2025/01/"
+    echo "1. Find all HEIC images in: ${target_folder}"
     echo "2. Convert them to WebP format"
     echo "3. Update markdown references"
     echo "4. Optionally remove original HEIC files"
@@ -129,23 +142,23 @@ main() {
         exit 1
     fi
     
-    # Check if January folder exists
-    if [ ! -d "content/posts/2025/01" ]; then
-        echo -e "${RED}Error: content/posts/2025/01 directory not found.${NC}"
-        echo "Please check if the January folder exists."
+    # Check if target folder exists
+    if [ ! -d "$target_folder" ]; then
+        echo -e "${RED}Error: Target folder '${target_folder}' not found.${NC}"
+        echo "Please check if the folder exists."
         exit 1
     fi
     
-    # Find all directories containing HEIC files in January only
-    heic_dirs=$(find content/posts/2025/01 -type f -name "*.heic" -exec dirname {} \; | sort -u)
+    # Find all directories containing HEIC files in target folder
+    heic_dirs=$(find "$target_folder" -type f -name "*.heic" -exec dirname {} \; | sort -u)
     
     if [ -z "$heic_dirs" ]; then
-        echo -e "${YELLOW}No HEIC files found in content/posts/2025/01/${NC}"
+        echo -e "${YELLOW}No HEIC files found in ${target_folder}${NC}"
         exit 0
     fi
     
     heic_count=$(echo "$heic_dirs" | wc -l)
-    echo -e "${GREEN}Found HEIC files in ${heic_count} directories in January${NC}"
+    echo -e "${GREEN}Found HEIC files in ${heic_count} directories in ${target_folder}${NC}"
     echo ""
     
     # Process each directory
@@ -159,14 +172,14 @@ main() {
         fi
     done <<< "$heic_dirs"
     
-    echo -e "${GREEN}=== January Conversion Complete ===${NC}"
+    echo -e "${GREEN}=== Conversion Complete ===${NC}"
     echo -e "${GREEN}Total images converted: ${total_converted}${NC}"
     echo -e "${GREEN}Total markdown files updated: ${total_updated}${NC}"
     echo ""
     
     # Ask about removing original HEIC files
     if [ ${#heic_files_to_remove[@]} -gt 0 ]; then
-        echo -e "${YELLOW}Found ${#heic_files_to_remove[@]} HEIC files that were converted.${NC}"
+        echo -e "${YELLOW}Found ${#heic_count} HEIC files that were converted.${NC}"
         echo -e "${YELLOW}Remove all original HEIC files? (y/n)${NC}"
         read -r response
         if [[ "$response" =~ ^[Yy]$ ]]; then
@@ -183,7 +196,7 @@ main() {
     
     echo ""
     echo -e "${YELLOW}Note: Backup files (.backup) were created for all modified markdown files.${NC}"
-    echo -e "${BLUE}This was a test run on January folder only.${NC}"
+    echo -e "${BLUE}Processed folder: ${target_folder}${NC}"
 }
 
 # Run main function
