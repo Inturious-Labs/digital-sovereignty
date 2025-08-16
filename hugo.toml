@@ -29,21 +29,7 @@ enableRobotsTXT = true
   # Copyright notice
   copyright = "© 2025 Herbert Yang. All rights reserved."
   
-  # Newsletter settings
-  [params.newsletter]
-    enabled = true
-    title = "Stay Updated"
-    subtitle = "Get the latest insights on digital sovereignty, technology, and innovation delivered to your inbox."
-    placeholder = "Enter your email address"
-    buttonText = "Subscribe"
-    privacyText = "I agree to receive emails and accept the Privacy Policy"
-    privacyUrl = "/privacy"
-    successMessage = "Thank you for subscribing! Please check your email to confirm."
-    errorMessage = "Something went wrong. Please try again."
-    networkErrorMessage = "Network error. Please try again."
-    privacyRequiredMessage = "Please accept the privacy policy to continue."
-    privacyNote = "We respect your privacy. Unsubscribe at any time."
-    spamNote = "No spam, just valuable insights."
+
 
 # Main menu
 [menu]
