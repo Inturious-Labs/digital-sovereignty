@@ -1,6 +1,6 @@
 ---
 title: "Testing for RSS Feed - Try 1"
-date: 2025-08-21
+date: 2025-08-21T12:35:06
 slug: testing-for-rss-feed
 draft: false
 description: "let's test if Buttondown can send out the email as desired"
