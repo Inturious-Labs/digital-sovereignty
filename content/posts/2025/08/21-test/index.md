@@ -20,6 +20,8 @@ At a more serious level, you have a growing interest in crypto because it was th
 
 At a more professional level, you are thinking of pivoting your career into crypto, too. You want to size up Joe to see if he's a legit insider in the know, who can make some intros for you. You want to know if this crypto industry is worth investing the next few years of your life to build a new track record. You might even want to start buying some tokens and try to see if your friend knows much alpha.
 
+![friends](./friends.webp)
+
 Asking the right question demonstrates real intelligence and the radius of one's knowledge boundary. Here are a few questions you could throw at him/her. As someone on the other side of the table, I rarely get them, which says a lot about crypto's strenuous long march toward mass adoption and challenges in driving mindshare in the general public. Maybe these questions are just my own wishful thinking, but let's have a try.
 
 Any big event lately? Which one did you go? How was it?
@@ -27,6 +29,8 @@ Any big event lately? Which one did you go? How was it?
 This is the easy opener. Crypto is a very event-driven industry. People go there to speak, social, source leads, and catch up with friends. From the event location, the sponsors, the hosts, the crow size, to the speakers, you can get a glimpse into which direction the wind is blowing - they're constantly changing.
 
 What is the current sentiment among your crypto friends?
+
+![friends](./friends.webp)
 
 Another softball question that almost everyone can catch. There is hardly a dull day in crypto. Either a community gets rug-pulled, or a wallet is hacked, or a country head issues a memecoin, or Vitalik is dating a new girl friend (ETH selling signal), or Bitcoin just drops another 5%, or another project out of nowhere just soars 100x, or a T1 project announces another generous air-drop to all token holders sending the market into stratosphere. Let him talk.
 

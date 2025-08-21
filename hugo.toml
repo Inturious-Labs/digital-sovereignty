@@ -4,6 +4,7 @@ languageCode = "en"
 timeZone = "Asia/Shanghai"
 theme = "paper"
 enableRobotsTXT = true
+canonifyURLs = true
 
 [label]
   icon = "img/logo.png"
