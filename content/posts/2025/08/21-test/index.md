@@ -10,6 +10,8 @@ categories:
 
 ![friends](./friends.webp)
 
+This is a test!
+
 So you've heard that your friend Joe just joined a crypto company. You are with him now at a dinner party, or an alumni event, or just catching up over a beer at a bar. What kind of questions could you ask Joe that would come across as interesting, non-imposing and smart?
 
 At a casual level, you have a slight fleeting interest in crypto as you just read some sensational headline stories from that industry. Now you can find out more to keep this innocent party conversation going without boring either party too much.
