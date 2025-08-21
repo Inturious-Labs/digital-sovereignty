@@ -1,6 +1,7 @@
 baseURL = "/"
 title = "Digital Sovereignty Chronicle"
 languageCode = "en"
+timeZone = "Asia/Shanghai"
 theme = "paper"
 enableRobotsTXT = true
 
@@ -55,14 +56,6 @@ enableRobotsTXT = true
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
-
-# RSS-specific settings
-[services.rss]
-  limit = 20  # Number of recent posts to include in RSS feed
-
-# Ensure RSS output is enabled
-[outputs]
-  home = ["HTML", "RSS"]
 
 # Define URL links
 [permalinks]
