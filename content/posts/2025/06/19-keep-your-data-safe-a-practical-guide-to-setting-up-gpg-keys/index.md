@@ -8,7 +8,7 @@ categories:
   - "newsletter"
 ---
 
-![](././8611a6f5-c6a5-4318-ba1e-381c167da3e0_1280x853.jpeg))
+![](././8611a6f5-c6a5-4318-ba1e-381c167da3e0_1280x853.jpeg)
 
 **GPG** stands for GNU Privacy Guard. It is a free and open-source implementation of the OpenPGP standard, used for encryption and signing of data and communications. **PGP** is “Pretty Good Privacy”, an encryption program that provides cryptographic privacy and authentication for data transmission. PGP was originally created by Phil Zimmermann in 1991.
 
