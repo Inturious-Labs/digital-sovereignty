@@ -5,7 +5,7 @@ slug: keep-your-data-safe-a-practical-guide-to-setting-up-gpg-keys
 draft: false
 description: "a step-by-step guide to use GNU Privacy Guard protocol to securely send and receive messages/data on the Internet"
 categories:
-  - "newsletter"
+  - "Digital Life"
 ---
 
 ![](././8611a6f5-c6a5-4318-ba1e-381c167da3e0_1280x853.jpeg)

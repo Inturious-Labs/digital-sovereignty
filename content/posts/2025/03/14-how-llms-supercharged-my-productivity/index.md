@@ -5,7 +5,7 @@ slug: how-llms-supercharged-my-productivity
 draft: false
 description: "a personal account of how AI raised my game by 100x"
 categories:
-  - "newsletter"
+  - "AI Coding"
 ---
 
 [![](./3df61cde-7543-4206-9b4e-b4d8bd24cf75_1280x720.webp)](./3df61cde-7543-4206-9b4e-b4d8bd24cf75_1280x720.webp)

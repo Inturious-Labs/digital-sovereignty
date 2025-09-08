@@ -5,7 +5,7 @@ slug: blockchain-web3-and-crypto
 draft: false
 description: "when and how to use the three amigos in different contexts"
 categories:
-  - "newsletter"
+  - "Crypto ABC"
 ---
 
 [![](./cbdb28da-3964-4e02-bb1d-8cff03f22a40_1200x800.webp)](./cbdb28da-3964-4e02-bb1d-8cff03f22a40_1200x800.webp)

@@ -4,7 +4,6 @@ date: 2025-08-11T09:02:04
 slug: how-to-use-the-substack-editor
 draft: true
 categories:
-  - "newsletter"
 ---
 
 Hi! This is a draft post. Did you know that there are a bunch of nice formatting options in this editor? For example:

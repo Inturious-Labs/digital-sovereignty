@@ -5,7 +5,7 @@ slug: 10-podcasts-on-tech-in-2025
 draft: false
 description: "the best podcasts worth listening to on AI, Web3, crypto and good old tech"
 categories:
-  - "newsletter"
+  - "Curation Tips"
 ---
 
 Podcast has become one of my primary sources of information intake, besides Twitter, since more than ten years ago when I lived in Palo Alto, CA. In 2025, podcast is still a very potent channel for information, insight and perspectives of very high density, though its supremacy is being challenged by the rising AI LLMs that can summarize podcast episodes based on transcripts.

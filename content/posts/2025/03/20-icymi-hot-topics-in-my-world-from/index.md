@@ -5,7 +5,7 @@ slug: icymi-hot-topics-in-my-world-from
 draft: false
 description: "discovering potential alpha in BTC, L1 blockchains, LLMs and perfect randomness"
 categories:
-  - "newsletter"
+  - "ICYMI"
 ---
 
 [![](./93ec1685-2b2b-4080-b1fa-4ce03dc6698c_1420x1158.webp)](./93ec1685-2b2b-4080-b1fa-4ce03dc6698c_1420x1158.webp)

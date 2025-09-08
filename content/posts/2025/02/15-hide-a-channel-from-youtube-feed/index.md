@@ -5,7 +5,7 @@ slug: hide-a-channel-from-youtube-feed
 draft: false
 description: "surprisingly, this is harder than you think"
 categories:
-  - "newsletter"
+  - "Digital Life"
 ---
 
 [![](./fb4095a8-2807-4fc2-88df-58757cd61e0e_1400x916.webp)](./fb4095a8-2807-4fc2-88df-58757cd61e0e_1400x916.webp)
