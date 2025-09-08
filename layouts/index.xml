@@ -22,8 +22,8 @@
         <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
         {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
         <guid>{{ .Permalink }}</guid>
-        <description>{{ .Content | html }}</description>
-        <content:encoded>{{ .Content | html }}</content:encoded>
+        <description>{{ .Content | replaceRE `src="\.\/([^"]+)"` (printf `src="%s%s"` .Permalink "$1") | html }}<p><a href="{{ .Permalink }}" style="display: inline-block; background-color: #e5e7eb; color: #1f2937; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 20px; font-weight: 600;">🌐 Read on Website</a></p></description>
+        <content:encoded>{{ .Content | replaceRE `src="\.\/([^"]+)"` (printf `src="%s%s"` .Permalink "$1") | html }}<p><a href="{{ .Permalink }}" style="display: inline-block; background-color: #e5e7eb; color: #1f2937; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 20px; font-weight: 600;">🌐 Read on Website</a></p></content:encoded>
         </item>
     {{ end }}
     {{ end }}
