@@ -2,12 +2,10 @@
 title: "Odin.fun Speaks To The Chinese Community"
 date: 2025-03-09T04:11:54.546000+00:00
 slug: odinfun-speaks-to-the-chinese-community
-draft: false
+draft: true
 description: "Anna Cafe Chat Series Episode 4 on March 7, 2025 on all things Odin.fun"
 categories:
   - "podcast"
-series:
-  - "Anna Cafe Chat Series"
 ---
 
 [![](./755930e7-1fe7-409a-9eee-152495df2c22_1920x1080.webp)](./755930e7-1fe7-409a-9eee-152495df2c22_1920x1080.webp)

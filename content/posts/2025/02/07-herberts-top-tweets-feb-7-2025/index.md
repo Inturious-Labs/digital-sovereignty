@@ -5,7 +5,7 @@ slug: herberts-top-tweets-feb-7-2025
 draft: false
 description: "AI was on fire"
 categories:
-  - "newsletter"
+  - "ICYMI"
 ---
 
 [![](./a2b857c9-7d98-4c78-bf00-eea3cdd62245_637x657.webp)](./a2b857c9-7d98-4c78-bf00-eea3cdd62245_637x657.webp)

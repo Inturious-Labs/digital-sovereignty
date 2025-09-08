@@ -5,7 +5,7 @@ slug: combine-multiple-images-into-one
 draft: false
 description: "use command-line tool to create a single PDF file from multiple screenshots"
 categories:
-  - "newsletter"
+  - "Digital Life"
 ---
 
 [![](./2cdedc25-6174-43f6-98cf-b52e9c79a9c9_1200x675.webp)](./2cdedc25-6174-43f6-98cf-b52e9c79a9c9_1200x675.webp)

@@ -5,7 +5,7 @@ slug: rename-daily-notes-in-obsidian-in
 draft: false
 description: "convert month-day-year filenames into YYYY-MM-DD using shell script"
 categories:
-  - "newsletter"
+  - "Digital Life"
 ---
 
 [![](./8a022066-b14e-469e-aaa8-5b16ff6ee7db_940x314.webp)](./8a022066-b14e-469e-aaa8-5b16ff6ee7db_940x314.webp)

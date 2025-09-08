@@ -2,7 +2,7 @@
 title: "AI Lounge Talk: AI x Bitcoin Synergy"
 date: 2025-03-21T03:33:00.818000+00:00
 slug: ai-lounge-talk-ai-x-bitcoin-synergy
-draft: false
+draft: true
 description: "ICP Hubs Singapore hosted a panel discussion on AI x Bitcoin"
 categories:
   - "podcast"

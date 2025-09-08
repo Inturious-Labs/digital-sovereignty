@@ -5,7 +5,7 @@ slug: decoding-the-crypto-ecosystem-ep01-blockchains
 draft: false
 description: "a primer to understand layer 1 blockchains for non-web3 folks"
 categories:
-  - "newsletter"
+  - "Crypto ABC"
 series:
   - "Decoding the Crypto Ecosystem"
 ---

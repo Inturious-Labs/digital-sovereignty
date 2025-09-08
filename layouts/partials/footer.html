@@ -1,17 +1,16 @@
 <footer
-  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+  class="mx-auto flex max-w-(--w) items-center justify-center px-8 text-xs tracking-wider uppercase opacity-60 py-8"
+  style="margin-bottom: 40px; padding-bottom: 20px;"
 >
-  <div class="text-right">
-    <div class="mb-4">
+  <div class="text-center">
+    <div style="margin-bottom: 24px;">
             {{- if site.Params.copyright -}} {{- site.Params.copyright -}} {{- else -}} &copy; {{-
       now.Year }}
       <a class="link" href="{{- `` | absURL -}}">{{- site.Title -}}</a>
       {{- end -}}
     </div>
-    <br>
-    <div class="flex items-center gap-2">
+    <div class="flex items-center justify-center gap-2">
       <span class="whitespace-nowrap">powered by</span> <a href="https://dashboard.internetcomputer.org/canister/wupbw-2aaaa-aaaae-abn7a-cai" target="_blank" rel="noopener"><img src="/img/ic_logo.svg" alt="Internet Computer" class="opacity-60" style="width: 150px !important" /></a>
-    </div>
     </div>
   </div>
 </footer>
