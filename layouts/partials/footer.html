@@ -1,8 +1,9 @@
 <footer
-  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center justify-center px-8 text-xs tracking-wider uppercase opacity-60"
+  class="mx-auto flex max-w-(--w) items-center justify-center px-8 text-xs tracking-wider uppercase opacity-60 py-8"
+  style="margin-bottom: 40px; padding-bottom: 20px;"
 >
   <div class="text-center">
-    <div class="mb-2">
+    <div style="margin-bottom: 24px;">
             {{- if site.Params.copyright -}} {{- site.Params.copyright -}} {{- else -}} &copy; {{-
       now.Year }}
       <a class="link" href="{{- `` | absURL -}}">{{- site.Title -}}</a>
