@@ -1,0 +1,23 @@
+{{- define "main" -}}
+
+<header class="mb-14">
+  <h1 class="my-0! pb-2.5">{{ .Title }}</h1>
+  <div class="text-sm antialiased opacity-60">
+    {{ len .Pages }} post{{- if ne (len .Pages) 1 -}}s{{- end }} in this series
+  </div>
+</header>
+
+<section class="space-y-2">
+  {{- range .Pages.ByDate -}}
+  <div>
+    <a href="{{- .Permalink -}}" class="no-underline hover:opacity-80">
+      {{- .Title -}}
+    </a>
+    <span class="text-xs opacity-60 ml-2">
+      {{- .Date | time.Format "Jan 2, 2006" -}}
+    </span>
+  </div>
+  {{- end -}}
+</section>
+
+{{- end -}}
