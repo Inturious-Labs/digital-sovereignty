@@ -2,12 +2,10 @@
 title: "ICP AI Agent Twitter Spaces Panel Discussion"
 date: 2025-03-07T06:01:07.329000+00:00
 slug: icp-ai-agent-twitter-spaces-panel
-draft: false
+draft: true
 description: "Anna Cafe Chat Series Episode 2 on March 4, 2025 on AI agent, Bybit hack and ICP"
 categories:
   - "podcast"
-series:
-  - "Anna Cafe Chat Series"
 ---
 
 [![](./17291626-648c-4b12-91e5-a0459600238e_1200x675.webp)](./17291626-648c-4b12-91e5-a0459600238e_1200x675.webp)

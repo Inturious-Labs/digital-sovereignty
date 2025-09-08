@@ -5,7 +5,7 @@ slug: stay-online-when-traveling-abroad
 draft: false
 description: "do yourself a favor and get a wi-fi roaming station at the departing airport"
 categories:
-  - "newsletter"
+  - "Digital Life"
 ---
 
 [![](./05f05383-194f-4d9b-8e38-6d084ade3b0f_1300x867.webp)](./05f05383-194f-4d9b-8e38-6d084ade3b0f_1300x867.webp)

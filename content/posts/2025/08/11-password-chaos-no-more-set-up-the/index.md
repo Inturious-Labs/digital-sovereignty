@@ -4,7 +4,6 @@ date: 2025-08-11T09:02:06
 slug: password-chaos-no-more-set-up-the
 draft: true
 categories:
-  - "newsletter"
 ---
 
 Managing passwords is never easy. Everybody has to have a protocol that works for them to get through the day-to-day grind, but very few can truly get it right.

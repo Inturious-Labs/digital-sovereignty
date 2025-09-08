@@ -5,7 +5,6 @@ slug: from-25k-to-1m-the-substack-writers
 draft: false
 description: "a glimpse into which categories are popular for Substack creators"
 categories:
-  - "newsletter"
 ---
 
 [![](./c90db8cc-ce4e-4a7c-977d-6ae7a9702bde_1748x1240.webp)](./c90db8cc-ce4e-4a7c-977d-6ae7a9702bde_1748x1240.webp)

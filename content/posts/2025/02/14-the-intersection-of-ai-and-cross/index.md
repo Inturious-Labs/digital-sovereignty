@@ -2,7 +2,7 @@
 title: "The Intersection of AI and Cross-Chain by Node Lab x Axelar"
 date: 2025-02-14T13:29:55.488000+00:00
 slug: the-intersection-of-ai-and-cross
-draft: false
+draft: true
 description: "Twitter Spaces on Jan 23, 2025"
 categories:
   - "podcast"

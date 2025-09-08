@@ -5,8 +5,6 @@ slug: recap-of-marc-andreessens-talk-on
 draft: false
 description: "my notes from this 5-hour electrifying conversation on Jan 27"
 categories:
-  - "newsletter"
-series:
   - "Podcast Recaps"
 ---
 

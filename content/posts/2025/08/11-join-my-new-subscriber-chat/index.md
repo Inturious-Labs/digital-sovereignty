@@ -4,7 +4,6 @@ date: 2025-08-11T09:02:06
 slug: join-my-new-subscriber-chat
 draft: true
 categories:
-  - "newsletter"
 ---
 
 Today I’m announcing a brand new addition to my Substack publication: Digital Sovereignty Chronicle **subscriber chat**.

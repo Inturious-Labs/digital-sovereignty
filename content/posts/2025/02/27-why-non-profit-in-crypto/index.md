@@ -5,7 +5,7 @@ slug: why-non-profit-in-crypto
 draft: false
 description: "what is a non-profit foundation in crypto and what it does"
 categories:
-  - "newsletter"
+  - "Crypto ABC"
 ---
 
 When friends hear that I work in a non-profit foundation headquartered in Zurich, Switzerland, they're often surprised. This is a difficult concept to grasp, for people who are used to working for corporations, listed companies, LLCs, offshore entities, etc. Revenue and profit are supposed to be the dominant measures of success. What do you guys do in a non-profit, promoting world peace? Why using non-profit as your legal format? I was pretty confused about it too, when I first learned about this concept in 2017.
