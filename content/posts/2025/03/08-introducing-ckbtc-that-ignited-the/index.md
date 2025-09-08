@@ -2,12 +2,10 @@
 title: "Introducing ckBTC That Ignited the BTC Community"
 date: 2025-03-08T11:43:30.477000+00:00
 slug: introducing-ckbtc-that-ignited-the
-draft: false
+draft: true
 description: "Anna Cafe Chat Series Episode 3 on March 6, 2025 on ckBTC and Odin"
 categories:
   - "podcast"
-series:
-  - "Anna Cafe Chat Series"
 ---
 
 [![](./e7dcb7a7-74d7-4f47-8648-ff3edbb591c7_1920x1080.webp)](./e7dcb7a7-74d7-4f47-8648-ff3edbb591c7_1920x1080.webp)

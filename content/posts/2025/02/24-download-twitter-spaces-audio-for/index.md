@@ -5,7 +5,7 @@ slug: download-twitter-spaces-audio-for
 draft: false
 description: "take data ownership of Twitter Spaces audio files forever"
 categories:
-  - "newsletter"
+  - "Digital Life"
 ---
 
 [![](./5b3cde01-43c8-41ee-8cfe-8f20380cc109_1884x845.webp)](./5b3cde01-43c8-41ee-8cfe-8f20380cc109_1884x845.webp)

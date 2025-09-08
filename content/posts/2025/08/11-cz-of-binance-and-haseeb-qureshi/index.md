@@ -4,7 +4,6 @@ date: 2025-08-11T09:02:06
 slug: cz-of-binance-and-haseeb-qureshi
 draft: true
 categories:
-  - "newsletter"
 ---
 
 ## Colin Wu Interviews CZ of Binance

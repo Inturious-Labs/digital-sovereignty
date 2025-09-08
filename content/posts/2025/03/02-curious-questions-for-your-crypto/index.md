@@ -5,7 +5,7 @@ slug: curious-questions-for-your-crypto
 draft: false
 description: "Answering is easy, but asking the right question is hard"
 categories:
-  - "newsletter"
+  - "Crypto ABC"
 ---
 
 [![](./44308e9e-82f7-4823-86ae-b30b89da3a25_1024x768.webp)](./44308e9e-82f7-4823-86ae-b30b89da3a25_1024x768.webp)

@@ -5,7 +5,7 @@ slug: decoding-the-crypto-ecosystem-ep02-miners
 draft: false
 description: "who are the crypto miners and what do they do?"
 categories:
-  - "newsletter"
+  - "Crypto ABC"
 series:
   - "Decoding the Crypto Ecosystem"
 ---

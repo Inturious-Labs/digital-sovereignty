@@ -5,7 +5,7 @@ slug: asia-is-mission-critical-to-crypto-success
 draft: false
 description: "Asia Crypto Ecosystem EP01 - if you cannot succeed in Asia, you cannot succeed globally"
 categories:
-  - "newsletter"
+  - "Crypto ABC"
 series:
   - "Asia Crypto Ecosystem"
 ---

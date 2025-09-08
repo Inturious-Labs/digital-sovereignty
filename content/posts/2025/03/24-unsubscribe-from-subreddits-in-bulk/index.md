@@ -5,7 +5,7 @@ slug: unsubscribe-from-subreddits-in-bulk
 draft: false
 description: "a handy trick that saved me 15 minutes of laborious manual button-pressing"
 categories:
-  - "newsletter"
+  - "Digital Life"
 ---
 
 [![](./58e8eebd-4f98-4145-b8ab-9622f6ab28fa_1200x630.webp)](./58e8eebd-4f98-4145-b8ab-9622f6ab28fa_1200x630.webp)
