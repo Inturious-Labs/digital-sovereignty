@@ -1,9 +1,9 @@
 ---
-title: "Testing for RSS Feed - Try 3"
-date: 2025-08-21T20:14:00
-slug: testing-for-rss-feed-try-3
+title: "Testing for RSS Feed - Try 5"
+date: 2025-09-08T20:45:00
+slug: testing-for-rss-feed-try-5
 draft: false
-description: "let's test if Buttondown can send out the email as desired"
+description: "testing RSS feed with improved button contrast for Buttondown emails"
 categories:
   - "newsletter"
 ---
