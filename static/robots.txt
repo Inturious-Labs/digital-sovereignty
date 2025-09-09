@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://digitalsovereignty.herbertyang.xyz/sitemap.xml
