@@ -6,7 +6,11 @@ draft: true
 categories:
 ---
 
-Today I’m announcing a brand new addition to my Substack publication: Digital Sovereignty Chronicle **subscriber chat**.
+Make mnore chaange change chang change! I miss David Bowie who died a few years ag
+
+Make some changes to test the git version control co-authored by Claude Code
+
+Today I'm announcing a brand new addition to my Substack publication: Digital Sovereignty Chronicle **subscriber chat**.
 
 This is a conversation space exclusively for subscribers—kind of like a group chat or live hangout. I’ll post questions and updates that come my way, and you can jump into the discussion.
 
