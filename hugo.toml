@@ -27,6 +27,9 @@ canonifyURLs = true
   
   # Description
   description = "I break down complex crypto concepts into simple terms, explore data hacks toward digital sovereignty, analyze little-known tech breakthroughs, and share my notes from tech podcasts"
+
+  # SEO and Google Search Console
+  googleSiteVerification = ""  # Add your GSC verification code here
   
   # Copyright notice
   copyright = "© 2025 Herbert Yang. All rights reserved."
@@ -52,7 +55,7 @@ canonifyURLs = true
     url = "/about/"
     weight = 20
 
-# Sitemap (nice for SEO & Buttondown)
+# Enhanced sitemap configuration for better SEO
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
