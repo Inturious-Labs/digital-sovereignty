@@ -10,7 +10,7 @@ series:
   - "Decoding the Crypto Ecosystem"
 ---
 
-[![](./f2340fa2-de8b-433a-a4a2-fc21c0fe6c59_3000x2250.webp)](./f2340fa2-de8b-433a-a4a2-fc21c0fe6c59_3000x2250.webp)
+![data center](./datacenter.png)
 
 Crypto miners, in very broad strokes, keep blockchains alive.
 
@@ -83,8 +83,6 @@ touching clear sky.
 - All Watched Over by Machines of Loving Grace, Richard Brautigan
 
 Thanks for reading Digital Sovereignty Chronicle! This post is public so feel free to share it.
-
-[Share](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep02-miners?utm_source=substack&utm_medium=email&utm_content=share&action=share)
 
 ---
 
