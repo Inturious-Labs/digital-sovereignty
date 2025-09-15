@@ -135,6 +135,39 @@ This project includes several utility scripts for managing content and convertin
 
 **Note**: Always run these scripts from the project root directory (`digital-sovereignty/`).
 
+## Hugo Development Workflow
+
+### Local Development Preview
+
+To preview your site locally with correct localhost URLs, use the master writing workflow:
+
+```bash
+# Start local development server
+./write preview
+```
+
+**Important**: Always use `./write preview` instead of `hugo serve` directly. The preview command automatically:
+- Sets the correct localhost baseURL (`http://localhost:1313`)
+- Includes draft posts (`-D` flag)
+- Binds to all interfaces for network access
+- Preserves production URLs in sitemap for SEO
+
+### Other Writing Commands
+
+```bash
+# Create new post
+./write new "Post Title" [category]
+
+# Edit existing post
+./write edit "Post Title"
+
+# Publish post
+./write publish "Post Title"
+
+# Check session status
+./write status
+```
+
 ## Configure Custom Domains
 
 1. Follow this guide to create `ALIAS`, `CNAME`, and `TXT` records on the domain registrar for the domain or subdomain:
