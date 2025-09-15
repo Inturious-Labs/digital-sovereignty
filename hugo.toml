@@ -5,6 +5,7 @@ timeZone = "Asia/Shanghai"
 theme = "paper"
 enableRobotsTXT = true
 canonifyURLs = true
+googleAnalytics = "G-JFQFKNFFR7" 
 
 [label]
   icon = "img/logo.png"
