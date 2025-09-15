@@ -34,10 +34,10 @@ $paginator.Pages -}}<!---->
   {{- end -}}<!---->
   {{- if site.Params.name -}}
   <div>
-    <div class="mt-3 mb-1 text-2xl font-medium text-black dark:text-white">
-      {{- site.Params.name -}}
+    <div class="mt-3 mb-1 text-xl font-normal antialiased opacity-60">
+      <a href="/about/" class="hover:opacity-80 transition-opacity no-underline">{{- site.Params.name -}}</a>
     </div>
-    <div class="break-words">
+    <div class="break-words text-xs antialiased opacity-60" style="font-style: italic !important;">
       {{- site.Params.bio | default (print `A personal blog by `
       site.Params.name) -}}
     </div>
@@ -57,7 +57,7 @@ $paginator.Pages -}}<!---->
   <h2 class="my-0!">{{- .Title -}}</h2>
   <time class="text-xs antialiased opacity-60"
     >{{- .Date | time.Format ":date_medium" -}}
-    ,  
+    <span class="mx-1">&middot;</span>
     {{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}
     read
     </time
