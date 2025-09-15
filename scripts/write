@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# Digital Sovereignty Chronicle - Master Writing Workflow
+# One command to rule them all
+
+# Colors
+BLUE='\033[0;34m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+echo -e "${BLUE}✍️  Digital Sovereignty Chronicle Writing Workflow${NC}"
+echo -e "${GREEN}=================================================${NC}"
+echo ""
+
+# Check if scripts directory exists
+if [ ! -d "scripts" ]; then
+    echo "❌ Run this from the project root directory"
+    exit 1
+fi
+
+# Show current session status
+./scripts/session-manager.sh status
+
+echo ""
+echo -e "${BLUE}Quick Actions:${NC}"
+echo "  1. Create new post:      ./scripts/write new \"Post Title\" [category]"
+echo "  2. Edit existing post:   ./scripts/write edit \"Post Title\""
+echo "  3. Publish post:         ./scripts/write publish \"Post Title\""
+echo "  4. Session status:       ./scripts/write status"
+echo "  5. Preview site:         ./scripts/write preview"
+echo ""
+
+# Handle commands
+case "${1:-}" in
+    "new"|"n")
+        shift
+        ./scripts/new-post.sh "$@"
+        ;;
+    "edit"|"e")
+        shift
+        ./scripts/session-manager.sh edit "$@"
+        ;;
+    "publish"|"p")
+        shift
+        ./scripts/publish-post.sh "$@"
+        ;;
+    "status"|"s")
+        ./scripts/session-manager.sh status
+        ;;
+    "preview"|"dev")
+        echo -e "${BLUE}🌐 Starting local preview...${NC}"
+        hugo server -D --bind 0.0.0.0 --baseURL http://localhost:1313
+        ;;
+    "session")
+        shift
+        ./scripts/session-manager.sh "$@"
+        ;;
+    *)
+        echo -e "${GREEN}💡 Use one of the commands above or:${NC}"
+        echo "   ./scripts/session-manager.sh help"
+        echo "   ./scripts/new-post.sh help"
+        echo "   ./scripts/publish-post.sh help"
+        ;;
+esac
