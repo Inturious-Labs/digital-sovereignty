@@ -56,8 +56,13 @@ $paginator.Pages -}}<!---->
   {{- end -}}
   <h2 class="my-0!">{{- .Title -}}</h2>
   <time class="text-xs antialiased opacity-60"
-    >{{- .Date | time.Format ":date_medium" -}}</time
+    >{{- .Date | time.Format ":date_medium" -}}
+    ,  
+    {{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}
+    read
+    </time
   >
+
   <a class="absolute inset-0 text-[0px]" href="{{- .Permalink -}}"
     >{{- .Title -}}</a
   >
