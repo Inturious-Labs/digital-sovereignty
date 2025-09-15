@@ -143,10 +143,10 @@ To preview your site locally with correct localhost URLs, use the master writing
 
 ```bash
 # Start local development server
-./write preview
+./scripts/write preview
 ```
 
-**Important**: Always use `./write preview` instead of `hugo serve` directly. The preview command automatically:
+**Important**: Always use `./scripts/write preview` instead of `hugo serve` directly. The preview command automatically:
 - Sets the correct localhost baseURL (`http://localhost:1313`)
 - Includes draft posts (`-D` flag)
 - Binds to all interfaces for network access
@@ -156,16 +156,16 @@ To preview your site locally with correct localhost URLs, use the master writing
 
 ```bash
 # Create new post
-./write new "Post Title" [category]
+./scripts/write new "Post Title" [category]
 
 # Edit existing post
-./write edit "Post Title"
+./scripts/write edit "Post Title"
 
 # Publish post
-./write publish "Post Title"
+./scripts/write publish "Post Title"
 
 # Check session status
-./write status
+./scripts/write status
 ```
 
 ## Configure Custom Domains
