@@ -5,7 +5,7 @@ slug: why-i-left-substack
 draft: false
 description: "why I left Substack after six months and migrated my writing and contents to a new self-hosted stack for much better control and Zettelkasten-styled writing"
 categories:
-  - "digital-life"
+  - "Digital Life"
 images: ["eagle-fly-away.jpg"]
 ---
 
