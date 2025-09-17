@@ -3,12 +3,13 @@ title: "Keep Your Data Safe: A Practical Guide to Setting Up GPG Keys"
 date: 2025-06-19T12:07:52.098000+00:00
 slug: keep-your-data-safe-a-practical-guide-to-setting-up-gpg-keys
 draft: false
+images: ["vault.jpeg"]
 description: "a step-by-step guide to use GNU Privacy Guard protocol to securely send and receive messages/data on the Internet"
 categories:
   - "Digital Life"
 ---
 
-![](././8611a6f5-c6a5-4318-ba1e-381c167da3e0_1280x853.jpeg)
+![hero](./vault.jpeg)
 
 **GPG** stands for GNU Privacy Guard. It is a free and open-source implementation of the OpenPGP standard, used for encryption and signing of data and communications. **PGP** is “Pretty Good Privacy”, an encryption program that provides cryptographic privacy and authentication for data transmission. PGP was originally created by Phil Zimmermann in 1991.
 
