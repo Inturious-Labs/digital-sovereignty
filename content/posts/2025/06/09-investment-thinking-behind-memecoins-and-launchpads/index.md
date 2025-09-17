@@ -6,7 +6,7 @@ draft: false
 images: ["web3-101.webp"]
 description: "notes from podcast Web3 101's interview of Pima, a legendary crypto OG"
 categories:
-  - "Podcast Recaps"
+  - "Podcast Recap"
 ---
 
 ![Web3 101 podcast](./web3-101.webp)

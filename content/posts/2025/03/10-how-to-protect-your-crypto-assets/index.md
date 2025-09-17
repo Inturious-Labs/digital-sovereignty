@@ -5,7 +5,7 @@ slug: how-to-protect-your-crypto-assets
 draft: true
 description: "Twitter Spaces panel hosted by 1783DAO on recent security breach incidents in crypto and how the industry would be affected"
 categories:
-  - "podcast"
+  - "Podcast Recap"
 ---
 
 [![](./1fe71dbb-8555-4626-9f03-40665c68df3b_1025x3690.webp)](./1fe71dbb-8555-4626-9f03-40665c68df3b_1025x3690.webp)
