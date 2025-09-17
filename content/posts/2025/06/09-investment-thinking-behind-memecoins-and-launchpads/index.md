@@ -3,12 +3,13 @@ title: "Investment Thinking Behind Memecoins and Launchpads"
 date: 2025-06-09T15:05:35.548000+00:00
 slug: investment-thinking-behind-memecoins-and-launchpads
 draft: false
+images: ["web3-101.webp"]
 description: "notes from podcast Web3 101's interview of Pima, a legendary crypto OG"
 categories:
   - "Podcast Recaps"
 ---
 
-[![](./07d2265e-84a8-4765-9fc1-09c63fafd185_512x512.webp)](./07d2265e-84a8-4765-9fc1-09c63fafd185_512x512.webp)
+![Web3 101 podcast](./web3-101.webp)
 
 ### About Web3 101
 

@@ -3,6 +3,7 @@ title: "Decoding the Crypto Ecosystem - EP02 - Miners"
 date: 2025-04-22T02:19:27.452000+00:00
 slug: decoding-the-crypto-ecosystem-ep02-miners
 draft: false
+images: ["datacenter.png"]
 description: "who are the crypto miners and what do they do?"
 categories:
   - "Crypto ABC"
