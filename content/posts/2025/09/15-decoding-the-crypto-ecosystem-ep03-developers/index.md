@@ -9,6 +9,7 @@ categories:
 series:
   - "Decoding the Crypto Ecosystem"
 keywords: ["crypto", "blockchain", "dApp", "developers", "startup founders"]
+images: ["developer.jpg"]
 ---
 
 <!-- Featured image for social media -->

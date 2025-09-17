@@ -17,21 +17,25 @@ googleAnalytics = "G-JFQFKNFFR7"
 [params]
   # Color style for Paper theme
   color = 'linen'  # Options: 'linen', 'wheat', 'gray', 'light'
-  
+
   # Your information
   name = 'Herbert Yang'
   bio = 'front-row view on decentralization, crypto dApps, web3 innovation, blockchain technology, ecosystem growth, AI, and digital sovereignty'
-  
+
   # Favicon settings (Paper theme uses different param names)
   favicon = "img/favicon.ico"
   appleTouchIcon = "img/apple-touch-icon.png"
-  
+
   # Description
   description = "I break down complex crypto concepts into simple terms, explore data hacks toward digital sovereignty, analyze little-known tech breakthroughs, and share my notes from tech podcasts"
 
   # SEO and Google Search Console
   googleSiteVerification = ""  # Add your GSC verification code here
-  
+
+  # Social Media and SEO
+  enableOpenGraph = true
+  enableTwitterCards = true
+
   # Copyright notice
   copyright = "© 2025 Herbert Yang. All rights reserved."
   

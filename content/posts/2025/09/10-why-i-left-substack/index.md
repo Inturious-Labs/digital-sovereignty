@@ -6,6 +6,7 @@ draft: false
 description: "why I left Substack after six months and migrated my writing and contents to a new self-hosted stack for much better control and Zettelkasten-styled writing"
 categories:
   - "digital-life"
+images: ["eagle-fly-away.jpg"]
 ---
 
 <!-- Featured image for social media -->
