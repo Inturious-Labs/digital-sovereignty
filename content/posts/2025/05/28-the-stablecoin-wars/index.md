@@ -5,7 +5,7 @@ slug: the-stablecoin-wars
 draft: false
 description: "From Facebook’s failed Libra to Wall Street’s looming crypto arms race - Web3 101 podcast breaks down how stablecoins could transform the future of money"
 categories:
-  - "Podcast Recaps"
+  - "Podcast Recap"
 ---
 
 [![](./ad5c9ca4-b207-4573-97e8-cd537d09be18_1391x858.webp)](./ad5c9ca4-b207-4573-97e8-cd537d09be18_1391x858.webp)

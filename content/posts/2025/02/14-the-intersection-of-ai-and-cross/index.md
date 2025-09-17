@@ -5,7 +5,7 @@ slug: the-intersection-of-ai-and-cross
 draft: true
 description: "Twitter Spaces on Jan 23, 2025"
 categories:
-  - "podcast"
+  - "Podcast Recap"
 ---
 
 [![](./6abe7e0d-4afa-4d23-955c-bccaead1c629_2720x1520.webp)](https://x.com/i/spaces/1eaKbaaALNYxX)
