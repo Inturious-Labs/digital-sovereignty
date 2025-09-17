@@ -3,6 +3,7 @@ title: "Asia is Mission Critical to Crypto's Success"
 date: 2025-06-12T23:15:14.770000+00:00
 slug: asia-is-mission-critical-to-crypto-success
 draft: false
+images: ["asia-map.webp"]
 description: "Asia Crypto Ecosystem EP01 - if you cannot succeed in Asia, you cannot succeed globally"
 categories:
   - "Crypto ABC"
@@ -10,7 +11,7 @@ series:
   - "Asia Crypto Ecosystem"
 ---
 
-[![](./b6553a02-9df6-4c78-8381-0c4da54e4053_1200x686.webp)](./b6553a02-9df6-4c78-8381-0c4da54e4053_1200x686.webp)
+![Asia Map](./asia-map.webp)
 
 This is the first issue of a new series - ***Asia Crypto Ecosystem***. I will cover the importance of Asia, the challenges, tips for non-Asia teams, tips for Asia teams, and close the series with some practical suggestions for anyone interested in doing crypto in Asia.
 

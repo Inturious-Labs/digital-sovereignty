@@ -3,6 +3,7 @@ title: "Decoding the Crypto Ecosystem - EP01 - Blockchains"
 date: 2025-03-07T02:01:05.839000+00:00
 slug: decoding-the-crypto-ecosystem-ep01-blockchains
 draft: false
+images: ["trees.png"]
 description: "a primer to understand layer 1 blockchains for non-web3 folks"
 categories:
   - "Crypto ABC"
