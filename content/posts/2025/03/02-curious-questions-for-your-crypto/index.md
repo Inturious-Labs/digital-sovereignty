@@ -3,12 +3,13 @@ title: "Curious Questions for Your Crypto Friend"
 date: 2025-03-02T23:01:30.443000+00:00
 slug: curious-questions-for-your-crypto
 draft: false
+images: ["coffee-chat.webp"]
 description: "Answering is easy, but asking the right question is hard"
 categories:
   - "Crypto ABC"
 ---
 
-[![](./44308e9e-82f7-4823-86ae-b30b89da3a25_1024x768.webp)](./44308e9e-82f7-4823-86ae-b30b89da3a25_1024x768.webp)
+![coffee chat](./coffee-chat.webp)
 
 So you've heard that your friend Joe just joined a crypto company. You are with him now at a dinner party, or an alumni event, or just catching up over a beer at a bar. What kind of questions could you ask Joe that would come across as interesting, non-imposing and smart?
 

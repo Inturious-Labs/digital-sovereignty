@@ -3,7 +3,7 @@ title: "Decoding the Crypto Ecosystem - EP02 - Miners"
 date: 2025-04-22T02:19:27.452000+00:00
 slug: decoding-the-crypto-ecosystem-ep02-miners
 draft: false
-images: ["datacenter.png"]
+images: ["datacenter.jpg"]
 description: "who are the crypto miners and what do they do?"
 categories:
   - "Crypto ABC"
@@ -11,7 +11,7 @@ series:
   - "Decoding the Crypto Ecosystem"
 ---
 
-![data center](./datacenter.png)
+![data center](./datacenter.jpg)
 
 Crypto miners, in very broad strokes, keep blockchains alive.
 

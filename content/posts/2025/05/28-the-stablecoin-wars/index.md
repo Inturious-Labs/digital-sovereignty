@@ -3,12 +3,13 @@ title: "The Stablecoin Wars: Why Your Bank Might Become the Next Visa"
 date: 2025-05-28T01:44:07.751000+00:00
 slug: the-stablecoin-wars
 draft: false
+images: ["stablecoin.webp"]
 description: "From Facebook’s failed Libra to Wall Street’s looming crypto arms race - Web3 101 podcast breaks down how stablecoins could transform the future of money"
 categories:
   - "Podcast Recap"
 ---
 
-[![](./ad5c9ca4-b207-4573-97e8-cd537d09be18_1391x858.webp)](./ad5c9ca4-b207-4573-97e8-cd537d09be18_1391x858.webp)
+![Stablecoin Wars](./stablecoin.webp)
 
 **Web3 101** is growing into one of the [best crypto podcasts](https://digitalsovereignty.herbertyang.xyz/p/10-podcasts-on-tech-in-2025). If **Wu Blockchain** were the CNN for crypto - it recaps breaking events of the moment; Web3 101 would be the Atlantic or the New Yorker of crypto. The hosts are not only knowledgeable but also know how to ask the right questions in the right way (a major weakness for many podcast hosts).
 
