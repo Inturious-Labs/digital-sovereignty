@@ -3,12 +3,13 @@ title: "Rename Daily Notes in Obsidian in Bulk"
 date: 2025-03-11T06:00:42.914000+00:00
 slug: rename-daily-notes-in-obsidian-in
 draft: false
+images: ["obsidian.webp"]
 description: "convert month-day-year filenames into YYYY-MM-DD using shell script"
 categories:
   - "Digital Life"
 ---
 
-[![](./8a022066-b14e-469e-aaa8-5b16ff6ee7db_940x314.webp)](./8a022066-b14e-469e-aaa8-5b16ff6ee7db_940x314.webp)
+![obsidian](./obsidian.webp)
 
 I migrated from **Roam Research** to **Obsidian** a few years ago. Both second-brain productivity tools follow the **Zettelkasten** method to organize daily notes. So my library contains several thousand notes that are organized by dates. Roam uses the month-day-year filename convention that’s more prevalent in the United States, like “January 25th, 2023.md”.
 

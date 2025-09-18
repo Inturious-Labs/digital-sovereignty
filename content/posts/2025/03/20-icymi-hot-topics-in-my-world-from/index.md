@@ -3,12 +3,13 @@ title: "ICYMI: Hot Topics In My World from Feb 7 to Mar 19"
 date: 2025-03-20T00:01:27.891000+00:00
 slug: icymi-hot-topics-in-my-world-from
 draft: false
+images: ["odin.webp"]
 description: "discovering potential alpha in BTC, L1 blockchains, LLMs and perfect randomness"
 categories:
   - "ICYMI"
 ---
 
-[![](./93ec1685-2b2b-4080-b1fa-4ce03dc6698c_1420x1158.webp)](./93ec1685-2b2b-4080-b1fa-4ce03dc6698c_1420x1158.webp)
+![odin](./odin.webp)
 
 In case you miss it, here are the top conversations on [my Twitter](https://x.com/herbertyang) (original tweets only, not including retweets) in the last few weeks, since [February 7, 2025](https://digitalsovereignty.herbertyang.xyz/p/herberts-top-tweets-feb-7-2025). These topics received the most attention from the crypto crowd.
 

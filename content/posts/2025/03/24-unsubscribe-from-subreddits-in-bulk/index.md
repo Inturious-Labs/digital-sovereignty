@@ -3,12 +3,13 @@ title: "Unsubscribe from Subreddits in Bulk"
 date: 2025-03-24T09:01:40.968000+00:00
 slug: unsubscribe-from-subreddits-in-bulk
 draft: false
+images: ["reddit.webp"]
 description: "a handy trick that saved me 15 minutes of laborious manual button-pressing"
 categories:
   - "Digital Life"
 ---
 
-[![](./58e8eebd-4f98-4145-b8ab-9622f6ab28fa_1200x630.webp)](./58e8eebd-4f98-4145-b8ab-9622f6ab28fa_1200x630.webp)
+![reddit](./reddit.webp)
 
 One of my takeaways from listening to the recent [5-hour podcast episode of](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on) **[Lex Fridman](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on)** [interviewing](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on) **[Marc Andreessen](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on)** is that **Reddit** matters and has become even more important than ever because all the LLMs crawl its vast public archives of subreddit discussions. Goold old BBS still rocks.
 
