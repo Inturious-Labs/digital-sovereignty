@@ -3,12 +3,13 @@ title: "Stay Online When Traveling Abroad"
 date: 2025-05-12T14:48:12.494000+00:00
 slug: stay-online-when-traveling-abroad
 draft: false
+images: ["airport.webp"]
 description: "do yourself a favor and get a wi-fi roaming station at the departing airport"
 categories:
   - "Digital Life"
 ---
 
-[![](./05f05383-194f-4d9b-8e38-6d084ade3b0f_1300x867.webp)](./05f05383-194f-4d9b-8e38-6d084ade3b0f_1300x867.webp)
+![airport](./airport.webp)
 
 I travel a lot, mostly for short trips of 3-5 days in one destination country. I found that the best way to stay online on such short trips is to rent a wi-fi roaming station at the departing airport.
 

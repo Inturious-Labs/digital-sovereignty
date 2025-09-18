@@ -3,12 +3,13 @@ title: "Combine Multiple Images Into One PDF"
 date: 2025-03-17T02:00:26.099000+00:00
 slug: combine-multiple-images-into-one
 draft: false
+images: ["imagemagick.webp"]
 description: "use command-line tool to create a single PDF file from multiple screenshots"
 categories:
   - "Digital Life"
 ---
 
-[![](./2cdedc25-6174-43f6-98cf-b52e9c79a9c9_1200x675.webp)](./2cdedc25-6174-43f6-98cf-b52e9c79a9c9_1200x675.webp)
+![imagemagick](./imagemagick.webp)
 
 We nowadays take many screenshots. Sharing those images is a hassle. It would be easier to merge the images into a single PDF file. This can be done for free with a command-line tool [ImageMagick](https://imagemagick.org/index.php) on masOS, following this original guide from Stack Overflow[1](#footnote-1).
 
