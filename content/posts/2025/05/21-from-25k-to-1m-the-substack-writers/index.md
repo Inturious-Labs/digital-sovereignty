@@ -3,11 +3,12 @@ title: "From 25K to 1M+: The Substack Writers Dominating Their Fields"
 date: 2025-05-21T08:34:48.033000+00:00
 slug: from-25k-to-1m-the-substack-writers
 draft: false
+images: ["writer.webp"]
 description: "a glimpse into which categories are popular for Substack creators"
 categories:
 ---
 
-[![](./c90db8cc-ce4e-4a7c-977d-6ae7a9702bde_1748x1240.webp)](./c90db8cc-ce4e-4a7c-977d-6ae7a9702bde_1748x1240.webp)
+![writer](./writer.webp)
 
 Apparently, Substack doesn’t want to bring too much attention to [its league tables of top writers](https://substack.com/leaderboard/culture/paid). This link is hidden in an obscure corner. So I took a tour and a snapshot of all the bestselling writers that are topping the 29 categories.
 

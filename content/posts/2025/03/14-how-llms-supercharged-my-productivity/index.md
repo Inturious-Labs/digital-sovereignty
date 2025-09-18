@@ -3,12 +3,13 @@ title: "How LLMs Supercharged My Productivity"
 date: 2025-03-14T14:39:34.927000+00:00
 slug: how-llms-supercharged-my-productivity
 draft: false
+images: ["LLM.webp"]
 description: "a personal account of how AI raised my game by 100x"
 categories:
   - "AI Coding"
 ---
 
-[![](./3df61cde-7543-4206-9b4e-b4d8bd24cf75_1280x720.webp)](./3df61cde-7543-4206-9b4e-b4d8bd24cf75_1280x720.webp)
+![LLM](./LLM.webp)
 
 I was slightly skeptical about how LLMs (large language models) could find real-life use cases.
 

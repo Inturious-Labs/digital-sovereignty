@@ -3,6 +3,7 @@ title: "Run DeepSeek on MacBook Pro"
 date: 2025-01-30T09:11:53.072000+00:00
 slug: run-deepseek-on-macbook-pro
 draft: false
+images: ["deepseek.jpeg"]
 description: "Use the most advanced AI LLM on your home computer"
 categories:
   - "AI Coding"
@@ -10,7 +11,7 @@ categories:
 
 A few days ago Chinese AI startup DeepSeek released its latest R1 large language model (“LLM”) and took the whole world by surprise. It uses only a tiny fraction of the GPU machine cost of its much bigger rivals like chatGPT from OpenAI, but delivers the same or even better result. It’s open source too, so everyone can use its service for free. The world’s most valuable company NVIDIA lost nearly 17% of its market cap overnight, as R1’s superb performance suggested that piling up NVIDIA’s GPU machines to train LLMs with brute force might not the only way to advance AI.
 
-![](././98252351-50dd-4286-9fd5-dce7a9b95633_2082x1118.jpeg))
+![deepseek](./deepseek.jpeg)
 
 Yesterday I managed to deploy DeepSeek on my MacBook Pro. Here’s how I did it. It’s actually quite simple. The advantage of running an LLM on your home computer is that you can use it without relying on the servers of DeepSeek, which are currently humming full speed ahead and frequently can’t connect due to high traffic. Another benefit is that the questions you throw to DeepSeek - the prompts, will not be sent to the server and potentially be exposed to others. Your prompts reveal a lot about who you are and what you do. It’s best to keep them private on your own local machine.
 
