@@ -70,14 +70,30 @@ body {
     content: none !important;
 }
 
-:where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-    background-color: #f3f4f6 !important;
+/* Inline code styling - light gray background for visibility */
+:where(p code):not(:where([class~="not-prose"],[class~="not-prose"] *)),
+:where(li code):not(:where([class~="not-prose"],[class~="not-prose"] *)),
+:where(td code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    background-color: #e5e7eb !important;
+    color: #1f2937 !important;
     padding: 0.125rem 0.25rem !important;
     border-radius: 0.25rem !important;
     font-size: 0.875em !important;
 }
 
-.dark :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-    background-color: #374151 !important;
+.dark :where(p code):not(:where([class~="not-prose"],[class~="not-prose"] *)),
+.dark :where(li code):not(:where([class~="not-prose"],[class~="not-prose"] *)),
+.dark :where(td code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    background-color: #4b5563 !important;
+    color: #f9fafb !important;
+}
+
+/* Code block styling - no background, let syntax highlighting handle it */
+:where(pre code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    background-color: transparent !important;
+    color: inherit !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    font-size: inherit !important;
 }
   
