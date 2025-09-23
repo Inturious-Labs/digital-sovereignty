@@ -1,0 +1,41 @@
+{
+  "Insert Image with Auto Path": {
+    "prefix": "img",
+    "body": [
+      "![${1:Alt text}](./images/${2:filename}.webp)"
+    ],
+    "description": "Insert image with relative path to images folder"
+  },
+  "Insert Featured Image": {
+    "prefix": "featured",
+    "body": [
+      "![${1:Featured Image}](./featured-image.webp)"
+    ],
+    "description": "Insert featured image for social media"
+  },
+  "Insert Figure with Caption": {
+    "prefix": "figure",
+    "body": [
+      "![${1:Alt text}](./images/${2:filename}.webp)",
+      "*${3:Caption text}*"
+    ],
+    "description": "Insert figure with caption"
+  },
+  "Post Frontmatter": {
+    "prefix": "frontmatter",
+    "body": [
+      "---",
+      "title: \"${1:Post Title}\"",
+      "date: ${2:2025-09-09T10:00:00+00:00}",
+      "slug: ${3:post-slug}",
+      "draft: ${4:true}",
+      "description: \"${5:Brief description}\"",
+      "categories:",
+      "  - \"${6:category}\"",
+      "series:",
+      "  - \"${7:series}\"",
+      "---"
+    ],
+    "description": "Insert post frontmatter template"
+  }
+}
