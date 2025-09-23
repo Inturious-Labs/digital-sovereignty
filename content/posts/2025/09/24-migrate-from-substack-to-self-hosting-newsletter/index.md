@@ -1,6 +1,6 @@
 ---
 title: "Migrate from Substack to a Self-Hosting Newsletter"
-date: 2025-09-23
+date: 2025-09-24
 slug: migrate-from-substack-to-a-self-hosting-newsletter
 draft: true
 description: "detailed steps of migrating newsletter from Substack to a self-hosting technology stack that gives you complete control at every step, with ICP, Buttondown, Hugo and Stripe"
@@ -25,11 +25,11 @@ I migrated three newsletters from Substack in the last few months. Here's a walk
 
 Substack seems to use **AWS** (Amazon Web Services), evidenced by its storage of images on AWS S3 servers. Managing your own AWS EC2 instance (virtual private server) is a complex task and it can get expensive quickly. 
 
-Other hosting services like **Replit** and **Vercel** are major improvement over hugely bloated **WordPress**, but they're still centralized platforms. If you've come this far to stumble upon this article, you probably care about *decentralization* and *digital sovereignty* a lot. You might as well go all the way to the other end of the spectrum with the **Internet Computer **("IC", or "**ICP**"), a decentralized AWS that can host your website in its smart contract deployed on a blockchain.
+Other hosting services like **Replit** and **Vercel** are major improvement over hugely bloated **WordPress**, but they're still centralized platforms. If you've come this far to stumble upon this article, you probably care about *decentralization* and *digital sovereignty* a lot. You might as well go all the way to the other end of the spectrum with the **Internet Computer** ("IC", or "**ICP**"), a decentralized AWS that can host your website in its smart contract deployed on a blockchain.
 
-Why build on ICP? It's a lot cheaper and easier. You get 100% control of your content. No other tech platform can give you that claim. This might not be essential for most people, who just read and consume. For writers who want their words to become part of human history and persist for a long time, this means a lot. You think Amazon, Microsoft, Alibaba, Meta, and Google can still be around 50 years from now? Think again. I used to work for General Electric.
+Why build on ICP? It's a lot cheaper and easier. You get 100% control of your content. No other tech platform can give you that claim. This might not be essential for most people, who just read and consume. For writers who want their words to become part of human history and persist for a long time, this means a lot. You think Amazon, Microsoft, Alibaba, Meta, and Google can still be around 50 years from now? Think again.
 
-I'll explain how to build a static website on an IC canister (which is a smart contract with 400 GB stable memory, sort of a light-weighted Docker) in a future post. 
+I'll explain how to build a static website on an IC canister (which is a smart contract with `400 GB` stable memory, sort of a light-weighted Docker) in a future post. 
 
 ## Step 2: Build your own frontend
 
