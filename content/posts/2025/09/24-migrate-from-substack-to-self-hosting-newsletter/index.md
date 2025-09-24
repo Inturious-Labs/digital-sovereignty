@@ -2,7 +2,7 @@
 title: "Migrate from Substack to a Self-Hosting Newsletter"
 date: 2025-09-24
 slug: migrate-from-substack-to-a-self-hosting-newsletter
-draft: true
+draft: false
 description: "detailed steps of migrating newsletter from Substack to a self-hosting technology stack that gives you complete control at every step, with ICP, Buttondown, Hugo and Stripe"
 categories:
   - "Digital Life"
