@@ -1,0 +1,20 @@
+{
+  "editor.wordWrap": "on",
+  "editor.lineNumbers": "off",
+  "editor.minimap.enabled": false,
+  "editor.suggest.showFiles": true,
+  "editor.suggest.showFolders": true,
+  "files.associations": {
+    "*.md": "markdown"
+  },
+  "markdown.preview.breaks": true,
+  "markdown.preview.linkify": true,
+  "markdown.suggest.paths.enabled": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "index.md": "*.webp,*.jpg,*.png,*.gif"
+  },
+  "workbench.editorAssociations": {
+    "*.md": "default"
+  }
+}
