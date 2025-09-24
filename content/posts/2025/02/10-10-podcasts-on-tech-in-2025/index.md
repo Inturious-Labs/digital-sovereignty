@@ -3,6 +3,7 @@ title: "10 Podcasts on Tech in 2025"
 date: 2025-02-10T00:01:30.601000+00:00
 slug: 10-podcasts-on-tech-in-2025
 draft: false
+images: ["podcast.webp"]
 description: "the best podcasts worth listening to on AI, Web3, crypto and good old tech"
 categories:
   - "Curation Tips"
@@ -10,7 +11,7 @@ categories:
 
 Podcast has become one of my primary sources of information intake, besides Twitter, since more than ten years ago when I lived in Palo Alto, CA. In 2025, podcast is still a very potent channel for information, insight and perspectives of very high density, though its supremacy is being challenged by the rising AI LLMs that can summarize podcast episodes based on transcripts.
 
-[![](./8993dea3-0109-4f64-854e-b6ea86521212_1140x855.webp)](./8993dea3-0109-4f64-854e-b6ea86521212_1140x855.webp)
+![podcast](./podcast.webp)
 
 Some of them are getting very long - such as the recent DeepSeek episode on **Lex Fridman** that clocked at 5 hours 16 minutes, but still, the good ones are worth listening to. These are the top ones from my library:
 

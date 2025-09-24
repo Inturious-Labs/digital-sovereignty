@@ -3,12 +3,13 @@ title: "Recap of Marc Andreessen's Talk on Lex Fridman Podcast"
 date: 2025-02-21T13:12:21.508000+00:00
 slug: recap-of-marc-andreessens-talk-on
 draft: false
+images: ["andreessen.webp"]
 description: "my notes from this 5-hour electrifying conversation on Jan 27"
 categories:
   - "Podcast Recap"
 ---
 
-[![](./f8207e8d-fda6-4b56-91f1-dd1d84a1c385_2000x1000.webp)](./f8207e8d-fda6-4b56-91f1-dd1d84a1c385_2000x1000.webp)
+![Andreessen](./andreessen.webp)
 
 Marc Andreessen has been on a roll lately, from Joe Rogan to Lex Fridman to Patrick O'Shaughnessy. This episode on Fridman recorded on January 27 is the longest one, clocking at 5h:16m. It talks about America’s new spirit, Wokeness, “thought criminals”, DEI, problems at universities, affirmative action, and AI. Andreessen is very bullish on America’s future. I took down some notes that I found useful and insightful. The original, full transcript can be found [here](https://lexfridman.com/marc-andreessen-2-transcript).
 
