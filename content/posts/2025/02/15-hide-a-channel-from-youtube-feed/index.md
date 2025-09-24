@@ -3,12 +3,13 @@ title: "Hide a Channel from Youtube Feed"
 date: 2025-02-15T15:01:25.890000+00:00
 slug: hide-a-channel-from-youtube-feed
 draft: false
+images: ["youtube.webp"]
 description: "surprisingly, this is harder than you think"
 categories:
   - "Digital Life"
 ---
 
-[![](./fb4095a8-2807-4fc2-88df-58757cd61e0e_1400x916.webp)](./fb4095a8-2807-4fc2-88df-58757cd61e0e_1400x916.webp)
+![youtube](./youtube.webp)
 
 The rise of the AI age brings about an unpleasant side effect (among many others), that is, fake movie trailers.
 

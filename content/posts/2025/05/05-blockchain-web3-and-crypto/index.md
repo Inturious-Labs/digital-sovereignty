@@ -3,12 +3,13 @@ title: "Blockchain, Web3 and Crypto"
 date: 2025-05-05T12:03:18.794000+00:00
 slug: blockchain-web3-and-crypto
 draft: false
+images: ["blockchain.webp"]
 description: "when and how to use the three amigos in different contexts"
 categories:
   - "Crypto ABC"
 ---
 
-[![](./cbdb28da-3964-4e02-bb1d-8cff03f22a40_1200x800.webp)](./cbdb28da-3964-4e02-bb1d-8cff03f22a40_1200x800.webp)
+![blockchain](./blockchain.webp)
 
 It's confusing to look at these three terms. They seem to talk about the same thing, or do they? Sometimes they are used almost interchangeably. What's the difference then?
 

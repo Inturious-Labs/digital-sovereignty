@@ -3,12 +3,13 @@ title: "Recap of Lex Fridman's Podcast on DeepSeek and AI"
 date: 2025-02-11T23:01:08.234000+00:00
 slug: recap-of-lex-fridmans-podcast-on
 draft: false
+images: ["deepseek.webp"]
 description: "key takeaways from Lex Fridman's 5-hour podcast on February 3 with Dylan Patel and Nathan Lambert on all things DeepSeek, AI, OpenAI, NVIDIA, xAI, TSMC, Stargate and AI Megaclusters"
 categories:
   - "Podcast Recap"
 ---
 
-[![](./20694118-7678-4333-9b42-0b999f2bec71_1280x720.webp)](./20694118-7678-4333-9b42-0b999f2bec71_1280x720.webp)
+![deepseek](./deepseek.webp)
 
 This 5-hour interview must be the longest podcast episode I’ve listened to, but it’s still worth it. Below are my notes. They’re not meant to be a verbatim summary to capture every word they uttered. I only took what I found useful. You can find the full transcript [here](https://lexfridman.com/deepseek-dylan-patel-nathan-lambert-transcript).
 
