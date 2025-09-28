@@ -88,6 +88,9 @@
   <!-- generator -->
   {{- hugo.Generator -}}
 
+  <!-- canonical URL: always generate for SEO -->
+  <link rel="canonical" href="{{- .Permalink -}}" />
+
   <!-- production -->
   {{- if or hugo.IsProduction (eq site.Params.env "production") -}}
   <!---->
@@ -107,9 +110,6 @@
     title="{{- site.Title -}}"
   />
   {{- end -}}
-
-  <!-- canonical -->
-  <link rel="canonical" href="{{- .Permalink -}}" />
   {{- end -}}
   <!---->
 </head>
