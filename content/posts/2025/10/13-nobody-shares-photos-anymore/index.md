@@ -1,8 +1,8 @@
 ---
 title: "Nobody Shares Photos Anymore"
-date: 2099-12-31T00:00:00+08:00
+date: 2025-10-13T12:00:00+08:00
 slug: nobody-shares-photos-anymore
-draft: true
+draft: false
 description: "photo sharing is becoming a dying art, and what caused the death of the photographer"
 categories:
   - "Digital Life"
