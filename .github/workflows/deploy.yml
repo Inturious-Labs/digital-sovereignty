@@ -13,6 +13,9 @@ on:
       - 'README.md'
       - 'docs/**'
       - 'data/**'
+  schedule:
+    # Run daily at 12:00 UTC (8:00 PM Shanghai time) to publish scheduled posts
+    - cron: '0 12 * * *'
 
 jobs:
   deploy:
