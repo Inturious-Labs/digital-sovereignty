@@ -30,7 +30,7 @@ googleAnalytics = "G-JFQFKNFFR7"
   description = "I break down complex crypto concepts into simple terms, explore data hacks toward digital sovereignty, analyze little-known tech breakthroughs, and share my notes from tech podcasts"
 
   # SEO and Google Search Console
-  googleSiteVerification = ""  # Add your GSC verification code here
+  googleSiteVerification = "EUfZMwldx_-h0IaT9wYRkBB1hJ_LSoO5LDY3-Gu9zZU"  # Add your GSC verification code here
 
   # Social Media and SEO
   enableOpenGraph = true
