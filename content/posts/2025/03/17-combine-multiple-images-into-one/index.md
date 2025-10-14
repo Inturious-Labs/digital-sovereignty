@@ -7,6 +7,7 @@ images: ["imagemagick.webp"]
 description: "use command-line tool to create a single PDF file from multiple screenshots"
 categories:
   - "Digital Life"
+enable_rapport: true
 ---
 
 ![imagemagick](./imagemagick.webp)

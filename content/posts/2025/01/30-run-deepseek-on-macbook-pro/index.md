@@ -7,6 +7,7 @@ images: ["deepseek.jpeg"]
 description: "Use the most advanced AI LLM on your home computer"
 categories:
   - "AI Coding"
+enable_rapport: true
 ---
 
 A few days ago Chinese AI startup DeepSeek released its latest R1 large language model (“LLM”) and took the whole world by surprise. It uses only a tiny fraction of the GPU machine cost of its much bigger rivals like chatGPT from OpenAI, but delivers the same or even better result. It’s open source too, so everyone can use its service for free. The world’s most valuable company NVIDIA lost nearly 17% of its market cap overnight, as R1’s superb performance suggested that piling up NVIDIA’s GPU machines to train LLMs with brute force might not the only way to advance AI.

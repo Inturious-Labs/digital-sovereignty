@@ -7,6 +7,7 @@ images: ["obsidian.webp"]
 description: "convert month-day-year filenames into YYYY-MM-DD using shell script"
 categories:
   - "Digital Life"
+enable_rapport: true
 ---
 
 ![obsidian](./obsidian.webp)

@@ -7,6 +7,7 @@ images: ["twitter-spaces.webp"]
 description: "take data ownership of Twitter Spaces audio files forever"
 categories:
   - "Digital Life"
+enable_rapport: true
 ---
 
 ![Twitter Spaces](./twitter-spaces.webp)

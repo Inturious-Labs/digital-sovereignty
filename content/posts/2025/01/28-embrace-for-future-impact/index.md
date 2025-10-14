@@ -6,6 +6,8 @@ draft: false
 images: ["pills.webp"]
 description: "why I want to create this newsletter"
 categories:
+  - "Digital Life"
+enable_rapport: true
 ---
 
 This newsletter is a journal of the tools and web services I use on my mission to become one of the first individuals to achieve full digital sovereignty.
