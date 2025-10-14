@@ -5,12 +5,14 @@ on:
     branches: [ main ]
     paths-ignore:
       - 'README.md'
+      - 'PLAN.md'
       - 'docs/**'
       - 'data/**'
   pull_request:
     branches: [ main ]
     paths-ignore:
       - 'README.md'
+      - 'PLAN.md'
       - 'docs/**'
       - 'data/**'
   schedule:
