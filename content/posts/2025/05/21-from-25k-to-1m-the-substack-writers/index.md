@@ -6,6 +6,7 @@ draft: false
 images: ["writer.webp"]
 description: "a glimpse into which categories are popular for Substack creators"
 categories:
+enable_rapport: true
 ---
 
 ![writer](./writer.webp)

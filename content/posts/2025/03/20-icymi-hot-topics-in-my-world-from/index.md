@@ -7,6 +7,7 @@ images: ["odin.webp"]
 description: "discovering potential alpha in BTC, L1 blockchains, LLMs and perfect randomness"
 categories:
   - "ICYMI"
+enable_rapport: true
 ---
 
 ![odin](./odin.webp)

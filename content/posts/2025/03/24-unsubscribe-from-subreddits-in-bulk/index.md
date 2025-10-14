@@ -7,6 +7,7 @@ images: ["reddit.webp"]
 description: "a handy trick that saved me 15 minutes of laborious manual button-pressing"
 categories:
   - "Digital Life"
+enable_rapport: true
 ---
 
 ![reddit](./reddit.webp)
