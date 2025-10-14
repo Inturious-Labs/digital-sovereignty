@@ -7,6 +7,7 @@ images: ["web3-101.webp"]
 description: "notes from podcast Web3 101's interview of Pima, a legendary crypto OG"
 categories:
   - "Podcast Recap"
+enable_rapport: true
 ---
 
 ![Web3 101 podcast](./web3-101.webp)
@@ -114,6 +115,3 @@ Pima offers very thought-provoking insights. It’s a great conversation that wo
 
 I was mildly surprised that when they discussed which blockchain would challenge Solana’s speed and cost, neither Liu Feng or Pima seemed to remember there is another major L1 blockchain the Internet Computer (“ICP”). I met Liu Feng at ICP’s highly-anticipated road show in Shanghai in May 2021 before its mainnet launch and Pima was once very favorable on ICP too. Guess they have moved on.
 
----
-
-Digital Sovereignty Chronicle is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.

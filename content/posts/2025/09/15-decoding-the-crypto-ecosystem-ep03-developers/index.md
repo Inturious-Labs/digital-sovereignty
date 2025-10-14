@@ -10,6 +10,7 @@ series:
   - "Decoding the Crypto Ecosystem"
 keywords: ["crypto", "blockchain", "dApp", "developers", "startup founders"]
 images: ["developer.jpg"]
+enable_rapport: true
 ---
 
 <!-- Featured image for social media -->
@@ -59,7 +60,3 @@ In Web3, very few projects can achieve such an exalted superapp status that make
 A L1 blockchain loves those developers who build exclusively on its chain, so that the chain can claim "this killer app was born natively from our chain". Developers on the other hand, often go on mating dances with other blockchains, just to get more grants to survive to another day. 
 
 There is no right or wrong in this relationship. They both need each other to grow to the point of mass adoption. They grumble about unequivocal love and reluctantly hold hands together at the next Token2049 event.
-
----
-
-*Published in [Digital Sovereignty Chronicle](https://digitalsovereignty.herbertyang.xyz/) - Breaking down complex crypto concepts, exploring digital sovereignty, and sharing insights from the frontier of decentralized technology.*

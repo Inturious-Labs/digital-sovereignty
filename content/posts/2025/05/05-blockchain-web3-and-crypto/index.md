@@ -7,6 +7,7 @@ images: ["blockchain.webp"]
 description: "when and how to use the three amigos in different contexts"
 categories:
   - "Crypto ABC"
+enable_rapport: true
 ---
 
 ![blockchain](./blockchain.webp)

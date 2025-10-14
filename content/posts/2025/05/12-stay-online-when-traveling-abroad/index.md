@@ -7,6 +7,7 @@ images: ["airport.webp"]
 description: "do yourself a favor and get a wi-fi roaming station at the departing airport"
 categories:
   - "Digital Life"
+enable_rapport: true
 ---
 
 ![airport](./airport.webp)

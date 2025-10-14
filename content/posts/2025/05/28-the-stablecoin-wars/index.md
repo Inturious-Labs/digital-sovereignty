@@ -7,6 +7,7 @@ images: ["stablecoin.webp"]
 description: "From Facebook’s failed Libra to Wall Street’s looming crypto arms race - Web3 101 podcast breaks down how stablecoins could transform the future of money"
 categories:
   - "Podcast Recap"
+enable_rapport: true
 ---
 
 ![Stablecoin Wars](./stablecoin.webp)
