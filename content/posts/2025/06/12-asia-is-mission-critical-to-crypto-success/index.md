@@ -9,6 +9,7 @@ categories:
   - "Crypto ABC"
 series:
   - "Asia Crypto Ecosystem"
+enable_rapport: true
 ---
 
 ![Asia Map](./asia-map.webp)
@@ -128,7 +129,3 @@ In 2025, the landscape for L1 blockchains is more or less settled. The existing 
 Asia is mission-critical in all five pillars of the crypto ecosystem: **blockchains**, **exchanges**, **developers**, **users**, and **dApps**. Companies that are willing to overcome cultural and geographical barriers and invest in Asia will be rewarded in the long run. The jury is still out there.
 
 Can't wait to find out in five years.
-
----
-
-Digital Sovereignty Chronicle is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.

@@ -8,6 +8,7 @@ categories:
   - "Digital Life"
 images: ["photo-sharing.jpg"]
 keywords: ["photo sharing", "flickr", "dreamstime", "Leica", "Instagram", "Wechat", "RedNote"]
+enable_rapport: true
 ---
 
 <!-- Featured image for social media -->
@@ -44,7 +45,3 @@ Despite all the odds, I refuse to surrender.
 I think there could be a way to resurrect that past glory. There must be a way for independent content creators to thrive. AI has been a game-changer. It just needs to be used the right way.
 
 I'll explain how this is possible in my next post. Stay tuned.
-
----
-
-*Published in [Digital Sovereignty Chronicle](https://digitalsovereignty.herbertyang.xyz/) - Breaking down complex crypto concepts, exploring digital sovereignty, and sharing insights from the frontier of decentralized technology.*

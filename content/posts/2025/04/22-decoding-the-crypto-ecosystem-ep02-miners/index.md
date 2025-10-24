@@ -9,6 +9,7 @@ categories:
   - "Crypto ABC"
 series:
   - "Decoding the Crypto Ecosystem"
+enable_rapport: true
 ---
 
 ![data center](./datacenter.jpg)

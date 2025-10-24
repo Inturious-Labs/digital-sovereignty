@@ -7,6 +7,7 @@ images: ["coffee-chat.webp"]
 description: "Answering is easy, but asking the right question is hard"
 categories:
   - "Crypto ABC"
+enable_rapport: true
 ---
 
 ![coffee chat](./coffee-chat.webp)
