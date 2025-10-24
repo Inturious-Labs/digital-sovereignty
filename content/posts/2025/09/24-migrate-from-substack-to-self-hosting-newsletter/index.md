@@ -8,6 +8,7 @@ categories:
   - "Digital Life"
 images: ["hero-image.jpg"]
 keywords: ["Substack", "Hugo", "dfx", "ICP", "canister", "Internet Computer", "Buttondown", "Stripe", "RSS", "Claude Code", "Cursor", "AWS"]
+enable_rapport: true
 ---
 
 <!-- Featured image for social media -->
@@ -114,7 +115,3 @@ It's mainly `sitemap.xml `and `robots.txt`.  [Google Search Console](https://sea
 Though my site keeps the same URL links through this Substack migration, Google still seems to discriminate its pages. I have the feeling that Substack has left a bad taste for Google. It might take a while for Google's crawling bots to realize this site has quietly replaced its engine and is now just a harmless writer who wants to acquire his own 1,000 fans with no ambition to turn that into a VC-backed multi-billion behemoth. 
 
 I am glad I left Substack early. I would have accumulated too much technical debt had I not completed this sooner. Way to go!
-
----
-
-*Published in [Digital Sovereignty Chronicle](https://digitalsovereignty.herbertyang.xyz/) - Breaking down complex crypto concepts, exploring digital sovereignty, and sharing insights from the frontier of decentralized technology.*

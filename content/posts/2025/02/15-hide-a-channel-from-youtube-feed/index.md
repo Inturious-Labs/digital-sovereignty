@@ -7,6 +7,7 @@ images: ["youtube.webp"]
 description: "surprisingly, this is harder than you think"
 categories:
   - "Digital Life"
+enable_rapport: true
 ---
 
 ![youtube](./youtube.webp)

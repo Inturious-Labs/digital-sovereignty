@@ -7,6 +7,7 @@ images: ["foundation.jpg"]
 description: "what is a non-profit foundation in crypto and what it does"
 categories:
   - "Crypto ABC"
+enable_rapport: true
 ---
 
 ![Non-Profit Foundation](./foundation.jpg)

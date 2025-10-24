@@ -7,6 +7,7 @@ description: "why I left Substack after six months and migrated my writing and c
 categories:
   - "Digital Life"
 images: ["eagle-fly-away.jpg"]
+enable_rapport: true
 ---
 
 <!-- Featured image for social media -->
@@ -67,7 +68,3 @@ My writing loop is now 100% offline. The only time it needs Internet access is w
 Now I feel at home. 
 
 I'll write more on this journey to Terminus. Stayed tuned.
-
----
-
-*Published in [Digital Sovereignty Chronicle](https://digitalsovereignty.herbertyang.xyz/) - Breaking down complex crypto concepts, exploring digital sovereignty, and sharing insights from the frontier of decentralized technology.*

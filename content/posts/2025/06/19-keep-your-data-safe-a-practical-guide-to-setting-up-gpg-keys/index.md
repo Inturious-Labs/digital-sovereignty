@@ -7,6 +7,7 @@ images: ["vault.jpeg"]
 description: "a step-by-step guide to use GNU Privacy Guard protocol to securely send and receive messages/data on the Internet"
 categories:
   - "Digital Life"
+enable_rapport: true
 ---
 
 ![hero](./vault.jpeg)
@@ -152,7 +153,3 @@ Dada! Congratulations! This is the first step toward your digital sovereignty.
 ***Useful References:***
 
 <https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key>
-
----
-
-Digital Sovereignty Chronicle is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.

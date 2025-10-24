@@ -7,6 +7,7 @@ images: ["LLM.webp"]
 description: "a personal account of how AI raised my game by 100x"
 categories:
   - "AI Coding"
+enable_rapport: true
 ---
 
 ![LLM](./LLM.webp)

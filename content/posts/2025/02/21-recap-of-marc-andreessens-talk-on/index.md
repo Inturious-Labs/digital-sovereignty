@@ -7,6 +7,7 @@ images: ["andreessen.webp"]
 description: "my notes from this 5-hour electrifying conversation on Jan 27"
 categories:
   - "Podcast Recap"
+enable_rapport: true
 ---
 
 ![Andreessen](./andreessen.webp)
