@@ -36,4 +36,4 @@ I could never find those few hours.
 
 Deleting incremental new emails is considerably easier. For the old ones, just let them sit there. There is usually no pressing urgency to sort them out anyway.
 
-... but no more red dot in the last ten minutes. Nobody loves me anymore? 😓🤔☹️🙄
+But no more red dots in the last ten minutes. Nobody loves me anymore? 😓🤔☹️🙄
