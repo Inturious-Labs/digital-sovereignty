@@ -20,7 +20,3 @@ series:
 ## Main Content
 
 ## Conclusion
-
----
-
-*Published in [Digital Sovereignty Chronicle](https://digitalsovereignty.herbertyang.xyz/) - Breaking down complex crypto concepts, exploring digital sovereignty, and sharing insights from the frontier of decentralized technology.*
