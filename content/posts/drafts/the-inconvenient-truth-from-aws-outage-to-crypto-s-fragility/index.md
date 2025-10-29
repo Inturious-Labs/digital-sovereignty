@@ -71,7 +71,3 @@ So the question becomes, in the spirit of antifragility, where should you deploy
 While most people hang on to AWS because they don't know any better, I am fortunate to work in a very edgy frontier industry where a paradigm shift is quietly brewing. I will place my bet on a truly decentralized blockchain platform. This nascent industry is still volatile and tender, but it has shown promising signs of a different kind of Internet, the one where sovereignty aligns with creativity and economic rewards align with proof of effort. 
 
 Let's see who will have the last laugh, 100 years from now.
-
----
-
-*Published in [Digital Sovereignty Chronicle](https://digitalsovereignty.herbertyang.xyz/) - Breaking down complex crypto concepts, exploring digital sovereignty, and sharing insights from the frontier of decentralized technology.*
