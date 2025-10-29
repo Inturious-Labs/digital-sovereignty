@@ -119,4 +119,13 @@ pre code {
     color: #d4af37 !important; /* Golden text for contrast */
     border-color: #525252 !important; /* Subtle border */
 }
-  
+
+/* Remove quotation marks from blockquotes and italic styling */
+blockquote {
+    font-style: normal !important;
+}
+
+blockquote p:first-of-type::before,
+blockquote p:last-of-type::after {
+    content: none !important;
+}
