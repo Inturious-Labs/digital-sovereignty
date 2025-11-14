@@ -20,7 +20,7 @@ googleAnalytics = "G-JFQFKNFFR7"
 
   # Your information
   name = 'Herbert Yang'
-  bio = 'investor/writer/builder/evangelist on AI, crypto, decentralization, and a journey toward digital sovereignty'
+  bio = 'practical insights on crypto, AI, web3, decentralization, and data sovereignty'
 
   # Favicon settings (Paper theme uses different param names)
   favicon = "img/favicon.ico"
@@ -35,6 +35,9 @@ googleAnalytics = "G-JFQFKNFFR7"
   # Social Media and SEO
   enableOpenGraph = true
   enableTwitterCards = true
+
+  # Default hero image for social media sharing (Open Graph and Twitter Cards)
+  images = ["img/hero.jpeg"]
 
   # Copyright notice
   copyright = "© 2025 Herbert Yang. All rights reserved."
