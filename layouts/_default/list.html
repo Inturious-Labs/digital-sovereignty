@@ -15,6 +15,20 @@
 {{- $paginator := .Paginate $pages -}} {{- range $index, $page :=
 $paginator.Pages -}}<!---->
 
+<!-- Hero Image -->
+{{- if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) -}}<!---->
+{{- if site.Params.images -}}
+<div class="mb-12 -mt-2">
+  <img
+    src="{{- index site.Params.images 0 | absURL -}}"
+    alt="{{- site.Title -}}"
+    class="w-full h-auto rounded-lg"
+    style="max-height: 400px; object-fit: cover;"
+  />
+</div>
+{{- end -}}
+{{- end -}}
+
 <!-- avatar -->
 {{- if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) -}}<!---->
 
@@ -44,6 +58,12 @@ $paginator.Pages -}}<!---->
   </div>
   {{- end -}}
 </div>
+
+<!-- Newsletter Signup -->
+<div class="mt-8 mb-8">
+  {{- partial "newsletter-signup.html" . -}}
+</div>
+
 {{- end -}}<!---->
 
 {{- end -}}
