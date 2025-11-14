@@ -21,6 +21,8 @@ googleAnalytics = "G-JFQFKNFFR7"
   # Your information
   name = 'Herbert Yang'
   bio = 'practical insights on crypto, AI, web3, decentralization, and data sovereignty'
+  twitter = 'herbertyang'
+  github = 'https://github.com/Inturious-Labs/digital-sovereignty'
 
   # Favicon settings (Paper theme uses different param names)
   favicon = "img/favicon.ico"
