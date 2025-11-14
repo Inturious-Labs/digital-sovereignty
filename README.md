@@ -1,50 +1,58 @@
 # README
 
+[![Deploy to IC Mainnet](https://github.com/Inturious-Labs/digital-sovereignty/actions/workflows/deploy.yml/badge.svg)](https://github.com/Inturious-Labs/digital-sovereignty/actions/workflows/deploy.yml)
+
+## Live Site
+
+- **Production URL**: [https://digitalsovereignty.herbertyang.xyz](https://digitalsovereignty.herbertyang.xyz)
+- **Internet Computer Canister**: [https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io](https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io)
+- **Canister ID**: `wupbw-2aaaa-aaaae-abn7a-cai`
+
 ## dfx commands
 
 Switch to the correct identity:
 
 ```
 dfx identity list
-dfx identity use guizishanren
+dfx identity use <identity-name>
 dfx identity whoami
 ```
 
-Get the principal `lxmxz-3fjoo-5fcay-obm3a-3jk4a-r4ztf-sgvy5-w2pkk-ovwor-hf42s-7ae` for identity `guizishanren`:
+Get the principal for your identity:
 
 ```
 dfx identity get-principal
 ```
 
-Check the ICP balance and the account ID for the identity canister `guizishanren`:
+Check the ICP balance and the account ID for your identity:
 
 ```
 dfx ledger --network ic balance
 ```
 
-Check the account ID `0e5dc971adc229513ae59e5a8c83864dbf4d296d32306360ffd6bde154dab793` (for ICP transfer) for the identity canister `guizishanren`:
+Check the account ID (for ICP transfer) for your identity:
 
 ```
 dfx ledger --network ic account-id
 ```
 
-Check the cycles balance for the identity canister `guizishanren`:
+Check the cycles balance for your identity:
 
 ```
 dfx cycles --network ic balance
 ```
 
-Transfer some $ICP into account `0e5dc...b793` and verify the balance has been topped up with `dfx ledger`. 
+Transfer some $ICP into your account and verify the balance has been topped up with `dfx ledger`.
 
-Then, convert $ICP into cycles from the ledger account to cycles account for this identity `guizishanren`:
+Then, convert $ICP into cycles from the ledger account to cycles account for your identity:
 
 ```
 dfx cycles convert --network ic --amount 1
 ```
 
-Verify that the ICP balance has been deducted with `dfx ledger` and that cycles balance has been topped up with `dfx cycles`. 
+Verify that the ICP balance has been deducted with `dfx ledger` and that cycles balance has been topped up with `dfx cycles`.
 
-## Content Management Scripts
+## Substack Migration Scripts
 
 This project includes several utility scripts for managing content and converting image formats. All scripts are located in the `scripts/` directory.
 
@@ -134,87 +142,6 @@ This project includes several utility scripts for managing content and convertin
 - **Flexible**: Specify any folder path as needed
 
 **Note**: Always run these scripts from the project root directory (`digital-sovereignty/`).
-
-## Hugo Development Workflow
-
-### Local Development Preview
-
-To preview your site locally with correct localhost URLs, use the master writing workflow:
-
-```bash
-# Start local development server
-./scripts/write preview
-```
-
-**Important**: Always use `./scripts/write preview` instead of `hugo serve` directly. The preview command automatically:
-- Sets the correct localhost baseURL (`http://localhost:1313`)
-- Includes draft posts (`-D` flag)
-- Binds to all interfaces for network access
-- Preserves production URLs in sitemap for SEO
-
-### Other Writing Commands
-
-```bash
-# Create new post
-./scripts/write new "Post Title" [category]
-
-# Edit existing post
-./scripts/write edit "Post Title"
-
-# Publish post
-./scripts/write publish "Post Title"
-
-# Check session status
-./scripts/write status
-```
-
-## Configure Custom Domains
-
-1. Follow this guide to create `ALIAS`, `CNAME`, and `TXT` records on the domain registrar for the domain or subdomain:
-
-https://internetcomputer.org/docs/building-apps/frontends/custom-domains/dns-setup
-
-Note: for the subdomain `example`, this record `example.ic-domain.live.icp1.io` can only be created with a `CNAME` record, NOT the `ALIAS` record that the guide suggests.
-
-2. Follow this guide to create `.well-known` folder,  `id-domains` file, and `.ic-assets.json5` file on the dfx folder. For a hugo site, the output folder is `public/`, which is regenerated every time hugo deploys. So these dfx-specific files should be placed in `static/` folder. All contents in `static/` are copied directly into `public/` when hugo re-deploys the site. 
-
-https://internetcomputer.org/docs/building-apps/frontends/custom-domains/using-custom-domains
-
-3. Deploy the canister
-
-4. Register the domain with the HTTP gateways by issuing the following command and replacing CUSTOM_DOMAIN with your custom domain:
-
-```
-curl -sL -X POST \
-    -H 'Content-Type: application/json' \
-    https://icp0.io/registrations \
-    --data @- <<EOF
-    {
-      "name": "CUSTOM_DOMAIN"
-    }
-EOF
-```
-
-5. If the call is successful, you'll get a JSON response:
-
-```
-{"id":"REQUEST_ID"}
-```
-
-6. Track the progress of your registration with this command:
-
-```
-curl -sL -X GET \
-    https://icp0.io/registrations/REQUEST_ID
-```
-
-7. Check the DNS record for the domain:
-
-```
-dig yourdomain.xyz CNAME
-dig yourdomain.xyz TXT
-dig yourdomain.xyz ALIAS
-```
 
 ## Git Branching Strategy
 
