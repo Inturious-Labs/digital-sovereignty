@@ -20,7 +20,7 @@ googleAnalytics = "G-JFQFKNFFR7"
 
   # Your information
   name = 'Herbert Yang'
-  bio = 'front-row view on decentralization, crypto dApps, web3 innovation, blockchain technology, ecosystem growth, AI, and digital sovereignty'
+  bio = 'practical insights on crypto, AI, web3, decentralization, and data sovereignty'
 
   # Favicon settings (Paper theme uses different param names)
   favicon = "img/favicon.ico"
