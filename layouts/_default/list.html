@@ -18,7 +18,7 @@ $paginator.Pages -}}<!---->
 <!-- Hero Image -->
 {{- if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) -}}<!---->
 {{- if site.Params.images -}}
-<div class="mb-12 -mt-2">
+<div class="mb-6" style="margin-top: -5rem;">
   <img
     src="{{- index site.Params.images 0 | absURL -}}"
     alt="{{- site.Title -}}"
@@ -34,7 +34,7 @@ $paginator.Pages -}}<!---->
 
 {{- $avatar_url := $.Scratch.Get "avatar_url" -}}<!---->
 {{- if or $avatar_url site.Params.name -}}
-<div class="-mt-2 mb-12 flex items-center">
+<div class="-mt-2 mb-4 flex items-center">
   {{- if $avatar_url -}}
   <div
     class="h-24 w-24 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 ltr:mr-5 ltr:-ml-1 rtl:-mr-1 rtl:ml-5 dark:bg-white/90!"
@@ -46,16 +46,10 @@ $paginator.Pages -}}<!---->
     />
   </div>
   {{- end -}}<!---->
-  {{- if site.Params.name -}}
-  <div>
-    <div class="mt-3 mb-1 text-xl font-normal antialiased opacity-60">
-      <a href="/about/" class="hover:opacity-80 transition-opacity no-underline">{{- site.Params.name -}}</a>
-    </div>
+  {{- if site.Params.bio -}}
     <div class="break-words text-xs antialiased opacity-60" style="font-style: italic !important;">
-      {{- site.Params.bio | default (print `A personal blog by `
-      site.Params.name) -}}
+      {{- site.Params.bio -}}
     </div>
-  </div>
   {{- end -}}
 </div>
 
