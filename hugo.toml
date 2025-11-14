@@ -36,6 +36,9 @@ googleAnalytics = "G-JFQFKNFFR7"
   enableOpenGraph = true
   enableTwitterCards = true
 
+  # Default hero image for social media sharing (Open Graph and Twitter Cards)
+  images = ["img/hero.jpeg"]
+
   # Copyright notice
   copyright = "© 2025 Herbert Yang. All rights reserved."
   
