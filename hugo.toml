@@ -3,7 +3,7 @@ title = "Digital Sovereignty Chronicle"
 languageCode = "en"
 timeZone = "Asia/Shanghai"
 theme = "paper"
-enableRobotsTXT = true
+enableRobotsTXT = false
 canonifyURLs = true
 googleAnalytics = "G-JFQFKNFFR7" 
 
