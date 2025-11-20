@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Decoding the Crypto Ecosystem on Digital Sovereignty Chronicle</title>
+    <link>https://digitalsovereignty.herbertyang.xyz/series/decoding-the-crypto-ecosystem/</link>
+    <description>Recent content in Decoding the Crypto Ecosystem on Digital Sovereignty Chronicle</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://digitalsovereignty.herbertyang.xyz/series/decoding-the-crypto-ecosystem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Decoding the Crypto Ecosystem - EP03 - Developers</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep03-developers/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0800</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep03-developers/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;./developer.jpg&#34; alt=&#34;Featured Image&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Previously from &lt;strong&gt;Decoding the Crypto Ecosystem Series&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains&#34;&gt;EP01 - Blockchains&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep02-miners/&#34;&gt;EP02 - Miners&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Developers build applications. In the crypto industry, they build decentralized applications, or dApps. In traditional Silicon Valley, &amp;ldquo;startup founders&amp;rdquo; get a lot more attention, especially when they attend Y Combinator&amp;rsquo;s Demo Day event or are mentioned in Forbes&amp;rsquo; &amp;ldquo;30-under-30&amp;rdquo; list. &amp;ldquo;Code is law&amp;rdquo; is the mantra in the crypto business, and the cypherpunk culture is deeply rooted in the community&amp;rsquo;s emo.  Therefore, developers, who are by definition coders, are the darlings of crypto. They carry all the hope and inspiration.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Decoding the Crypto Ecosystem - EP02 - Miners</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep02-miners/</link>
+      <pubDate>Tue, 22 Apr 2025 02:19:27 +0000</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep02-miners/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;./datacenter.jpg&#34; alt=&#34;data center&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Crypto miners, in very broad strokes, keep blockchains alive.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Previously from &lt;strong&gt;Decoding the Crypto Ecosystem Series&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains&#34;&gt;EP01 - Blockchains&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-do-they-do&#34;&gt;What do they do&lt;/h2&gt;&#xA;&lt;p&gt;Miners can be split into validators and node operators. Generally speaking, they spend computational resources to participate in a race to calculate some mathematical algorithms that are very hard to solve but very easy to verify. When they successfully produce a new block, this blockchain&amp;rsquo;s height is increased by one; more data from applications that are running on this blockchain can be written into this new block (and become immutable); the blockchain continues its growth and survives for another day.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Decoding the Crypto Ecosystem - EP01 - Blockchains</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains/</link>
+      <pubDate>Fri, 07 Mar 2025 02:01:05 +0000</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;./banyan-trees.jpg&#34; alt=&#34;Banyan tree&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;Crypto has grown into a $3 trillion industry with thousands of blockchains, tens of thousands of dApps, and millions of tokens. For anyone interested in this industry, it would be helpful to first understand who are the different players and stakeholders in crypto, what they do, what are their motivations, and how they interact with each other.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m starting a series called &amp;ldquo;&lt;em&gt;&lt;strong&gt;Decoding the Crypto Ecosystem&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; with 12 episodes. Each episode covers a major ecosystem player/stakeholder. They are:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

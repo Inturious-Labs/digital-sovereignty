@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Block crawlers from draft content and admin areas
+Disallow: /admin/
+Disallow: /*draft*
+Disallow: /*.json$
+
+# Important: Point to sitemap
+Sitemap: https://digitalsovereignty.herbertyang.xyz/sitemap.xml
+
+# Additional crawl optimization
+Crawl-delay: 1
+
+# Allow popular bots explicitly
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

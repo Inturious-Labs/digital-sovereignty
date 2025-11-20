@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Coding on Digital Sovereignty Chronicle</title>
+    <link>https://digitalsovereignty.herbertyang.xyz/categories/ai-coding/</link>
+    <description>Recent content in AI Coding on Digital Sovereignty Chronicle</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Mar 2025 14:39:34 +0000</lastBuildDate>
+    <atom:link href="https://digitalsovereignty.herbertyang.xyz/categories/ai-coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How LLMs Supercharged My Productivity</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/p/how-llms-supercharged-my-productivity/</link>
+      <pubDate>Fri, 14 Mar 2025 14:39:34 +0000</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/p/how-llms-supercharged-my-productivity/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;./LLM.webp&#34; alt=&#34;LLM&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I was slightly skeptical about how LLMs (large language models) could find real-life use cases.&lt;/p&gt;&#xA;&lt;p&gt;I have been a keen observer of this second coming of the AI revolution that was ignited in November 2022 by OpenAI&amp;rsquo;s release of chatGPT. It&amp;rsquo;s a super hot topic in Web3. I talk about it extensively in public speeches, Twitter Spaces AMAs, and panel discussions. I&amp;rsquo;ve been involved in several AI startups. AI has dominated the airwave everywhere, from the streets of San Francisco to the lakeside of Hangzhou. All my friends in tech are discussing it non-stop and many are fretting about the imminent arrival of AGI.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Run DeepSeek on MacBook Pro</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/p/run-deepseek-on-macbook-pro/</link>
+      <pubDate>Thu, 30 Jan 2025 09:11:53 +0000</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/p/run-deepseek-on-macbook-pro/</guid>
+      <description>&lt;p&gt;A few days ago Chinese AI startup DeepSeek released its latest R1 large language model (“LLM”) and took the whole world by surprise. It uses only a tiny fraction of the GPU machine cost of its much bigger rivals like chatGPT from OpenAI, but delivers the same or even better result. It’s open source too, so everyone can use its service for free. The world’s most valuable company NVIDIA lost nearly 17% of its market cap overnight, as R1’s superb performance suggested that piling up NVIDIA’s GPU machines to train LLMs with brute force might not the only way to advance AI.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

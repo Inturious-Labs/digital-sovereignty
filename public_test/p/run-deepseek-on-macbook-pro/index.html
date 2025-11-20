@@ -1,0 +1,472 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en"
+  dir="ltr"
+><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Run DeepSeek on MacBook Pro - Digital Sovereignty Chronicle</title>
+
+  
+  <meta name="theme-color" />
+
+  <meta name="google-site-verification" content="EUfZMwldx_-h0IaT9wYRkBB1hJ_LSoO5LDY3-Gu9zZU" /><meta name="description" content="A few days ago Chinese AI startup DeepSeek released its latest R1 large language model (“LLM”) and took the whole world by surprise. It uses only a tiny fraction of the GPU machine cost of its much bigger rivals like chatGPT from OpenAI, but delivers the same or even better result. It’s open source too, so everyone can use its service for free. The world’s most valuable company NVIDIA lost nearly 17% of its market cap overnight, as R1’s superb performance suggested that piling up NVIDIA’s GPU machines to train LLMs with brute force might not the only way to advance AI." />
+  <meta name="author" content="Herbert Yang" /><link rel="preload stylesheet" as="style" href="https://digitalsovereignty.herbertyang.xyz/main.min.css" />
+
+  
+  <link rel="preload" as="image" href="https://digitalsovereignty.herbertyang.xyz/theme.png" />
+
+  
+
+  
+
+  <script
+    defer
+    src="https://digitalsovereignty.herbertyang.xyz/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+
+  
+  <link
+    rel="icon"
+    href="https://digitalsovereignty.herbertyang.xyz/img/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://digitalsovereignty.herbertyang.xyz/img/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.148.2">
+  <link rel="canonical" href="https://digitalsovereignty.herbertyang.xyz/p/run-deepseek-on-macbook-pro/" />
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFQFKNFFR7"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-JFQFKNFFR7');
+        }
+      </script>
+  <meta itemprop="name" content="Run DeepSeek on MacBook Pro">
+  <meta itemprop="description" content="Use the most advanced AI LLM on your home computer">
+  <meta itemprop="datePublished" content="2025-01-30T09:11:53+00:00">
+  <meta itemprop="dateModified" content="2025-01-30T09:11:53+00:00">
+  <meta itemprop="wordCount" content="581">
+  <meta itemprop="image" content="https://digitalsovereignty.herbertyang.xyz/p/run-deepseek-on-macbook-pro/deepseek.jpeg">
+  <meta itemprop="keywords" content="AI Coding"><meta property="og:url" content="https://digitalsovereignty.herbertyang.xyz/p/run-deepseek-on-macbook-pro/">
+  <meta property="og:site_name" content="Digital Sovereignty Chronicle">
+  <meta property="og:title" content="Run DeepSeek on MacBook Pro">
+  <meta property="og:description" content="Use the most advanced AI LLM on your home computer">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-01-30T09:11:53+00:00">
+    <meta property="article:modified_time" content="2025-01-30T09:11:53+00:00">
+    <meta property="og:image" content="https://digitalsovereignty.herbertyang.xyz/p/run-deepseek-on-macbook-pro/deepseek.jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://digitalsovereignty.herbertyang.xyz/p/run-deepseek-on-macbook-pro/deepseek.jpeg">
+  <meta name="twitter:title" content="Run DeepSeek on MacBook Pro">
+  <meta name="twitter:description" content="Use the most advanced AI LLM on your home computer">
+
+</head>
+<body
+    class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
+  ><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="https://digitalsovereignty.herbertyang.xyz/"
+      >Digital Sovereignty Chronicle</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
+  ><nav
+      class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse"
+    ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/posts/"
+        >Posts</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/categories/"
+        >Categories</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/series/"
+        >Series</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/about/"
+        >About</a
+      ></nav>
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+  <header class="mb-14">
+    <h1 class="my-0! pb-2.5">Run DeepSeek on MacBook Pro</h1><div class="text-xs antialiased opacity-60"><time>Jan 30, 2025</time><span class="mx-1">&middot;</span>
+      <span>3 minutes read</span>
+    </div></header>
+
+  <section><p>A few days ago Chinese AI startup DeepSeek released its latest R1 large language model (“LLM”) and took the whole world by surprise. It uses only a tiny fraction of the GPU machine cost of its much bigger rivals like chatGPT from OpenAI, but delivers the same or even better result. It’s open source too, so everyone can use its service for free. The world’s most valuable company NVIDIA lost nearly 17% of its market cap overnight, as R1’s superb performance suggested that piling up NVIDIA’s GPU machines to train LLMs with brute force might not the only way to advance AI.</p>
+<p><img src="./deepseek.jpeg" alt="deepseek"></p>
+<p>Yesterday I managed to deploy DeepSeek on my MacBook Pro. Here’s how I did it. It’s actually quite simple. The advantage of running an LLM on your home computer is that you can use it without relying on the servers of DeepSeek, which are currently humming full speed ahead and frequently can’t connect due to high traffic. Another benefit is that the questions you throw to DeepSeek - the prompts, will not be sent to the server and potentially be exposed to others. Your prompts reveal a lot about who you are and what you do. It’s best to keep them private on your own local machine.</p>
+<p>Here’s my MacBook Pro:</p>
+<ul>
+<li>Apple M1 Pro, 14-inch, 2021</li>
+<li>16 GB memory</li>
+<li>macOS: Sequoia 15.2</li>
+<li>Hard Disk: 1 TB SSD</li>
+</ul>
+<p>Open up <a href="https://iterm2.com">iTerm2</a>, which is a feature-rich replacement for Mac’s default Terminal.app, and install <a href="https://ollama.com/download/mac">Ollama</a> in <a href="https://brew.sh">Homebrew</a>, Mac’s package manager.</p>
+<pre tabindex="0"><code class="language-None" data-lang="None">$ brew install ollama
+</code></pre><p>After installation, check the version.</p>
+<pre tabindex="0"><code class="language-None" data-lang="None">$ ollama --version
+ollama version is 0.5.7a
+</code></pre><p>Spin up the Ollama server:</p>
+<pre tabindex="0"><code class="language-None" data-lang="None">$ ollama serve
+</code></pre><p>It looks something like this:</p>
+<p><a href="./7ba8553c-9f64-42a7-9c9f-999e61346107_1050x243.webp"><img src="./7ba8553c-9f64-42a7-9c9f-999e61346107_1050x243.webp" alt=""></a></p>
+<p>You can pick a model that your Mac’s memory and hard disk allow. The bigger the number in front of “B” (for billion of parameters), the more accurate the model is. I’ve downloaded 1.5B, 8B and 14B model.</p>
+<p><a href="https://github.com/deepseek-ai/DeepSeek-R1">https://github.com/deepseek-ai/DeepSeek-R1</a></p>
+<p><a href="https://github.com/deepseek-ai/DeepSeek-R1?tab=readme-ov-file"><img src="./de36818b-a348-46dc-aa5e-b5a680185c70_815x377.png" alt=""></a></p>
+<p>Keep this Terminal (iTerm2) window open, open another Terminal window and download DeepSeek R1’s 1.5B model.</p>
+<pre tabindex="0"><code class="language-None" data-lang="None">$ ollama run deepseek-r1:1.5b
+</code></pre><p>If your network is slow, this downloading process may take a few tries, but don’t worry, the download will resume where you left it off. If you have a VPN service that can route your machine through a US IP address, it will speed up the download quite a bit.</p>
+<p><img src="././e4f99be6-ffc5-40a4-ac77-45b7988780ae_929x428.png" alt="">)</p>
+<p>Once the download/installation is successful, you will see a prompt. Time to fire away your questions! You can now play around with a local copy of DeepSeek, the most advanced AI that resides on your laptop.</p>
+<p><img src="././7c0c9f37-f22e-4e9e-9856-5e324541ef4f_712x496.png" alt="">)</p>
+<p>Type /? to see the prompt menu</p>
+<p><img src="././1de3dc25-b504-4d33-817d-e6ffd83f0bbb_381x701.png" alt="">)</p>
+<p>Two useful prompts:</p>
+<ul>
+<li>/bye to close out this session</li>
+<li>/clear to clear the session context</li>
+</ul>
+<p>If you don’t /clear, DeepSeek will treat the dialogue as an ongoing, continuous conversation and sometimes over-think too much.</p>
+<p>To restart DeepSeek, just type the same command before, while keeping the Ollama window open.</p>
+<pre tabindex="0"><code class="language-None" data-lang="None">$ ollama run deepseek-r1:1.5b
+</code></pre><p>You can also try out bigger versions of R1.</p>
+<pre tabindex="0"><code class="language-None" data-lang="None">$ ollama run deepseek-r1:8b
+$ ollama run deepseek-r1:14b
+</code></pre><p>Experience DeepSeek’s famous “chain-of-thought (COT)” yourself. It’s quite amusing, though the locally run, distilled model is much slower than what you can get straight out of <a href="https://chat.deepseek.com">https://chat.deepseek.com</a>. This is the price for privacy.</p>
+<p><img src="././26e60ca9-9353-43c7-a809-ed088c5479e7_1012x805.png" alt="">)</p>
+<p>To run DeepSeek R1’s undistilled model will <a href="https://x.com/carrigmat/status/1884244369907278106">require 768 GB memory and quite a few M4 Mac machines</a>, which is beyond the reach for most consumers. Running the distilled model is a lot easier and could be done by just anyone. Try it out!</p>
+</section>
+
+  <div class="mt-24 rounded-xl bg-black/[3%] p-6 dark:bg-white/[8%]">
+    <h3 class="mb-4 text-lg font-medium">Comments & Discussion</h3>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/ic-agent-bundle.js"></script>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/ic-agent.js"></script>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/widget.js?v=1.0.0"></script>
+    <div id="rapport"></div>
+    <script>
+      Rapport.init({
+        canisterId: 'kedx2-liaaa-aaaai-q34ga-cai',
+        pageUrl: 'https:\/\/digitalsovereignty.herbertyang.xyz\/p\/run-deepseek-on-macbook-pro\/'
+      });
+    </script>
+  </div><footer class="mt-12 flex flex-wrap"><a
+      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://digitalsovereignty.herbertyang.xyz/categories/ai-coding"
+      >AI Coding</a
+    ></footer><nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  ><a class="ltr:pr-3 rtl:pl-3" href="https://digitalsovereignty.herbertyang.xyz/p/herberts-top-tweets-feb-7-2025/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Herbert&#39;s Top Tweets - Feb 7, 2025</span></a
+    ><a
+      class="justify-end pl-3 ltr:ml-auto rtl:mr-auto"
+      href="https://digitalsovereignty.herbertyang.xyz/p/embrace-for-future-impact/"
+      ><span>Embrace For Future Impact</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    ></nav>
+<div class="newsletter-signup">
+    <div class="newsletter-divider"></div>
+    <div class="newsletter-container">
+        <div class="newsletter-content">
+            <p>Receive Digital Sovereignty Chronicle newsletter in your inbox</p>
+            
+            <form action="https://buttondown.com/api/emails/embed-subscribe/digital-sovereignty" 
+                  method="post" 
+                  class="newsletter-form"
+                  target="_blank">
+                
+                <div class="form-group">
+                    <input type="email" 
+                           name="email" 
+                           id="newsletter-email" 
+                           placeholder="Enter your email address"
+                           required
+                           class="newsletter-input">
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="newsletter-button">
+                        Subscribe
+                    </button>
+                </div>
+                
+                <div class="newsletter-privacy">
+                    <small>We respect your <a href="https://digitalsovereignty.herbertyang.xyz/privacy">privacy</a>. Unsubscribe at any time.</small>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+.newsletter-signup {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    color: #333;
+    box-shadow: none;
+}
+
+.newsletter-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #8B4513, transparent);
+    margin-bottom: 1.5rem;
+    opacity: 0.6;
+}
+
+.newsletter-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #8B4513;
+}
+
+.newsletter-content p {
+    margin: 0 0 1.5rem 0;
+    opacity: 0.8;
+    line-height: 1.5;
+    color: #666;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-input {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    background: white;
+    border-color: #8B4513;
+    box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.2);
+}
+
+.newsletter-input::placeholder {
+    color: #666;
+}
+
+.newsletter-button {
+    padding: 12px 24px;
+    background: #D2691E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.newsletter-button:hover {
+    background: #CD853F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(210, 105, 30, 0.4);
+}
+
+.newsletter-button:active {
+    transform: translateY(0);
+}
+
+.newsletter-privacy {
+    margin-top: 0.5rem;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.85rem;
+}
+
+ 
+@media (max-width: 768px) {
+    .newsletter-signup {
+        margin: 1.5rem 0;
+        padding: 1rem;
+    }
+    
+    .newsletter-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .newsletter-input,
+    .newsletter-button {
+        font-size: 16px;  
+    }
+}
+
+ 
+@media (prefers-color-scheme: dark) {
+    .newsletter-input {
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+    }
+    
+    .newsletter-input:focus {
+        background: white;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.newsletter-form');
+    const emailInput = document.querySelector('#newsletter-email');
+    const submitButton = document.querySelector('.newsletter-button');
+    
+    if (form && emailInput && submitButton) {
+        form.addEventListener('submit', function(e) {
+            
+            const email = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            
+            submitButton.textContent = 'Subscribing...';
+            submitButton.disabled = true;
+            
+            
+            setTimeout(() => {
+                submitButton.textContent = 'Subscribe';
+                submitButton.disabled = false;
+            }, 2000);
+        });
+    }
+});
+</script>
+
+</article></main><footer
+  class="mx-auto flex max-w-(--w) items-center justify-center px-8 text-xs tracking-wider uppercase opacity-60 py-8"
+  style="margin-bottom: 40px; padding-bottom: 20px;"
+>
+  <div class="text-center">
+    <div style="margin-bottom: 24px;">© 2025 Herbert Yang. All rights reserved.</div>
+    <div class="flex items-center justify-center gap-2">
+      <span class="whitespace-nowrap">powered by</span> <a href="https://dashboard.internetcomputer.org/canister/wupbw-2aaaa-aaaae-abn7a-cai" target="_blank" rel="noopener"><img src="https://digitalsovereignty.herbertyang.xyz/img/ic_logo.svg" alt="Internet Computer" class="opacity-60" style="width: 150px !important" /></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

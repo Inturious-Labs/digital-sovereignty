@@ -1,0 +1,469 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en"
+  dir="ltr"
+><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Decoding the Crypto Ecosystem - EP03 - Developers - Digital Sovereignty Chronicle</title>
+
+  
+  <meta name="theme-color" />
+
+  <meta name="google-site-verification" content="EUfZMwldx_-h0IaT9wYRkBB1hJ_LSoO5LDY3-Gu9zZU" /><meta name="description" content="
+
+Previously from Decoding the Crypto Ecosystem Series
+
+EP01 - Blockchains
+EP02 - Miners
+
+
+Introduction
+Developers build applications. In the crypto industry, they build decentralized applications, or dApps. In traditional Silicon Valley, &ldquo;startup founders&rdquo; get a lot more attention, especially when they attend Y Combinator&rsquo;s Demo Day event or are mentioned in Forbes&rsquo; &ldquo;30-under-30&rdquo; list. &ldquo;Code is law&rdquo; is the mantra in the crypto business, and the cypherpunk culture is deeply rooted in the community&rsquo;s emo.  Therefore, developers, who are by definition coders, are the darlings of crypto. They carry all the hope and inspiration." />
+  <meta name="author" content="Herbert Yang" /><link rel="preload stylesheet" as="style" href="https://digitalsovereignty.herbertyang.xyz/main.min.css" />
+
+  
+  <link rel="preload" as="image" href="https://digitalsovereignty.herbertyang.xyz/theme.png" />
+
+  
+
+  
+
+  <script
+    defer
+    src="https://digitalsovereignty.herbertyang.xyz/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+
+  
+  <link
+    rel="icon"
+    href="https://digitalsovereignty.herbertyang.xyz/img/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://digitalsovereignty.herbertyang.xyz/img/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.148.2">
+  <link rel="canonical" href="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep03-developers/" />
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFQFKNFFR7"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-JFQFKNFFR7');
+        }
+      </script>
+  <meta itemprop="name" content="Decoding the Crypto Ecosystem - EP03 - Developers">
+  <meta itemprop="description" content="who are the developers building decentralized applications? how are they different from developers from Web2? how do they navigate through the choppy waters of crypto?">
+  <meta itemprop="datePublished" content="2025-09-15T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2025-09-15T00:00:00+08:00">
+  <meta itemprop="wordCount" content="1074">
+  <meta itemprop="image" content="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep03-developers/developer.jpg">
+  <meta itemprop="keywords" content="crypto,blockchain,dApp,developers,startup founders"><meta property="og:url" content="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep03-developers/">
+  <meta property="og:site_name" content="Digital Sovereignty Chronicle">
+  <meta property="og:title" content="Decoding the Crypto Ecosystem - EP03 - Developers">
+  <meta property="og:description" content="who are the developers building decentralized applications? how are they different from developers from Web2? how do they navigate through the choppy waters of crypto?">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-15T00:00:00+08:00">
+    <meta property="article:modified_time" content="2025-09-15T00:00:00+08:00">
+    <meta property="og:image" content="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep03-developers/developer.jpg">
+      <meta property="og:see_also" content="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep02-miners/">
+      <meta property="og:see_also" content="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep03-developers/developer.jpg">
+  <meta name="twitter:title" content="Decoding the Crypto Ecosystem - EP03 - Developers">
+  <meta name="twitter:description" content="who are the developers building decentralized applications? how are they different from developers from Web2? how do they navigate through the choppy waters of crypto?">
+
+</head>
+<body
+    class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
+  ><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="https://digitalsovereignty.herbertyang.xyz/"
+      >Digital Sovereignty Chronicle</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
+  ><nav
+      class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse"
+    ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/posts/"
+        >Posts</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/categories/"
+        >Categories</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/series/"
+        >Series</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/about/"
+        >About</a
+      ></nav>
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+  <header class="mb-14">
+    <h1 class="my-0! pb-2.5">Decoding the Crypto Ecosystem - EP03 - Developers</h1><div class="text-xs antialiased opacity-60"><time>Sep 15, 2025</time><span class="mx-1">&middot;</span>
+      <span>6 minutes read</span>
+    </div></header>
+
+  <section><p><img src="./developer.jpg" alt="Featured Image"></p>
+<hr>
+<p>Previously from <strong>Decoding the Crypto Ecosystem Series</strong></p>
+<ol>
+<li><a href="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains">EP01 - Blockchains</a></li>
+<li><a href="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep02-miners/">EP02 - Miners</a></li>
+</ol>
+<hr>
+<h2 id="introduction">Introduction</h2>
+<p>Developers build applications. In the crypto industry, they build decentralized applications, or dApps. In traditional Silicon Valley, &ldquo;startup founders&rdquo; get a lot more attention, especially when they attend Y Combinator&rsquo;s Demo Day event or are mentioned in Forbes&rsquo; &ldquo;30-under-30&rdquo; list. &ldquo;Code is law&rdquo; is the mantra in the crypto business, and the cypherpunk culture is deeply rooted in the community&rsquo;s emo.  Therefore, developers, who are by definition coders, are the darlings of crypto. They carry all the hope and inspiration.</p>
+<h2 id="founders-journey">Founder&rsquo;s Journey</h2>
+<p><img src="./speaker.jpg" alt="ICP event in Shanghai, 2021"></p>
+<p>That inspiration often happens at a serendipitous encounter with a <a href="https://x.com/herbertyang/status/1452500111695638531">blockchain-hosted event</a>. Developer Bob learns about an up-and-coming new blockchain, which usually boasts a grandiose vision to completely change the industry, the world, and the civilization. Maybe Bob is just intrigued by the speaker&rsquo;s passion and eloquence. He checks out the documentation for this <a href="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains">new blockchain</a> and finds that the <a href="https://digitalsovereignty.herbertyang.xyz/p/why-non-profit-in-crypto/">foundation</a> behind this blockchain just launched a grant program to incentive developers to try out the software development kit (SDK). Bob builds a Hello-World app using the SDK in five minutes. This looks legit.</p>
+<p>Bob starts building on this blockchain. He participates in a hackathon organized by the foundation, joins several online workshops, deepens his knowledge and skills for the particular smart contract of this blockchain and its preferred language (usually Rust), and makes the cut for the demo day. In a surreal moment, he meets the founder of the blockchain, who is like Jesus walking on water in the eyes of his feverish fans. Bob becomes a believer and wants to be part of that paradigm-shifting, greater success.</p>
+<p>With his credentials as a finalist in the hackathon, Bob receives a grant from the foundation. He pings the DevRel (Developer Relationship) team of the foundation every now and then for questions. He comments and debates on the <a href="https://x.com/herbertyang/status/1889520294035128812">official developer forum for this blockchain</a>, which is run and moderated by the foundation. He slowly builds up a reputation on the forum and in the community. His Twitter following grows, which is highly correlated with, if not capped by, the popularity of this blockchain. If Bob speaks good English, he becomes a thought leader or, even better, a KOL. He starts writing in threads or Tweet storms as he&rsquo;s confident that his writing should be read by all other developers in the same ecosystem. This is the way.</p>
+<p>As his conviction grows, Bob assembles a team. He might even leave his Web2 job to pursue this Web3 career full-time. The team is usually distributed all over the place and everyone just works from his/her comfortable home. Renting an office is expensive and so not cool. Bob convinces Alice to join the team to lead BD/marketing/community. It&rsquo;s always an Alice, not a Jerry. Bob and his coder friends continue to build the dApp. Alice is trying to get some early users on Twitter, Discord, and Telegram.</p>
+<h2 id="developers--blockchains">Developers &amp; Blockchains</h2>
+<p>For a layer one blockchain, developers are the real target users. The open-source technology created by the foundation - the developer lab of the blockchain, is at the protocol or infrastructure level. The protocol would not be useful at all without adoption in the developer community. Blockchain foundations rely on these developers to create killer apps that would turn heads in the industry, such as <strong>Uniswap</strong> for Ethereum or <strong>Pump.fun</strong> for Solana.</p>
+<p>Therefore, it&rsquo;s not an understatement to argue that the vibrance and the strength of a blockchain ecosystem can be measured by one single metric - developer activities. <a href="https://www.developerreport.com/reports/devs/2024">The Global Developer Report</a> issued by <strong>Maria Shen</strong> of <strong>Electric Capita</strong>l (one of the largest crypto funds in the world) has become the standard bearer on this. It&rsquo;s way more useful and insightful than <strong>Mary Meeker</strong>&rsquo;s utterly useless Trends - Artificial Intelligence Report, which becomes obsolete the moment it&rsquo;s released, despite BOND Capital&rsquo;s supreme and unjustified confidence that people in 2025 would still read a report of 340 pages, on AI, of all things.</p>
+<p><img src="./electric-capital-report.png" alt="Electric Capital Developer Report 2024"></p>
+<p>Though the foundation is rooting for the success of all the developers in its nascent ecosystem, it needs to tread water very carefully in an act of delicate balance. Many developers are professional grant shoppers - they excel at winning hackathons and go around all the major foundations to apply for grants. In a bull market, many developer teams think they can become the next Uniswap and proudly claim they&rsquo;re platform-agnostic. It implies that they can hold the court with all major blockchain ecosystems and thrive on their own, with or without explicit endorsement of any particular L1/L2 blockchain.</p>
+<p>The reality is a lot more nuanced. One major difference between Web3 and Web2 is that, the foundations that create L1 blockchains wield considerable power in shaping the future direction of the industry. In Web2, even the mighty AWS (Amazon Web Services) is just a tech vendor. It does not have the power to tell ByteDance or RedNot what to do because those superapps&rsquo; core technology stack is not dependent on AWS. Cloud computing is just another cost layer, albeit a critical one, that can be swapped in and out, if the customer has enough money. In 2025 you don&rsquo;t hear a successful YC startup proclaiming we nailed our product-market fit because we use AWS. They would only casually mention that their founder knew Alexandr Wang when they hung out at IOI training camps together, like, 15 years ago.</p>
+<p>In Web3, very few projects can achieve such an exalted superapp status that makes them truly platform agnostic. Bob has to pledge his allegiance to some flag - House of Stack or House of Lannister. This is how we roll in the industry. You can&rsquo;t be a lone wolf. In Web2, founders gather around T1 VCs, accelerators and vertical-focused events. In Web3, developers gather around L1 blockchains and T1 tentpole events. <a href="https://internetcomputer.org/ecosystem?tag=dapp">Endorsement from a leading L1 blockchain</a> goes a long way for developer Bob.</p>
+<p><img src="./icp-ecosystem-2025.png" alt="ICP Ecosystem 2025"></p>
+<p>A L1 blockchain loves those developers who build exclusively on its chain, so that the chain can claim &ldquo;this killer app was born natively from our chain&rdquo;. Developers on the other hand, often go on mating dances with other blockchains, just to get more grants to survive to another day.</p>
+<p>There is no right or wrong in this relationship. They both need each other to grow to the point of mass adoption. They grumble about unequivocal love and reluctantly hold hands together at the next Token2049 event.</p>
+</section>
+
+  <div class="mt-24 rounded-xl bg-black/[3%] p-6 dark:bg-white/[8%]">
+    <h3 class="mb-4 text-lg font-medium">Comments & Discussion</h3>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/ic-agent-bundle.js"></script>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/ic-agent.js"></script>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/widget.js?v=1.0.0"></script>
+    <div id="rapport"></div>
+    <script>
+      Rapport.init({
+        canisterId: 'kedx2-liaaa-aaaai-q34ga-cai',
+        pageUrl: 'https:\/\/digitalsovereignty.herbertyang.xyz\/p\/decoding-the-crypto-ecosystem-ep03-developers\/'
+      });
+    </script>
+  </div><footer class="mt-12 flex flex-wrap"><a
+      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://digitalsovereignty.herbertyang.xyz/categories/crypto-abc"
+      >Crypto ABC</a
+    ></footer><footer class="mt-12 flex flex-wrap"><a
+      class="mb-1.5 rounded-lg bg-black/[6%] px-5 py-1 no-underline hover:bg-black/[9%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[12%] dark:hover:bg-white/[16%] border border-black/[10%] dark:border-white/[15%]"
+      href="https://digitalsovereignty.herbertyang.xyz/series/decoding-the-crypto-ecosystem"
+      >Decoding the Crypto Ecosystem</a
+    ></footer><nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  ><a class="ltr:pr-3 rtl:pl-3" href="https://digitalsovereignty.herbertyang.xyz/p/migrate-from-substack-to-a-self-hosting-newsletter/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Migrate from Substack to a Self-Hosting Newsletter</span></a
+    ><a
+      class="justify-end pl-3 ltr:ml-auto rtl:mr-auto"
+      href="https://digitalsovereignty.herbertyang.xyz/p/why-i-left-substack/"
+      ><span>Why I Left Substack</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    ></nav>
+<div class="newsletter-signup">
+    <div class="newsletter-divider"></div>
+    <div class="newsletter-container">
+        <div class="newsletter-content">
+            <p>Receive Digital Sovereignty Chronicle newsletter in your inbox</p>
+            
+            <form action="https://buttondown.com/api/emails/embed-subscribe/digital-sovereignty" 
+                  method="post" 
+                  class="newsletter-form"
+                  target="_blank">
+                
+                <div class="form-group">
+                    <input type="email" 
+                           name="email" 
+                           id="newsletter-email" 
+                           placeholder="Enter your email address"
+                           required
+                           class="newsletter-input">
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="newsletter-button">
+                        Subscribe
+                    </button>
+                </div>
+                
+                <div class="newsletter-privacy">
+                    <small>We respect your <a href="https://digitalsovereignty.herbertyang.xyz/privacy">privacy</a>. Unsubscribe at any time.</small>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+.newsletter-signup {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    color: #333;
+    box-shadow: none;
+}
+
+.newsletter-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #8B4513, transparent);
+    margin-bottom: 1.5rem;
+    opacity: 0.6;
+}
+
+.newsletter-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #8B4513;
+}
+
+.newsletter-content p {
+    margin: 0 0 1.5rem 0;
+    opacity: 0.8;
+    line-height: 1.5;
+    color: #666;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-input {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    background: white;
+    border-color: #8B4513;
+    box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.2);
+}
+
+.newsletter-input::placeholder {
+    color: #666;
+}
+
+.newsletter-button {
+    padding: 12px 24px;
+    background: #D2691E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.newsletter-button:hover {
+    background: #CD853F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(210, 105, 30, 0.4);
+}
+
+.newsletter-button:active {
+    transform: translateY(0);
+}
+
+.newsletter-privacy {
+    margin-top: 0.5rem;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.85rem;
+}
+
+ 
+@media (max-width: 768px) {
+    .newsletter-signup {
+        margin: 1.5rem 0;
+        padding: 1rem;
+    }
+    
+    .newsletter-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .newsletter-input,
+    .newsletter-button {
+        font-size: 16px;  
+    }
+}
+
+ 
+@media (prefers-color-scheme: dark) {
+    .newsletter-input {
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+    }
+    
+    .newsletter-input:focus {
+        background: white;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.newsletter-form');
+    const emailInput = document.querySelector('#newsletter-email');
+    const submitButton = document.querySelector('.newsletter-button');
+    
+    if (form && emailInput && submitButton) {
+        form.addEventListener('submit', function(e) {
+            
+            const email = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            
+            submitButton.textContent = 'Subscribing...';
+            submitButton.disabled = true;
+            
+            
+            setTimeout(() => {
+                submitButton.textContent = 'Subscribe';
+                submitButton.disabled = false;
+            }, 2000);
+        });
+    }
+});
+</script>
+
+</article></main><footer
+  class="mx-auto flex max-w-(--w) items-center justify-center px-8 text-xs tracking-wider uppercase opacity-60 py-8"
+  style="margin-bottom: 40px; padding-bottom: 20px;"
+>
+  <div class="text-center">
+    <div style="margin-bottom: 24px;">© 2025 Herbert Yang. All rights reserved.</div>
+    <div class="flex items-center justify-center gap-2">
+      <span class="whitespace-nowrap">powered by</span> <a href="https://dashboard.internetcomputer.org/canister/wupbw-2aaaa-aaaae-abn7a-cai" target="_blank" rel="noopener"><img src="https://digitalsovereignty.herbertyang.xyz/img/ic_logo.svg" alt="Internet Computer" class="opacity-60" style="width: 150px !important" /></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

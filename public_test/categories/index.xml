@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Digital Sovereignty Chronicle</title>
+    <link>https://digitalsovereignty.herbertyang.xyz/categories/</link>
+    <description>Recent content in Categories on Digital Sovereignty Chronicle</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Nov 2025 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://digitalsovereignty.herbertyang.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Digital Life</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/categories/digital-life/</link>
+      <pubDate>Sun, 02 Nov 2025 12:00:00 +0800</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/categories/digital-life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Crypto ABC</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/categories/crypto-abc/</link>
+      <pubDate>Fri, 24 Oct 2025 12:00:00 +0800</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/categories/crypto-abc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Podcast Recap</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/categories/podcast-recap/</link>
+      <pubDate>Mon, 09 Jun 2025 15:05:35 +0000</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/categories/podcast-recap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ICYMI</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/categories/icymi/</link>
+      <pubDate>Thu, 20 Mar 2025 00:01:27 +0000</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/categories/icymi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Coding</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/categories/ai-coding/</link>
+      <pubDate>Fri, 14 Mar 2025 14:39:34 +0000</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/categories/ai-coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Curation Tips</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/categories/curation-tips/</link>
+      <pubDate>Mon, 10 Feb 2025 00:01:30 +0000</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/categories/curation-tips/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

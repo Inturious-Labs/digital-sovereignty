@@ -1,0 +1,558 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en"
+  dir="ltr"
+><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Set Custom Domain for Canister Website on Internet Computer - Digital Sovereignty Chronicle</title>
+
+  
+  <meta name="theme-color" />
+
+  <meta name="google-site-verification" content="EUfZMwldx_-h0IaT9wYRkBB1hJ_LSoO5LDY3-Gu9zZU" /><meta name="description" content="
+After deploying a frontend canister on the Internet Computer (&ldquo;IC&rdquo;) - a layer-1 blockchain that allows running a full-stack web service, the URL for the site looks like this:
+https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io/
+Though fully functional and providing a cue to validate this smart contract on the blockchain explorer similar to what you could do for a Bitcoin address, this is geeky and hard to remember.
+Here&rsquo;s the guide on how to configure the custom domain for your website that is deployed on an IC canister, so that when viewers type https://hello-roddy.xyz, they will be directed to https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io. All they have to remember is the &ldquo;normal&rdquo; (or vanity) domain name hello-roddy.xyz, which you purchase from a domain name registrar such as GoDaddy." />
+  <meta name="author" content="Herbert Yang" /><link rel="preload stylesheet" as="style" href="https://digitalsovereignty.herbertyang.xyz/main.min.css" />
+
+  
+  <link rel="preload" as="image" href="https://digitalsovereignty.herbertyang.xyz/theme.png" />
+
+  
+
+  
+
+  <script
+    defer
+    src="https://digitalsovereignty.herbertyang.xyz/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+
+  
+  <link
+    rel="icon"
+    href="https://digitalsovereignty.herbertyang.xyz/img/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://digitalsovereignty.herbertyang.xyz/img/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.148.2">
+  <link rel="canonical" href="https://digitalsovereignty.herbertyang.xyz/p/set-custom-domain-for-canister-website-on-internet-computer/" />
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFQFKNFFR7"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-JFQFKNFFR7');
+        }
+      </script>
+  <meta itemprop="name" content="Set Custom Domain for Canister Website on Internet Computer">
+  <meta itemprop="description" content="guide for how to set up custom domain name for your canister-hosted website deployed on the Internet Computer Protocol">
+  <meta itemprop="datePublished" content="2025-11-02T12:00:00+08:00">
+  <meta itemprop="dateModified" content="2025-11-02T12:00:00+08:00">
+  <meta itemprop="wordCount" content="658">
+  <meta itemprop="image" content="https://digitalsovereignty.herbertyang.xyz/p/set-custom-domain-for-canister-website-on-internet-computer/canister-hero.jpg">
+  <meta itemprop="keywords" content="self-hosting,DFINITY,IC,ICP,Internet Computer,canister,custom domain,DNS"><meta property="og:url" content="https://digitalsovereignty.herbertyang.xyz/p/set-custom-domain-for-canister-website-on-internet-computer/">
+  <meta property="og:site_name" content="Digital Sovereignty Chronicle">
+  <meta property="og:title" content="Set Custom Domain for Canister Website on Internet Computer">
+  <meta property="og:description" content="guide for how to set up custom domain name for your canister-hosted website deployed on the Internet Computer Protocol">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-02T12:00:00+08:00">
+    <meta property="article:modified_time" content="2025-11-02T12:00:00+08:00">
+    <meta property="og:image" content="https://digitalsovereignty.herbertyang.xyz/p/set-custom-domain-for-canister-website-on-internet-computer/canister-hero.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://digitalsovereignty.herbertyang.xyz/p/set-custom-domain-for-canister-website-on-internet-computer/canister-hero.jpg">
+  <meta name="twitter:title" content="Set Custom Domain for Canister Website on Internet Computer">
+  <meta name="twitter:description" content="guide for how to set up custom domain name for your canister-hosted website deployed on the Internet Computer Protocol">
+
+</head>
+<body
+    class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
+  ><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="https://digitalsovereignty.herbertyang.xyz/"
+      >Digital Sovereignty Chronicle</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
+  ><nav
+      class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse"
+    ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/posts/"
+        >Posts</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/categories/"
+        >Categories</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/series/"
+        >Series</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/about/"
+        >About</a
+      ></nav>
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+  <header class="mb-14">
+    <h1 class="my-0! pb-2.5">Set Custom Domain for Canister Website on Internet Computer</h1><div class="text-xs antialiased opacity-60"><time>Nov 2, 2025</time><span class="mx-1">&middot;</span>
+      <span>4 minutes read</span>
+    </div></header>
+
+  <section><p><img src="./canister-hero.jpg" alt="Featured Image"></p>
+<p>After deploying a frontend canister on the <strong><a href="https://internetcomputer.org/">Internet Computer (&ldquo;IC&rdquo;)</a></strong> - a layer-1 blockchain that allows running a full-stack web service, the URL for the site looks like this:</p>
+<p><a href="https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io/">https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io/</a></p>
+<p>Though fully functional and providing a cue to validate <a href="https://dashboard.internetcomputer.org/canister/wupbw-2aaaa-aaaae-abn7a-cai">this smart contract on the blockchain explorer</a> similar to what you could do for a <strong>Bitcoin</strong> address, this is geeky and hard to remember.</p>
+<p>Here&rsquo;s the guide on how to configure the custom domain for your website that is deployed on an IC canister, so that when viewers type <a href="https://hello-roddy.xyz">https://hello-roddy.xyz</a>, they will be directed to <a href="https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io">https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io</a>. All they have to remember is the &ldquo;normal&rdquo; (or vanity) domain name <code>hello-roddy.xyz</code>, which you purchase from a domain name registrar such as <strong>GoDaddy</strong>.</p>
+<p>You can configure an IC canister site to point to not only a domain like <code>hello-roddy.xyz</code>, but also a subdomain like <code>blog.hello-roddy.xyz</code>.</p>
+<h2 id="1-create-dns-records">1. Create DNS records</h2>
+<p>In the DNS zone of your domain registrar, create 3 records:</p>
+<p>If your site is a <a href="herbertyang.xyz/">root domain</a>, <code>hello-roddy.xyz</code>:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Host</th>
+          <th>Value</th>
+          <th>TTL (seconds)</th>
+          <th>Type</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>@</code></td>
+          <td><code>hello-roddy.xyz.icp1.io</code></td>
+          <td>300</td>
+          <td><code>ALIAS</code></td>
+      </tr>
+      <tr>
+          <td><code>_acme-challenge</code></td>
+          <td><code>_acme-challenge.hello-roddy.xyz.icp2.io</code></td>
+          <td>300</td>
+          <td><code>CNAME</code></td>
+      </tr>
+      <tr>
+          <td><code>_canister-id</code></td>
+          <td><code>wupbw-2aaaa-aaaae-abn7a-cai</code></td>
+          <td>300</td>
+          <td><code>TXT</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>If your site is a <a href="https://digitalsovereignty.herbertyang.xyz/">subdomain</a>, <code>blog.hello-roddy.xyz</code>:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Host</th>
+          <th>Value</th>
+          <th>TTL (seconds)</th>
+          <th>Type</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>@</code></td>
+          <td><code>blog.hello-roddy.xyz.icp1.io</code></td>
+          <td>300</td>
+          <td><code>CNAME</code></td>
+      </tr>
+      <tr>
+          <td><code>_acme-challenge.blog</code></td>
+          <td><code>_acme-challenge.blog.hello-roddy.xyz.icp2.io</code></td>
+          <td>300</td>
+          <td><code>CNAME</code></td>
+      </tr>
+      <tr>
+          <td><code>_canister-id.blog</code></td>
+          <td><code>wupbw-2aaaa-aaaae-abn7a-cai</code></td>
+          <td>300</td>
+          <td><code>TXT</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>Note that the <a href="https://internetcomputer.org/docs/building-apps/frontends/custom-domains/dns-setup">official guide</a> says you should create <code>ALIAS</code> for subdomain for host <code>@</code>. In my experience, ALIAS does NOT work. You have to use a <code>CNAME</code> record instead.</p>
+<h2 id="2-create-dfx-specific-parameters">2. Create dfx specific parameters</h2>
+<p>Create a file named <code>ic-domains</code> and add your domain in this file:</p>
+<pre tabindex="0"><code>hello-roddy.xyz
+</code></pre><p>Place this file in a folder <code>.well-known</code>, in the dfx root directory, such as:</p>
+<pre tabindex="0"><code>├── .git
+├── .dfx
+├── dfx.json
+├── ic-assets.json5
+├── package.json
+├── canister_ids.json
+├── .well-known
+│ └── ic-domains
+</code></pre><p>By default, <code>dfx</code> excludes all files and directories starting with a <code>.</code>. To include the <code>ic-domains</code> file, you need to create an additional file <code>ic-assets.json5</code> in the SAME directory as <code>.well-known</code> folder.</p>
+<p><code>ic-assets.json5</code> file needs to contain this json string:</p>
+<pre tabindex="0"><code>[
+  {
+    &#34;match&#34;: &#34;.well-known&#34;,
+    &#34;ignore&#34;: false
+  }
+]
+</code></pre><p>While the above arrangement works for a simple <a href="https://inturious.com/">semantic HTML site</a>, it won&rsquo;t work right away for a static website built by a <strong>Static Site Generator</strong> (Pelican, React, Docusaurus, Hugo, etc).</p>
+<p>For example, a <a href="https://gohugo.io/">Hugo</a>-based website&rsquo;s output folder is <code>public/</code>, which is re-generated every time Hugo builds. If these three files, <code>.ic-assets.json5</code>, <code>.well-known</code>,  and <code>ic-domains</code> were placed in <code>public/</code>, they will be erased every time Hugo regenerates this folder.</p>
+<p>So all these three <strong>dfx</strong>-specific files should be placed in <code>static/</code> folder, together with other permanent media assets such as site logo and favicon. All the contents in <code>static/</code> are copied directly into <code>public/</code> when Hugo re-deploys the site.</p>
+<pre tabindex="0"><code>├── dfx.json
+├── package.json
+├── canister_ids.json
+├── public
+├── static
+│ ├── .ic-assets.json5
+│ ├── .well-known
+│ │ └──ic-domains
+</code></pre><h2 id="3-deploy-the-canister">3. Deploy the canister</h2>
+<p>When the above three dfx files are in the right place, deploy the canister.</p>
+<h2 id="4-register-the-domain">4. Register the domain</h2>
+<p>Run this command to register the domain with the HTTP gateways:</p>
+<pre tabindex="0"><code>curl -sL -X POST \
+    -H &#39;Content-Type: application/json&#39; \
+    https://icp0.io/registrations \
+    --data @- &lt;&lt;EOF
+    {
+      &#34;name&#34;: &#34;hello-roddy.xyz&#34;
+    }
+EOF
+</code></pre><p>If the call is successful, you will receive a JSON response that contains a request ID (a very long text string) in the body:</p>
+<pre tabindex="0"><code>{&#34;id&#34;:&#34;REQUEST_ID&#34;}
+</code></pre><h2 id="5-check-the-progress">5. Check the progress</h2>
+<p>Check the status of your registration request. Usually, you can get a confirmed message within 1~2 minutes.</p>
+<pre tabindex="0"><code>curl -sL -X GET \
+    https://icp0.io/registrations/REQUEST_ID
+</code></pre><p>When you see <code>Available: The registration request has been successfully processed.</code>, congratulations! Now you can access your canister website using your preferred custom domain.</p>
+<p>For additional technical details, check out this official IC guide: <a href="https://internetcomputer.org/docs/building-apps/frontends/custom-domains/using-custom-domains#custom-domains-using-your-own-infrastructure">https://internetcomputer.org/docs/building-apps/frontends/custom-domains/using-custom-domains#custom-domains-using-your-own-infrastructure</a> too, though it&rsquo;s a lot more technical with tons of details you probably don&rsquo;t need to know.</p>
+<p>Custom domain configuration for an IC canister-hosted site does require a few extra steps than traditional website operation. But given the significantly enhanced security, total sovereignty ownership, much lower cost, and future ease of site upkeep, this effort is still well worth it.</p>
+<hr>
+</section>
+
+  <div class="mt-24 rounded-xl bg-black/[3%] p-6 dark:bg-white/[8%]">
+    <h3 class="mb-4 text-lg font-medium">Comments & Discussion</h3>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/ic-agent-bundle.js"></script>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/ic-agent.js"></script>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/widget.js?v=1.0.0"></script>
+    <div id="rapport"></div>
+    <script>
+      Rapport.init({
+        canisterId: 'kedx2-liaaa-aaaai-q34ga-cai',
+        pageUrl: 'https:\/\/digitalsovereignty.herbertyang.xyz\/p\/set-custom-domain-for-canister-website-on-internet-computer\/'
+      });
+    </script>
+  </div><footer class="mt-12 flex flex-wrap"><a
+      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://digitalsovereignty.herbertyang.xyz/categories/digital-life"
+      >Digital Life</a
+    ></footer><footer class="mt-12 flex flex-wrap"><a
+      class="mb-1.5 rounded-lg bg-black/[6%] px-5 py-1 no-underline hover:bg-black/[9%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[12%] dark:hover:bg-white/[16%] border border-black/[10%] dark:border-white/[15%]"
+      href="https://digitalsovereignty.herbertyang.xyz/series/self-host-website"
+      >Self-Host Website</a
+    ></footer><nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  ><a
+      class="justify-end pl-3 ltr:ml-auto rtl:mr-auto"
+      href="https://digitalsovereignty.herbertyang.xyz/p/easier-than-zero-inbox/"
+      ><span>Easier Than Zero Inbox</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    ></nav>
+<div class="newsletter-signup">
+    <div class="newsletter-divider"></div>
+    <div class="newsletter-container">
+        <div class="newsletter-content">
+            <p>Receive Digital Sovereignty Chronicle newsletter in your inbox</p>
+            
+            <form action="https://buttondown.com/api/emails/embed-subscribe/digital-sovereignty" 
+                  method="post" 
+                  class="newsletter-form"
+                  target="_blank">
+                
+                <div class="form-group">
+                    <input type="email" 
+                           name="email" 
+                           id="newsletter-email" 
+                           placeholder="Enter your email address"
+                           required
+                           class="newsletter-input">
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="newsletter-button">
+                        Subscribe
+                    </button>
+                </div>
+                
+                <div class="newsletter-privacy">
+                    <small>We respect your <a href="https://digitalsovereignty.herbertyang.xyz/privacy">privacy</a>. Unsubscribe at any time.</small>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+.newsletter-signup {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    color: #333;
+    box-shadow: none;
+}
+
+.newsletter-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #8B4513, transparent);
+    margin-bottom: 1.5rem;
+    opacity: 0.6;
+}
+
+.newsletter-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #8B4513;
+}
+
+.newsletter-content p {
+    margin: 0 0 1.5rem 0;
+    opacity: 0.8;
+    line-height: 1.5;
+    color: #666;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-input {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    background: white;
+    border-color: #8B4513;
+    box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.2);
+}
+
+.newsletter-input::placeholder {
+    color: #666;
+}
+
+.newsletter-button {
+    padding: 12px 24px;
+    background: #D2691E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.newsletter-button:hover {
+    background: #CD853F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(210, 105, 30, 0.4);
+}
+
+.newsletter-button:active {
+    transform: translateY(0);
+}
+
+.newsletter-privacy {
+    margin-top: 0.5rem;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.85rem;
+}
+
+ 
+@media (max-width: 768px) {
+    .newsletter-signup {
+        margin: 1.5rem 0;
+        padding: 1rem;
+    }
+    
+    .newsletter-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .newsletter-input,
+    .newsletter-button {
+        font-size: 16px;  
+    }
+}
+
+ 
+@media (prefers-color-scheme: dark) {
+    .newsletter-input {
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+    }
+    
+    .newsletter-input:focus {
+        background: white;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.newsletter-form');
+    const emailInput = document.querySelector('#newsletter-email');
+    const submitButton = document.querySelector('.newsletter-button');
+    
+    if (form && emailInput && submitButton) {
+        form.addEventListener('submit', function(e) {
+            
+            const email = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            
+            submitButton.textContent = 'Subscribing...';
+            submitButton.disabled = true;
+            
+            
+            setTimeout(() => {
+                submitButton.textContent = 'Subscribe';
+                submitButton.disabled = false;
+            }, 2000);
+        });
+    }
+});
+</script>
+
+</article></main><footer
+  class="mx-auto flex max-w-(--w) items-center justify-center px-8 text-xs tracking-wider uppercase opacity-60 py-8"
+  style="margin-bottom: 40px; padding-bottom: 20px;"
+>
+  <div class="text-center">
+    <div style="margin-bottom: 24px;">© 2025 Herbert Yang. All rights reserved.</div>
+    <div class="flex items-center justify-center gap-2">
+      <span class="whitespace-nowrap">powered by</span> <a href="https://dashboard.internetcomputer.org/canister/wupbw-2aaaa-aaaae-abn7a-cai" target="_blank" rel="noopener"><img src="https://digitalsovereignty.herbertyang.xyz/img/ic_logo.svg" alt="Internet Computer" class="opacity-60" style="width: 150px !important" /></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en"
+  dir="ltr"
+><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>The Inconvenient Truth from AWS&#39; Outage to Crypto&#39;s Fragility - Digital Sovereignty Chronicle</title>
+
+  
+  <meta name="theme-color" />
+
+  <meta name="google-site-verification" content="EUfZMwldx_-h0IaT9wYRkBB1hJ_LSoO5LDY3-Gu9zZU" /><meta name="description" content="
+A lot has been reported about the massive outage of Amazon Web Services (&ldquo;AWS&rdquo;) in the last few days. Many crypto exchanges went offline, and some blockchains had difficulty finalizing transactions.
+Many crypto KOLs woke up to the brutal reality that the vast majority of L1/L2 blockchains are highly dependent on AWS or, in general, centralized cloud computing services. For example, 58.83% of Ethereum nodes are deployed on cloud compute platforms." />
+  <meta name="author" content="Herbert Yang" /><link rel="preload stylesheet" as="style" href="https://digitalsovereignty.herbertyang.xyz/main.min.css" />
+
+  
+  <link rel="preload" as="image" href="https://digitalsovereignty.herbertyang.xyz/theme.png" />
+
+  
+
+  
+
+  <script
+    defer
+    src="https://digitalsovereignty.herbertyang.xyz/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+
+  
+  <link
+    rel="icon"
+    href="https://digitalsovereignty.herbertyang.xyz/img/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://digitalsovereignty.herbertyang.xyz/img/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.148.2">
+  <link rel="canonical" href="https://digitalsovereignty.herbertyang.xyz/p/the-inconvenient-truth-from-aws-outage-to-crypto-s-fragility/" />
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFQFKNFFR7"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-JFQFKNFFR7');
+        }
+      </script>
+  <meta itemprop="name" content="The Inconvenient Truth from AWS&#39; Outage to Crypto&#39;s Fragility">
+  <meta itemprop="description" content="What is decentralization when most of your nodes are running on AWS? An inconvenient truth revealed by the widespread AWS outage that exposed the fragility of the entire crypto industry.">
+  <meta itemprop="datePublished" content="2025-10-24T12:00:00+08:00">
+  <meta itemprop="dateModified" content="2025-10-24T12:00:00+08:00">
+  <meta itemprop="wordCount" content="1344">
+  <meta itemprop="image" content="https://digitalsovereignty.herbertyang.xyz/p/the-inconvenient-truth-from-aws-outage-to-crypto-s-fragility/aws-outage.jpg">
+  <meta itemprop="keywords" content="AWS,outage,DFINITY,ICP,canister,subnet"><meta property="og:url" content="https://digitalsovereignty.herbertyang.xyz/p/the-inconvenient-truth-from-aws-outage-to-crypto-s-fragility/">
+  <meta property="og:site_name" content="Digital Sovereignty Chronicle">
+  <meta property="og:title" content="The Inconvenient Truth from AWS&#39; Outage to Crypto&#39;s Fragility">
+  <meta property="og:description" content="What is decentralization when most of your nodes are running on AWS? An inconvenient truth revealed by the widespread AWS outage that exposed the fragility of the entire crypto industry.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-24T12:00:00+08:00">
+    <meta property="article:modified_time" content="2025-10-24T12:00:00+08:00">
+    <meta property="og:image" content="https://digitalsovereignty.herbertyang.xyz/p/the-inconvenient-truth-from-aws-outage-to-crypto-s-fragility/aws-outage.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://digitalsovereignty.herbertyang.xyz/p/the-inconvenient-truth-from-aws-outage-to-crypto-s-fragility/aws-outage.jpg">
+  <meta name="twitter:title" content="The Inconvenient Truth from AWS&#39; Outage to Crypto&#39;s Fragility">
+  <meta name="twitter:description" content="What is decentralization when most of your nodes are running on AWS? An inconvenient truth revealed by the widespread AWS outage that exposed the fragility of the entire crypto industry.">
+
+</head>
+<body
+    class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
+  ><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="https://digitalsovereignty.herbertyang.xyz/"
+      >Digital Sovereignty Chronicle</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
+  ><nav
+      class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse"
+    ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/posts/"
+        >Posts</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/categories/"
+        >Categories</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/series/"
+        >Series</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="https://digitalsovereignty.herbertyang.xyz/about/"
+        >About</a
+      ></nav>
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+  <header class="mb-14">
+    <h1 class="my-0! pb-2.5">The Inconvenient Truth from AWS&#39; Outage to Crypto&#39;s Fragility</h1><div class="text-xs antialiased opacity-60"><time>Oct 24, 2025</time><span class="mx-1">&middot;</span>
+      <span>7 minutes read</span>
+    </div></header>
+
+  <section><p><img src="./aws-outage.jpg" alt="Featured Image"></p>
+<p>A lot has been reported about the massive outage of Amazon Web Services (&ldquo;AWS&rdquo;) in the last few days. Many crypto exchanges went offline, and some blockchains had difficulty finalizing transactions.</p>
+<p>Many crypto KOLs woke up to the brutal reality that the vast majority of <a href="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains/">L1/L2 blockchains</a> are highly dependent on AWS or, in general, centralized cloud computing services. For example, <code>58.83%</code> of Ethereum nodes are deployed on cloud compute platforms.</p>
+<p><img src="./eth-nodes-by-host.png" alt="eth nodes by host"></p>
+<p>And  <code>27.17% </code>of those are on <strong>AWS</strong>.</p>
+<p><img src="./eth-nodes-by-host-company.jpg" alt="eth nodes by host company"></p>
+<p>Their surprise gives away their naivety and ignorance. This has always been the case in crypto. I&rsquo;ve been saying this since 2021, from the day I left AWS to join DFINITY Foundation, the developer studio behind the Internet Computer Protocol (&ldquo;ICP&rdquo;), a leading L1 blockchain.</p>
+<p><img src="./herbert-on-aws.jpg" alt="Herbert on AWS"></p>
+<p>Decentralization rolls off the tongue for crypto people, but many of them don&rsquo;t realize how fragile these crypto protocols, blockchains, and infrastructure services (exchanges and wallets) are at the mercy of cloud computing platforms like AWS, Google Cloud, and Microsoft Azure. If AWS can deplatform <strong>Parler</strong>, it can easily deplatform any blockchain whose nodes are running inside its EC2 virtual machines, along with thousands of not millions, of apps and tokens that run their own smart contracts on those chains.</p>
+<p>Crypto protocols are much more vulnerable to the mood of the day of powerful centralized big tech firms than people are willing to admit.</p>
+<p>AWS Outage is not the worst thing that can happen to a crypto project. It can do a lot worse by having its AWS account hacked, compromising its private key. Whoever has access to the private key controls the wallet and the assets in it. Saving your private key on a web service, regardless of its format, is a recipe for disaster. If your account has not been hacked, it&rsquo;s only because its balance is not substantial enough yet (to motivate the hackers).</p>
+<p>Among the major blockchains (small, exotic, niche L1 blockchains don&rsquo;t have the critical mass to matter), there are only two exceptions that would come out unscathed from an AWS outage: <strong>Bitcoin</strong> and <strong>ICP</strong>.</p>
+<p>Bitcoin miners consist of either individual validators running Bitcoin Core in their home basements or professional mining pools that aggregate massive hash power. Machines from centralized cloud computing platforms are not optimized for Bitcoin mining. Using AWS would defeat the purpose of Bitcoin fundamentalists.</p>
+<p>ICP is a multi-blockchain infrastructure network that can be considered a decentralized version of AWS. It consists of many subnets (currently <a href="https://dashboard.internetcomputer.org/network/subnets">47 globally</a>). Each subnet is a blockchain with its own consensus and nodes (most subnets have <code>13</code> nodes). When the compute power of a subnet is full, ICP&rsquo;s protocol will spin up new subnets to meet the growing demand. Technically, there is no limit how many subnets ICP can have. The nodes are run by <a href="https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep02-miners/">independent IDC operators</a> around the world, who are paid in <a href="https://coinmarketcap.com/currencies/internet-computer/">$ICP</a> tokens for providing the compute resources that power the smart contracts running on ICP. ICP logs more than <code>600,000</code> transactions per second (<a href="https://dashboard.internetcomputer.org/">by Ethereum equivalent</a>), far exceeding every other crypto L1/L2 by a long mile.</p>
+<p><img src="./fastest-blockchains.jpg" alt="fastest blockchains"></p>
+<p>This speed is on par with traditional web services. It&rsquo;s not possible yet to run an FPS game like <strong>League of Legends</strong>, which requires less than <code>50 milliseconds</code> of latency, on ICP. But everything else, from a social network, email, Texas Hold &rsquo;em game, blog, SaaS, CRM, e-commerce, can all be running on ICP just fine, and that is already happening.</p>
+<p>This subnet architecture is very different from Ethereum and Solana. In ICP terms, Ethereum is just one single subnet. A transaction cannot be finalized until all its nodes agree to it. This is very secure, but also very slow. That&rsquo;s why Ethereum needs L2 blockchains (<strong>Arbitrum</strong>, <strong>Optimism</strong>, <strong>zkSync</strong>) to handle its workload, creating another conflict between Ethereum L1 and L2s.</p>
+<p>In other words, ICP has solved the most difficult problem that keeps the crypto industry from getting mainstream adoption - horizontal scaling. Horizontal scaling is a given in the current good old Web2, but an almost insurmountable challenge for Ethereum and its wannabes. Several other L1 blockchains attempted to develop their own sharding/subnet features, but ICP is the only chain that has already implemented this in production since 2021.</p>
+<p>Also, the ICP network has never been down since its mainnet went live on May 21, 2021. In the same period, AWS infamously went down at least 4 times: December 2021, June 2023, July 2024,  and October 2025.</p>
+<p>Another major feature of ICP is its actor-type smart contract - canister. With 500 GB stable memory, it&rsquo;s a Docker-like virtual machine that can host the front-end of web services. It&rsquo;s similar to an EC2 virtual machine from AWS. AWS can close down your EC2 without giving any explanation, but the canister is controlled by you ONLY.</p>
+<p><img src="./canister.jpg" alt="canister"></p>
+<p>You have 100% full discretion on who can access your canister - may it be your spouse, children, co-worker, collaborator, or another agentic canister. Though a canister smart contract is deployed on a subnet and gets its compute and storage from the node operator of that subnet, the node operator will not be able to &ldquo;see&rdquo; what&rsquo;s inside your canister.</p>
+<p>I&rsquo;ve been blogging since 2006 and have used every blogging platform there has been, all the way starting from <strong>Geocities</strong> and <strong>Blogspot</strong>. I moved <a href="https://herbertyang.xyz/">my blog</a> to a <a href="https://hbc6w-gqaaa-aaaag-aagdq-cai.raw.ic0.app/">canister on ICP</a> a few years ago and have since then built many canister websites, such as <a href="https://digitalsovereignty.herbertyang.xyz/">this very newsletter</a>.  Can you tell it&rsquo;s actually deployed, end-to-end, on a blockchain?</p>
+<p>It&rsquo;s a lot easier to build a website on Canister vs traditional EC2 from AWS.  Figuratively speaking, AWS would require you to do 10 things to get a site up and running, while you only need to do 3-4 with ICP.  It&rsquo;s also a lot cheaper. I would have to pay at least $5~10/month to keep EC2 instances on my AWS account. My costs of keeping the same site running on a canister, as measured in cycles, are a tiny fraction of that.</p>
+<p>There are many other powerful features of a canister, of course, beyond just hosting a website. For example, it can control a Bitcoin wallet and essentially let you do transactions on Bitcoin much faster and more cheaply without going through the Bitcoin mainnet. You can also achieve total anonymity, an extremely difficult feat to pull off on the Internet of 2025.</p>
+<p>As a content creator, I don&rsquo;t like paying ransom to any centralized, faceless, powerful platform for hosting my contents. I like to take things into my own hands and don&rsquo;t mind going a few extra steps to keep it that way. I want my writing and <a href="https://herbertyang.xyz/docs/gallery/">photographs</a> to persist for a very, very long time, like 500-10,000 years, not because they&rsquo;re the next <strong>In Search of Lost Time</strong>, but because they can be an interesting footnote, if not a small chapter, in the grander human history that records real stories of real people and their emotions in our generation. I don&rsquo;t want them to fizzle out together with those centralized platforms.</p>
+<p>Because in the end, all the current big tech firms will fall into oblivion. The boy who wants to slay the dragon will become the dragon itself. It&rsquo;s a very repeatable and predictable play.</p>
+<p>So the question becomes, in the spirit of antifragility, where should you deploy your storage repository and publication outlet, making sure you take full control of the digital sovereignty of your creation and minimizing <a href="https://digitalsovereignty.herbertyang.xyz/p/migrate-from-substack-to-a-self-hosting-newsletter/">painful migration</a> costs? A simpler way of asking this question is, where would you maintain your identity and personal branding?</p>
+<p>While most people hang on to AWS because they don&rsquo;t know any better, I am fortunate to work in a very edgy frontier industry where a paradigm shift is quietly brewing. I will place my bet on a truly decentralized blockchain platform. This nascent industry is still volatile and tender, but it has shown promising signs of a different kind of Internet, the one where sovereignty aligns with creativity and economic rewards align with proof of effort.</p>
+<p>Let&rsquo;s see who will have the last laugh, 100 years from now.</p>
+</section>
+
+  <div class="mt-24 rounded-xl bg-black/[3%] p-6 dark:bg-white/[8%]">
+    <h3 class="mb-4 text-lg font-medium">Comments & Discussion</h3>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/ic-agent-bundle.js"></script>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/ic-agent.js"></script>
+    <script src="https://kdcro-gqaaa-aaaai-q34gq-cai.icp0.io/widget.js?v=1.0.0"></script>
+    <div id="rapport"></div>
+    <script>
+      Rapport.init({
+        canisterId: 'kedx2-liaaa-aaaai-q34ga-cai',
+        pageUrl: 'https:\/\/digitalsovereignty.herbertyang.xyz\/p\/the-inconvenient-truth-from-aws-outage-to-crypto-s-fragility\/'
+      });
+    </script>
+  </div><footer class="mt-12 flex flex-wrap"><a
+      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://digitalsovereignty.herbertyang.xyz/categories/crypto-abc"
+      >Crypto ABC</a
+    ></footer><nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  ><a class="ltr:pr-3 rtl:pl-3" href="https://digitalsovereignty.herbertyang.xyz/p/easier-than-zero-inbox/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Easier Than Zero Inbox</span></a
+    ><a
+      class="justify-end pl-3 ltr:ml-auto rtl:mr-auto"
+      href="https://digitalsovereignty.herbertyang.xyz/p/nobody-shares-photos-anymore/"
+      ><span>Nobody Shares Photos Anymore</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    ></nav>
+<div class="newsletter-signup">
+    <div class="newsletter-divider"></div>
+    <div class="newsletter-container">
+        <div class="newsletter-content">
+            <p>Receive Digital Sovereignty Chronicle newsletter in your inbox</p>
+            
+            <form action="https://buttondown.com/api/emails/embed-subscribe/digital-sovereignty" 
+                  method="post" 
+                  class="newsletter-form"
+                  target="_blank">
+                
+                <div class="form-group">
+                    <input type="email" 
+                           name="email" 
+                           id="newsletter-email" 
+                           placeholder="Enter your email address"
+                           required
+                           class="newsletter-input">
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="newsletter-button">
+                        Subscribe
+                    </button>
+                </div>
+                
+                <div class="newsletter-privacy">
+                    <small>We respect your <a href="https://digitalsovereignty.herbertyang.xyz/privacy">privacy</a>. Unsubscribe at any time.</small>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+.newsletter-signup {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    color: #333;
+    box-shadow: none;
+}
+
+.newsletter-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #8B4513, transparent);
+    margin-bottom: 1.5rem;
+    opacity: 0.6;
+}
+
+.newsletter-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #8B4513;
+}
+
+.newsletter-content p {
+    margin: 0 0 1.5rem 0;
+    opacity: 0.8;
+    line-height: 1.5;
+    color: #666;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-input {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    background: white;
+    border-color: #8B4513;
+    box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.2);
+}
+
+.newsletter-input::placeholder {
+    color: #666;
+}
+
+.newsletter-button {
+    padding: 12px 24px;
+    background: #D2691E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.newsletter-button:hover {
+    background: #CD853F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(210, 105, 30, 0.4);
+}
+
+.newsletter-button:active {
+    transform: translateY(0);
+}
+
+.newsletter-privacy {
+    margin-top: 0.5rem;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.85rem;
+}
+
+ 
+@media (max-width: 768px) {
+    .newsletter-signup {
+        margin: 1.5rem 0;
+        padding: 1rem;
+    }
+    
+    .newsletter-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .newsletter-input,
+    .newsletter-button {
+        font-size: 16px;  
+    }
+}
+
+ 
+@media (prefers-color-scheme: dark) {
+    .newsletter-input {
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+    }
+    
+    .newsletter-input:focus {
+        background: white;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.newsletter-form');
+    const emailInput = document.querySelector('#newsletter-email');
+    const submitButton = document.querySelector('.newsletter-button');
+    
+    if (form && emailInput && submitButton) {
+        form.addEventListener('submit', function(e) {
+            
+            const email = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            
+            submitButton.textContent = 'Subscribing...';
+            submitButton.disabled = true;
+            
+            
+            setTimeout(() => {
+                submitButton.textContent = 'Subscribe';
+                submitButton.disabled = false;
+            }, 2000);
+        });
+    }
+});
+</script>
+
+</article></main><footer
+  class="mx-auto flex max-w-(--w) items-center justify-center px-8 text-xs tracking-wider uppercase opacity-60 py-8"
+  style="margin-bottom: 40px; padding-bottom: 20px;"
+>
+  <div class="text-center">
+    <div style="margin-bottom: 24px;">© 2025 Herbert Yang. All rights reserved.</div>
+    <div class="flex items-center justify-center gap-2">
+      <span class="whitespace-nowrap">powered by</span> <a href="https://dashboard.internetcomputer.org/canister/wupbw-2aaaa-aaaae-abn7a-cai" target="_blank" rel="noopener"><img src="https://digitalsovereignty.herbertyang.xyz/img/ic_logo.svg" alt="Internet Computer" class="opacity-60" style="width: 150px !important" /></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

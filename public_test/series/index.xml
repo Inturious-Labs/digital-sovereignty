@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Digital Sovereignty Chronicle</title>
+    <link>https://digitalsovereignty.herbertyang.xyz/series/</link>
+    <description>Recent content in Series on Digital Sovereignty Chronicle</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Nov 2025 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://digitalsovereignty.herbertyang.xyz/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Self-Host Website</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/series/self-host-website/</link>
+      <pubDate>Sun, 02 Nov 2025 12:00:00 +0800</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/series/self-host-website/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Decoding the Crypto Ecosystem</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/series/decoding-the-crypto-ecosystem/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0800</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/series/decoding-the-crypto-ecosystem/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Asia Crypto Ecosystem</title>
+      <link>https://digitalsovereignty.herbertyang.xyz/series/asia-crypto-ecosystem/</link>
+      <pubDate>Thu, 12 Jun 2025 23:15:14 +0000</pubDate>
+      <guid>https://digitalsovereignty.herbertyang.xyz/series/asia-crypto-ecosystem/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
