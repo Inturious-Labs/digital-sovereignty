@@ -1,7 +1,7 @@
 ---
 title: "Avoid the Cloud Data Backup Trap: Why I Will Never Use AWS Glacier Again"
 date: 2025-11-25T12:00:00+08:00
-slug: avoid-the-cloud-data-backup-trap-no-more-aws-glacier
+slug: avoid-the-cloud-data-backup-trap-why-i-will-never-use-aws-glacier-again
 draft: false
 description: "Amazon' low-cost storage service AWS Glacier is a nasty parasite. It's very difficult to be killed off. It sucks your blood dry."
 categories:
