@@ -5,6 +5,11 @@
         "source": [
           "public"
         ]
+      },
+      "backend": {
+        "type": "rust",
+        "package": "backend",
+        "candid": "backend/backend.did"
       }
     },
     "networks": {

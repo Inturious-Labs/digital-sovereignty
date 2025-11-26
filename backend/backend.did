@@ -1,0 +1,13 @@
+// Candid interface for the paywall backend canister
+
+type StatusResponse = record {
+    version : text;
+};
+
+service : {
+    // Health check
+    health : () -> (text) query;
+
+    // Get canister status
+    status : () -> (StatusResponse) query;
+}

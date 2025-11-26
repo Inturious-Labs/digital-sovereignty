@@ -1,0 +1,25 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# Internet Computer
+ic-cdk = "0.13"
+ic-cdk-timers = "0.7"
+candid = "0.10"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Cryptography
+sha2 = "0.10"
+hmac = "0.12"
+hex = "0.4"
+
+# Stable storage
+ic-stable-structures = "0.6"
