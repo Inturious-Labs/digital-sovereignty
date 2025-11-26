@@ -1,5 +1,9 @@
 // Candid interface for the paywall backend canister
 
+// ============================================================================
+// Common Types
+// ============================================================================
+
 type StatusResponse = record {
     version : text;
     access_tokens : nat64;
@@ -14,6 +18,10 @@ type AccessToken = record {
     created_at : nat64;
     expires_at : nat64;
 };
+
+// ============================================================================
+// Auth Types
+// ============================================================================
 
 type AuthCreateTokenResponse = record {
     success : bool;
@@ -33,6 +41,10 @@ type SigningTestResponse = record {
     signed_cookie : text;
     signature_valid : bool;
 };
+
+// ============================================================================
+// Stripe Types
+// ============================================================================
 
 type StripeConfigStatus = record {
     is_configured : bool;
@@ -60,6 +72,10 @@ type StripeParseEventResponse = record {
     error : opt text;
 };
 
+// ============================================================================
+// Email Types
+// ============================================================================
+
 type EmailConfigStatus = record {
     is_configured : bool;
     has_api_key : bool;
@@ -75,11 +91,73 @@ type SendEmailRequest = record {
     text : opt text;
 };
 
-service : {
-    // Health check
-    health : () -> (text) query;
+// ============================================================================
+// Production API Types
+// ============================================================================
 
-    // Get canister status with storage counts
+type CreatePaymentRequest = record {
+    email : text;
+    article_slug : text;
+    article_title : text;
+};
+
+type CreatePaymentResponse = record {
+    success : bool;
+    payment_intent_id : opt text;
+    client_secret : opt text;
+    error : opt text;
+};
+
+type WebhookResponse = record {
+    success : bool;
+    message : text;
+};
+
+type ValidateAccessRequest = record {
+    article_slug : text;
+    access_token : opt text;
+    session_id : opt text;
+};
+
+type ValidateAccessResponse = record {
+    has_access : bool;
+    article_slug : text;
+};
+
+type CreateGiftRequest = record {
+    article_slug : text;
+    gifter_token : text;
+    gifter_name : opt text;
+    article_title : opt text;
+    recipient_email : opt text;
+};
+
+type CreateGiftResponse = record {
+    success : bool;
+    gift_token : opt text;
+    gift_url : opt text;
+    error : opt text;
+};
+
+type RedeemGiftResponse = record {
+    success : bool;
+    article_slug : opt text;
+    error : opt text;
+};
+
+type CreateSessionResponse = record {
+    success : bool;
+    session_cookie : opt text;
+    error : opt text;
+};
+
+// ============================================================================
+// Service Definition
+// ============================================================================
+
+service : {
+    // Health & Status
+    health : () -> (text) query;
     status : () -> (StatusResponse) query;
 
     // Storage test endpoints
@@ -103,4 +181,22 @@ service : {
     email_status : () -> (EmailConfigStatus) query;
     email_preview_access : (to_email : text, article_title : text, article_slug : text, access_token : text) -> (SendEmailRequest) query;
     email_preview_gift : (to_email : text, gifter_name : text, article_title : text, article_slug : text, gift_token : text) -> (SendEmailRequest) query;
+
+    // =========================================================================
+    // Production Endpoints
+    // =========================================================================
+
+    // Payment flow
+    create_payment : (CreatePaymentRequest) -> (CreatePaymentResponse);
+    handle_webhook : (payload : text, signature : text) -> (WebhookResponse);
+
+    // Access validation
+    validate_access : (ValidateAccessRequest) -> (ValidateAccessResponse) query;
+
+    // Gift flow
+    create_gift : (CreateGiftRequest) -> (CreateGiftResponse);
+    redeem_gift : (gift_token : text, redeemer_email : text) -> (RedeemGiftResponse);
+
+    // Session management
+    create_session : (access_token : text) -> (CreateSessionResponse);
 }
