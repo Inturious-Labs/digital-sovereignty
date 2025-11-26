@@ -15,6 +15,25 @@ type AccessToken = record {
     expires_at : nat64;
 };
 
+type AuthCreateTokenResponse = record {
+    success : bool;
+    token : opt text;
+    error : opt text;
+};
+
+type AuthValidateResponse = record {
+    valid : bool;
+    article_slug : opt text;
+    email : opt text;
+    error : opt text;
+};
+
+type SigningTestResponse = record {
+    signature : text;
+    signed_cookie : text;
+    signature_valid : bool;
+};
+
 service : {
     // Health check
     health : () -> (text) query;
@@ -22,7 +41,13 @@ service : {
     // Get canister status with storage counts
     status : () -> (StatusResponse) query;
 
-    // Test endpoints for storage validation
+    // Storage test endpoints
     test_insert_token : (email : text, article_slug : text) -> (text);
     test_get_token : (token : text) -> (opt AccessToken) query;
+
+    // Auth test endpoints
+    auth_create_token : (email : text, article_slug : text) -> (AuthCreateTokenResponse);
+    auth_validate_token : (token : text) -> (AuthValidateResponse) query;
+    auth_check_access : (token : text, article_slug : text) -> (bool) query;
+    auth_test_signing : (data : text) -> (SigningTestResponse) query;
 }
