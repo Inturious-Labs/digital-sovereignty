@@ -2,12 +2,27 @@
 
 type StatusResponse = record {
     version : text;
+    access_tokens : nat64;
+    user_sessions : nat64;
+    gift_tokens : nat64;
+};
+
+type AccessToken = record {
+    token : text;
+    email : text;
+    article_slug : text;
+    created_at : nat64;
+    expires_at : nat64;
 };
 
 service : {
     // Health check
     health : () -> (text) query;
 
-    // Get canister status
+    // Get canister status with storage counts
     status : () -> (StatusResponse) query;
+
+    // Test endpoints for storage validation
+    test_insert_token : (email : text, article_slug : text) -> (text);
+    test_get_token : (token : text) -> (opt AccessToken) query;
 }
