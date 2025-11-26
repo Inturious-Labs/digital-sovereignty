@@ -211,5 +211,44 @@ pub struct StripeParseEventResponse {
     pub error: Option<String>,
 }
 
+// ============================================================================
+// Email test endpoints
+// ============================================================================
+
+/// Configure email service
+#[update]
+fn email_configure(api_key: String) {
+    email::set_email_api_key(api_key);
+}
+
+/// Get email configuration status
+#[query]
+fn email_status() -> email::EmailConfigStatus {
+    email::get_config_status()
+}
+
+/// Preview access email (without sending)
+#[query]
+fn email_preview_access(
+    to_email: String,
+    article_title: String,
+    article_slug: String,
+    access_token: String,
+) -> email::SendEmailRequest {
+    email::preview_access_email(&to_email, &article_title, &article_slug, &access_token)
+}
+
+/// Preview gift email (without sending)
+#[query]
+fn email_preview_gift(
+    to_email: String,
+    gifter_name: String,
+    article_title: String,
+    article_slug: String,
+    gift_token: String,
+) -> email::SendEmailRequest {
+    email::preview_gift_email(&to_email, &gifter_name, &article_title, &article_slug, &gift_token)
+}
+
 // Export Candid interface
 ic_cdk::export_candid!();

@@ -60,6 +60,21 @@ type StripeParseEventResponse = record {
     error : opt text;
 };
 
+type EmailConfigStatus = record {
+    is_configured : bool;
+    has_api_key : bool;
+    sender_email : text;
+    sender_name : text;
+    site_url : text;
+};
+
+type SendEmailRequest = record {
+    to : text;
+    subject : text;
+    html : text;
+    text : opt text;
+};
+
 service : {
     // Health check
     health : () -> (text) query;
@@ -82,4 +97,10 @@ service : {
     stripe_status : () -> (StripeConfigStatus) query;
     stripe_test_webhook_verify : (payload : text, signature : text) -> (StripeWebhookTestResponse) query;
     stripe_test_parse_event : (payload : text) -> (StripeParseEventResponse) query;
+
+    // Email test endpoints
+    email_configure : (api_key : text) -> ();
+    email_status : () -> (EmailConfigStatus) query;
+    email_preview_access : (to_email : text, article_title : text, article_slug : text, access_token : text) -> (SendEmailRequest) query;
+    email_preview_gift : (to_email : text, gifter_name : text, article_title : text, article_slug : text, gift_token : text) -> (SendEmailRequest) query;
 }
