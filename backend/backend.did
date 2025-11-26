@@ -34,6 +34,32 @@ type SigningTestResponse = record {
     signature_valid : bool;
 };
 
+type StripeConfigStatus = record {
+    is_configured : bool;
+    has_secret_key : bool;
+    has_webhook_secret : bool;
+};
+
+type StripeWebhookTestResponse = record {
+    valid : bool;
+    error : opt text;
+};
+
+type WebhookEvent = record {
+    event_type : text;
+    payment_intent_id : text;
+    email : opt text;
+    article_slug : opt text;
+    article_title : opt text;
+    amount : nat64;
+};
+
+type StripeParseEventResponse = record {
+    success : bool;
+    event : opt WebhookEvent;
+    error : opt text;
+};
+
 service : {
     // Health check
     health : () -> (text) query;
@@ -50,4 +76,10 @@ service : {
     auth_validate_token : (token : text) -> (AuthValidateResponse) query;
     auth_check_access : (token : text, article_slug : text) -> (bool) query;
     auth_test_signing : (data : text) -> (SigningTestResponse) query;
+
+    // Stripe test endpoints
+    stripe_configure : (secret_key : text, webhook_secret : text) -> ();
+    stripe_status : () -> (StripeConfigStatus) query;
+    stripe_test_webhook_verify : (payload : text, signature : text) -> (StripeWebhookTestResponse) query;
+    stripe_test_parse_event : (payload : text) -> (StripeParseEventResponse) query;
 }

@@ -14,6 +14,7 @@ mod stripe;
 
 use candid::{CandidType, Deserialize};
 use ic_cdk::{query, update};
+use ic_cdk::api::management_canister::http_request::{HttpResponse, TransformArgs};
 
 /// Health check endpoint
 #[query]
@@ -145,6 +146,69 @@ pub struct SigningTestResponse {
     pub signature: String,
     pub signed_cookie: String,
     pub signature_valid: bool,
+}
+
+// ============================================================================
+// Stripe test endpoints
+// ============================================================================
+
+/// Configure Stripe API keys (for testing)
+#[update]
+fn stripe_configure(secret_key: String, webhook_secret: String) {
+    stripe::set_stripe_secret_key(secret_key);
+    stripe::set_stripe_webhook_secret(webhook_secret);
+}
+
+/// Get Stripe configuration status
+#[query]
+fn stripe_status() -> stripe::StripeConfigStatus {
+    stripe::get_config_status()
+}
+
+/// Test webhook signature verification
+#[query]
+fn stripe_test_webhook_verify(payload: String, signature: String) -> StripeWebhookTestResponse {
+    // Use a large tolerance for testing (1 hour)
+    match stripe::verify_webhook_signature(payload.as_bytes(), &signature, 3600) {
+        Ok(()) => StripeWebhookTestResponse {
+            valid: true,
+            error: None,
+        },
+        Err(e) => StripeWebhookTestResponse {
+            valid: false,
+            error: Some(e.to_string()),
+        },
+    }
+}
+
+#[derive(CandidType, Deserialize)]
+pub struct StripeWebhookTestResponse {
+    pub valid: bool,
+    pub error: Option<String>,
+}
+
+/// Test webhook event parsing
+#[query]
+fn stripe_test_parse_event(payload: String) -> StripeParseEventResponse {
+    match stripe::parse_webhook_event(payload.as_bytes()) {
+        Ok(event) => StripeParseEventResponse {
+            success: true,
+            event: Some(event),
+            error: None,
+        },
+        Err(e) => StripeParseEventResponse {
+            success: false,
+            event: None,
+            error: Some(e.to_string()),
+        },
+    }
+}
+
+#[derive(CandidType, Deserialize)]
+pub struct StripeParseEventResponse {
+    pub success: bool,
+    pub event: Option<stripe::WebhookEvent>,
+    pub error: Option<String>,
 }
 
 // Export Candid interface
