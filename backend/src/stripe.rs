@@ -189,6 +189,178 @@ pub async fn create_payment_intent(request: CreatePaymentRequest) -> StripeResul
 }
 
 // ============================================================================
+// Checkout Session (for redirect flow with immediate unlock)
+// ============================================================================
+
+/// Request to create a Checkout Session
+#[derive(Debug, Clone, CandidType, Deserialize, Serialize)]
+pub struct CreateCheckoutSessionRequest {
+    pub article_slug: String,
+    pub article_title: String,
+    pub success_url: String,
+    pub cancel_url: String,
+}
+
+/// Response from creating a Checkout Session
+#[derive(Debug, Clone, CandidType, Deserialize, Serialize)]
+pub struct CreateCheckoutSessionResponse {
+    pub session_id: String,
+    pub checkout_url: String,
+}
+
+/// Stripe API response for Checkout Session
+#[derive(Debug, Deserialize)]
+struct StripeCheckoutSession {
+    id: String,
+    url: String,
+}
+
+/// Create a Checkout Session for article purchase (redirect flow)
+pub async fn create_checkout_session(request: CreateCheckoutSessionRequest) -> StripeResult<CreateCheckoutSessionResponse> {
+    let secret_key = get_secret_key()?;
+
+    // Build form-encoded body for Stripe API
+    // Note: We don't collect email here - Stripe will collect it on the checkout page
+    let body = format!(
+        "mode=payment\
+        &line_items[0][price_data][currency]=usd\
+        &line_items[0][price_data][product_data][name]={}\
+        &line_items[0][price_data][unit_amount]={}\
+        &line_items[0][quantity]=1\
+        &metadata[article_slug]={}\
+        &metadata[article_title]={}\
+        &success_url={}\
+        &cancel_url={}",
+        urlencoded(&request.article_title),
+        ARTICLE_PRICE_CENTS,
+        urlencoded(&request.article_slug),
+        urlencoded(&request.article_title),
+        urlencoded(&format!("{}?session_id={{CHECKOUT_SESSION_ID}}", request.success_url)),
+        urlencoded(&request.cancel_url)
+    );
+
+    let request_headers = vec![
+        HttpHeader {
+            name: "Content-Type".to_string(),
+            value: "application/x-www-form-urlencoded".to_string(),
+        },
+        HttpHeader {
+            name: "Authorization".to_string(),
+            value: format!("Bearer {}", secret_key),
+        },
+    ];
+
+    let request_arg = CanisterHttpRequestArgument {
+        url: format!("{}/checkout/sessions", STRIPE_API_URL),
+        method: HttpMethod::POST,
+        body: Some(body.into_bytes()),
+        max_response_bytes: Some(10_000),
+        transform: Some(TransformContext::from_name("transform_stripe_response".to_string(), vec![])),
+        headers: request_headers,
+    };
+
+    let cycles: u128 = 100_000_000_000;
+
+    let (response,): (HttpResponse,) = http_request(request_arg, cycles)
+        .await
+        .map_err(|(code, msg)| StripeError::HttpRequestFailed(format!("{:?}: {}", code, msg)))?;
+
+    if response.status != 200u64 {
+        let error_body = String::from_utf8_lossy(&response.body);
+        return Err(StripeError::InvalidResponse(format!(
+            "Status {}: {}",
+            response.status, error_body
+        )));
+    }
+
+    let session: StripeCheckoutSession = serde_json::from_slice(&response.body)
+        .map_err(|e| StripeError::ParseError(e.to_string()))?;
+
+    Ok(CreateCheckoutSessionResponse {
+        session_id: session.id,
+        checkout_url: session.url,
+    })
+}
+
+/// Response from verifying a payment session
+#[derive(Debug, Clone, CandidType, Deserialize, Serialize)]
+pub struct VerifyPaymentResponse {
+    pub success: bool,
+    pub email: Option<String>,
+    pub article_slug: Option<String>,
+    pub article_title: Option<String>,
+    pub payment_status: String,
+}
+
+/// Stripe API response for retrieving Checkout Session
+#[derive(Debug, Deserialize)]
+struct StripeCheckoutSessionDetails {
+    id: String,
+    payment_status: String,
+    customer_details: Option<StripeCustomerDetails>,
+    metadata: Option<StripeMetadata>,
+}
+
+#[derive(Debug, Deserialize)]
+struct StripeCustomerDetails {
+    email: Option<String>,
+}
+
+/// Verify a completed payment by session ID
+/// Called after user returns from Stripe checkout
+pub async fn verify_payment_session(session_id: &str) -> StripeResult<VerifyPaymentResponse> {
+    let secret_key = get_secret_key()?;
+
+    let request_headers = vec![
+        HttpHeader {
+            name: "Authorization".to_string(),
+            value: format!("Bearer {}", secret_key),
+        },
+    ];
+
+    let request_arg = CanisterHttpRequestArgument {
+        url: format!("{}/checkout/sessions/{}", STRIPE_API_URL, session_id),
+        method: HttpMethod::GET,
+        body: None,
+        max_response_bytes: Some(10_000),
+        transform: Some(TransformContext::from_name("transform_stripe_response".to_string(), vec![])),
+        headers: request_headers,
+    };
+
+    let cycles: u128 = 100_000_000_000;
+
+    let (response,): (HttpResponse,) = http_request(request_arg, cycles)
+        .await
+        .map_err(|(code, msg)| StripeError::HttpRequestFailed(format!("{:?}: {}", code, msg)))?;
+
+    if response.status != 200u64 {
+        let error_body = String::from_utf8_lossy(&response.body);
+        return Err(StripeError::InvalidResponse(format!(
+            "Status {}: {}",
+            response.status, error_body
+        )));
+    }
+
+    let session: StripeCheckoutSessionDetails = serde_json::from_slice(&response.body)
+        .map_err(|e| StripeError::ParseError(e.to_string()))?;
+
+    let email = session.customer_details.and_then(|c| c.email);
+    let metadata = session.metadata.unwrap_or(StripeMetadata {
+        email: None,
+        article_slug: None,
+        article_title: None,
+    });
+
+    Ok(VerifyPaymentResponse {
+        success: session.payment_status == "paid",
+        email,
+        article_slug: metadata.article_slug,
+        article_title: metadata.article_title,
+        payment_status: session.payment_status,
+    })
+}
+
+// ============================================================================
 // Webhook Handling
 // ============================================================================
 

@@ -95,6 +95,28 @@ type SendEmailRequest = record {
 // Production API Types
 // ============================================================================
 
+type CreateCheckoutSessionRequest = record {
+    article_slug : text;
+    article_title : text;
+    success_url : text;
+    cancel_url : text;
+};
+
+type CreateCheckoutSessionResponse = record {
+    success : bool;
+    session_id : opt text;
+    checkout_url : opt text;
+    error : opt text;
+};
+
+type VerifyPaymentResponse = record {
+    success : bool;
+    access_token : opt text;
+    article_slug : opt text;
+    error : opt text;
+};
+
+// Legacy Payment Intent types (for Stripe Elements flow)
 type CreatePaymentRequest = record {
     email : text;
     article_slug : text;
@@ -186,7 +208,11 @@ service : {
     // Production Endpoints
     // =========================================================================
 
-    // Payment flow
+    // Payment flow (Checkout Session - redirect flow with immediate unlock)
+    create_checkout_session : (CreateCheckoutSessionRequest) -> (CreateCheckoutSessionResponse);
+    verify_payment : (session_id : text) -> (VerifyPaymentResponse);
+
+    // Payment flow (Legacy - Payment Intent for Stripe Elements)
     create_payment : (CreatePaymentRequest) -> (CreatePaymentResponse);
     handle_webhook : (payload : text, signature : text) -> (WebhookResponse);
 

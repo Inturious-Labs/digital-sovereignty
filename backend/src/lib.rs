@@ -254,8 +254,138 @@ fn email_preview_gift(
 // Production Endpoints
 // ============================================================================
 
-/// Create a payment intent for article purchase
+/// Create a Checkout Session for article purchase (redirect flow)
 /// Called by frontend when user clicks "Unlock Article ($5)"
+#[update]
+async fn create_checkout_session(request: CreateCheckoutSessionRequest) -> CreateCheckoutSessionResponse {
+    let stripe_request = stripe::CreateCheckoutSessionRequest {
+        article_slug: request.article_slug,
+        article_title: request.article_title,
+        success_url: request.success_url,
+        cancel_url: request.cancel_url,
+    };
+
+    match stripe::create_checkout_session(stripe_request).await {
+        Ok(response) => CreateCheckoutSessionResponse {
+            success: true,
+            session_id: Some(response.session_id),
+            checkout_url: Some(response.checkout_url),
+            error: None,
+        },
+        Err(e) => CreateCheckoutSessionResponse {
+            success: false,
+            session_id: None,
+            checkout_url: None,
+            error: Some(e.to_string()),
+        },
+    }
+}
+
+#[derive(CandidType, Deserialize)]
+pub struct CreateCheckoutSessionRequest {
+    pub article_slug: String,
+    pub article_title: String,
+    pub success_url: String,
+    pub cancel_url: String,
+}
+
+#[derive(CandidType, Deserialize)]
+pub struct CreateCheckoutSessionResponse {
+    pub success: bool,
+    pub session_id: Option<String>,
+    pub checkout_url: Option<String>,
+    pub error: Option<String>,
+}
+
+/// Verify a completed payment and return access token
+/// Called by frontend after user returns from Stripe checkout
+#[update]
+async fn verify_payment(session_id: String) -> VerifyPaymentResponse {
+    // 1. Verify payment with Stripe
+    let stripe_result = match stripe::verify_payment_session(&session_id).await {
+        Ok(r) => r,
+        Err(e) => {
+            return VerifyPaymentResponse {
+                success: false,
+                access_token: None,
+                article_slug: None,
+                error: Some(format!("Stripe verification failed: {}", e)),
+            };
+        }
+    };
+
+    // 2. Check payment was successful
+    if !stripe_result.success {
+        return VerifyPaymentResponse {
+            success: false,
+            access_token: None,
+            article_slug: stripe_result.article_slug,
+            error: Some(format!("Payment not completed: {}", stripe_result.payment_status)),
+        };
+    }
+
+    // 3. Extract required fields
+    let email = match stripe_result.email {
+        Some(e) => e,
+        None => {
+            return VerifyPaymentResponse {
+                success: false,
+                access_token: None,
+                article_slug: stripe_result.article_slug,
+                error: Some("No email found in payment session".to_string()),
+            };
+        }
+    };
+
+    let article_slug = match stripe_result.article_slug {
+        Some(s) => s,
+        None => {
+            return VerifyPaymentResponse {
+                success: false,
+                access_token: None,
+                article_slug: None,
+                error: Some("No article_slug found in payment metadata".to_string()),
+            };
+        }
+    };
+
+    let article_title = stripe_result.article_title.unwrap_or_else(|| article_slug.clone());
+
+    // 4. Create access token
+    let access_token = match auth::create_access_token(email.clone(), article_slug.clone()).await {
+        Ok(token) => token,
+        Err(e) => {
+            return VerifyPaymentResponse {
+                success: false,
+                access_token: None,
+                article_slug: Some(article_slug),
+                error: Some(format!("Failed to create access token: {}", e)),
+            };
+        }
+    };
+
+    // 5. Send confirmation email (async, non-blocking - don't fail if email fails)
+    let _ = email::send_access_email(&email, &article_title, &article_slug, &access_token.token).await;
+
+    // 6. Return success with access token
+    VerifyPaymentResponse {
+        success: true,
+        access_token: Some(access_token.token),
+        article_slug: Some(article_slug),
+        error: None,
+    }
+}
+
+#[derive(CandidType, Deserialize)]
+pub struct VerifyPaymentResponse {
+    pub success: bool,
+    pub access_token: Option<String>,
+    pub article_slug: Option<String>,
+    pub error: Option<String>,
+}
+
+/// Legacy: Create a payment intent for article purchase
+/// Kept for backwards compatibility with Stripe Elements flow
 #[update]
 async fn create_payment(request: CreatePaymentRequest) -> CreatePaymentResponse {
     let stripe_request = stripe::CreatePaymentRequest {
