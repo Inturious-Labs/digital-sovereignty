@@ -57,12 +57,13 @@ paywall-backend/
 ```
 
 **Key Endpoints:**
-- `POST /create-payment` - Initialize Stripe Payment Intent
-- `POST /stripe-webhook` - Handle payment completion notifications
-- `GET /validate-access` - Check if user has access to article
+- `POST /create-checkout-session` - Create Stripe Checkout Session, returns checkout URL
+- `POST /verify-payment` - Verify completed payment, returns access token (for immediate unlock)
+- `POST /stripe-webhook` - Handle payment completion notifications (backup/async flow)
+- `POST /validate-access` - Check if user has access to article
 - `POST /create-gift` - Generate gift access tokens
-- `GET /redeem-gift` - Redeem gift access
-- `GET /user-sessions` - Manage user session state
+- `POST /redeem-gift` - Redeem gift access
+- `POST /create-session` - Create user session from access token
 
 #### 2. Frontend Modifications (Hugo)
 
@@ -128,13 +129,91 @@ struct GiftToken {
 
 ## Payment & Access Flow
 
-### Purchase Flow
-1. **User clicks "Unlock Article ($5)"** → Frontend calls `POST /create-payment`
-2. **Backend creates Stripe Payment Intent** → Returns checkout URL
-3. **User completes payment on Stripe** → Stripe sends webhook to `POST /stripe-webhook`
-4. **Backend validates webhook** → Generates secure access token → Sends email with private link
-5. **User clicks private link** → Backend validates token → Creates session cookie
-6. **Future visits** → Frontend checks session → Shows full content
+### Purchase Flow (Immediate Unlock)
+
+The purchase flow is designed for **immediate access** after payment - no email check required.
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           PURCHASE FLOW DIAGRAM                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│   USER                    FRONTEND                BACKEND              STRIPE│
+│    │                         │                       │                    │  │
+│    │ 1. Click "Unlock $5"    │                       │                    │  │
+│    │────────────────────────>│                       │                    │  │
+│    │                         │                       │                    │  │
+│    │                         │ 2. POST /create-checkout-session           │  │
+│    │                         │──────────────────────>│                    │  │
+│    │                         │                       │                    │  │
+│    │                         │                       │ 3. Create Checkout │  │
+│    │                         │                       │    Session         │  │
+│    │                         │                       │───────────────────>│  │
+│    │                         │                       │                    │  │
+│    │                         │                       │<───────────────────│  │
+│    │                         │                       │   session_id + url │  │
+│    │                         │                       │                    │  │
+│    │                         │<──────────────────────│                    │  │
+│    │                         │   checkout_url        │                    │  │
+│    │                         │                       │                    │  │
+│    │<────────────────────────│                       │                    │  │
+│    │   Redirect to Stripe    │                       │                    │  │
+│    │                         │                       │                    │  │
+│    │ 4. Enter email + pay    │                       │                    │  │
+│    │─────────────────────────────────────────────────────────────────────>│  │
+│    │                         │                       │                    │  │
+│    │<─────────────────────────────────────────────────────────────────────│  │
+│    │   Redirect back with ?session_id=xxx           │                    │  │
+│    │                         │                       │                    │  │
+│    │                         │ 5. POST /verify-payment (session_id)       │  │
+│    │                         │──────────────────────>│                    │  │
+│    │                         │                       │                    │  │
+│    │                         │                       │ 6. Retrieve session│  │
+│    │                         │                       │    from Stripe     │  │
+│    │                         │                       │───────────────────>│  │
+│    │                         │                       │<───────────────────│  │
+│    │                         │                       │   email, payment   │  │
+│    │                         │                       │                    │  │
+│    │                         │                       │ 7. Create access   │  │
+│    │                         │                       │    token, store,   │  │
+│    │                         │                       │    send email      │  │
+│    │                         │                       │                    │  │
+│    │                         │<──────────────────────│                    │  │
+│    │                         │   access_token        │                    │  │
+│    │                         │                       │                    │  │
+│    │                         │ 8. Store token in     │                    │  │
+│    │                         │    cookie, unlock     │                    │  │
+│    │                         │    content            │                    │  │
+│    │                         │                       │                    │  │
+│    │<────────────────────────│                       │                    │  │
+│    │   ARTICLE UNLOCKED!     │                       │                    │  │
+│    │                         │                       │                    │  │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Step-by-step:**
+
+1. **User clicks "Unlock Article ($5)"** → Frontend JS initiates checkout
+2. **Frontend calls `POST /create-checkout-session`** → Sends article_slug, article_title
+3. **Backend creates Stripe Checkout Session** → Returns checkout URL with success redirect
+4. **User redirected to Stripe** → Enters email and payment info on Stripe's hosted page
+5. **Payment succeeds** → Stripe redirects user back to article with `?session_id=xxx`
+6. **Frontend detects session_id** → Calls `POST /verify-payment` with session_id
+7. **Backend verifies with Stripe** → Retrieves customer email from Stripe session
+8. **Backend creates access token** → Stores in DB, returns token to frontend
+9. **Frontend stores token in cookie** → Unlocks article **immediately**
+10. **Backend sends confirmation email** → Private link for future access (async, non-blocking)
+
+**Key Design Decisions:**
+
+- **No email collection on our site**: Stripe Checkout collects email during payment
+- **Immediate unlock**: User sees content right after payment, no email check required
+- **Email sent in background**: Private link email is for convenience (future visits, other devices)
+- **Webhook as backup**: Stripe webhook still processes payments (handles edge cases like browser close)
+
+### Legacy Flow (Email-First) - Deprecated
+
+The original design required users to check email for access. This is now deprecated in favor of immediate unlock above. The webhook flow remains as a backup mechanism.
 
 ### Gift Flow
 1. **Paid user clicks "Gift this Article"** → Modal with email/link options
