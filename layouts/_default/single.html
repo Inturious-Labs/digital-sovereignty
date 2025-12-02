@@ -21,7 +21,46 @@
     {{- end -}}
   </header>
 
+  {{- if .Params.paywall -}}
+  <!-- Paywalled Article -->
+  <section class="paywall-container"
+           data-article-slug="{{- .File.ContentBaseName -}}"
+           data-price="{{- .Params.price | default 5 -}}">
+
+    <!-- Preview Content (visible to all) -->
+    <div class="paywall-preview">
+      {{- if .Params.preview -}}
+      {{- .Params.preview | markdownify -}}
+      {{- else -}}
+      {{- .Summary -}}
+      {{- end -}}
+    </div>
+
+    <!-- Unlock Prompt (shown to non-paying users) -->
+    <div class="paywall-prompt" id="paywall-prompt">
+      <h3>Continue Reading</h3>
+      <p>Unlock this article for ${{- .Params.price | default 5 }} to read the full content.</p>
+      <button class="paywall-unlock-btn" id="paywall-unlock-btn">
+        Unlock for ${{- .Params.price | default 5 -}}
+      </button>
+    </div>
+
+    <!-- Full Content (hidden, revealed after payment) -->
+    <div class="paywall-full-content" id="paywall-full-content">
+      {{- .Content -}}
+    </div>
+
+    <!-- Gift Section (shown to paid users) -->
+    <div class="paywall-gift-section" id="paywall-gift-section">
+      <h4>Share this article as a gift</h4>
+      <p>You can gift this article to a friend.</p>
+      <button class="paywall-gift-btn" id="paywall-gift-btn">Gift this Article</button>
+    </div>
+  </section>
+  {{- else -}}
+  <!-- Regular Article (no paywall) -->
   <section>{{- .Content -}}</section>
+  {{- end -}}
 
   <!-- Rapport Comments Widget -->
   {{- if .Params.enable_rapport -}}

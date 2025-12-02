@@ -129,3 +129,170 @@ blockquote p:first-of-type::before,
 blockquote p:last-of-type::after {
     content: none !important;
 }
+
+/* =============================================================================
+   PAYWALL STYLES
+   ============================================================================= */
+
+/* Paywall container - wraps the locked content area */
+.paywall-container {
+    position: relative;
+    margin-top: 2rem;
+}
+
+/* Preview content shown to non-paying users */
+.paywall-preview {
+    position: relative;
+}
+
+/* Gradient fade effect at bottom of preview */
+.paywall-preview::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(transparent, var(--bg, #faf8f1));
+    pointer-events: none;
+}
+
+.dark .paywall-preview::after {
+    background: linear-gradient(transparent, var(--bg, #2a2a2a));
+}
+
+/* Unlock prompt box */
+.paywall-prompt {
+    background-color: #f5f0e6;
+    border: 2px solid #e6dcc9;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.dark .paywall-prompt {
+    background-color: #3a3a3a;
+    border-color: #525252;
+}
+
+.paywall-prompt h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.paywall-prompt p {
+    margin: 0 0 1.5rem 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.dark .paywall-prompt p {
+    color: #a0a0a0;
+}
+
+/* Unlock button */
+.paywall-unlock-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #16a34a;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none !important;
+}
+
+.paywall-unlock-btn:hover {
+    background-color: #15803d;
+    text-decoration: none !important;
+}
+
+.paywall-unlock-btn:active {
+    background-color: #166534;
+}
+
+/* Full content (hidden by default, shown when unlocked) */
+.paywall-full-content {
+    display: none;
+}
+
+.paywall-full-content.unlocked {
+    display: block;
+}
+
+/* Gift sharing section (shown to paid users) */
+.paywall-gift-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    display: none;
+}
+
+.paywall-gift-section.visible {
+    display: block;
+}
+
+.dark .paywall-gift-section {
+    background-color: #1a2e1a;
+    border-color: #2d5a2d;
+}
+
+.paywall-gift-section h4 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.paywall-gift-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #16a34a;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none !important;
+}
+
+.paywall-gift-btn:hover {
+    background-color: #15803d;
+}
+
+/* Loading state */
+.paywall-loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.dark .paywall-loading {
+    color: #a0a0a0;
+}
+
+/* Error state */
+.paywall-error {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 1rem;
+    color: #dc2626;
+    margin-top: 1rem;
+}
+
+.dark .paywall-error {
+    background-color: #2a1a1a;
+    border-color: #5a2d2d;
+    color: #f87171;
+}
