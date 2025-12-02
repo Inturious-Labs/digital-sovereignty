@@ -72,9 +72,13 @@
     } else if (giftToken) {
       // Handle gift redemption
       handleGiftRedemption(giftToken, articleSlug);
-    } else if (accessToken || sessionId) {
-      // Validate existing access
-      validateAccess(articleSlug, accessToken, sessionId);
+    } else if (accessToken) {
+      // Has stored access token - unlock locally (skip backend validation for offline/dev)
+      console.log('[Paywall] Found stored access token, unlocking');
+      unlockContent();
+    } else if (sessionId) {
+      // Has session - validate with backend
+      validateAccess(articleSlug, null, sessionId);
     } else {
       console.log('[Paywall] No access token found, showing paywall');
     }
@@ -83,6 +87,14 @@
     if (unlockButton) {
       unlockButton.addEventListener('click', function() {
         handleUnlockClick(articleSlug, price);
+      });
+    }
+
+    // Set up gift button click handler
+    const giftButton = document.getElementById('paywall-gift-btn');
+    if (giftButton) {
+      giftButton.addEventListener('click', function() {
+        handleGiftClick(articleSlug);
       });
     }
   }
@@ -136,19 +148,168 @@
   }
 
   /**
+   * Handle gift button click - show gift options modal
+   */
+  function handleGiftClick(articleSlug) {
+    console.log('[Paywall] Gift clicked for:', articleSlug);
+
+    // Get user's access token
+    const accessToken = getCookie(CONFIG.accessCookiePrefix + articleSlug);
+    if (!accessToken) {
+      alert('You need to have purchased this article to gift it.');
+      return;
+    }
+
+    // Create modal
+    const modal = document.createElement('div');
+    modal.id = 'gift-modal';
+    modal.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+    `;
+
+    const articleTitle = document.querySelector('h1')?.textContent || articleSlug;
+
+    modal.innerHTML = `
+      <div style="
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        max-width: 400px;
+        width: 90%;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      ">
+        <h3 style="margin: 0 0 1rem 0; font-size: 1.25rem;">Gift this Article</h3>
+        <p style="margin: 0 0 1.5rem 0; color: #666; font-size: 0.95rem;">
+          Share "${articleTitle}" with a friend.
+        </p>
+
+        <div style="margin-bottom: 1.5rem;">
+          <button id="gift-get-link" style="
+            width: 100%;
+            padding: 12px;
+            background: #16a34a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 0.75rem;
+          ">Get Shareable Link</button>
+
+          <div id="gift-link-container" style="display: none; margin-top: 1rem;">
+            <input id="gift-link-input" type="text" readonly style="
+              width: 100%;
+              padding: 10px;
+              border: 1px solid #ddd;
+              border-radius: 6px;
+              font-size: 0.9rem;
+              box-sizing: border-box;
+            " />
+            <button id="gift-copy-link" style="
+              width: 100%;
+              padding: 10px;
+              background: #2563eb;
+              color: white;
+              border: none;
+              border-radius: 6px;
+              font-size: 0.9rem;
+              cursor: pointer;
+              margin-top: 0.5rem;
+            ">Copy Link</button>
+          </div>
+        </div>
+
+        <button id="gift-close" style="
+          width: 100%;
+          padding: 10px;
+          background: #f3f4f6;
+          color: #374151;
+          border: none;
+          border-radius: 6px;
+          font-size: 0.9rem;
+          cursor: pointer;
+        ">Close</button>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // Event handlers
+    document.getElementById('gift-close').onclick = () => modal.remove();
+    modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+
+    document.getElementById('gift-get-link').onclick = async () => {
+      await generateGiftLink(articleSlug, accessToken, articleTitle);
+    };
+  }
+
+  /**
+   * Generate a gift link via backend
+   */
+  async function generateGiftLink(articleSlug, gifterToken, articleTitle) {
+    const btn = document.getElementById('gift-get-link');
+    btn.disabled = true;
+    btn.textContent = 'Generating...';
+
+    try {
+      const response = await fetch(`${CONFIG.backendUrl}/create-gift`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          article_slug: articleSlug,
+          gifter_token: gifterToken,
+          article_title: articleTitle,
+          recipient_email: null // Link option - no pre-set email
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      if (result.success && result.gift_url) {
+        // Show the link
+        const container = document.getElementById('gift-link-container');
+        const input = document.getElementById('gift-link-input');
+        input.value = result.gift_url;
+        container.style.display = 'block';
+        btn.style.display = 'none';
+
+        // Set up copy button
+        document.getElementById('gift-copy-link').onclick = () => {
+          input.select();
+          document.execCommand('copy');
+          showSuccessMessage('Link copied to clipboard!');
+        };
+      } else {
+        throw new Error(result.error || 'Failed to create gift link');
+      }
+    } catch (error) {
+      console.error('[Paywall] Gift creation error:', error);
+      alert('Unable to create gift link: ' + error.message);
+      btn.disabled = false;
+      btn.textContent = 'Get Shareable Link';
+    }
+  }
+
+  /**
    * Handle gift token redemption
    */
   async function handleGiftRedemption(giftToken, articleSlug) {
     console.log('[Paywall] Redeeming gift token...');
-
-    // For gift redemption, we need user's email
-    // For now, prompt for email (can be improved with modal later)
-    const email = prompt('Enter your email to redeem this gift:');
-
-    if (!email) {
-      console.log('[Paywall] Gift redemption cancelled');
-      return;
-    }
 
     try {
       const response = await fetch(`${CONFIG.backendUrl}/redeem-gift`, {
@@ -158,7 +319,7 @@
         },
         body: JSON.stringify({
           gift_token: giftToken,
-          redeemer_email: email
+          redeemer_email: '' // Optional - not required for redemption
         })
       });
 
@@ -176,7 +337,7 @@
         cleanUrl();
         unlockContent();
 
-        alert('Gift redeemed! You now have full access to this article.');
+        showSuccessMessage('Gift redeemed! Article unlocked.');
       } else {
         console.error('[Paywall] Gift redemption failed:', result.error);
         alert('Unable to redeem gift: ' + (result.error || 'Unknown error'));
@@ -333,7 +494,7 @@
   /**
    * Show a brief success message after unlocking
    */
-  function showSuccessMessage() {
+  function showSuccessMessage(message = 'Payment successful! Article unlocked.') {
     const successDiv = document.createElement('div');
     successDiv.className = 'paywall-success';
     successDiv.style.cssText = `
@@ -348,7 +509,7 @@
       z-index: 9999;
       animation: fadeIn 0.3s ease-out;
     `;
-    successDiv.textContent = 'Payment successful! Article unlocked.';
+    successDiv.textContent = message;
     document.body.appendChild(successDiv);
 
     // Remove after 3 seconds
