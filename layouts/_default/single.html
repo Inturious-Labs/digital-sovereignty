@@ -23,17 +23,14 @@
 
   {{- if .Params.paywall -}}
   <!-- Paywalled Article -->
+  <!-- Use <!--more--> in your content to mark the end of the preview -->
   <section class="paywall-container"
            data-article-slug="{{- .File.ContentBaseName -}}"
            data-price="{{- .Params.price | default 5 -}}">
 
-    <!-- Preview Content (visible to all) -->
+    <!-- Preview Content (visible to all) - everything before <!--more--> -->
     <div class="paywall-preview">
-      {{- if .Params.preview -}}
-      {{- .Params.preview | markdownify -}}
-      {{- else -}}
       {{- .Summary -}}
-      {{- end -}}
     </div>
 
     <!-- Unlock Prompt (shown to non-paying users) -->
@@ -45,9 +42,13 @@
       </button>
     </div>
 
-    <!-- Full Content (hidden, revealed after payment) -->
+    <!-- Full Content (hidden, revealed after payment) - everything after <!--more--> -->
     <div class="paywall-full-content" id="paywall-full-content">
+      {{- with .ContentWithoutSummary -}}
+      {{- . -}}
+      {{- else -}}
       {{- .Content -}}
+      {{- end -}}
     </div>
 
     <!-- Gift Section (shown to paid users) -->
