@@ -367,6 +367,9 @@
       // Current page URL for redirect
       const currentUrl = window.location.origin + window.location.pathname;
 
+      // Convert price to cents (price is in dollars from data attribute)
+      const priceCents = Math.round(parseFloat(price) * 100);
+
       // Call backend to create Stripe Checkout Session
       const response = await fetch(`${CONFIG.backendUrl}/create-checkout-session`, {
         method: 'POST',
@@ -376,6 +379,7 @@
         body: JSON.stringify({
           article_slug: articleSlug,
           article_title: articleTitle,
+          price_cents: priceCents,
           success_url: currentUrl,
           cancel_url: currentUrl
         })

@@ -195,6 +195,7 @@ pub async fn create_payment_intent(request: CreatePaymentRequest) -> StripeResul
 pub struct CreateCheckoutSessionRequest {
     pub article_slug: String,
     pub article_title: String,
+    pub price_cents: u64,  // Price in cents (e.g., 500 = $5.00)
     pub success_url: String,
     pub cancel_url: String,
 }
@@ -230,7 +231,7 @@ pub async fn create_checkout_session(request: CreateCheckoutSessionRequest) -> S
         &success_url={}\
         &cancel_url={}",
         urlencoded(&request.article_title),
-        ARTICLE_PRICE_CENTS,
+        request.price_cents,
         urlencoded(&request.article_slug),
         urlencoded(&request.article_title),
         urlencoded(&format!("{}?session_id={{CHECKOUT_SESSION_ID}}", request.success_url)),

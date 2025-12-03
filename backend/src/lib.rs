@@ -264,12 +264,13 @@ fn email_preview_gift(
 // ============================================================================
 
 /// Create a Checkout Session for article purchase (redirect flow)
-/// Called by frontend when user clicks "Unlock Article ($5)"
+/// Called by frontend when user clicks "Unlock Article"
 #[update]
 async fn create_checkout_session(request: CreateCheckoutSessionRequest) -> CreateCheckoutSessionResponse {
     let stripe_request = stripe::CreateCheckoutSessionRequest {
         article_slug: request.article_slug,
         article_title: request.article_title,
+        price_cents: request.price_cents,
         success_url: request.success_url,
         cancel_url: request.cancel_url,
     };
@@ -294,6 +295,7 @@ async fn create_checkout_session(request: CreateCheckoutSessionRequest) -> Creat
 pub struct CreateCheckoutSessionRequest {
     pub article_slug: String,
     pub article_title: String,
+    pub price_cents: u64,  // Price in cents (e.g., 500 = $5.00)
     pub success_url: String,
     pub cancel_url: String,
 }
@@ -801,6 +803,7 @@ async fn handle_create_checkout_session(body: &[u8]) -> http::HttpResponse {
     struct Request {
         article_slug: String,
         article_title: String,
+        price_cents: u64,
         success_url: String,
         cancel_url: String,
     }
@@ -813,6 +816,7 @@ async fn handle_create_checkout_session(body: &[u8]) -> http::HttpResponse {
     let stripe_request = stripe::CreateCheckoutSessionRequest {
         article_slug: req.article_slug,
         article_title: req.article_title,
+        price_cents: req.price_cents,
         success_url: req.success_url,
         cancel_url: req.cancel_url,
     };
