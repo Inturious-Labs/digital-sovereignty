@@ -79,6 +79,13 @@ fn test_get_token(token: String) -> Option<storage::AccessToken> {
 // Auth test endpoints (for validating auth module)
 // ============================================================================
 
+/// Configure HMAC secret for signing cookies/tokens
+/// Should be called after deployment with a secure random secret
+#[update]
+fn auth_configure(hmac_secret: String) {
+    auth::set_hmac_secret(hmac_secret.into_bytes());
+}
+
 /// Create access token using secure random generation
 #[update]
 async fn auth_create_token(email: String, article_slug: String) -> AuthCreateTokenResponse {
@@ -228,6 +235,12 @@ pub struct StripeParseEventResponse {
 #[update]
 fn email_configure(api_key: String) {
     email::set_email_api_key(api_key);
+}
+
+/// Configure site URL (used for gift links and emails)
+#[update]
+fn site_configure(site_url: String) {
+    email::set_site_url(site_url);
 }
 
 /// Get email configuration status
@@ -595,8 +608,8 @@ async fn create_gift(request: CreateGiftRequest) -> CreateGiftResponse {
         }
     };
 
-    // Build gift URL
-    let site_url = "https://digitalsovereignty.herbertyang.xyz";
+    // Build gift URL using configured site URL
+    let site_url = email::get_site_url();
     let gift_url = format!("{}/posts/{}/?gift={}", site_url, request.article_slug, gift.gift_token);
 
     // If recipient email provided, send gift notification

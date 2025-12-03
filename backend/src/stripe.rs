@@ -19,7 +19,6 @@ type HmacSha256 = Hmac<Sha256>;
 
 // Stripe API configuration
 const STRIPE_API_URL: &str = "https://api.stripe.com/v1";
-const ARTICLE_PRICE_CENTS: u64 = 500; // $5.00
 
 // Configuration storage
 thread_local! {

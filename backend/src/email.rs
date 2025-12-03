@@ -110,7 +110,8 @@ fn get_sender() -> (String, String) {
     (email, name)
 }
 
-fn get_site_url() -> String {
+/// Get site URL for links
+pub fn get_site_url() -> String {
     SITE_URL.with(|u| u.borrow().clone())
 }
 

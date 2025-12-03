@@ -21,8 +21,8 @@ const SESSION_EXPIRY_DAYS: u64 = 30;
 const GIFT_EXPIRY_DAYS: u64 = 90;
 const NANOS_PER_DAY: u64 = 24 * 60 * 60 * 1_000_000_000;
 
-// HMAC secret key (in production, this should be stored securely)
-// TODO: Move to secure configuration
+// HMAC secret key for signing cookies/tokens
+// Configure via auth_configure() canister call - default is insecure placeholder
 thread_local! {
     static HMAC_SECRET: RefCell<Vec<u8>> = RefCell::new(b"default_secret_change_in_production".to_vec());
 }
