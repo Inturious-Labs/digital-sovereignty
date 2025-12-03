@@ -12,8 +12,8 @@
 
   // Configuration
   const CONFIG = {
-    // Backend canister URL (IC mainnet)
-    backendUrl: 'https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io',
+    // Backend canister URL (IC mainnet - using raw domain to bypass certification)
+    backendUrl: 'https://fhvra-iiaaa-aaaae-acznq-cai.raw.icp0.io',
     // Cookie name for session
     sessionCookieName: 'ds_session',
     // Cookie name for access tokens (per article)

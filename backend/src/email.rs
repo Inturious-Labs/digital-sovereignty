@@ -6,9 +6,9 @@
 //! - Email template rendering
 
 use candid::{CandidType, Deserialize};
-use ic_cdk::api::management_canister::http_request::{
-    http_request, CanisterHttpRequestArgument, HttpHeader, HttpMethod, HttpResponse, TransformArgs,
-    TransformContext,
+use ic_cdk::management_canister::{
+    http_request, transform_context_from_query, HttpHeader, HttpMethod, HttpRequestArgs,
+    HttpRequestResult, TransformArgs,
 };
 use serde::Serialize;
 use std::cell::RefCell;
@@ -182,24 +182,22 @@ pub async fn send_email(request: SendEmailRequest) -> EmailResult<SendEmailRespo
         },
     ];
 
-    let request_arg = CanisterHttpRequestArgument {
+    let request_arg = HttpRequestArgs {
         url: api_url,
         method: HttpMethod::POST,
         body: Some(body),
         max_response_bytes: Some(5_000),
-        transform: Some(TransformContext::from_name(
+        transform: Some(transform_context_from_query(
             "transform_email_response".to_string(),
             vec![],
         )),
         headers: request_headers,
+        is_replicated: Some(false), // Non-replicated outcall for deterministic response
     };
 
-    // HTTP outcall requires cycles
-    let cycles: u128 = 100_000_000_000; // 100 billion cycles
-
-    let (response,): (HttpResponse,) = http_request(request_arg, cycles)
+    let response: HttpRequestResult = http_request(&request_arg)
         .await
-        .map_err(|(code, msg)| EmailError::HttpRequestFailed(format!("{:?}: {}", code, msg)))?;
+        .map_err(|e| EmailError::HttpRequestFailed(format!("{:?}", e)))?;
 
     if response.status >= 200u64 && response.status < 300u64 {
         let resend_response: ResendEmailResponse = serde_json::from_slice(&response.body)
@@ -384,7 +382,7 @@ Digital Sovereignty Chronicle"#,
 
 /// Transform function to clean up HTTP response for consensus
 #[ic_cdk::query]
-pub fn transform_email_response(args: TransformArgs) -> HttpResponse {
+pub fn transform_email_response(args: TransformArgs) -> HttpRequestResult {
     let mut response = args.response;
     // Remove headers that may vary between replicas
     response.headers.clear();

@@ -9,12 +9,21 @@
 
 mod auth;
 mod email;
+mod http;
 mod storage;
 mod stripe;
 
 use candid::{CandidType, Deserialize};
 use ic_cdk::{query, update};
-use ic_cdk::api::management_canister::http_request::{HttpResponse, TransformArgs};
+use ic_cdk::management_canister::{HttpRequestResult, TransformArgs};
+use serde::Serialize;
+
+/// Transform function for HTTP outcalls - required for IC consensus
+/// Must be a query function exposed at canister level
+#[query]
+fn transform_stripe_response(args: TransformArgs) -> HttpRequestResult {
+    stripe::transform_stripe_response(args)
+}
 
 /// Health check endpoint
 #[query]
@@ -33,7 +42,7 @@ fn status() -> StatusResponse {
     }
 }
 
-#[derive(CandidType, Deserialize)]
+#[derive(CandidType, Deserialize, Serialize)]
 pub struct StatusResponse {
     pub version: String,
     pub access_tokens: u64,
@@ -289,7 +298,7 @@ pub struct CreateCheckoutSessionRequest {
     pub cancel_url: String,
 }
 
-#[derive(CandidType, Deserialize)]
+#[derive(CandidType, Deserialize, Serialize)]
 pub struct CreateCheckoutSessionResponse {
     pub success: bool,
     pub session_id: Option<String>,
@@ -376,7 +385,7 @@ async fn verify_payment(session_id: String) -> VerifyPaymentResponse {
     }
 }
 
-#[derive(CandidType, Deserialize)]
+#[derive(CandidType, Deserialize, Serialize)]
 pub struct VerifyPaymentResponse {
     pub success: bool,
     pub access_token: Option<String>,
@@ -534,7 +543,7 @@ pub struct ValidateAccessRequest {
     pub session_id: Option<String>,
 }
 
-#[derive(CandidType, Deserialize)]
+#[derive(CandidType, Deserialize, Serialize)]
 pub struct ValidateAccessResponse {
     pub has_access: bool,
     pub article_slug: String,
@@ -620,7 +629,7 @@ pub struct CreateGiftRequest {
     pub recipient_email: Option<String>,
 }
 
-#[derive(CandidType, Deserialize)]
+#[derive(CandidType, Deserialize, Serialize)]
 pub struct CreateGiftResponse {
     pub success: bool,
     pub gift_token: Option<String>,
@@ -646,7 +655,7 @@ fn redeem_gift(gift_token: String, redeemer_email: String) -> RedeemGiftResponse
     }
 }
 
-#[derive(CandidType, Deserialize)]
+#[derive(CandidType, Deserialize, Serialize)]
 pub struct RedeemGiftResponse {
     pub success: bool,
     pub article_slug: Option<String>,
@@ -699,6 +708,171 @@ pub struct CreateSessionResponse {
     pub success: bool,
     pub session_cookie: Option<String>,
     pub error: Option<String>,
+}
+
+// ============================================================================
+// HTTP Request Handlers
+// ============================================================================
+
+/// Handle HTTP GET requests (query calls)
+#[query]
+fn http_request(request: http::HttpRequest) -> http::HttpResponse {
+    let path = http::get_path(&request.url);
+
+    // Handle CORS preflight
+    if request.method == "OPTIONS" {
+        return http::HttpResponse::cors_preflight();
+    }
+
+    match (request.method.as_str(), path) {
+        ("GET", "/health") => {
+            http::HttpResponse::json(200, &serde_json::json!({"status": "OK"}))
+        }
+        ("GET", "/status") => {
+            let status = StatusResponse {
+                version: env!("CARGO_PKG_VERSION").to_string(),
+                access_tokens: storage::count_access_tokens(),
+                user_sessions: storage::count_user_sessions(),
+                gift_tokens: storage::count_gift_tokens(),
+            };
+            http::HttpResponse::json(200, &status)
+        }
+        // POST requests need to go through http_request_update
+        ("POST", _) => {
+            // Return upgrade flag to route to http_request_update
+            http::HttpResponse::upgrade()
+        }
+        _ => http::HttpResponse::not_found(),
+    }
+}
+
+/// Handle HTTP POST requests (update calls - can modify state and make outcalls)
+#[update]
+async fn http_request_update(request: http::HttpRequest) -> http::HttpResponse {
+    let path = http::get_path(&request.url);
+
+    // Handle CORS preflight
+    if request.method == "OPTIONS" {
+        return http::HttpResponse::cors_preflight();
+    }
+
+    match (request.method.as_str(), path) {
+        ("POST", "/validate-access") => {
+            handle_validate_access(&request.body)
+        }
+        ("POST", "/create-checkout-session") => {
+            handle_create_checkout_session(&request.body).await
+        }
+        ("POST", "/verify-payment") => {
+            handle_verify_payment(&request.body).await
+        }
+        ("POST", "/create-gift") => {
+            handle_create_gift(&request.body).await
+        }
+        ("POST", "/redeem-gift") => {
+            handle_redeem_gift(&request.body)
+        }
+        _ => http::HttpResponse::not_found(),
+    }
+}
+
+// HTTP handler implementations
+
+fn handle_validate_access(body: &[u8]) -> http::HttpResponse {
+    let request: ValidateAccessRequest = match http::parse_json(body) {
+        Ok(r) => r,
+        Err(e) => return http::HttpResponse::bad_request(&e),
+    };
+
+    let has_access = auth::check_article_access(
+        &request.article_slug,
+        request.access_token.as_deref(),
+        request.session_id.as_deref(),
+    );
+
+    http::HttpResponse::json(200, &ValidateAccessResponse {
+        has_access,
+        article_slug: request.article_slug,
+    })
+}
+
+async fn handle_create_checkout_session(body: &[u8]) -> http::HttpResponse {
+    #[derive(Deserialize)]
+    struct Request {
+        article_slug: String,
+        article_title: String,
+        success_url: String,
+        cancel_url: String,
+    }
+
+    let req: Request = match http::parse_json(body) {
+        Ok(r) => r,
+        Err(e) => return http::HttpResponse::bad_request(&e),
+    };
+
+    let stripe_request = stripe::CreateCheckoutSessionRequest {
+        article_slug: req.article_slug,
+        article_title: req.article_title,
+        success_url: req.success_url,
+        cancel_url: req.cancel_url,
+    };
+
+    match stripe::create_checkout_session(stripe_request).await {
+        Ok(response) => http::HttpResponse::json(200, &CreateCheckoutSessionResponse {
+            success: true,
+            session_id: Some(response.session_id),
+            checkout_url: Some(response.checkout_url),
+            error: None,
+        }),
+        Err(e) => http::HttpResponse::json(200, &CreateCheckoutSessionResponse {
+            success: false,
+            session_id: None,
+            checkout_url: None,
+            error: Some(e.to_string()),
+        }),
+    }
+}
+
+async fn handle_verify_payment(body: &[u8]) -> http::HttpResponse {
+    #[derive(Deserialize)]
+    struct Request {
+        session_id: String,
+    }
+
+    let req: Request = match http::parse_json(body) {
+        Ok(r) => r,
+        Err(e) => return http::HttpResponse::bad_request(&e),
+    };
+
+    // Call the existing verify_payment logic
+    let result = verify_payment(req.session_id).await;
+    http::HttpResponse::json(200, &result)
+}
+
+async fn handle_create_gift(body: &[u8]) -> http::HttpResponse {
+    let request: CreateGiftRequest = match http::parse_json(body) {
+        Ok(r) => r,
+        Err(e) => return http::HttpResponse::bad_request(&e),
+    };
+
+    let result = create_gift(request).await;
+    http::HttpResponse::json(200, &result)
+}
+
+fn handle_redeem_gift(body: &[u8]) -> http::HttpResponse {
+    #[derive(Deserialize)]
+    struct Request {
+        gift_token: String,
+        redeemer_email: String,
+    }
+
+    let req: Request = match http::parse_json(body) {
+        Ok(r) => r,
+        Err(e) => return http::HttpResponse::bad_request(&e),
+    };
+
+    let result = redeem_gift(req.gift_token, req.redeemer_email);
+    http::HttpResponse::json(200, &result)
 }
 
 // Export Candid interface

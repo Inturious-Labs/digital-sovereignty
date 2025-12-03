@@ -6,7 +6,7 @@
           "public"
         ]
       },
-      "backend": {
+      "dsc-backend": {
         "type": "rust",
         "package": "backend",
         "candid": "backend/backend.did"

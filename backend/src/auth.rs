@@ -66,7 +66,7 @@ impl std::fmt::Display for AuthError {
 
 /// Generate a cryptographically secure random token using IC's random beacon
 pub async fn generate_secure_token() -> AuthResult<String> {
-    let (random_bytes,) = ic_cdk::api::management_canister::main::raw_rand()
+    let random_bytes = ic_cdk::management_canister::raw_rand()
         .await
         .map_err(|_| AuthError::RandomGenerationFailed)?;
 
@@ -77,7 +77,7 @@ pub async fn generate_secure_token() -> AuthResult<String> {
 /// Generate a token synchronously using timestamp + caller (less secure, for fallback)
 pub fn generate_fallback_token() -> String {
     let time = ic_cdk::api::time();
-    let caller = ic_cdk::api::caller();
+    let caller = ic_cdk::api::msg_caller();
     let data = format!("{:?}{}", caller, time);
     hex::encode(sha2::Sha256::digest(data.as_bytes()))
 }

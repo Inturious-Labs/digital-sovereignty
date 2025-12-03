@@ -8,8 +8,8 @@ crate-type = ["cdylib"]
 
 [dependencies]
 # Internet Computer
-ic-cdk = "0.13"
-ic-cdk-timers = "0.7"
+ic-cdk = "0.19"
+ic-cdk-timers = "1.0"
 candid = "0.10"
 
 # Serialization
@@ -22,4 +22,4 @@ hmac = "0.12"
 hex = "0.4"
 
 # Stable storage
-ic-stable-structures = "0.6"
+ic-stable-structures = "0.7"

@@ -7,9 +7,9 @@
 
 use candid::{CandidType, Deserialize};
 use hmac::{Hmac, Mac};
-use ic_cdk::api::management_canister::http_request::{
-    http_request, CanisterHttpRequestArgument, HttpHeader, HttpMethod, HttpResponse, TransformArgs,
-    TransformContext,
+use ic_cdk::management_canister::{
+    http_request, transform_context_from_query, HttpHeader, HttpMethod, HttpRequestArgs,
+    HttpRequestResult, TransformArgs,
 };
 use serde::Serialize;
 use sha2::Sha256;
@@ -153,21 +153,19 @@ pub async fn create_payment_intent(request: CreatePaymentRequest) -> StripeResul
         },
     ];
 
-    let request_arg = CanisterHttpRequestArgument {
+    let request_arg = HttpRequestArgs {
         url: format!("{}/payment_intents", STRIPE_API_URL),
         method: HttpMethod::POST,
         body: Some(body.into_bytes()),
         max_response_bytes: Some(10_000),
-        transform: Some(TransformContext::from_name("transform_stripe_response".to_string(), vec![])),
+        transform: Some(transform_context_from_query("transform_stripe_response".to_string(), vec![])),
         headers: request_headers,
+        is_replicated: Some(false), // Non-replicated outcall for deterministic response
     };
 
-    // HTTP outcall requires cycles
-    let cycles: u128 = 100_000_000_000; // 100 billion cycles
-
-    let (response,): (HttpResponse,) = http_request(request_arg, cycles)
+    let response: HttpRequestResult = http_request(&request_arg)
         .await
-        .map_err(|(code, msg)| StripeError::HttpRequestFailed(format!("{:?}: {}", code, msg)))?;
+        .map_err(|e| StripeError::HttpRequestFailed(e.to_string()))?;
 
     if response.status != 200u64 {
         let error_body = String::from_utf8_lossy(&response.body);
@@ -250,20 +248,19 @@ pub async fn create_checkout_session(request: CreateCheckoutSessionRequest) -> S
         },
     ];
 
-    let request_arg = CanisterHttpRequestArgument {
+    let request_arg = HttpRequestArgs {
         url: format!("{}/checkout/sessions", STRIPE_API_URL),
         method: HttpMethod::POST,
         body: Some(body.into_bytes()),
         max_response_bytes: Some(10_000),
-        transform: Some(TransformContext::from_name("transform_stripe_response".to_string(), vec![])),
+        transform: Some(transform_context_from_query("transform_stripe_response".to_string(), vec![])),
         headers: request_headers,
+        is_replicated: Some(false), // Non-replicated outcall for deterministic response
     };
 
-    let cycles: u128 = 100_000_000_000;
-
-    let (response,): (HttpResponse,) = http_request(request_arg, cycles)
+    let response: HttpRequestResult = http_request(&request_arg)
         .await
-        .map_err(|(code, msg)| StripeError::HttpRequestFailed(format!("{:?}: {}", code, msg)))?;
+        .map_err(|e| StripeError::HttpRequestFailed(e.to_string()))?;
 
     if response.status != 200u64 {
         let error_body = String::from_utf8_lossy(&response.body);
@@ -318,20 +315,19 @@ pub async fn verify_payment_session(session_id: &str) -> StripeResult<VerifyPaym
         },
     ];
 
-    let request_arg = CanisterHttpRequestArgument {
+    let request_arg = HttpRequestArgs {
         url: format!("{}/checkout/sessions/{}", STRIPE_API_URL, session_id),
         method: HttpMethod::GET,
         body: None,
         max_response_bytes: Some(10_000),
-        transform: Some(TransformContext::from_name("transform_stripe_response".to_string(), vec![])),
+        transform: Some(transform_context_from_query("transform_stripe_response".to_string(), vec![])),
         headers: request_headers,
+        is_replicated: Some(false), // Non-replicated outcall for deterministic response
     };
 
-    let cycles: u128 = 100_000_000_000;
-
-    let (response,): (HttpResponse,) = http_request(request_arg, cycles)
+    let response: HttpRequestResult = http_request(&request_arg)
         .await
-        .map_err(|(code, msg)| StripeError::HttpRequestFailed(format!("{:?}: {}", code, msg)))?;
+        .map_err(|e| StripeError::HttpRequestFailed(e.to_string()))?;
 
     if response.status != 200u64 {
         let error_body = String::from_utf8_lossy(&response.body);
@@ -485,12 +481,52 @@ pub fn is_payment_succeeded(event: &WebhookEvent) -> bool {
 
 /// Transform function to clean up HTTP response for consensus
 /// This is required for IC HTTP outcalls to work properly
-#[ic_cdk::query]
-pub fn transform_stripe_response(args: TransformArgs) -> HttpResponse {
+/// Note: Exposed as a query function in lib.rs
+///
+/// Stripe responses contain variable fields (timestamps, request IDs) that
+/// cause different replicas to see different responses. This transform
+/// normalizes the response by keeping only the fields we need.
+pub fn transform_stripe_response(args: TransformArgs) -> HttpRequestResult {
     let mut response = args.response;
     // Remove headers that may vary between replicas
     response.headers.clear();
+
+    // Try to parse and normalize the JSON body
+    if let Ok(body_str) = String::from_utf8(response.body.clone()) {
+        if let Ok(json) = serde_json::from_str::<serde_json::Value>(&body_str) {
+            // Extract only the fields we care about, removing variable ones
+            let normalized = normalize_stripe_json(&json);
+            if let Ok(normalized_bytes) = serde_json::to_vec(&normalized) {
+                response.body = normalized_bytes;
+            }
+        }
+    }
+
     response
+}
+
+/// Normalize Stripe JSON by keeping only stable fields
+fn normalize_stripe_json(json: &serde_json::Value) -> serde_json::Value {
+    match json {
+        serde_json::Value::Object(map) => {
+            let mut result = serde_json::Map::new();
+            for (key, value) in map {
+                // Skip fields that vary between requests/replicas
+                if matches!(key.as_str(),
+                    "created" | "request" | "livemode" | "request_log_url" |
+                    "balance_transaction" | "receipt_url" | "latest_charge"
+                ) {
+                    continue;
+                }
+                result.insert(key.clone(), normalize_stripe_json(value));
+            }
+            serde_json::Value::Object(result)
+        }
+        serde_json::Value::Array(arr) => {
+            serde_json::Value::Array(arr.iter().map(normalize_stripe_json).collect())
+        }
+        _ => json.clone()
+    }
 }
 
 // ============================================================================

@@ -37,6 +37,10 @@ impl Storable for AccessToken {
         Cow::Owned(Encode!(self).unwrap())
     }
 
+    fn into_bytes(self) -> Vec<u8> {
+        Encode!(&self).unwrap()
+    }
+
     fn from_bytes(bytes: Cow<[u8]>) -> Self {
         Decode!(bytes.as_ref(), Self).unwrap()
     }
@@ -60,6 +64,10 @@ pub struct UserSession {
 impl Storable for UserSession {
     fn to_bytes(&self) -> Cow<[u8]> {
         Cow::Owned(Encode!(self).unwrap())
+    }
+
+    fn into_bytes(self) -> Vec<u8> {
+        Encode!(&self).unwrap()
     }
 
     fn from_bytes(bytes: Cow<[u8]>) -> Self {
@@ -90,6 +98,10 @@ impl Storable for GiftToken {
         Cow::Owned(Encode!(self).unwrap())
     }
 
+    fn into_bytes(self) -> Vec<u8> {
+        Encode!(&self).unwrap()
+    }
+
     fn from_bytes(bytes: Cow<[u8]>) -> Self {
         Decode!(bytes.as_ref(), Self).unwrap()
     }
@@ -107,6 +119,10 @@ pub struct StorableString(pub String);
 impl Storable for StorableString {
     fn to_bytes(&self) -> Cow<[u8]> {
         Cow::Owned(Encode!(&self.0).unwrap())
+    }
+
+    fn into_bytes(self) -> Vec<u8> {
+        Encode!(&self.0).unwrap()
     }
 
     fn from_bytes(bytes: Cow<[u8]>) -> Self {
@@ -170,7 +186,7 @@ pub fn get_all_access_tokens() -> Vec<AccessToken> {
         tokens
             .borrow()
             .iter()
-            .map(|(_, token)| token)
+            .map(|entry| entry.value().clone())
             .collect()
     })
 }
