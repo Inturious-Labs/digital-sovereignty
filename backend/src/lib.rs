@@ -268,8 +268,9 @@ fn email_preview_gift(
     article_title: String,
     article_slug: String,
     gift_token: String,
+    article_price: f64,
 ) -> email::SendEmailRequest {
-    email::preview_gift_email(&to_email, &gifter_name, &article_title, &article_slug, &gift_token)
+    email::preview_gift_email(&to_email, &gifter_name, &article_title, &article_slug, &gift_token, article_price)
 }
 
 // ============================================================================
@@ -416,6 +417,7 @@ async fn create_payment(request: CreatePaymentRequest) -> CreatePaymentResponse 
         email: request.email,
         article_slug: request.article_slug,
         article_title: request.article_title,
+        price_cents: request.price_cents.unwrap_or(500),  // Default to $5
     };
 
     match stripe::create_payment_intent(stripe_request).await {
@@ -439,6 +441,7 @@ pub struct CreatePaymentRequest {
     pub email: String,
     pub article_slug: String,
     pub article_title: String,
+    pub price_cents: Option<u64>,  // Price in cents, defaults to $5 if not provided
 }
 
 #[derive(CandidType, Deserialize)]
@@ -616,6 +619,7 @@ async fn create_gift(request: CreateGiftRequest) -> CreateGiftResponse {
     if let Some(ref recipient) = request.recipient_email {
         let gifter_name = request.gifter_name.unwrap_or_else(|| gifter_email.clone());
         let article_title = request.article_title.unwrap_or_else(|| request.article_slug.clone());
+        let article_price = request.article_price.unwrap_or(5.0);  // Default to $5 if not specified
 
         let _ = email::send_gift_email(
             recipient,
@@ -624,6 +628,7 @@ async fn create_gift(request: CreateGiftRequest) -> CreateGiftResponse {
             &article_title,
             &request.article_slug,
             &gift.gift_token,
+            article_price,
         ).await;
     }
 
@@ -641,6 +646,7 @@ pub struct CreateGiftRequest {
     pub gifter_token: String,
     pub gifter_name: Option<String>,
     pub article_title: Option<String>,
+    pub article_price: Option<f64>,  // Price in dollars (e.g., 5.0 = $5.00)
     pub recipient_email: Option<String>,
 }
 

@@ -308,6 +308,7 @@ pub async fn send_gift_email(
     article_title: &str,
     article_slug: &str,
     gift_token: &str,
+    article_price: f64,
 ) -> EmailResult<SendEmailResponse> {
     let site_url = get_site_url();
     let gift_link = format!(
@@ -316,6 +317,13 @@ pub async fn send_gift_email(
     );
 
     let subject = format!("{} shared an article with you!", gifter_name);
+
+    // Format price nicely (e.g., $5 or $3.50)
+    let price_str = if article_price.fract() == 0.0 {
+        format!("${}", article_price as u64)
+    } else {
+        format!("${:.2}", article_price)
+    };
 
     let html = format!(
         r#"<!DOCTYPE html>
@@ -335,7 +343,7 @@ pub async fn send_gift_email(
     <div class="gift-box">
         <p><strong>{}</strong> ({}) thought you'd enjoy this article from Digital Sovereignty Chronicle:</p>
         <h3>"{}"</h3>
-        <p>This is a $5 article – yours free as a gift!</p>
+        <p>This is a {} article – yours free as a gift!</p>
     </div>
 
     <a href="{}" class="button">Read Article</a>
@@ -348,7 +356,7 @@ pub async fn send_gift_email(
     </div>
 </body>
 </html>"#,
-        gifter_name, gifter_email, article_title, gift_link, gift_link
+        gifter_name, gifter_email, article_title, price_str, gift_link, gift_link
     );
 
     let text = format!(
@@ -358,14 +366,14 @@ pub async fn send_gift_email(
 
 "{}"
 
-This is a $5 article – yours free as a gift!
+This is a {} article – yours free as a gift!
 
 Read your article: {}
 
 Enjoy the read!
 
 Digital Sovereignty Chronicle"#,
-        gifter_name, gifter_email, article_title, gift_link
+        gifter_name, gifter_email, article_title, price_str, gift_link
     );
 
     send_email(SendEmailRequest {
@@ -447,6 +455,7 @@ pub fn preview_gift_email(
     article_title: &str,
     article_slug: &str,
     gift_token: &str,
+    article_price: f64,
 ) -> SendEmailRequest {
     let site_url = get_site_url();
     let gift_link = format!(
@@ -454,13 +463,20 @@ pub fn preview_gift_email(
         site_url, article_slug, gift_token
     );
 
+    // Format price nicely (e.g., $5 or $3.50)
+    let price_str = if article_price.fract() == 0.0 {
+        format!("${}", article_price as u64)
+    } else {
+        format!("${:.2}", article_price)
+    };
+
     SendEmailRequest {
         to: to_email.to_string(),
         subject: format!("{} shared an article with you!", gifter_name),
         html: format!(
-            "<p>{} shared: <a href=\"{}\">{}</a></p>",
-            gifter_name, gift_link, article_title
+            "<p>{} shared a {} article: <a href=\"{}\">{}</a></p>",
+            gifter_name, price_str, gift_link, article_title
         ),
-        text: Some(format!("{} shared: {}", gifter_name, gift_link)),
+        text: Some(format!("{} shared a {} article: {}", gifter_name, price_str, gift_link)),
     }
 }

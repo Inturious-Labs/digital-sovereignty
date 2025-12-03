@@ -108,6 +108,12 @@ pub struct CreatePaymentRequest {
     pub email: String,
     pub article_slug: String,
     pub article_title: String,
+    #[serde(default = "default_price_cents")]
+    pub price_cents: u64,  // Price in cents (e.g., 500 = $5.00)
+}
+
+fn default_price_cents() -> u64 {
+    500 // Default to $5.00 for backwards compatibility
 }
 
 /// Response from creating a payment intent
@@ -135,7 +141,7 @@ pub async fn create_payment_intent(request: CreatePaymentRequest) -> StripeResul
     // Build form-encoded body for Stripe API
     let body = format!(
         "amount={}&currency=usd&metadata[email]={}&metadata[article_slug]={}&metadata[article_title]={}&automatic_payment_methods[enabled]=true",
-        ARTICLE_PRICE_CENTS,
+        request.price_cents,
         urlencoded(&request.email),
         urlencoded(&request.article_slug),
         urlencoded(&request.article_title)
