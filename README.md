@@ -50,35 +50,25 @@ This creates `index.md` with proper frontmatter and template structure.
 - Add `featured-image.webp` for social media preview
 - Preview locally: `hugo server -D` (from repo root)
 
-### 4. Audit Before Publishing
+### 4. Publish
 
-Run the audit script to validate your article:
+Run the publish script to validate and prepare your article:
 
 ```bash
-dsc-audit
+dsc-publish
 ```
 
-The audit checks:
-- Required frontmatter fields (title, date, slug, categories)
-- Description length (SEO optimization)
-- Word count
-- Image references and files
-- Placeholder content warnings
+This script:
+- Validates frontmatter, content, and images
+- Prompts for publication date (defaults to today)
+- Sets `draft: false`
+- Shows git commands for committing
 
-### 5. Finalize and Publish
-
-When ready to publish:
+### 5. Commit and Create PR
 
 ```bash
-# Update frontmatter
-# - Change date from 2099-12-31 to actual publication date
-# - Set draft: false
-
-# Commit your changes
 git add .
 git commit -m "Publish: My Article Title"
-
-# Push and create PR
 git push -u origin draft/my-article-slug
 gh pr create --base main --title "Publish: My Article Title"
 
@@ -93,7 +83,7 @@ git branch -d draft/my-article-slug
 | Script | Purpose | Usage |
 |--------|---------|-------|
 | `dsc-init-article` | Create index.md with frontmatter | Run from article folder |
-| `dsc-audit` | Validate article before publish | Run from article folder |
+| `dsc-publish` | Validate, set date, set draft:false | Run from article folder |
 
 ## Git Branching Strategy
 
