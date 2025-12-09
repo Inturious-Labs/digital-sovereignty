@@ -8,6 +8,7 @@ on:
       - 'PLAN.md'
       - 'docs/**'
       - 'data/**'
+      - 'scripts/**'
   pull_request:
     branches: [ main ]
     paths-ignore:
@@ -15,6 +16,7 @@ on:
       - 'PLAN.md'
       - 'docs/**'
       - 'data/**'
+      - 'scripts/**'
   schedule:
     # Run daily at 12:00 UTC (8:00 PM Shanghai time) to publish scheduled posts
     - cron: '0 12 * * *'
