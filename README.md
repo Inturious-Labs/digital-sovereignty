@@ -1,4 +1,4 @@
-# README
+# Digital Sovereignty Chronicle
 
 [![Deploy to IC Mainnet](https://github.com/Inturious-Labs/digital-sovereignty/actions/workflows/deploy.yml/badge.svg)](https://github.com/Inturious-Labs/digital-sovereignty/actions/workflows/deploy.yml)
 
@@ -8,232 +8,212 @@
 - **Internet Computer Canister**: [https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io](https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io)
 - **Canister ID**: `wupbw-2aaaa-aaaae-abn7a-cai`
 
-## dfx commands
+## Publishing Workflow
 
-Switch to the correct identity:
+Complete workflow for creating and publishing a new article.
 
-```
-dfx identity list
-dfx identity use <identity-name>
-dfx identity whoami
-```
+### 1. Create Draft Branch and Article Folder
 
-Get the principal for your identity:
-
-```
-dfx identity get-principal
-```
-
-Check the ICP balance and the account ID for your identity:
-
-```
-dfx ledger --network ic balance
-```
-
-Check the account ID (for ICP transfer) for your identity:
-
-```
-dfx ledger --network ic account-id
-```
-
-Check the cycles balance for your identity:
-
-```
-dfx cycles --network ic balance
-```
-
-Transfer some $ICP into your account and verify the balance has been topped up with `dfx ledger`.
-
-Then, convert $ICP into cycles from the ledger account to cycles account for your identity:
-
-```
-dfx cycles convert --network ic --amount 1
-```
-
-Verify that the ICP balance has been deducted with `dfx ledger` and that cycles balance has been topped up with `dfx cycles`.
-
-## Substack Migration Scripts
-
-This project includes several utility scripts for managing content and converting image formats. All scripts are located in the `scripts/` directory.
-
-### 1. HEIC to WebP Converter (`convert_heic_to_webp.sh`)
-
-**Purpose**: Converts HEIC images to WebP format and updates markdown references.
-
-**What it does**:
-- Finds all HEIC images in a specified folder
-- Converts them to WebP format using ImageMagick
-- Updates markdown references from HEIC to WebP filenames
-- Creates backup files before making changes
-- Optionally removes original HEIC files
-
-**Usage**:
 ```bash
-# Convert HEIC files in January folder
-./scripts/convert_heic_to_webp.sh content/posts/2025/01
+# Create a new branch for your article
+git checkout main
+git pull
+git checkout -b draft/my-article-slug
 
-# Convert HEIC files in February folder
-./scripts/convert_heic_to_webp.sh content/posts/2025/02
-
-# Convert HEIC files in any specific folder
-./scripts/convert_heic_to_webp.sh content/posts/2025/03
+# Create the article folder (YYYY/MM/DD-slug format)
+mkdir -p content/posts/2025/12/09-my-article-slug
+cd content/posts/2025/12/09-my-article-slug
 ```
 
-**Requirements**: ImageMagick must be installed (`brew install imagemagick`)
+### 2. Initialize Article with Frontmatter
 
-### 2. Substack URL Updater (`update_substack_urls.sh`)
+Run the interactive wizard to create `index.md`:
 
-**Purpose**: Converts Substack CDN image URLs to local file references.
-
-**What it does**:
-- Finds all markdown files in a specified folder
-- Converts Substack CDN URLs to local file references
-- Creates backup files before making changes
-- Handles complex URL patterns automatically
-
-**Usage**:
 ```bash
-# Update URLs in January folder
-./scripts/update_substack_urls.sh content/posts/2025/01
-
-# Update URLs in February folder
-./scripts/update_substack_urls.sh content/posts/2025/02
-
-# Update URLs in any specific folder
-./scripts/update_substack_urls.sh content/posts/2025/03
+dsc-init-article
 ```
 
-### 3. HEIC Image Remover (`remove_heic_images.sh`)
+The wizard will prompt for:
+- **Title**: Article title
+- **Slug**: Auto-generated from folder name (can override)
+- **Description**: SEO description
+- **Category**: Choose from existing or create new
+- **Series**: Optional, choose from existing or create new
+- **Keywords**: Optional, comma-separated for SEO
 
-**Purpose**: Safely removes all HEIC images from the content directory.
+This creates `index.md` with proper frontmatter and template structure.
 
-**What it does**:
-- Recursively searches for all HEIC files in `content/posts/`
-- Shows exactly what files will be deleted
-- Requires explicit confirmation before deletion
-- Provides detailed feedback on the deletion process
+### 3. Write Content
 
-**Usage**:
+- Add your content to `index.md`
+- Add images to the article folder (WebP format preferred)
+- Add `featured-image.webp` for social media preview
+- Preview locally: `hugo server -D` (from repo root)
+
+### 4. Audit Before Publishing
+
+Run the audit script to validate your article:
+
 ```bash
-./scripts/remove_heic_images.sh
+dsc-audit
 ```
 
-**Safety**: Requires typing "yes" to confirm deletion
+The audit checks:
+- Required frontmatter fields (title, date, slug, categories)
+- Description length (SEO optimization)
+- Word count
+- Image references and files
+- Placeholder content warnings
 
-### 4. Typical Workflow
+### 5. Finalize and Publish
 
-**For processing new content**:
+When ready to publish:
+
 ```bash
-# 1. Convert HEIC images to WebP
-./scripts/convert_heic_to_webp.sh content/posts/2025/01
+# Update frontmatter
+# - Change date from 2099-12-31 to actual publication date
+# - Set draft: false
 
-# 2. Update Substack URLs to local references
-./scripts/update_substack_urls.sh content/posts/2025/01
+# Commit your changes
+git add .
+git commit -m "Publish: My Article Title"
 
-# 3. (Optional) Remove original HEIC files after verification
-./scripts/remove_heic_images.sh
+# Push and create PR
+git push -u origin draft/my-article-slug
+gh pr create --base main --title "Publish: My Article Title"
+
+# After PR is merged, clean up
+git checkout main
+git pull
+git branch -d draft/my-article-slug
 ```
 
-**Benefits**:
-- **Web-optimized images**: WebP format provides better compression
-- **Local references**: No dependency on external CDN services
-- **Batch processing**: Process entire folders at once
-- **Safe operations**: Backup files and confirmation prompts
-- **Flexible**: Specify any folder path as needed
+### Workflow Scripts
 
-**Note**: Always run these scripts from the project root directory (`digital-sovereignty/`).
+| Script | Purpose | Usage |
+|--------|---------|-------|
+| `dsc-init-article` | Create index.md with frontmatter | Run from article folder |
+| `dsc-audit` | Validate article before publish | Run from article folder |
 
 ## Git Branching Strategy
 
-This project uses a specialized branching strategy designed for continuous content creation and publication:
-
-### Branch Structure
+Simple branch-per-article workflow:
 
 ```
 main (production)
  │
- ├── drafts/writing-pad (long-lived drafts branch)
- │    │
- │    ├── publish/article-name-1 (ephemeral publish branch)
- │    │    └──> merges into main, then deleted
- │    │
- │    ├── publish/article-name-2 (ephemeral publish branch)
- │    │    └──> merges into main, then deleted
- │    │
- │    └── (continues as "moving train" of drafts)
+ ├── draft/article-a  ──> PR ──> merge ──> delete
+ │
+ ├── draft/article-b  ──> PR ──> merge ──> delete
+ │
+ └── draft/article-c  (work in progress)
 ```
 
-### Visual Workflow
+**Key Principles:**
+- `main` branch is always production-ready
+- Each article gets its own `draft/slug` branch
+- Create PR to merge into main when ready
+- Delete branch after merge
+- Multiple articles can be in progress simultaneously
+
+## Content Structure
+
+Articles use Hugo page bundles:
 
 ```
-main:           o─────o──────o──────o──────o
-                      ↑      ↑      ↑
-                      │      │      │
-                      │      │      └─ publish/article-3 (merge & delete)
-                      │      └──────── publish/article-2 (merge & delete)
-                      └─────────────── publish/article-1 (merge & delete)
-                                       │
-                                       │
-drafts/writing-pad:  o───o───o───o───┤───o───o───o (continuous)
-                     │       │       │       │
-                     │       │       │       └─ new draft started
-                     │       │       └───────── article-3 ready
-                     │       └─────────────── article-2 ready
-                     └───────────────────── article-1 ready
+content/posts/
+└── 2025/
+    └── 12/
+        └── 09-my-article-slug/
+            ├── index.md           # Article content
+            ├── featured-image.webp  # Social media preview
+            └── other-images.webp  # Additional images
 ```
 
-### The "Moving Train" Concept
+**Frontmatter Example:**
+```yaml
+---
+title: "My Article Title"
+date: 2025-12-09T12:00:00+08:00
+slug: my-article-slug
+draft: false
+description: "A compelling description for SEO (50-160 chars)"
+categories:
+  - "crypto"
+series:
+  - "Deep Dive Series"
+images: ["featured-image.webp"]
+keywords: ["keyword1", "keyword2"]
+enable_rapport: true
+---
+```
 
-The `drafts/writing-pad` branch acts as a **moving train** where:
-- Multiple articles exist in various stages of completion
-- Some drafts are just starting
-- Some drafts are nearly ready for publication
-- Published articles "graduate" and leave the train
-- New articles join the train as new drafts
-- The train (branch) itself **never gets merged or deleted**
+## Image Processing Scripts
 
-### Publishing Workflow
+Utility scripts for processing images (useful for Substack migration).
 
-When an article is ready to publish:
+### HEIC to WebP Converter
 
-1. **Create a publish branch** from `drafts/writing-pad`:
-   ```bash
-   git checkout drafts/writing-pad
-   git checkout -b publish/article-name
-   ```
+```bash
+./scripts/convert_heic_to_webp.sh content/posts/2025/12
+```
 
-2. **Push and create PR**:
-   ```bash
-   git push -u origin publish/article-name
-   gh pr create --title "Publish: Article Name" --base main
-   ```
+Converts HEIC images to WebP and updates markdown references.
 
-3. **Merge and delete** the publish branch:
-   ```bash
-   # Merge PR on GitHub (this deletes the publish branch automatically)
-   ```
+**Requirements**: `brew install imagemagick`
 
-4. **Return to drafts branch**:
-   ```bash
-   git checkout drafts/writing-pad
-   git branch -D publish/article-name  # Clean up local branch
-   ```
+### Substack URL Updater
 
-5. **Continue working** on other drafts in `drafts/writing-pad`
+```bash
+./scripts/update_substack_urls.sh content/posts/2025/12
+```
 
-### Key Principles
+Converts Substack CDN URLs to local file references.
 
-- ✅ `main` branch remains pristine and production-ready
-- ✅ `drafts/writing-pad` is a **long-lived branch** that never gets merged
-- ✅ Each publish branch is **ephemeral** and gets deleted after merging
-- ✅ Multiple drafts can coexist at different stages of completion
-- ✅ No risk of losing draft work when publishing individual articles
-- ✅ Clean separation between draft work and production releases
+### HEIC Image Remover
 
-### Why This Approach?
+```bash
+./scripts/remove_heic_images.sh
+```
 
-**Traditional branching**: Each feature/article would require its own branch from main, making it difficult to work on multiple drafts simultaneously.
+Safely removes HEIC files after conversion (requires confirmation).
 
-**This approach**: The `drafts/writing-pad` branch serves as a persistent workspace where multiple articles can be developed in parallel, with individual articles "graduating" to production when ready.
+## DFX Commands Reference
 
-This mirrors a physical writing pad where you might have several drafts at various stages, and you tear off pages to publish them when they're ready, while the pad itself remains intact for future work.
+### Identity Management
+
+```bash
+dfx identity list
+dfx identity use <identity-name>
+dfx identity whoami
+dfx identity get-principal
+```
+
+### Balance Checks
+
+```bash
+# ICP balance
+dfx ledger --network ic balance
+
+# Account ID (for receiving ICP)
+dfx ledger --network ic account-id
+
+# Cycles balance
+dfx cycles --network ic balance
+```
+
+### Convert ICP to Cycles
+
+```bash
+dfx cycles convert --network ic --amount 1
+```
+
+## Deployment
+
+Deployment is automated via GitHub Actions:
+
+- **Trigger**: Push to `main` branch or PR merge
+- **Schedule**: Daily at 12:00 UTC (checks for posts ready to publish)
+- **Process**: Hugo build → Deploy to IC mainnet
+
+The workflow automatically skips deployment if no posts are ready (date ≤ today AND draft = false).
