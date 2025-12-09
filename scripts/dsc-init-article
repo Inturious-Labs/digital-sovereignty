@@ -15,6 +15,9 @@ GRAY='\033[0;90m'
 NC='\033[0m'
 BOLD='\033[1m'
 
+# Standard keywords for all DSC articles (Part A)
+STANDARD_KEYWORDS="ICP, Internet Computer, 互联网计算机, Internet Computer Protocol, canister, blockchain, crypto, decentralization, digital sovereignty, 区块链"
+
 # Find repo root by looking for hugo.toml
 find_repo_root() {
     local dir="$PWD"
@@ -194,21 +197,21 @@ category=$(select_category)
 # Series
 series=$(select_series)
 
-# Keywords
-printf "${GREEN}Keywords${NC} ${GRAY}(comma-separated, optional):${NC} "
-read -r keywords
+# Keywords - Part A (standard) is prefilled, Part B (article-specific) is optional
+printf "${GREEN}Article-specific keywords${NC} ${GRAY}(comma-separated, optional - standard keywords auto-added):${NC} "
+read -r extra_keywords
 
-# Build keywords array
-keyword_field="[]"
-if [ -n "$keywords" ]; then
-    keyword_array=""
-    IFS=',' read -ra kw_list <<< "$keywords"
-    for kw in "${kw_list[@]}"; do
-        kw=$(echo "$kw" | sed 's/^[ \t]*//;s/[ \t]*$//')
-        [ -n "$keyword_array" ] && keyword_array="${keyword_array}, \"$kw\"" || keyword_array="\"$kw\""
-    done
-    keyword_field="[$keyword_array]"
-fi
+# Build keywords array - combine standard + article-specific
+all_keywords="$STANDARD_KEYWORDS"
+[ -n "$extra_keywords" ] && all_keywords="$all_keywords, $extra_keywords"
+
+keyword_array=""
+IFS=',' read -ra kw_list <<< "$all_keywords"
+for kw in "${kw_list[@]}"; do
+    kw=$(echo "$kw" | sed 's/^[ \t]*//;s/[ \t]*$//')
+    [ -n "$keyword_array" ] && keyword_array="${keyword_array}, \"$kw\"" || keyword_array="\"$kw\""
+done
+keyword_field="[$keyword_array]"
 
 # Create index.md
 cat > "index.md" << EOF
@@ -240,27 +243,15 @@ enable_rapport: true
 ## Main Content
 
 ## Conclusion
-
----
-
-*Published in [Digital Sovereignty Chronicle](https://digitalsovereignty.herbertyang.xyz/) - Breaking down complex crypto concepts, exploring digital sovereignty, and sharing insights from the frontier of decentralized technology.*
 EOF
 
 echo ""
 echo -e "${GREEN}index.md created successfully!${NC}"
 echo ""
-echo -e "${PURPLE}Next steps:${NC}"
+echo -e "${BLUE}Next steps:${NC}"
 echo "  1. Add featured-image.webp to this folder"
-echo "  2. Write your content"
-echo "  3. Preview: hugo server -D"
-echo "  4. Audit: dsc-audit"
+echo "  2. Edit: ${YELLOW}cursor index.md${NC} (with quiet light theme)"
+echo "     or:  ${YELLOW}open -a MacDown index.md${NC}"
+echo "  3. Preview: ${YELLOW}hugo server -D${NC}"
+echo "  4. Audit: ${YELLOW}dsc-audit${NC}"
 echo "  5. Update date & set draft: false when ready"
-
-# Open in editor
-if command -v cursor > /dev/null 2>&1; then
-    cursor "index.md"
-elif command -v code > /dev/null 2>&1; then
-    code "index.md"
-elif [ -n "${EDITOR:-}" ]; then
-    $EDITOR "index.md"
-fi
