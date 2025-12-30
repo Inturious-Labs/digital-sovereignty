@@ -1,17 +1,17 @@
 ---
-title: "Enslaved by Data"
-date: 2099-12-31T00:00:00+08:00
+title: "Enslaved by Data: There Is Something About Emma Stone"
+date: 2025-12-30
 slug: enslaved-by-data
-draft: true
-description: "how we are becoming slaves of data"
+draft: false
+description: "How an impulsive urge to watch an Emma Stone movie quickly spiralled out of control and turned into a massive rabbit hole of a major home network overhaul."
 categories:
   - "Digital Life"
-images: [""]
-keywords: ["ICP", "Internet Computer", "互联网计算机", "Internet Computer Protocol", "canister", "blockchain", "crypto", "decentralization", "digital sovereignty", "区块链", "Jellyfin", "Synology", "Backup"]
+images: ["hero.jpg"]
+keywords: ["ICP", "Internet Computer", "互联网计算机", "Internet Computer Protocol", "canister", "blockchain", "crypto", "decentralization", "digital sovereignty", "区块链", "Jellyfin", "Synology", "Backup", "Emma Stone", "Bugonia", "Jellyfin", "Synology", "NAS"]
 enable_rapport: true
 ---
 
-![Featured Image](./featured-image.webp)
+![Featured Image](./hero.jpg)
 
 I was trying to watch the recent Emma Stone movie Bugonia on Jellyfin. Jellyfin is an open-source alternative to Plex that allows you to create your own film/show/music library on the home network and enjoy entertainment on all connected devices. 
 
@@ -33,9 +33,9 @@ Even stranger, Jellyfin's official documentation keeps saying "container.app" fo
 
 A bit of Google research revealed that Synology released a major update to its operating system (DSM) two years ago, from 7.1 to 7.2. Part of this major update was to rebrand docker.app as container.app and many related changes. Ah, that must be the reason. The docker.app on my Synology is deprecated. No wonder it could not find Jellyfin. 
 
-Guess I just have to update my Synology's OS from 7.1 to 7.2. But before getting to 7.2, I still have to finish a few smaller updates within 7.1. Sure, let's get all of them updated, once and for all.
+Guess I just have to update my Synology's OS from 7.1 to 7.3. But before getting to 7.3, I still have to finish a few smaller updates within 7.1. Sure, let's get all of them updated, once and for all.
 
-A few hours later, I was finally able to press the button on 7.2. Synology prompted me: 
+A few hours later, I was finally able to press the button on 7.3. Synology prompted me: 
 
 > Please make sure you have backed up all your key data before proceeding with this major update
 
@@ -43,7 +43,7 @@ Hmm, you just have to say this out loud, don't you? It's been a few months since
 
 Because this backup job was approaching its file size limit. My mobile hard drive has 4TB capacity. I vaguely remember in my last backup, all the family photos and videos, and documents for the past 20+ years were adding up to somewhere close to 3.5TB. 
 
-My wife and I had a soul-searching and philosophical conversation about our current and future usage of data. Our conclusion is that let data be data; the beast is out of the cage and cannot be contained, and we just need to top up the hard disk storage on Synology. The problem is that our NAS' current storage usage is about 80% and doesn't leave much room for more data.
+My wife and I had a soul-searching and philosophical conversation about our current and future usage of data. Our conclusion was that let data be data; the beast is out of the cage and cannot be contained, and we just need to top up the hard disk storage on Synology. The problem is that our NAS' current storage usage is about 80% and doesn't leave much room for more data.
 
 Given the way this crazy AI arms race is going around the world, the cost for data storage is likely NOT going to come down any time soon. So we decided that we should expand the NAS storage.
 
@@ -60,6 +60,3 @@ Luckily, Claude's analysis showed that I only need less than 3TB. This is well w
 Finally, I activated Hyper Backup on Synology and started the backup. This is going to take a few days. 
 
 Wait, what was it that I was trying to do in the beginning? I remember there was something about Emma Stone. 
-
-
-
