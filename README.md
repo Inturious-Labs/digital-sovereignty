@@ -87,6 +87,13 @@ git branch -d draft/my-article-slug
 | `dsc-init-article` | Create index.md with frontmatter | Run from article folder |
 | `dsc-publish` | Validate, set date, set draft:false | Run from article folder |
 
+**Installation (symlinks to /usr/local/bin):**
+
+```bash
+sudo ln -sf /Users/zire/matrix/zire/digital-sovereignty/scripts/dsc-init-article /usr/local/bin/dsc-init-article
+sudo ln -sf /Users/zire/matrix/zire/digital-sovereignty/scripts/dsc-publish /usr/local/bin/dsc-publish
+```
+
 ## Git Branching Strategy
 
 Simple branch-per-article workflow:
