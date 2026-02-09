@@ -1,6 +1,6 @@
 ---
 title: "Beyond the Hype: 10 Real-World Truths About Living with OpenClaw AI Assistant"
-date: 2026-02-10T12:00:00+08:00
+date: 2026-02-10T02:00:00+08:00
 slug: beyond-the-hype-10-real-world-truths-about-living-with-openclaw-ai-assistant
 draft: false
 description: "after using OpenClaw extensively for more than two weeks, here's my honest take on the AI assistant and how it may or may not change our lives."
@@ -25,6 +25,8 @@ What is OpenClaw, really?
 
 So is the hype real? It is quite a revolution and opens up a whole new world for Silicon Valley overnight. It reminds me of that exuberance and excitement when we first touched the Internet in 1995. While **Claude Code** helps me write code and answer questions based on each session, OpenClaw is capable of implementing those features directly if given enough permissions. 
 
+![Hype](hype.jpg)
+
 Can we do the same with **Claude Cowork**? Probably yes, from a technical standpoint, if Anthropic wants to push in that direction. If you give your OpenClaw bot open access to everything on your main computer - you probably get a similar effect that Claude Cowork could give you, too. 
 
 But they are positioned differently. Claude Cowork is more like an operating system trying to dethrone Windows and macOS. OpenClaw is the consummate AI assistant. Also, Claude is not open source, but OpenClaw is. I would not give this much access of my personal data to a centralized, closed-source software. 
@@ -35,6 +37,8 @@ That said, my experience with OpenClaw has more nuances than revealed by many po
 
 Installing OpenClaw is straight forward but making it work well, takes a lot of effort and patience. For all the time I've spent on OpenClaw so far, probably 90% are on fixing errors vs only 10% are actually creating new features or content. I'd like to flip this ratio to fully unleash the power of my OpenClaw bot - **Zelda**, so that he can help me either boost productivity or increase MRR (Monthly Recurring Revenue).
 
+![Fixes](fix.jpg)
+
 But the reality is, there is always another error to fix. Zelda has this bloated confidence in making configuration changes on the fly. He'll be like, let me change this LLM for you real quick. He walks out of the door in big strides, slams the door behind him in a signature James Bond move. Then he just locks himself out of the house and never comes back. It's not funny and quite stupid. 
 
 Now I no longer make configuration changes directly in OpenClaw (TUI or Telegram). I'll use Claude Code to ssh into the MacMini where Zelda lives and debug the issue. Claude Code is more old school and less of a hippie, but always gets the job done. 
@@ -44,6 +48,8 @@ It should be said that OpenClaw requires you to be very comfortable with CLI (Co
 ## 2. The pursuit of one-person company
 
 I'm in the early phase of assembling a team of agents and subagents that would work for me around the clock. OpenClaw allows me to create a setup where:
+
+![Agents Swarm](agents.jpg)
 
 - Agent Zelda is the chief of staff + CTO + COO. It's always ON (MacMini + Telegram) to my requests. It prioritizes tasks and scopes out jobs for other agents and subagents. It has a deep bond with me. It's my brain trust.
 - Agent Aaron is also always ON. It's a tireless scraper of web articles for my interests or a watchful eye for my Twitter feed. It's very purposeful and highly autonomous.
@@ -81,6 +87,8 @@ As of February 2026, hardware is getting close to bringing that to reality. Some
 
 But if you're running a substantial business, either with significant MRR upside or a considerable cost-cutting opportunity from human employees, provided you have the technical know-how to maintain a mini data center in the basement, such a one-time investment could be well worth it. 
 
+![MacMini](macmini.jpg)
+
 This decision is of course independent of OpenClaw - you could go down this path even if you do not use OpenClaw. But OpenClaw shows what is possible when you have that much compute power. The genie is out of the bottle.
 
 ## 5. One-shot myth
@@ -88,6 +96,8 @@ This decision is of course independent of OpenClaw - you could go down this path
 Twitter is full of stories where some developers just use OpenClaw to one-shot a new product. I haven't experienced that, nor do I want to do that necessarily as a vibe coder. 
 
 Even when using Claude Code, I would approve every major command (with the heavily used button `1`) instead of letting LLM run wild on its own. I can't imagine my AI bot creating a whole new product autonomously entirely independent from my inputs. AI bot is certainly capable of doing that from a technical standpoint, but what good such a product would be without my inputs and human touch? 
+
+![One Shot](one-shot.jpg)
 
 One of the web services I've created with Zelda was done in about 30 minutes, end-to-end from ideation to launching it with production quality. I was very impressed with OpenClaw's performance but this was not a one-shot product with a super comprehensive prompt. It was born out of a continuous train of back-n-forth chats where I gave cues to the next stop for Zelda until he reached that final destination. 
 
@@ -104,6 +114,8 @@ Here are the big 3 guiding principles for my OpenClaw setup:
   1. It has to be in a contained sandbox environment
   2. Everything OpenClaw bot does, should be possible for rollback if needed
   3. OpenClaw's access is on a white-list basis
+
+![Permission](permission.jpg)
 
 What these mean operationally:
 
@@ -157,6 +169,8 @@ My feeling toward this question after using OpenClaw for more than two weeks is 
 
 When I use Claude Code to build a product, I feel my hands are firmly on the wheel. I may not always get what I want and Claude Code would sometimes circle in a dead-end or produce overly-engineered codes, but I can feel Claude Code is always sitting in the co-pilot's seat. 
 
+![Compare](compare.jpg)
+
 My OpenClaw bot Zelda is a lot more non-deterministic. This is partially attributed by the drifting factor, but also because OpenClaw is built differently - it does not seek your approval at every turn. I know a lot of scripting activities are probably taking place and humming under the hood, but OpenClaw does not show me those. It only shows me the result.  
 
 It creates a vibe that this bot is a thinking machine of its own persona and soul. It follows my journey toward the same direction by and large. Sometimes it goes off on its own side quests. Sometimes it comes back to the main mission after sorting out those side quests (or forgetting them). Sometimes, it tries to convince me that the side quest is actually the main mission going forward. 
@@ -174,6 +188,8 @@ Let me share 3 real cases:
   1. Zelda created a asynchronous web service to upload an image dropped by my wife in a Telegram chat to a designated shared folder on our home NAS server. It cuts her time spent on this loop from 1-2 minutes with at least 5 manual button clicks to less than 3~5 seconds with just 1 click.
   2. Zelda created a new set of Skills on Telegram that allows me to move the entire sourcing, curating, and summation process of publishing the [Sunday Blender](https://weekly.sundayblender.com/) weekly newsletter from laptop to mobile. This could save me up to 2 hours every week.
   3. Zelda created two briefing reports for me, an evening one and a morning one. Daily briefing is useful for everyone, regardless if you work in a corporate or your own startup. It used to be a popular practice in the age of Internet portals (remember Yahoo?), SMS (remember the time when telcos saved the entire Internet in China?), and RSS (Really Simple Syndication). It faded away when social media giants took over our lives and monopolized our attention economy with ads. OpenClaw helps me take back that control so that I can determine what I want to see.
+
+![Briefing](briefing.jpg)
 
 There are many more. For example, I'm planning to create a Palantir + CRM + Contacts Book with Zelda. I also want to use Zelda to work on 5 newsletter publications simultaneously. The list goes on. What I can do with OpenClaw is only constrained by my own imagination.
 
