@@ -1,14 +1,16 @@
 # Digital Sovereignty Chronicle
 
-[![Deploy to IC Mainnet](https://github.com/Inturious-Labs/digital-sovereignty/actions/workflows/deploy.yml/badge.svg)](https://github.com/Inturious-Labs/digital-sovereignty/actions/workflows/deploy.yml)
+[![Deploy to Vercel](https://github.com/Inturious-Labs/digital-sovereignty/actions/workflows/deploy.yml/badge.svg)](https://github.com/Inturious-Labs/digital-sovereignty/actions/workflows/deploy.yml)
 
-## Live Site
+## Current Status (February 2026)
 
-- **Production URL**: [https://digitalsovereignty.herbertyang.xyz](https://digitalsovereignty.herbertyang.xyz)
-- **Internet Computer Canister**: [https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io](https://wupbw-2aaaa-aaaae-abn7a-cai.icp0.io)
-- **Canister ID**: `wupbw-2aaaa-aaaae-abn7a-cai`
-
-## Publishing Workflow
+- ✅ **Live Site**: [https://digitalsovereignty.herbertyang.xyz](https://digitalsovereignty.herbertyang.xyz)
+- ✅ **Platform**: Vercel (Hugo static site)
+- ✅ **Latest Post**: "Enslaved by Data: There Is Something About Emma Stone" (Dec 30, 2025)
+- ✅ **Auto-Deployment**: GitHub Actions → Vercel
+- 📝 **Draft Ready**: "How To Top Up Proton Mail Balance with BTC" (Jan 31, 2026)
+- 📊 **Archive**: 38 published articles (2025), 1 draft (2026)
+- 🎯 **Focus**: Crypto, AI, Web3, decentralization, and data sovereignty
 
 Complete workflow for creating and publishing a new article.
 
@@ -168,34 +170,6 @@ Converts Substack CDN URLs to local file references.
 
 Safely removes HEIC files after conversion (requires confirmation).
 
-## DFX Commands Reference
-
-### Identity Management
-
-```bash
-dfx identity list
-dfx identity use <identity-name>
-dfx identity whoami
-dfx identity get-principal
-```
-
-### Balance Checks
-
-```bash
-# ICP balance
-dfx ledger --network ic balance
-
-# Account ID (for receiving ICP)
-dfx ledger --network ic account-id
-
-# Cycles balance
-dfx cycles --network ic balance
-```
-
-### Convert ICP to Cycles
-
-```bash
-dfx cycles convert --network ic --amount 1
 ```
 
 ## Deployment
@@ -204,6 +178,6 @@ Deployment is automated via GitHub Actions:
 
 - **Trigger**: Push to `main` branch or PR merge
 - **Schedule**: Daily at 12:00 UTC (checks for posts ready to publish)
-- **Process**: Hugo build → Deploy to IC mainnet
+- **Process**: Hugo build → Deploy to Vercel
 
 The workflow automatically skips deployment if no posts are ready (date ≤ today AND draft = false).
