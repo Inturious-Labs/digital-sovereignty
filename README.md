@@ -123,6 +123,44 @@ sudo ln -sf /Users/zire/matrix/zire/digital-sovereignty/scripts/dsc-init-article
 sudo ln -sf /Users/zire/matrix/zire/digital-sovereignty/scripts/dsc-publish /usr/local/bin/dsc-publish
 ```
 
+## Scheduled Publishing
+
+Articles publish themselves on a date you choose. Nothing needs to run on your machine.
+
+**How it works:** the production build runs `hugo --minify --gc` *without* `-F`, so
+Hugo omits any article whose `date` is still in the future. A daily Vercel Cron job
+(`0 14 * * *` UTC = 22:00 Shanghai) triggers a rebuild, which publishes exactly the
+articles whose date has arrived.
+
+Buttondown polls the RSS feed every 30 minutes and dedupes on `<guid>` (the article
+permalink), so a rebuild that changes nothing sends nothing.
+
+**To schedule an article:** set a future `date` in the frontmatter and `draft: false`,
+then commit and merge. It goes live on that date.
+
+```yaml
+date: 2026-09-05T22:00:00+08:00   # publishes Sept 5, 22:00 Shanghai
+draft: false
+```
+
+**Rules:**
+
+- Space articles at least a day apart so only one enters the feed per rebuild.
+- Never change the slug of an article in the newest 10 (the RSS window) — the slug
+  is the dedupe key, and a new slug reads as a new post to Buttondown.
+- Editing a title or body is safe; the guid does not change.
+- On the Hobby plan the cron fires at a random minute within the hour, so expect
+  publication somewhere in 22:00–22:59 Shanghai.
+
+**Required environment variables** (Vercel → Settings → Environment Variables):
+
+| Variable | Purpose |
+|----------|---------|
+| `CRON_SECRET` | Vercel sends this as `Authorization: Bearer …`; `/api/rebuild` rejects anything else |
+| `DEPLOY_HOOK_URL` | The Deploy Hook that actually starts the build (Settings → Git → Deploy Hooks) |
+
+Both are secrets. Anyone holding `DEPLOY_HOOK_URL` can trigger builds.
+
 ## Git Branching Strategy
 
 Simple branch-per-article workflow:

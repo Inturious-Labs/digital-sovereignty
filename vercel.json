@@ -1,4 +1,5 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "build": {
     "env": {
       "HUGO_VERSION": "0.148.2"
@@ -6,5 +7,11 @@
   },
   "buildCommand": "hugo --minify --gc",
   "outputDirectory": "public",
-  "framework": "hugo"
+  "framework": "hugo",
+  "crons": [
+    {
+      "path": "/api/rebuild",
+      "schedule": "0 14 * * *"
+    }
+  ]
 }
