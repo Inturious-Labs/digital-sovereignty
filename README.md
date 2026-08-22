@@ -126,6 +126,18 @@ published on the wrong day by accident. Past dates are rejected: Buttondown skip
 items dated more than a day before it discovers them, so a backdated article would
 never reach subscribers.
 
+**`now` and today's date are not the same thing:**
+
+| You type | Date written | Goes live |
+|----------|--------------|-----------|
+| `now` | current timestamp | immediately, on the next build |
+| today's date | today at `22:00` | tonight, when the cron runs |
+| a future date | that day at `22:00` | on that day |
+
+Both are legitimate — typing today's date is how you publish "tonight at 22:00",
+which lines up with the daily rebuild. To go live right away, answer `now`.
+The script tells you which one you picked.
+
 See [Scheduled Publishing](#scheduled-publishing) for the details.
 
 ### 6. Commit and Create PR

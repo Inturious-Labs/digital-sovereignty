@@ -317,7 +317,7 @@ while true; do
 
     if [ "$date_input" = "now" ]; then
         NEW_DATE=$(date +%Y-%m-%dT%H:%M:%S+08:00)
-        SCHEDULED=0
+        SCHEDULED=now
         break
     fi
 
@@ -340,15 +340,28 @@ while true; do
     # 22:00 matches the daily cron (14:00 UTC), so the article is already
     # eligible when the rebuild runs.
     NEW_DATE="${date_input}T22:00:00+08:00"
-    [ "$date_input" = "$TODAY" ] && SCHEDULED=0 || SCHEDULED=1
+    if [ "$date_input" != "$TODAY" ]; then
+        SCHEDULED=future
+    elif [ "$(date +%H%M)" -ge 2200 ]; then
+        # Today, and 22:00 has already passed - it goes out on the next build.
+        SCHEDULED=now
+    else
+        SCHEDULED=tonight
+    fi
     break
 done
 
 sed -i '' "s/^date: .*/date: ${NEW_DATE}/" "$INDEX_FILE"
 echo -e "${GREEN}[OK]${NC} Date set to: ${PINK}$NEW_DATE${NC}"
-if [ "$SCHEDULED" = "1" ]; then
-    echo -e "${BLUE}[i]${NC} Scheduled - stays hidden until ${PINK}${date_input}${NC}, then publishes on the daily rebuild."
-fi
+case "$SCHEDULED" in
+    future)
+        echo -e "${BLUE}[i]${NC} Scheduled - stays hidden until ${PINK}${date_input}${NC}, then publishes on the daily rebuild."
+        ;;
+    tonight)
+        echo -e "${BLUE}[i]${NC} Dated today at ${PINK}22:00${NC} - it stays hidden until tonight."
+        echo -e "    Want it live now instead? Re-run and answer ${PINK}now${NC}."
+        ;;
+esac
 
 # Set draft: false
 sed -i '' 's/^draft: true/draft: false/' "$INDEX_FILE"
