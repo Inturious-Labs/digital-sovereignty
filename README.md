@@ -135,13 +135,28 @@ articles whose date has arrived.
 Buttondown polls the RSS feed every 30 minutes and dedupes on `<guid>` (the article
 permalink), so a rebuild that changes nothing sends nothing.
 
-**To schedule an article:** set a future `date` in the frontmatter and `draft: false`,
-then commit and merge. It goes live on that date.
+**To schedule an article:** run `dsc-publish` and enter a future date at the prompt.
+It sets `draft: false` and dates the article for 22:00 Shanghai on that day.
+
+```
+Publish date [now | YYYY-MM-DD]: 2026-09-22
+[OK] Date set to: 2026-09-22T22:00:00+08:00
+[i]  Scheduled - stays hidden until 2026-09-22, then publishes on the daily rebuild.
+```
+
+Type `now` to publish immediately instead. The prompt is required — there is no
+silent default, so an article can never be published on the wrong day by accident.
+
+The resulting frontmatter is `draft: false` with a future date:
 
 ```yaml
-date: 2026-09-05T22:00:00+08:00   # publishes Sept 5, 22:00 Shanghai
+date: 2026-09-22T22:00:00+08:00   # publishes Sept 22, 22:00 Shanghai
 draft: false
 ```
+
+**Why `draft: false` and not `true`:** these are different mechanisms. `draft: true`
+hides an article until *you* flip it by hand; a future date hides it until that date
+arrives, automatically. Scheduling needs the date, so the draft flag must be off.
 
 **Rules:**
 

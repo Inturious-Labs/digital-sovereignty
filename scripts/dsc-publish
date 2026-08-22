@@ -298,10 +298,57 @@ else
     echo -e "${BLUE}[OK]${NC} Title: ${PINK}$CURRENT_TITLE${NC}"
 fi
 
-# Auto-set publication date and time from system clock
-NEW_DATE=$(date +%Y-%m-%dT%H:%M:%S+08:00)
+# Publication date - always prompt, no silent default.
+# A future date schedules the article: the production build omits it until that
+# date arrives, and the daily Vercel cron rebuild publishes it automatically.
+TODAY=$(date +%Y-%m-%d)
+echo ""
+echo -e "${GRAY}Publish date. 'now' publishes immediately; a future date (YYYY-MM-DD)${NC}"
+echo -e "${GRAY}schedules it - the daily rebuild will publish it on that day.${NC}"
+
+while true; do
+    printf "${GREEN}Publish date${NC} ${GRAY}[now | YYYY-MM-DD]:${NC} "
+    read -r date_input
+
+    if [ -z "$date_input" ]; then
+        echo -e "${YELLOW}[!]${NC} Enter 'now' or a date - this field is required."
+        continue
+    fi
+
+    if [ "$date_input" = "now" ]; then
+        NEW_DATE=$(date +%Y-%m-%dT%H:%M:%S+08:00)
+        SCHEDULED=0
+        break
+    fi
+
+    if ! [[ "$date_input" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+        echo -e "${YELLOW}[!]${NC} Use YYYY-MM-DD (e.g. 2026-09-22) or 'now'."
+        continue
+    fi
+
+    if ! date -j -f "%Y-%m-%d" "$date_input" >/dev/null 2>&1; then
+        echo -e "${YELLOW}[!]${NC} Not a real calendar date: $date_input"
+        continue
+    fi
+
+    if [[ "$date_input" < "$TODAY" ]]; then
+        echo -e "${YELLOW}[!]${NC} $date_input is in the past. Buttondown skips items"
+        echo -e "    dated more than a day before discovery, so it would never send."
+        continue
+    fi
+
+    # 22:00 matches the daily cron (14:00 UTC), so the article is already
+    # eligible when the rebuild runs.
+    NEW_DATE="${date_input}T22:00:00+08:00"
+    [ "$date_input" = "$TODAY" ] && SCHEDULED=0 || SCHEDULED=1
+    break
+done
+
 sed -i '' "s/^date: .*/date: ${NEW_DATE}/" "$INDEX_FILE"
 echo -e "${GREEN}[OK]${NC} Date set to: ${PINK}$NEW_DATE${NC}"
+if [ "$SCHEDULED" = "1" ]; then
+    echo -e "${BLUE}[i]${NC} Scheduled - stays hidden until ${PINK}${date_input}${NC}, then publishes on the daily rebuild."
+fi
 
 # Set draft: false
 sed -i '' 's/^draft: true/draft: false/' "$INDEX_FILE"
