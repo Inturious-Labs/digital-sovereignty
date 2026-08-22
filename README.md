@@ -6,11 +6,6 @@
 
 - ✅ **Live Site**: [https://digitalsovereignty.herbertyang.xyz](https://digitalsovereignty.herbertyang.xyz)
 - ✅ **Platform**: Vercel (Hugo static site)
-- ✅ **Latest Post**: "Enslaved by Data: There Is Something About Emma Stone" (Dec 30, 2025)
-- ✅ **Auto-Deployment**: GitHub Actions → Vercel
-- 📝 **Draft Ready**: "How To Top Up Proton Mail Balance with BTC" (Jan 31, 2026)
-- 📊 **Archive**: 38 published articles (2025), 1 draft (2026)
-- 🎯 **Focus**: Crypto, AI, Web3, decentralization, and data sovereignty
 
 Complete workflow for creating and publishing a new article.
 
@@ -50,9 +45,41 @@ This creates `index.md` with proper frontmatter and template structure.
 - Add your content to `index.md`
 - Add images to the article folder (WebP format preferred)
 - Add `featured-image.webp` for social media preview
-- Preview locally: `hugo server -D` (from repo root)
 
-### 4. Publish
+### 4. Preview Locally
+
+Start the Hugo development server from the repo root:
+
+```bash
+hugo serve -D -F
+```
+
+Then open **<http://localhost:1313/>** in your browser. Your article appears at
+`http://localhost:1313/p/<your-slug>/`.
+
+Both flags matter for unpublished work:
+
+| Flag | Meaning | Why you need it |
+|------|---------|-----------------|
+| `-D` | Include drafts | New articles have `draft: true` until `dsc-publish` runs |
+| `-F` | Include future-dated posts | `dsc-init-article` sets a placeholder date far in the future |
+
+Without them, Hugo builds the site but your new article is **silently missing** —
+no error, it just never appears in the list.
+
+The server watches for changes and live-reloads the browser as you edit
+`index.md`. Press `Ctrl+C` to stop it.
+
+**Troubleshooting:**
+
+- **Article not showing** — you almost certainly dropped `-D` or `-F`.
+- **Port 1313 already in use** — another server is still running. Stop it with
+  `pkill -f "hugo serve"`, or pick another port: `hugo serve -D -F -p 1314`.
+- **Edits not appearing** — Fast Render Mode can miss some changes. Restart with
+  `hugo serve -D -F --disableFastRender`.
+- **`hugo: command not found`** — install it: `brew install hugo`.
+
+### 5. Publish
 
 Run the publish script to validate and prepare your article:
 
@@ -66,10 +93,12 @@ This script:
 - Sets `draft: false`
 - Shows git commands for committing
 
-### 5. Commit and Create PR
+### 6. Commit and Create PR
 
 ```bash
-git add .
+# Stage the article path explicitly — never `git add .`, which can sweep in
+# unrelated drafts sitting untracked in content/
+git add content/posts/YYYY/MM/DD-my-article-slug
 git commit -m "Publish: My Article Title"
 git push -u origin draft/my-article-slug
 gh pr create --base main --title "Publish: My Article Title"
@@ -86,6 +115,13 @@ git branch -d draft/my-article-slug
 |--------|---------|-------|
 | `dsc-init-article` | Create index.md with frontmatter | Run from article folder |
 | `dsc-publish` | Validate, set date, set draft:false | Run from article folder |
+
+**Installation (symlinks to /usr/local/bin):**
+
+```bash
+sudo ln -sf /Users/zire/matrix/zire/digital-sovereignty/scripts/dsc-init-article /usr/local/bin/dsc-init-article
+sudo ln -sf /Users/zire/matrix/zire/digital-sovereignty/scripts/dsc-publish /usr/local/bin/dsc-publish
+```
 
 ## Git Branching Strategy
 
@@ -123,6 +159,7 @@ content/posts/
 ```
 
 **Frontmatter Example:**
+
 ```yaml
 ---
 title: "My Article Title"
