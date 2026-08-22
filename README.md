@@ -45,9 +45,41 @@ This creates `index.md` with proper frontmatter and template structure.
 - Add your content to `index.md`
 - Add images to the article folder (WebP format preferred)
 - Add `featured-image.webp` for social media preview
-- Preview locally: `hugo serve -D -F` (from repo root)
 
-### 4. Publish
+### 4. Preview Locally
+
+Start the Hugo development server from the repo root:
+
+```bash
+hugo serve -D -F
+```
+
+Then open **<http://localhost:1313/>** in your browser. Your article appears at
+`http://localhost:1313/p/<your-slug>/`.
+
+Both flags matter for unpublished work:
+
+| Flag | Meaning | Why you need it |
+|------|---------|-----------------|
+| `-D` | Include drafts | New articles have `draft: true` until `dsc-publish` runs |
+| `-F` | Include future-dated posts | `dsc-init-article` sets a placeholder date far in the future |
+
+Without them, Hugo builds the site but your new article is **silently missing** —
+no error, it just never appears in the list.
+
+The server watches for changes and live-reloads the browser as you edit
+`index.md`. Press `Ctrl+C` to stop it.
+
+**Troubleshooting:**
+
+- **Article not showing** — you almost certainly dropped `-D` or `-F`.
+- **Port 1313 already in use** — another server is still running. Stop it with
+  `pkill -f "hugo serve"`, or pick another port: `hugo serve -D -F -p 1314`.
+- **Edits not appearing** — Fast Render Mode can miss some changes. Restart with
+  `hugo serve -D -F --disableFastRender`.
+- **`hugo: command not found`** — install it: `brew install hugo`.
+
+### 5. Publish
 
 Run the publish script to validate and prepare your article:
 
@@ -61,10 +93,12 @@ This script:
 - Sets `draft: false`
 - Shows git commands for committing
 
-### 5. Commit and Create PR
+### 6. Commit and Create PR
 
 ```bash
-git add .
+# Stage the article path explicitly — never `git add .`, which can sweep in
+# unrelated drafts sitting untracked in content/
+git add content/posts/YYYY/MM/DD-my-article-slug
 git commit -m "Publish: My Article Title"
 git push -u origin draft/my-article-slug
 gh pr create --base main --title "Publish: My Article Title"
