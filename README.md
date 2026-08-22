@@ -1,11 +1,33 @@
 # Digital Sovereignty Chronicle
 
-[![Deploy to Vercel](https://github.com/Inturious-Labs/digital-sovereignty/actions/workflows/deploy.yml/badge.svg)](https://github.com/Inturious-Labs/digital-sovereignty/actions/workflows/deploy.yml)
+A Hugo static site published at
+[digitalsovereignty.herbertyang.xyz](https://digitalsovereignty.herbertyang.xyz),
+deployed on Vercel, with articles delivered to subscribers by Buttondown.
 
-## Current Status (February 2026)
+## How Publishing Works
 
-- ✅ **Live Site**: [https://digitalsovereignty.herbertyang.xyz](https://digitalsovereignty.herbertyang.xyz)
-- ✅ **Platform**: Vercel (Hugo static site)
+Articles publish themselves on a date you choose. You do not need to be at your
+machine when an article goes live, and nothing has to be merged on the day.
+
+Three pieces make that work:
+
+1. **The date decides.** The production build runs `hugo --minify --gc` *without*
+   the `-F` flag, so Hugo omits any article whose `date` is still in the future.
+   A future-dated article is absent from the site *and* the RSS feed — not hidden,
+   genuinely not built.
+2. **A daily rebuild checks.** A Vercel cron job runs every day at 14:00 UTC
+   (22:00 Shanghai) and triggers a rebuild. Whatever has crossed its date gets
+   published; everything else stays invisible.
+3. **Buttondown notices once.** It polls the RSS feed every 30 minutes and dedupes
+   on `<guid>` (the article permalink), so a rebuild that changes nothing sends
+   nothing, and each article can only ever produce one email.
+
+**Daily rebuild, any cadence you like.** The cron is a heartbeat, not the schedule.
+You control cadence entirely through each article's `date`. A missed cron run
+delays an article by hours, not by a week — which is why the rebuild is daily even
+if you publish weekly.
+
+## Publishing Workflow
 
 Complete workflow for creating and publishing a new article.
 
@@ -89,9 +111,22 @@ dsc-publish
 
 This script:
 - Validates frontmatter, content, and images
-- Prompts for publication date (defaults to today)
+- **Asks when to publish** — `now`, or a future date to schedule it
 - Sets `draft: false`
 - Shows git commands for committing
+
+```
+Publish date [now | YYYY-MM-DD]: 2026-09-22
+[OK] Date set to: 2026-09-22T22:00:00+08:00
+[i]  Scheduled - stays hidden until 2026-09-22, then publishes on the daily rebuild.
+```
+
+The prompt is required — there is no silent default, so an article cannot be
+published on the wrong day by accident. Past dates are rejected: Buttondown skips
+items dated more than a day before it discovers them, so a backdated article would
+never reach subscribers.
+
+See [Scheduled Publishing](#scheduled-publishing) for the details.
 
 ### 6. Commit and Create PR
 
@@ -125,56 +160,76 @@ sudo ln -sf /Users/zire/matrix/zire/digital-sovereignty/scripts/dsc-publish /usr
 
 ## Scheduled Publishing
 
-Articles publish themselves on a date you choose. Nothing needs to run on your machine.
+Reference for the mechanism described in [How Publishing Works](#how-publishing-works).
 
-**How it works:** the production build runs `hugo --minify --gc` *without* `-F`, so
-Hugo omits any article whose `date` is still in the future. A daily Vercel Cron job
-(`0 14 * * *` UTC = 22:00 Shanghai) triggers a rebuild, which publishes exactly the
-articles whose date has arrived.
+### Queueing a backlog
 
-Buttondown polls the RSS feed every 30 minutes and dedupes on `<guid>` (the article
-permalink), so a rebuild that changes nothing sends nothing.
-
-**To schedule an article:** run `dsc-publish` and enter a future date at the prompt.
-It sets `draft: false` and dates the article for 22:00 Shanghai on that day.
+Set each article a week apart, merge them all at once, and leave them alone:
 
 ```
-Publish date [now | YYYY-MM-DD]: 2026-09-22
-[OK] Date set to: 2026-09-22T22:00:00+08:00
-[i]  Scheduled - stays hidden until 2026-09-22, then publishes on the daily rebuild.
+article A -> 2026-09-01    article B -> 2026-09-08    article C -> 2026-09-15
 ```
 
-Type `now` to publish immediately instead. The prompt is required — there is no
-silent default, so an article can never be published on the wrong day by accident.
+All three can live on `main` from day one. Only the one whose date has arrived is
+built, so subscribers receive them one at a time.
 
-The resulting frontmatter is `draft: false` with a future date:
+### The two states
 
-```yaml
-date: 2026-09-22T22:00:00+08:00   # publishes Sept 22, 22:00 Shanghai
-draft: false
-```
+`draft: true` and a future `date` both hide an article, but only one of them ever
+un-hides itself:
 
-**Why `draft: false` and not `true`:** these are different mechanisms. `draft: true`
-hides an article until *you* flip it by hand; a future date hides it until that date
-arrives, automatically. Scheduling needs the date, so the draft flag must be off.
+| Frontmatter | Built today? | Publishes when |
+|-------------|--------------|----------------|
+| `draft: true` | no | never, until you flip the flag by hand |
+| `draft: false` + future `date` | no | automatically, on that date |
+| `draft: false` + past date | yes | already live |
 
-**Rules:**
+Scheduling relies on the date, so a scheduled article is always `draft: false`.
+Use `draft: true` for work that genuinely is not finished.
 
-- Space articles at least a day apart so only one enters the feed per rebuild.
-- Never change the slug of an article in the newest 10 (the RSS window) — the slug
-  is the dedupe key, and a new slug reads as a new post to Buttondown.
-- Editing a title or body is safe; the guid does not change.
-- On the Hobby plan the cron fires at a random minute within the hour, so expect
-  publication somewhere in 22:00–22:59 Shanghai.
+### Rules
 
-**Required environment variables** (Vercel → Settings → Environment Variables):
+- **Space articles at least a day apart** so only one enters the feed per rebuild.
+- **Never change the slug of an article in the newest 10** (the RSS window). The
+  slug becomes the `<guid>`, so a new slug reads as a brand-new post and Buttondown
+  will send it again. Editing a title or body is safe — the guid does not move.
+- **Do not backdate.** Buttondown's "skip old items" setting ignores anything dated
+  more than a day before discovery, so a backdated article silently never sends.
+  `dsc-publish` rejects past dates for this reason.
+- **Expect a fuzzy minute.** On the Hobby plan Vercel fires the cron at a random
+  minute within the scheduled hour, so publication lands somewhere in
+  22:00–22:59 Shanghai.
 
-| Variable | Purpose |
-|----------|---------|
-| `CRON_SECRET` | Vercel sends this as `Authorization: Bearer …`; `/api/rebuild` rejects anything else |
-| `DEPLOY_HOOK_URL` | The Deploy Hook that actually starts the build (Settings → Git → Deploy Hooks) |
+### Postponing an article
 
-Both are secrets. Anyone holding `DEPLOY_HOOK_URL` can trigger builds.
+Change the date and merge again. As long as the original date has not yet passed,
+nothing was ever built, so nothing was sent.
+
+### Configuration
+
+| Where | Setting |
+|-------|---------|
+| `vercel.json` | `crons` → `/api/rebuild` on `0 14 * * *` (UTC) |
+| `api/rebuild.js` | Verifies `CRON_SECRET`, then POSTs to the deploy hook |
+| Vercel env vars | `CRON_SECRET`, `DEPLOY_HOOK_URL` (Production) |
+| Buttondown | "Skip old items" enabled; RSS-to-email on the site feed |
+
+`CRON_SECRET` is the shared secret Vercel sends as `Authorization: Bearer …`;
+`/api/rebuild` returns 401 to anything else. `DEPLOY_HOOK_URL` is the deploy hook
+from **Project → Settings → Git → Deploy Hooks**. Both are secrets — anyone holding
+the hook URL can trigger builds.
+
+### If an article does not appear
+
+1. **Check the cron ran** — Vercel → Settings → Cron Jobs → View Logs. A 401 means
+   `CRON_SECRET` does not match; a 500 means `DEPLOY_HOOK_URL` is unset for Production.
+2. **Check the date has actually passed** in Shanghai time, not UTC.
+3. **Check `draft: false`** — a lingering `draft: true` blocks it regardless of date.
+4. **Rebuild locally the way production does:** `hugo --gc` with no `-F`. If the
+   article is missing there, it will be missing on the site.
+
+To preview scheduled work locally, use `hugo serve -D -F` — `-F` includes
+future-dated posts, `-D` includes drafts.
 
 ## Git Branching Strategy
 
@@ -264,10 +319,13 @@ Safely removes HEIC files after conversion (requires confirmation).
 
 ## Deployment
 
-Deployment is automated via GitHub Actions:
+Deployment is handled entirely by Vercel — there are no GitHub Actions in this repo.
 
-- **Trigger**: Push to `main` branch or PR merge
-- **Schedule**: Daily at 12:00 UTC (checks for posts ready to publish)
-- **Process**: Hugo build → Deploy to Vercel
+| Trigger | What happens |
+|---------|--------------|
+| Push or PR merge to `main` | Vercel builds and deploys automatically |
+| Daily cron, 14:00 UTC | `/api/rebuild` fires a deploy hook; anything that has reached its date goes live |
 
-The workflow automatically skips deployment if no posts are ready (date ≤ today AND draft = false).
+The build command is `hugo --minify --gc` (see `vercel.json`). It deliberately
+omits `-F`, which is what makes future-dated articles invisible until their day
+arrives.
