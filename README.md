@@ -6,11 +6,6 @@
 
 - ✅ **Live Site**: [https://digitalsovereignty.herbertyang.xyz](https://digitalsovereignty.herbertyang.xyz)
 - ✅ **Platform**: Vercel (Hugo static site)
-- ✅ **Latest Post**: "Enslaved by Data: There Is Something About Emma Stone" (Dec 30, 2025)
-- ✅ **Auto-Deployment**: GitHub Actions → Vercel
-- 📝 **Draft Ready**: "How To Top Up Proton Mail Balance with BTC" (Jan 31, 2026)
-- 📊 **Archive**: 38 published articles (2025), 1 draft (2026)
-- 🎯 **Focus**: Crypto, AI, Web3, decentralization, and data sovereignty
 
 Complete workflow for creating and publishing a new article.
 
@@ -50,7 +45,7 @@ This creates `index.md` with proper frontmatter and template structure.
 - Add your content to `index.md`
 - Add images to the article folder (WebP format preferred)
 - Add `featured-image.webp` for social media preview
-- Preview locally: `hugo server -D` (from repo root)
+- Preview locally: `hugo serve -D -F` (from repo root)
 
 ### 4. Publish
 
@@ -130,6 +125,7 @@ content/posts/
 ```
 
 **Frontmatter Example:**
+
 ```yaml
 ---
 title: "My Article Title"
