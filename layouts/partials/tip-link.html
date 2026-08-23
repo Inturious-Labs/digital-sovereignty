@@ -1,0 +1,66 @@
+{{ if not .Params.hideTip }}
+{{/* Use the published URL slug, not the content folder name. Folder names here carry
+     a date prefix and sometimes differ from the slug, which would make tip figures
+     hard to match back to articles. */}}
+{{ $slug := path.Base .RelPermalink }}
+<div class="tip-link-block">
+    <div class="tip-link-divider"></div>
+    <p class="tip-link-text">
+        <a class="tip-link"
+           href="https://tip.inturious.com/?src=dsc&a={{ $slug }}"
+           rel="noopener">Buy me a coffee ☕</a>
+    </p>
+</div>
+
+<style>
+.tip-link-block {
+    margin: 2.5rem 0 1rem;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.tip-link-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #8B4513, transparent);
+    margin-bottom: 1.5rem;
+    opacity: 0.6;
+}
+
+.tip-link-text {
+    margin: 0;
+}
+
+.tip-link-block .tip-link {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border: 1px solid #8B4513;
+    border-radius: 999px;
+    color: #8B4513;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tip-link-block .tip-link:hover {
+    background-color: #8B4513;
+    color: #faf8f0;
+}
+
+/* The theme puts .dark on <html>. Colour is set on the same selector shape as the
+   base rule so it actually wins, and lightened so it stays readable on the dark
+   background. */
+html.dark .tip-link-block .tip-link {
+    border-color: #c68a5b;
+    color: #c68a5b;
+}
+
+html.dark .tip-link-block .tip-link:hover {
+    background-color: #c68a5b;
+    color: #2a2a2a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tip-link { transition: none; }
+}
+</style>
+{{ end }}

@@ -23,6 +23,9 @@
 
   <section>{{- .Content -}}</section>
 
+  <!-- Tip link -->
+  {{- partial "tip-link.html" . -}}
+
   <!-- Rapport Comments Widget -->
   {{- if .Params.enable_rapport -}}
   <div class="mt-24 rounded-xl bg-black/[3%] p-6 dark:bg-white/[8%]">
