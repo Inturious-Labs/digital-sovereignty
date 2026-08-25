@@ -1,0 +1,1482 @@
+<title>Where Can I Buy Bitcoin?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground: #FBFAF8;
+    --surface: #FFFFFF;
+    --surface-sunk: #F3F1ED;
+    --ink: #1A1D21;
+    --ink-soft: #43484E;
+    --neutral: #6B7076;
+    --neutral-faint: #9AA0A6;
+    --rule: #E2DFD9;
+    --rule-strong: #CFCBC3;
+    --accent: #1F5F4A;
+    --accent-soft: #E8F0EC;
+    --accent-ink: #164436;
+    --caution: #9A5B1E;
+    --caution-soft: #F7EEE2;
+    --shadow: 0 1px 2px rgba(26, 29, 33, .05), 0 8px 24px -16px rgba(26, 29, 33, .18);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #14171A;
+      --surface: #1B1F23;
+      --surface-sunk: #212529;
+      --ink: #EDEAE4;
+      --ink-soft: #C3C7CC;
+      --neutral: #969CA3;
+      --neutral-faint: #6E747B;
+      --rule: #2C3238;
+      --rule-strong: #3C434A;
+      --accent: #5FB894;
+      --accent-soft: #1B2F28;
+      --accent-ink: #8FD3B4;
+      --caution: #D69A5C;
+      --caution-soft: #2B231A;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -16px rgba(0, 0, 0, .6);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #14171A;
+    --surface: #1B1F23;
+    --surface-sunk: #212529;
+    --ink: #EDEAE4;
+    --ink-soft: #C3C7CC;
+    --neutral: #969CA3;
+    --neutral-faint: #6E747B;
+    --rule: #2C3238;
+    --rule-strong: #3C434A;
+    --accent: #5FB894;
+    --accent-soft: #1B2F28;
+    --accent-ink: #8FD3B4;
+    --caution: #D69A5C;
+    --caution-soft: #2B231A;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -16px rgba(0, 0, 0, .6);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16.5px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 24px 96px;
+  }
+
+  .wrap {
+    max-width: 47rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* ---------- masthead ---------- */
+
+  header.masthead {
+    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--neutral);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .eyebrow .dot { color: var(--rule-strong); }
+  .eyebrow .live { color: var(--accent); }
+
+  h1 {
+    font-family: Newsreader, Georgia, serif;
+    font-size: clamp(2.4rem, 6vw, 3.5rem);
+    line-height: 1.06;
+    font-weight: 500;
+    letter-spacing: -.018em;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .standfirst {
+    font-family: Newsreader, Georgia, serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 40ch;
+  }
+
+  .meta-strip {
+    margin-top: 6px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    font-size: 13.5px;
+    color: var(--neutral);
+  }
+
+  .meta-strip b {
+    display: block;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--neutral-faint);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  /* ---------- generic type ---------- */
+
+  h2 {
+    font-family: Newsreader, Georgia, serif;
+    font-size: 1.85rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -.012em;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+    letter-spacing: -.005em;
+  }
+
+  p { margin: 0; max-width: 68ch; }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  strong { font-weight: 600; color: var(--ink); }
+  em { font-style: italic; }
+
+  code, .mono {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .88em;
+  }
+
+  section { display: flex; flex-direction: column; gap: 20px; }
+
+  .section-head {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .section-head .kicker {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--neutral);
+  }
+
+  .prose { display: flex; flex-direction: column; gap: 14px; }
+
+  /* ---------- findings (ranked — order is information) ---------- */
+
+  .findings { display: flex; flex-direction: column; gap: 18px; }
+
+  .finding {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    gap: 4px 16px;
+    padding: 22px 24px 24px;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+  }
+
+  .finding .num {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent);
+    padding-top: 5px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .finding .body { display: flex; flex-direction: column; gap: 12px; }
+  .finding h3 { color: var(--ink); }
+  .finding p { font-size: 15.5px; color: var(--ink-soft); }
+
+  .finding.flag { border-left: 3px solid var(--caution); }
+  .finding.flag .num { color: var(--caution); }
+
+  /* ---------- callouts ---------- */
+
+  .callout {
+    padding: 18px 22px;
+    border-radius: 3px;
+    background: var(--accent-soft);
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .callout .label {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    font-weight: 500;
+  }
+
+  .callout p { font-size: 15px; color: var(--ink-soft); }
+
+  .callout.warn { background: var(--caution-soft); }
+  .callout.warn .label { color: var(--caution); }
+
+  /* ---------- jurisdiction blocks ---------- */
+
+  .juris {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 26px 0 4px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .juris-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .juris-head h3 {
+    font-family: Newsreader, Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -.01em;
+  }
+
+  .regulator {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--neutral);
+    white-space: nowrap;
+  }
+
+  /* ---------- tables ---------- */
+
+  .table-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    background: var(--surface);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 34rem;
+  }
+
+  th {
+    text-align: left;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--neutral);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--rule-strong);
+    background: var(--surface-sunk);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  td.idx, td.date {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    color: var(--neutral);
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  td.name { font-weight: 500; }
+  td.entity { color: var(--neutral); font-size: 13.5px; }
+
+  tr.retail td.name::after {
+    content: "retail";
+    display: inline-block;
+    margin-left: 8px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 9.5px;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+    padding: 2px 6px;
+    border-radius: 2px;
+    vertical-align: 2px;
+    font-weight: 500;
+  }
+
+  tr.listed td.name::before {
+    content: "◆";
+    color: var(--accent);
+    margin-right: 7px;
+    font-size: 10px;
+    vertical-align: 1px;
+  }
+
+  .legend {
+    font-size: 13px;
+    color: var(--neutral);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .mk { color: var(--accent); font-size: 10px; }
+
+  /* ---------- scale cards ---------- */
+
+  .scale-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+
+  .scale-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .scale-card.lead { border-color: var(--accent); }
+
+  .scale-card .who {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .scale-card .who b { font-size: 15.5px; font-weight: 600; }
+
+  .scale-card .tag {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 9.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--neutral-faint);
+    white-space: nowrap;
+  }
+
+  .scale-card.lead .tag { color: var(--accent); }
+
+  .stat-rows { display: flex; flex-direction: column; gap: 7px; }
+
+  .stat-rows div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13.5px;
+    border-bottom: 1px dotted var(--rule);
+    padding-bottom: 6px;
+  }
+
+  .stat-rows div:last-child { border-bottom: none; padding-bottom: 0; }
+  .stat-rows dt, .stat-rows .k { color: var(--neutral); }
+  .stat-rows .v {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    color: var(--ink);
+    font-size: 13px;
+  }
+
+  /* ---------- verdict table ---------- */
+
+  td.omit { color: var(--neutral-faint); }
+  td.lead-cell { font-weight: 600; }
+
+  /* ---------- exit timeline ---------- */
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-left: 2px solid var(--rule-strong);
+    padding-left: 22px;
+    margin-left: 6px;
+  }
+
+  .tl-item {
+    position: relative;
+    padding: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .tl-item:last-child { padding-bottom: 0; }
+
+  .tl-item::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--ground);
+    border: 2px solid var(--rule-strong);
+  }
+
+  .tl-item.hot::before { border-color: var(--caution); background: var(--caution); }
+
+  .tl-item .when {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--neutral);
+  }
+
+  .tl-item .what { font-size: 15px; color: var(--ink-soft); max-width: 66ch; }
+  .tl-item .what b { color: var(--ink); }
+
+  /* ---------- channel grid ---------- */
+
+  .channels { display: flex; flex-direction: column; gap: 0; }
+
+  .channel {
+    display: grid;
+    grid-template-columns: 1.6rem 1fr;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .channel:last-child { border-bottom: none; }
+
+  .channel .ch-n {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    color: var(--accent);
+    padding-top: 3px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .channel.grey .ch-n { color: var(--caution); }
+  .channel .ch-t { display: flex; flex-direction: column; gap: 4px; }
+  .channel .ch-t b { font-size: 15px; font-weight: 600; }
+  .channel .ch-t span { font-size: 14.5px; color: var(--ink-soft); }
+
+  /* ---------- verdict box ---------- */
+
+  .verdict {
+    border: 1px solid var(--rule-strong);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .verdict-head {
+    background: var(--surface-sunk);
+    padding: 12px 20px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--neutral);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .verdict-body {
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--surface);
+  }
+
+  .ledger { display: flex; flex-direction: column; gap: 9px; }
+
+  .ledger div {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 14px;
+    font-size: 14.5px;
+    align-items: start;
+  }
+
+  .ledger .side {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding-top: 4px;
+  }
+
+  .ledger .for .side { color: var(--accent); }
+  .ledger .against .side { color: var(--caution); }
+  .ledger p { font-size: 14.5px; color: var(--ink-soft); }
+
+  /* ---------- key/value rows ---------- */
+
+  .kv { display: flex; flex-direction: column; gap: 0; }
+
+  .kv-row {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 6px 20px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 15px;
+  }
+
+  .kv-row:last-child { border-bottom: none; }
+
+  .kv-row dt {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    color: var(--neutral);
+    padding-top: 4px;
+  }
+
+  .kv-row dd { margin: 0; color: var(--ink-soft); }
+
+  /* ---------- lists ---------- */
+
+  ul.ticks, ol.steps { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  ul.ticks li {
+    padding-left: 20px;
+    position: relative;
+    font-size: 15px;
+    color: var(--ink-soft);
+    max-width: 68ch;
+  }
+
+  ul.ticks li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: .62em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--rule-strong);
+  }
+
+  ul.ticks li.no::before { background: var(--caution); }
+  ul.ticks li.yes::before { background: var(--accent); }
+
+  ol.steps { counter-reset: s; gap: 12px; }
+
+  ol.steps li {
+    counter-increment: s;
+    padding-left: 34px;
+    position: relative;
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    max-width: 68ch;
+  }
+
+  ol.steps li::before {
+    content: counter(s);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.75;
+  }
+
+  /* ---------- outline ---------- */
+
+  .outline { display: flex; flex-direction: column; gap: 0; }
+
+  .outline-item {
+    display: grid;
+    grid-template-columns: 2.2rem 1fr;
+    gap: 14px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .outline-item:last-child { border-bottom: none; }
+
+  .outline-item .n {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    color: var(--neutral-faint);
+    font-variant-numeric: tabular-nums;
+    padding-top: 3px;
+  }
+
+  .outline-item .t { display: flex; flex-direction: column; gap: 3px; }
+  .outline-item .t b { font-weight: 600; font-size: 15px; }
+  .outline-item .t span { font-size: 14px; color: var(--neutral); }
+
+  /* ---------- sources ---------- */
+
+  .sources { display: flex; flex-direction: column; gap: 22px; }
+  .src-group { display: flex; flex-direction: column; gap: 9px; }
+
+  .src-group h4 {
+    margin: 0;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--neutral);
+    font-weight: 500;
+  }
+
+  .src-group ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .src-group li { font-size: 14.5px; line-height: 1.5; }
+  .src-group li .note { color: var(--caution); font-size: 13px; }
+
+  footer.end {
+    margin-top: 8px;
+    padding-top: 22px;
+    border-top: 2px solid var(--ink);
+    font-size: 13.5px;
+    color: var(--neutral);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  @media (max-width: 560px) {
+    body { padding: 0 18px 72px; }
+    header.masthead { padding-top: 52px; }
+    .finding { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
+    .finding .num { padding-top: 0; }
+    .kv-row { grid-template-columns: 1fr; }
+    .kv-row dt { padding-top: 0; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">
+      <span>Research brief</span>
+      <span class="dot">/</span>
+      <span>Digital Sovereignty Chronicle</span>
+      <span class="dot">/</span>
+      <span class="live">Verified 25 Aug 2026</span>
+    </div>
+    <h1>Where Can I Buy Bitcoin?</h1>
+    <p class="standfirst">Licensed on-ramps for readers in Hong Kong, Singapore, the US, Canada — and the one case where the honest answer is “you can’t.”</p>
+    <div class="meta-strip">
+      <div><b>Scope</b>5 jurisdictions</div>
+      <div><b>Standard</b>Verifiable claims only</div>
+      <div><b>Draft target</b>900–1,300 words</div>
+    </div>
+  </header>
+
+  <!-- ============ FINDINGS ============ -->
+  <section>
+    <div class="section-head">
+      <span class="kicker">Start here</span>
+      <h2>Three findings that change the article</h2>
+    </div>
+
+    <div class="findings">
+
+      <article class="finding flag">
+        <div class="num">01</div>
+        <div class="body">
+          <h3>The HSBC premise doesn’t hold in Hong Kong</h3>
+          <p>HSBC throttles crypto in the UK (£2,500 per transaction, £10,000 per rolling 30 days) and blocks it outright in Australia. Credit-card crypto purchases are blocked globally. But <strong>Hong Kong is HSBC’s most permissive market</strong> — HSBC HK does not block transfers to SFC-licensed platforms, has offered crypto ETF access through its HK brokerage since mid-2023, and in April 2026 received one of the HKMA’s first two <strong>stablecoin issuer licences</strong>.</p>
+          <p>The bad reputation is real, but it’s a UK and Australia story that Hong Kong readers have absorbed by osmosis. Correcting this is a genuinely useful thing the article can do. If you have first-hand accounts of HK HSBC blocks, that’s worth a line — but it’s anecdote against documented policy, so frame it that way.</p>
+        </div>
+      </article>
+
+      <article class="finding">
+        <div class="num">02</div>
+        <div class="body">
+          <h3>The real bank problem is the reverse of what you’d expect</h3>
+          <p>The friction isn’t <em>which bank lets you send money out</em>. It’s that the licensed exchanges require the first deposit to arrive from <strong>a bank account in your own name</strong> — HKD 10,000 or USD equivalent minimum at both HashKey and OSL. No third-party accounts, no joint accounts.</p>
+          <p>The gating factor is having the right <em>kind</em> of bank account, not choosing the right bank.</p>
+        </div>
+      </article>
+
+      <article class="finding flag">
+        <div class="num">03</div>
+        <div class="body">
+          <h3>The mainland answer changed in February 2026</h3>
+          <p>On <strong>6 February 2026</strong>, eight PRC regulators — PBOC, NDRC, MIIT, NFRA, CSRC, SAFE and others — issued the <em>Notice on Further Preventing and Dealing with Virtual Currency and Other Related Risks</em>, Notice No. 42 [2026]. It extends the 2021 ban: <strong>offshore entities and individuals are now prohibited from providing virtual-currency services to persons in mainland China in any form.</strong> Previously the restriction bit at onshore employees and affiliates; now it reaches the offshore provider itself.</p>
+          <p>So the honest answer to a mainland-resident friend is no longer “use OKX with your passport.” <strong>The dividing line across your whole audience is not nationality — it is residence.</strong> A PRC passport holder residing in Hong Kong or Singapore has good, legal options. A PRC passport holder residing in the mainland does not have a clean answer, and you should not supply a workaround.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ SHORT ANSWER ============ -->
+  <section>
+    <div class="section-head">
+      <span class="kicker">The framing</span>
+      <h2>The short answer</h2>
+    </div>
+    <div class="prose">
+      <p>For someone with no crypto background, the answer is <strong>a licensed centralized exchange in the jurisdiction where they legally reside</strong>. Not the biggest exchange, not the cheapest one — the one that will actually accept their ID, take their money from a local bank, and still be there next year.</p>
+      <p>Everything below is organized by residence, because residence is what determines the answer.</p>
+    </div>
+  </section>
+
+  <!-- ============ REGIONAL MATRIX ============ -->
+  <section>
+    <div class="section-head">
+      <span class="kicker">Regional matrix</span>
+      <h2>Who can actually open an account</h2>
+    </div>
+
+    <!-- HONG KONG -->
+    <div class="juris">
+      <div class="juris-head">
+        <h3>Hong Kong</h3>
+        <span class="regulator">SFC · VATP register</span>
+      </div>
+
+      <p>Thirteen licensed platforms as of 25 August 2026:</p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Platform</th><th>Licensed entity</th><th>Licensed</th></tr>
+          </thead>
+          <tbody>
+            <tr class="retail listed"><td class="idx">01</td><td class="name">OSL Exchange</td><td class="entity">OSL Digital Securities Ltd — 863.HK</td><td class="date">15 Dec 2020</td></tr>
+            <tr class="retail listed"><td class="idx">02</td><td class="name">HashKey Exchange</td><td class="entity">Hash Blockchain Ltd — HKEX listed</td><td class="date">09 Nov 2022</td></tr>
+            <tr><td class="idx">03</td><td class="name">HKVAX</td><td class="entity">Hong Kong Virtual Asset Exchange Ltd</td><td class="date">03 Oct 2024</td></tr>
+            <tr><td class="idx">04</td><td class="name">HKbitEX</td><td class="entity">Hong Kong Digital Asset EX Ltd</td><td class="date">18 Dec 2024</td></tr>
+            <tr><td class="idx">05</td><td class="name">Accumulus</td><td class="entity">Accumulus GBA Technology</td><td class="date">18 Dec 2024</td></tr>
+            <tr><td class="idx">06</td><td class="name">DFX Labs</td><td class="entity">DFX Labs Company Ltd</td><td class="date">18 Dec 2024</td></tr>
+            <tr><td class="idx">07</td><td class="name">EX.IO</td><td class="entity">EXIO Ltd</td><td class="date">18 Dec 2024</td></tr>
+            <tr><td class="idx">08</td><td class="name">PantherTrade</td><td class="entity">Panthertrade HK Ltd — Futu</td><td class="date">27 Jan 2025</td></tr>
+            <tr><td class="idx">09</td><td class="name">YAX</td><td class="entity">YAX Hong Kong Ltd — Tiger Brokers</td><td class="date">27 Jan 2025</td></tr>
+            <tr><td class="idx">10</td><td class="name">Bullish</td><td class="entity">Bullish HK Markets Ltd</td><td class="date">18 Feb 2025</td></tr>
+            <tr><td class="idx">11</td><td class="name">BGE</td><td class="entity">Hong Kong BGE Ltd</td><td class="date">17 Jun 2025</td></tr>
+            <tr><td class="idx">12</td><td class="name">VDX</td><td class="entity">Victory Fintech Company Ltd</td><td class="date">13 Feb 2026</td></tr>
+            <tr><td class="idx">13</td><td class="name">Bixin.com</td><td class="entity">NewBX Ltd</td><td class="date">18 May 2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="legend"><span><span class="mk">◆</span> publicly listed company</span><span>“retail” = mature retail venue</span></p>
+
+      <div class="callout">
+        <span class="label">The headline fact</span>
+        <p><strong>Binance, OKX, Bybit, Coinbase, Kraken, HTX and Bitget are all absent from this list.</strong> Every big global name your friends have heard of is unlicensed in Hong Kong. Bybit additionally restricts Hong Kong access outright. <em>Why</em> they’re absent is the interesting part — see below.</p>
+      </div>
+
+      <h3>Why HashKey and OSL, and not the other eleven</h3>
+      <p>You don’t need to endorse anyone. Two of the thirteen are exchange-traded companies with audited public filings and disclosed volumes; the other eleven are private and disclose nothing. Let that asymmetry do the work.</p>
+
+      <div class="scale-grid">
+        <div class="scale-card lead">
+          <div class="who"><b>HashKey Exchange</b><span class="tag">HKEX listed</span></div>
+          <div class="stat-rows">
+            <div><span class="k">HK market share</span><span class="v">~75%</span></div>
+            <div><span class="k">vs. nearest rival</span><span class="v">&gt;3×</span></div>
+            <div><span class="k">Cumulative volume</span><span class="v">HK$1.7tn</span></div>
+            <div><span class="k">IPO raise</span><span class="v">US$214m</span></div>
+            <div><span class="k">CoinGecko trust</span><span class="v">9 / 10</span></div>
+          </div>
+        </div>
+        <div class="scale-card lead">
+          <div class="who"><b>OSL Exchange</b><span class="tag">863.HK</span></div>
+          <div class="stat-rows">
+            <div><span class="k">HK position</span><span class="v">#2</span></div>
+            <div><span class="k">Platform volume H1’25</span><span class="v">HK$68.2bn</span></div>
+            <div><span class="k">YoY growth</span><span class="v">+200%</span></div>
+            <div><span class="k">Custody assets</span><span class="v">HK$5.69bn</span></div>
+            <div><span class="k">Licensed</span><span class="v">first ever</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <span class="label">One line for the article</span>
+        <p>HashKey holds roughly <strong>75% of Hong Kong’s licensed volume</strong> and became <strong>Asia’s first publicly listed digital asset company</strong> on 17 December 2025. OSL was the <strong>first platform ever licensed</strong> in Hong Kong and trades as 863.HK. Both file audited public accounts. The other eleven do not — which is a fact, not an endorsement.</p>
+      </div>
+
+      <h3>So where did the big names go?</h3>
+      <p>The obvious reader question, and the honest answer is more interesting than “grey area.” The large offshore venues didn’t quietly ignore Hong Kong’s regime — most of them <strong>applied, then formally withdrew and exited</strong>, on the public record.</p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="when">29 Feb 2024 — deadline</span>
+          <span class="what">Platforms operating in Hong Kong had to file a licence application or close by 31 May 2024. <b>OKX and Bybit both applied.</b></span>
+        </div>
+        <div class="tl-item hot">
+          <span class="when">14 Mar 2024</span>
+          <span class="what">The SFC places <b>Bybit on its Suspicious Virtual Asset Trading Platforms Alert List</b>, flagging 11 of its products and stating that no Bybit entity is licensed in Hong Kong. <b>MEXC</b> is listed in the same period.</span>
+        </div>
+        <div class="tl-item hot">
+          <span class="when">24 May 2024</span>
+          <span class="what"><b>OKX withdraws its application</b>, citing “careful consideration” of business strategy.</span>
+        </div>
+        <div class="tl-item">
+          <span class="when">31 May 2024</span>
+          <span class="what">OKX <b>halts centralized trading for Hong Kong residents</b> — deposits stop auto-crediting, open orders cancelled, withdrawals only until 31 August. Its self-custodial Web3 wallet is unaffected.</span>
+        </div>
+        <div class="tl-item">
+          <span class="when">Same window</span>
+          <span class="what">Also withdrawn: <b>Gate.io’s Hong Kong arm</b>, <b>HKVAEX</b> (reported Binance link), and <b>Huobi HK</b> (HTX affiliate).</span>
+        </div>
+      </div>
+
+      <div class="callout">
+        <span class="label">Correct the frame — and this is background, not article copy</span>
+        <p>This is <strong>not</strong> quiet non-compliance. It is a documented, orderly withdrawal conducted with the regulator. Firms weigh licensing costs against market size and sometimes decline — an ordinary commercial decision, not a scandal. <strong>Keep this timeline in the brief and out of the article</strong>; see the tone note at the end.</p>
+      </div>
+
+      <h3>Then where do 120 million users come from?</h3>
+      <p>Four channels — three legitimate, one not:</p>
+
+      <div class="channels">
+        <div class="channel">
+          <div class="ch-n">01</div>
+          <div class="ch-t"><b>Jurisdictions where they hold licences</b><span>OKX holds MiCA authorisation from Malta (Jan 2025), a MiFID II derivatives licence (Mar 2025), a Payment Institution licence (Feb 2026), a full Dubai VARA VASP licence, and an <strong>MAS Major Payment Institution licence in Singapore</strong> since September 2024.</span></div>
+        </div>
+        <div class="channel">
+          <div class="ch-n">02</div>
+          <div class="ch-t"><b>Jurisdictions with no licensing regime at all</b><span>Much of the world. This is unregulated, which is not the same thing as grey — there is simply no permission to seek.</span></div>
+        </div>
+        <div class="channel">
+          <div class="ch-n">03</div>
+          <div class="ch-t"><b>Offshore entity structures</b><span>OKX’s international business runs through Aux Cayes FinTech in the Seychelles, with Seychelles, Bahamas and Dubai sister companies under a BVI parent. Users in permissive jurisdictions contract with those entities. Bybit is Dubai-based.</span></div>
+        </div>
+        <div class="channel grey">
+          <div class="ch-n">04</div>
+          <div class="ch-t"><b>Users who route around restrictions themselves</b><span>People in restricted jurisdictions reaching these platforms by VPN, against the platform’s own terms of service. It happens — but it is <em>users</em> breaching terms, not the exchange operating illegally in that market. <strong>Not article material.</strong></span></div>
+        </div>
+      </div>
+
+      <div class="callout warn">
+        <span class="label">The point that lands hardest for your audience</span>
+        <p>Those user counts are <strong>no longer mainland Chinese users</strong>. Since Notice No. 42 (February 2026), serving mainland persons is prohibited for offshore providers in any form. Whatever the historical China base was, it is now legally cut off — which is precisely how HashKey, a licensed Hong Kong venue, took ~75% of a market these giants walked away from.</p>
+      </div>
+
+      <div class="callout">
+        <span class="label">Article angle — the neutral phrasing</span>
+        <p>Your friends’ mental model is <em>biggest equals safest</em>. The useful correction is gentler than an accusation: <strong>size and local licensing are two different things</strong>. A global platform can be enormous, well-run, and licensed in a dozen places while simply not being licensed <em>where you live</em>. The question that matters to a reader isn’t which exchange is biggest — it’s which one is licensed in their own jurisdiction.</p>
+      </div>
+
+      <div class="callout">
+        <span class="label">Say it this way, not that way</span>
+        <p>Prefer <em>“the platforms licensed in Hong Kong are these”</em> over <em>“the big names are unlicensed here.”</em> Same information, reader-useful, and it doesn’t read as a charge against anyone. Name where a firm <strong>is</strong> licensed rather than where it isn’t.</p>
+      </div>
+
+      <dl class="kv">
+        <div class="kv-row">
+          <dt>Retail-ready</dt>
+          <dd>OSL and HashKey are the two mature retail venues. HKVAX is institutional and professional only; BGE is in a limited-access phase; VDX targets licensed financial institutions. PantherTrade (Futu) and YAX (Tiger) matter for your audience because many readers already hold those brokerage accounts.</dd>
+        </div>
+        <div class="kv-row">
+          <dt>Currencies</dt>
+          <dd>HKD and USD.</dd>
+        </div>
+        <div class="kv-row">
+          <dt>Rails</dt>
+          <dd>HashKey supports FPS and eDDA; the FPS payee displays as <code>HASH BLOCKCHAIN LIMITED CLIENT AC</code> or a close variant. Withdrawals reach any HK bank — HSBC, Hang Seng, Standard Chartered, ZA Bank, Mox.</dd>
+        </div>
+        <div class="kv-row">
+          <dt>Settlement</dt>
+          <dd><strong>ZA Bank is the settlement bank for both HashKey and OSL.</strong> This is the single most useful practical tip for a Hong Kong reader — worth its own callout in the article.</dd>
+        </div>
+        <div class="kv-row">
+          <dt>Onboarding</dt>
+          <dd>HKID (permanent preferred) or passport, plus proof of residential address issued within 3 months. Commercial addresses are rejected. First deposit HKD 10,000+ from an account in your own name. Non-permanent HKID holders should verify with a passport instead.</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- MAINLAND -->
+    <div class="juris">
+      <div class="juris-head">
+        <h3>Mainland China passport</h3>
+        <span class="regulator">PBOC · Notice No. 42 [2026]</span>
+      </div>
+
+      <div class="callout warn">
+        <span class="label">Your editorial call — keep this short</span>
+        <p>For mainland residents the article says one thing: <strong>this is illegal under Chinese law, full stop.</strong> No workaround, no caveats, no “but if you…”. One short paragraph, then move on. The detail below is background so you can write that paragraph accurately — most of it should not appear in the article.</p>
+      </div>
+
+      <p>The one distinction worth keeping in the prose is residence, because it decides which sentence a reader gets.</p>
+
+      <h3>Case A — PRC passport, resident in HK / SG / elsewhere: workable</h3>
+      <p>HashKey publishes an explicit <em>“account opening using a Chinese passport”</em> guide. Submit the PRC passport first (nationality: China, type: Passport), <strong>then submit a second overseas document</strong> establishing long-term residence — a non-mainland resident ID card, permanent resident visa, residence permit, work visa, student visa, or business visa.</p>
+      <ul class="ticks">
+        <li>Documents valid at least 3 months beyond the KYC submission date.</li>
+        <li>Original photographs only — no scans, no copies.</li>
+        <li>Passport data page fully unobstructed; no fingers or objects on the corners.</li>
+        <li>Initial deposit HKD 10,000 or USD equivalent — or complete verification in person at HashKey’s Hong Kong office.</li>
+      </ul>
+
+      <div class="callout">
+        <span class="label">Teaching point</span>
+        <p><strong>A PRC passport alone is not sufficient.</strong> The second document does the work. Readers with HK or SG residence status already hold it and don’t realize it’s the key that unlocks this.</p>
+      </div>
+
+      <h3>Case B — resident in mainland China: no clean answer</h3>
+      <p>Post–Notice No. 42, offshore platforms are prohibited from serving mainland persons in any form. Aggregator sites still claim Kraken and OKX accept mainland ID — <strong>do not repeat that</strong>. It is SEO content, it may already be stale, and pointing friends toward it exposes them to a regime that treats this as illegal financial activity. Community reports also note that failed KYC attempts can flag a passport across multiple platforms, so casual experimentation carries a real cost.</p>
+
+      <div class="callout warn">
+        <span class="label">Recommended framing</span>
+        <p>State the legal position, note that this is the one case where you can’t help, and stop there. Refusing to supply a workaround <em>is</em> the sovereignty-consistent position — and it protects you as a writer.</p>
+      </div>
+    </div>
+
+    <!-- SINGAPORE -->
+    <div class="juris">
+      <div class="juris-head">
+        <h3>Singapore</h3>
+        <span class="regulator">MAS · Payment Services Act</span>
+      </div>
+
+      <p>Roughly 36–37 firms held Major Payment Institution licences covering DPT services as of January 2026 — but that list mixes exchanges, custodians, payment apps (PayPal, Revolut), brokers (moomoo, DBS Vickers) and stablecoin issuers (StraitsX, Circle). <strong>It is not a list of 37 places to buy Bitcoin.</strong></p>
+
+      <h3>Which of these actually belong in the article</h3>
+      <p>You hadn’t heard of three of them, which is the right instinct — here is what each one is, so you can cut with confidence.</p>
+
+      <div class="scale-grid">
+        <div class="scale-card lead">
+          <div class="who"><b>Coinbase Singapore</b><span class="tag">lead with this</span></div>
+          <div class="stat-rows">
+            <div><span class="k">Verified users</span><span class="v">105m+</span></div>
+            <div><span class="k">Listed</span><span class="v">Nasdaq: COIN</span></div>
+            <div><span class="k">Onboarding</span><span class="v">Singpass</span></div>
+            <div><span class="k">SGD rails</span><span class="v">PayNow / FAST</span></div>
+          </div>
+        </div>
+        <div class="scale-card">
+          <div class="who"><b>Crypto.com</b><span class="tag">mention</span></div>
+          <div class="stat-rows">
+            <div><span class="k">MAS licensed</span><span class="v">yes</span></div>
+            <div><span class="k">Profile</span><span class="v">large global</span></div>
+            <div><span class="k">Role</span><span class="v">alternative</span></div>
+          </div>
+        </div>
+        <div class="scale-card">
+          <div class="who"><b>Coinhako</b><span class="tag">local incumbent</span></div>
+          <div class="stat-rows">
+            <div><span class="k">Customers</span><span class="v">~400,000</span></div>
+            <div><span class="k">Founded</span><span class="v">2014, SG</span></div>
+            <div><span class="k">Ownership</span><span class="v">private</span></div>
+          </div>
+        </div>
+        <div class="scale-card">
+          <div class="who"><b>Independent Reserve</b><span class="tag">cut</span></div>
+          <div class="stat-rows">
+            <div><span class="k">Users</span><span class="v">~350,000</span></div>
+            <div><span class="k">Footprint</span><span class="v">AU / NZ / SEA</span></div>
+            <div><span class="k">Note</span><span class="v">1st MAS licence</span></div>
+          </div>
+        </div>
+        <div class="scale-card">
+          <div class="who"><b>Bitstamp</b><span class="tag">cut</span></div>
+          <div class="stat-rows">
+            <div><span class="k">Founded</span><span class="v">2011</span></div>
+            <div><span class="k">Owner</span><span class="v">Robinhood</span></div>
+            <div><span class="k">SG advantage</span><span class="v">none</span></div>
+          </div>
+        </div>
+        <div class="scale-card">
+          <div class="who"><b>OKX SG</b><span class="tag">see below</span></div>
+          <div class="stat-rows">
+            <div><span class="k">MAS licence</span><span class="v">MPI, Sep 2024</span></div>
+            <div><span class="k">SGD rails</span><span class="v">PayNow, free</span></div>
+            <div><span class="k">Onboarding</span><span class="v">Singpass</span></div>
+            <div><span class="k">DOJ penalty</span><span class="v">$505m</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Why OKX isn’t the headline pick, despite the licences</h3>
+      <p>A fair challenge to my earlier draft: I called OKX the most regulated of the large offshore venues, noted it is MAS-licensed, then quietly left it off the recommendation. That was inconsistent. Here is the actual reasoning, and the first draft’s omission was for the wrong reason.</p>
+
+      <div class="verdict">
+        <div class="verdict-head">The case, both sides</div>
+        <div class="verdict-body">
+          <div class="ledger">
+            <div class="for">
+              <span class="side">For</span>
+              <p>MAS <strong>Major Payment Institution licence since September 2024</strong>. A <strong>DBS partnership</strong> delivering free instant SGD deposits and withdrawals. PayNow at zero fee, FAST across 27 participating banks, Singpass onboarding in about a minute. <strong>On rails alone it matches Coinbase SG</strong> — better than I gave it credit for.</p>
+            </div>
+            <div class="against">
+              <span class="side">Against</span>
+              <p>In <strong>February 2025 OKX pleaded guilty</strong> to operating an unlicensed money-transmitting business and paid <strong>$505 million</strong> ($84m fine, $421m forfeiture). It processed <strong>over $1 trillion</strong> in US customer transactions while officially barring US users. DOJ found an employee coached US customers to lie about their residency, and that OKX ran no commercial AML monitoring software until roughly May 2023. It operates under an <strong>external compliance monitor through February 2027</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout warn">
+        <span class="label">Verdict — and how much of it to publish</span>
+        <p>“Most regulated of the large offshore venues” was true but incomplete: that licence portfolio was assembled <em>after, and partly because of</em>, the plea. For an article telling non-crypto friends where to send their savings, <strong>a venue under an active DOJ compliance monitor shouldn’t be the headline pick</strong> — however good its PayNow integration is.</p>
+        <p><strong>But you don’t need to publish the reasoning.</strong> “Coinbase is the most straightforward option for a first purchase in Singapore” is a positive recommendation that requires no comparison and takes no shot at anyone. The DOJ plea is public record and you have it if a reader asks directly — it just doesn’t need to be in the piece.</p>
+      </div>
+
+      <h3>Bitget — visible on Twitter, not available in Singapore</h3>
+      <p>You asked where Bitget fits. The facts here are unusually clean, because <strong>Bitget published them itself</strong>.</p>
+
+      <dl class="kv">
+        <div class="kv-row">
+          <dt>MAS licence</dt>
+          <dd><strong>None.</strong> Bitget holds no licence, approval, registration or authorisation from MAS.</dd>
+        </div>
+        <div class="kv-row">
+          <dt>Its own terms</dt>
+          <dd>Singapore is listed as a <strong>Prohibited Country</strong> in Bitget’s Terms of Use, and platform access from Singapore is blocked. Bitget issued a formal notice confirming this on <strong>21 July 2026</strong>.</dd>
+        </div>
+        <div class="kv-row">
+          <dt>MAS listing</dt>
+          <dd>On the <strong>Investor Alert List</strong> — which flags entities the public might wrongly assume are regulated in Singapore. Note carefully: this is <strong>not an enforcement action</strong> and implies no finding of wrongdoing.</dd>
+        </div>
+        <div class="kv-row">
+          <dt>Where it is licensed</dt>
+          <dd><strong>El Salvador</strong> — full digital asset service provider licence (April 2026), spot, derivatives and yield products. <strong>Georgia</strong> — licensed in the Tbilisi Free Zone for custodial wallet and trading services. <strong>EU</strong> — MiCAR application filed with Austria’s FMA on 17 June 2026 from a Vienna headquarters; <em>not yet authorised</em>, and absent from ESMA’s register as of 22 August 2026.</dd>
+        </div>
+      </dl>
+
+      <div class="callout">
+        <span class="label">The Gracy Chen point — a genuinely useful lesson</span>
+        <p>Bitget’s CEO holds an NUS degree and is Singapore-connected, which makes the exchange <em>feel</em> Singaporean. It isn’t, in the only sense that matters here: <strong>where a company’s executives live has no bearing on where the company is licensed.</strong> Licensing follows the legal entity and the jurisdiction it serves, not the CEO’s address. That’s exactly the kind of reasonable-but-wrong proxy a non-crypto reader would rely on — worth one line in the article as a teaching moment.</p>
+      </div>
+
+      <div class="callout">
+        <span class="label">How to handle it without a swipe</span>
+        <p>You don’t need to characterise Bitget at all. <strong>“Not currently available to Singapore residents — the platform blocks access itself”</strong> is accurate, sourced to Bitget’s own notice, and reads as a fact about availability rather than a judgment. A firm with pending EU authorisation and licences in El Salvador and Georgia is <em>in transition</em>, which is a fairer description than anything sharper.</p>
+      </div>
+
+      <div class="callout">
+        <span class="label">Recommendation</span>
+        <p>Lead with <strong>Coinbase Singapore</strong>, name <strong>Crypto.com</strong> as the alternative, and mention <strong>Coinhako</strong> once as “the local incumbent if you want a Singapore-founded option.” <strong>OKX</strong> is legitimately available and worth one neutral line. <strong>Bitget</strong> only needs a mention if a reader is likely to ask — one sentence on availability. <strong>Drop Bitstamp and Independent Reserve entirely.</strong> Both are legitimate — Independent Reserve was in fact the first exchange MAS licensed — but they add names without adding value for a beginner, which is precisely the failure mode you want to avoid.</p>
+      </div>
+
+      <dl class="kv">
+        <div class="kv-row">
+          <dt>Rails</dt>
+          <dd>PayNow and FAST — free and instant on Coinbase SG.</dd>
+        </div>
+      </dl>
+
+      <p><strong>Retail restrictions readers must know before they try:</strong></p>
+      <ul class="ticks">
+        <li class="no"><strong>Locally issued credit cards cannot be used to buy crypto.</strong> Full stop.</li>
+        <li class="no">A <strong>risk-awareness assessment is mandatory</strong> before retail access is granted — expect a quiz.</li>
+        <li class="no">No leverage, margin, or financing for retail.</li>
+        <li class="no">No airdrops, referral bonuses, or sign-up incentives — so if someone offers one, that says something about who you’re dealing with.</li>
+        <li class="no">DPT services cannot be marketed to the Singapore public.</li>
+      </ul>
+
+      <div class="callout">
+        <span class="label">Opening hook</span>
+        <p>That last restriction is exactly why your Singapore friends have never seen a crypto ad — and why they end up asking you instead of Google. Good material for the intro.</p>
+      </div>
+
+      <h3>The credit-card ban does not lock locals out</h3>
+      <p>Worth stating plainly in the article, because it is a natural misreading: if locals hold locally issued credit cards and those cards can’t buy crypto, it can look as though MAS has quietly made crypto a foreigners-only product. It hasn’t.</p>
+
+      <div class="channels">
+        <div class="channel">
+          <div class="ch-n">01</div>
+          <div class="ch-t"><b>The rule targets borrowed money, not local people</b><span>It bans buying a volatile asset <em>on credit</em>. It sits in the same rulebook as the bans on margin, leverage and financing for retail — one principle, three expressions.</span></div>
+        </div>
+        <div class="channel">
+          <div class="ch-n">02</div>
+          <div class="ch-t"><b>Locals use PayNow and FAST instead</b><span>Instant transfers from their own SGD deposits, free, 24/7. A local with a DBS or OCBC account is fully served — and PayNow is <em>more</em> convenient than a card, not less.</span></div>
+        </div>
+        <div class="channel">
+          <div class="ch-n">03</div>
+          <div class="ch-t"><b>The causation runs the other way</b><span>MAS could afford to close the credit rail <em>because</em> Singapore has world-class instant payment infrastructure. The ban costs locals almost nothing.</span></div>
+        </div>
+        <div class="channel">
+          <div class="ch-n">04</div>
+          <div class="ch-t"><b>If anyone is inconvenienced, it’s foreigners</b><span>A visitor without a local bank account can’t use PayNow and would otherwise have reached for a card. The restriction bites hardest on non-residents.</span></div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <span class="label">Transferable lesson worth a line in the article</span>
+        <p>When a regulation blocks one payment method, ask what the <em>remaining</em> methods are before concluding a class of people is excluded. Regulators usually close the risky rail and leave the safe one open.</p>
+      </div>
+    </div>
+
+    <!-- US -->
+    <div class="juris">
+      <div class="juris-head">
+        <h3>United States</h3>
+        <span class="regulator">SEC · state-level</span>
+      </div>
+
+      <div class="scale-grid">
+        <div class="scale-card lead">
+          <div class="who"><b>Coinbase</b><span class="tag">the default</span></div>
+          <div class="stat-rows">
+            <div><span class="k">Verified users</span><span class="v">105m+</span></div>
+            <div><span class="k">Listed</span><span class="v">Nasdaq: COIN</span></div>
+            <div><span class="k">Assets traded</span><span class="v">345+</span></div>
+          </div>
+        </div>
+        <div class="scale-card">
+          <div class="who"><b>Gemini</b><span class="tag">mention</span></div>
+          <div class="stat-rows">
+            <div><span class="k">Users</span><span class="v">~13m</span></div>
+            <div><span class="k">IPO raise</span><span class="v">$425m</span></div>
+            <div><span class="k">Lifetime transfers</span><span class="v">&gt;$800bn</span></div>
+          </div>
+        </div>
+        <div class="scale-card">
+          <div class="who"><b>Kraken</b><span class="tag">mention</span></div>
+          <div class="stat-rows">
+            <div><span class="k">Users</span><span class="v">~7m</span></div>
+            <div><span class="k">Assets on platform</span><span class="v">$59.3bn</span></div>
+            <div><span class="k">2025 adj. revenue</span><span class="v">$2.2bn</span></div>
+          </div>
+        </div>
+      </div>
+
+      <dl class="kv">
+        <div class="kv-row">
+          <dt>Gaps</dt>
+          <dd><strong>Binance.US</strong> is unavailable in <strong>New York, Alaska, Washington and Georgia</strong>, and offers spot only — no futures or margin. Those state gaps make it a poor default recommendation; I’d leave it out. <strong>Bybit and OKX’s global platform do not serve US residents</strong>, nor does Binance’s global platform.</dd>
+        </div>
+      </dl>
+
+      <h3>Banking — the rail matters, not the bank</h3>
+
+      <div class="callout">
+        <span class="label">Your Capital One question, answered</span>
+        <p>Capital One blocks crypto purchases on its <strong>credit cards</strong> — volatility, fraud, and cash-advance exposure — but does <strong>not</strong> block ACH or bank transfers to licensed exchanges. Your experience is exactly right and matches published policy. It didn’t appear in the first draft because my source only covered the three largest retail banks; that was a sampling gap in my research, not evidence against Capital One.</p>
+      </div>
+
+      <p><strong>The rule that generalizes, and it’s better than any bank-by-bank table:</strong> the question isn’t <em>which bank</em> — it’s <em>which rail</em>. Nearly every major US bank blocks crypto on <strong>credit cards</strong> while permitting <strong>ACH and wire</strong> to licensed exchanges. Tell readers to link a bank account and never a card. One sentence, no table to go stale — and card rails carry 3–4% fees anyway, so it’s also the cheaper advice.</p>
+
+      <h3>The bigger 2026 shift: banks now sell Bitcoin directly</h3>
+      <p>Per River Research (January 2026), <strong>15 of the top 25 US banks — 60%</strong> — now offer or are building Bitcoin services spanning trading, custody, lending and advisory.</p>
+
+      <ul class="ticks">
+        <li class="yes"><strong>PNC</strong> — launched direct spot Bitcoin trading in December 2025 via Coinbase. PNC keeps the client relationship; Coinbase handles custody, execution and compliance behind the scenes.</li>
+        <li class="yes"><strong>JPMorgan Chase</strong> — partnership covering its 80m+ customers: Chase credit cards could fund Coinbase from autumn 2025, <strong>direct Chase-account linking to Coinbase during 2026</strong>, and Ultimate Rewards points redeemable for USDC.</li>
+        <li class="yes"><strong>Morgan Stanley</strong> — direct BTC, ETH and SOL trading on E*Trade in H1 2026, custody via Zerohash.</li>
+        <li class="yes"><strong>Wells Fargo</strong> — bitcoin-backed loans for institutional clients.</li>
+        <li><strong>Citi</strong> — exploring custody; more focused on tokenizing its own infrastructure than on retail trading.</li>
+        <li><strong>PNC, Citi and Wells Fargo</strong> — exploring a joint stablecoin through Early Warning Services, the parent of Zelle.</li>
+      </ul>
+
+      <div class="callout warn">
+        <span class="label">Note the irony worth flagging to readers</span>
+        <p>Even in the Chase–Coinbase deal, credit-card purchases may still be treated as <strong>cash advances</strong>. The “use a bank account, not a card” rule survives the partnership intact.</p>
+      </div>
+
+      <div class="callout">
+        <span class="label">Where instinct is out of date</span>
+        <p>The Operation Chokepoint 2.0 era (2022–24) is over. The SEC rescinded SAB 121 in January 2025, removing the accounting rule that forced banks to book customer crypto as a balance-sheet liability. Silvergate and Signature both collapsed in March 2023 — that’s where most of the “banks hate crypto” folklore comes from. Transfers to Coinbase, Kraken and Gemini clear reliably; transfers to obscure venues do not.</p>
+      </div>
+
+      <div class="callout">
+        <span class="label">This is your closer</span>
+        <p>The banks your friends already use are becoming Bitcoin on-ramps. That makes buying trivially easy — and makes the custody question <em>more</em> urgent, not less. Buying through Chase means Chase and Coinbase both know exactly what you hold. A clean bridge to self-custody, without preaching.</p>
+      </div>
+    </div>
+
+    <!-- CANADA -->
+    <div class="juris">
+      <div class="juris-head">
+        <h3>Canada</h3>
+        <span class="regulator">CSA · CATP regime</span>
+      </div>
+
+      <ul class="ticks">
+        <li class="yes"><strong>Coinbase</strong> — Restricted Dealer, April 2024; first international exchange registered in Canada.</li>
+        <li class="yes"><strong>Kraken</strong> (Payward Canada Inc.) — CATP decision, 1 April 2025.</li>
+        <li class="yes"><strong>Shakepay</strong> — FINTRAC, CSA, OSC and CIRO registered; CATP decision 6 July 2026.</li>
+        <li class="no"><strong>Binance withdrew from Canada in May 2023</strong>, citing CSA requirements on stablecoins and derivatives as making operation “no longer tenable.” Bybit restricts Canada.</li>
+      </ul>
+
+      <dl class="kv">
+        <div class="kv-row">
+          <dt>Rails</dt>
+          <dd>Interac e-Transfer is native — free on Coinbase, CAD 2–10,000 per transaction, usually minutes. Also EFT (free, 1–3 business days), PayPal (CAD 1,000/day), and debit/credit card at 3.99% — tell readers to avoid that one.</dd>
+        </div>
+      </dl>
+
+      <div class="callout">
+        <span class="label">On Shakepay — not obscure, just Canadian</span>
+        <p>You hadn’t heard of it, and that’s a geography artifact rather than a red flag. Shakepay has <strong>1.5m+ users</strong>, was founded in Montreal in 2015, is CIRO-registered, and received approval from Quebec’s AMF for Bitcoin-backed lending. It’s a Canada-only consumer Bitcoin app — invisible internationally, genuinely mainstream domestically. Worth one line as “the Canadian local option.” <strong>Coinbase and Kraken remain the two obvious picks</strong> for your audience.</p>
+      </div>
+
+      <div class="callout warn">
+        <span class="label">Verify before publishing</span>
+        <p>I could not fetch the CSA’s authorized-platform list directly — it 307-redirects and blocks automated fetches. Confirm the current roster at securities-administrators.ca before the article goes live.</p>
+      </div>
+    </div>
+
+    <!-- VERDICT -->
+    <div class="juris">
+      <div class="juris-head">
+        <h3>The verdict table</h3>
+        <span class="regulator">what to name, what to cut</span>
+      </div>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Market</th><th>Lead with</th><th>Mention</th><th>Omit</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name">Hong Kong</td><td class="lead-cell">HashKey, OSL</td><td>that 11 others are licensed but private</td><td class="omit">naming all 13 in prose</td></tr>
+            <tr><td class="name">Singapore</td><td class="lead-cell">Coinbase SG</td><td>Crypto.com; Coinhako as local incumbent; OKX in one neutral line; Bitget only on availability</td><td class="omit">Bitstamp, Independent Reserve</td></tr>
+            <tr><td class="name">United States</td><td class="lead-cell">Coinbase</td><td>Kraken, Gemini</td><td class="omit">Binance.US — state gaps</td></tr>
+            <tr><td class="name">Canada</td><td class="lead-cell">Coinbase, Kraken</td><td>Shakepay as local option</td><td class="omit">—</td></tr>
+            <tr><td class="name">Mainland China</td><td class="lead-cell">—</td><td>illegal under Notice No. 42; full stop</td><td class="omit">any workaround</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STRUCTURE ============ -->
+  <section>
+    <div class="section-head">
+      <span class="kicker">Suggested structure</span>
+      <h2>Ten sections, 900–1,300 words</h2>
+    </div>
+
+    <p>Following the shape of your Proton BTC piece: short, numbered, practical, one clear opinion at the end.</p>
+
+    <div class="outline">
+      <div class="outline-item"><div class="n">01</div><div class="t"><b>The question I keep getting</b><span>Friends from TradFi, market’s up, “where do I buy?” Hook with the Singapore ad ban.</span></div></div>
+      <div class="outline-item"><div class="n">02</div><div class="t"><b>The short answer</b><span>A licensed exchange where you legally live — then the reframe: not which is best, but which will take you.</span></div></div>
+      <div class="outline-item"><div class="n">03</div><div class="t"><b>It’s residence, not passport</b><span>The load-bearing insight. Set it up early; it’s what the audience gets wrong.</span></div></div>
+      <div class="outline-item"><div class="n">04</div><div class="t"><b>Hong Kong</b><span>The 13-name list, then the punchline that no famous name is on it. ZA Bank. The own-name first deposit.</span></div></div>
+      <div class="outline-item"><div class="n">04b</div><div class="t"><b>Size and local licensing are different things</b><span>The reframe, stated positively: a platform can be huge and well-licensed elsewhere without being licensed where you live. No exit timeline, no naming and shaming.</span></div></div>
+      <div class="outline-item"><div class="n">05</div><div class="t"><b>Singapore</b><span>MAS, the credit-card ban (and why it doesn’t lock locals out), the mandatory risk quiz, PayNow.</span></div></div>
+      <div class="outline-item"><div class="n">06</div><div class="t"><b>US and Canada</b><span>Brief. Coinbase/Kraken/Gemini, Binance.US state gaps, Binance’s Canadian exit, Interac.</span></div></div>
+      <div class="outline-item"><div class="n">07</div><div class="t"><b>The mainland question</b><span>One paragraph: illegal under Chinese law, full stop. No workaround offered.</span></div></div>
+      <div class="outline-item"><div class="n">08</div><div class="t"><b>About banks — rail, not bank</b><span>Correct the HSBC myth. Then the real rule: link an account, never a card. Then the 2026 twist — 60% of top US banks now sell Bitcoin themselves.</span></div></div>
+      <div class="outline-item"><div class="n">09</div><div class="t"><b>First three steps</b><span>Pick the licensed venue where you live; verify against the regulator’s own list; fund from your own account.</span></div></div>
+      <div class="outline-item"><div class="n">10</div><div class="t"><b>The closer</b><span>An exchange is a custodian you rent. Buying is step one; getting coins off the exchange is step two.</span></div></div>
+    </div>
+
+    <div class="callout">
+      <span class="label">On length</span>
+      <p>The Proton piece was 472 words and worked because it was one task. This has five jurisdictions, so it needs more room — but resist going past ~1,300 or it stops being the bookmarkable reference your friends actually want.</p>
+    </div>
+  </section>
+
+  <!-- ============ TONE ============ -->
+  <section>
+    <div class="section-head">
+      <span class="kicker">Editorial stance</span>
+      <h2>Writing this without burning your friends</h2>
+    </div>
+
+    <div class="prose">
+      <p>You work with people at these exchanges, and this piece isn’t an exposé. That constraint is easy to honour, because <strong>the article’s job and the exposé’s job are different questions</strong>:</p>
+      <p><strong>Your article answers “where can I go?” It does not answer “where has everyone else been?”</strong> A reader deciding where to make a first Bitcoin purchase needs the first answer completely and doesn’t need the second at all. Most of the sharper material in this brief exists because you asked me analytical questions — it is background for your confidence, not copy for your readers.</p>
+    </div>
+
+    <div class="channels">
+      <div class="channel">
+        <div class="ch-n">01</div>
+        <div class="ch-t"><b>Name where firms are licensed, not where they aren’t</b><span>“OKX holds licences in the EU, Dubai and Singapore” carries the same decision-relevant information as “OKX is unlicensed in Hong Kong,” without reading as an accusation.</span></div>
+      </div>
+      <div class="channel">
+        <div class="ch-n">02</div>
+        <div class="ch-t"><b>Let jurisdiction carry the structure</b><span>“Different platforms are licensed in different places — here’s what’s licensed where you live” is a fact about regulation, not a judgment about any company. It also happens to be the most useful possible framing for the reader.</span></div>
+      </div>
+      <div class="channel">
+        <div class="ch-n">03</div>
+        <div class="ch-t"><b>Recommend positively, don’t rank negatively</b><span>“Coinbase is the most straightforward first purchase in Singapore” needs no comparison and takes no shot. Every venue you omit is omitted silently — you never have to say why.</span></div>
+      </div>
+      <div class="channel">
+        <div class="ch-n">04</div>
+        <div class="ch-t"><b>Cut the exit timeline and the VPN channel</b><span>The withdrawal dates, the SFC alert listing, the DOJ plea and the VPN routing are all real and public — and none of them help a reader choose a venue. Keep them here as background.</span></div>
+      </div>
+      <div class="channel">
+        <div class="ch-n">05</div>
+        <div class="ch-t"><b>Where a firm blocks a market itself, quote the firm</b><span>Bitget says Singapore is a Prohibited Country in its own terms. Sourcing an availability fact to the company’s own notice is the least contentious form it can take.</span></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="label">The one line that does the heavy lifting</span>
+      <p><em>“Different platforms are licensed in different places. Here’s what’s licensed where you live.”</em> That sentence is reader-useful, factually unimpeachable, and would not annoy a single person you work with. Most of the article can hang off it.</p>
+    </div>
+
+    <div class="callout warn">
+      <span class="label">One caveat worth being clear about</span>
+      <p>The restraint here is editorial fit, not suppression. The SFC alert list, the DOJ plea and MAS’s Investor Alert List are matters of public record, and you have them sourced if a reader asks you directly. You’re choosing not to lead with them because <strong>they don’t serve the reader’s decision</strong> — which is a much stronger reason than avoiding awkwardness, and it happens to produce the same article.</p>
+    </div>
+  </section>
+  <!-- ============ CAUTIONS ============ -->
+  <section>
+    <div class="section-head">
+      <span class="kicker">Before you publish</span>
+      <h2>Editorial cautions</h2>
+    </div>
+
+    <ul class="ticks">
+      <li><strong>This brief is not the article.</strong> Roughly a third of what’s here — the exit timeline, the DOJ plea, the alert-list entries, the VPN channel — is background so you can write with confidence. Publishing it would turn a service piece into an exposé. See the editorial stance section above.</li>
+      <li><strong>Regulatory lists rot fast.</strong> The SFC list gained two entries in the last six months alone. Date-stamp the article explicitly — “as of August 2026” — and link to the primary registers so the piece degrades gracefully instead of becoming wrong.</li>
+      <li><strong>Link regulators, not review sites.</strong> Nearly every “top 10 exchanges 2026” result I hit was affiliate SEO content with inconsistent numbers.</li>
+      <li><strong>Volume rankings are noise here.</strong> Binance ran ~38.7% of top-10 CEX spot volume in Q2 2026, Bybit ~10%, Coinbase ~8.6% in Q1 — none of which helps a Hong Kong reader who legally can’t use two of the three. Leave rankings out; including them invites exactly the wrong mental model.</li>
+      <li><strong>Don’t publish a fee table.</strong> Fees change monthly, and a stale table is worse than none.</li>
+      <li><strong>Two name corrections from your outline.</strong> Huobi is now <strong>HTX</strong>; “BGET” is <strong>Bitget</strong> — and note that Bitget is distinct from <strong>BGE</strong>, the SFC-licensed Hong Kong entity. A genuinely confusable pair, worth a parenthetical.</li>
+      <li class="no"><strong>Deliberately excluded as unverified:</strong> per-bank block and allow behavior in HK and SG beyond documented HSBC policy, and whether individual HK banks silently flag exchange transfers. Only community anecdote exists, so per your call it stays out.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section>
+    <div class="section-head">
+      <span class="kicker">Sourcing</span>
+      <h2>Sources</h2>
+    </div>
+
+    <div class="sources">
+      <div class="src-group">
+        <h4>Primary · regulator</h4>
+        <ul>
+          <li><a href="https://www.sfc.hk/en/Welcome-to-the-Fintech-Contact-Point/Virtual-assets/Virtual-asset-trading-platforms-operators/Lists-of-virtual-asset-trading-platforms">SFC — Lists of virtual asset trading platforms</a></li>
+          <li><a href="https://www.securities-administrators.ca/crypto-platforms-regulation-and-enforcement-actions/crypto-platforms-authorized-to-do-business-with-canadians/">CSA — Crypto platforms authorized to do business with Canadians</a> <span class="note">— verify manually; blocks automated fetch</span></li>
+          <li>MAS Financial Institutions Directory — <span class="mono">eservices.mas.gov.sg/fid</span></li>
+        </ul>
+      </div>
+
+      <div class="src-group">
+        <h4>China Notice No. 42 [2026]</h4>
+        <ul>
+          <li><a href="https://www.coindesk.com/policy/2026/02/06/china-expands-crypto-crackdown-to-stablecoins-asset-tokenization">CoinDesk — China expands crypto crackdown to stablecoins, asset tokenization</a></li>
+          <li><a href="https://www.loc.gov/item/global-legal-monitor/2026-05-21/china-cryptocurrency-ban-extended-to-stablecoins-and-rwa-tokenization">Library of Congress — Cryptocurrency ban extended to stablecoins and RWA tokenization</a></li>
+          <li><a href="https://www.nortonrosefulbright.com/en/knowledge/publications/4ea238ef/china-rolls-out-updated-crypto-framework-establishing-the-legal-regime-for-rwa-tokenization">Norton Rose Fulbright — China rolls out updated crypto framework</a></li>
+          <li><a href="https://www.scmp.com/business/cryptocurrency/article/3342751/china-tightens-crypto-crackdown-onshore-rwa-tokenisation-ban">SCMP — China tightens crypto crackdown with onshore RWA tokenisation ban</a></li>
+        </ul>
+      </div>
+
+      <div class="src-group">
+        <h4>Exchange documentation</h4>
+        <ul>
+          <li><a href="https://www.hashkey.com/en-US">HashKey Exchange</a> · <a href="https://support.hashkey.com/hc/en-gb/articles/51888081263641-FPS-ID-Deposit-Guide">FPS ID deposit guide</a> · <a href="https://support.hashkey.com/hc/en-gb/articles/39956622764697-Guidance-of-account-opening-on-HashKey-Exchange-using-a-Chinese-passport">Chinese passport account opening</a></li>
+          <li><a href="https://www.osl.com/hk-en/support/account-verification-process-guide">OSL — Account verification process guide</a></li>
+          <li><a href="https://www.coinbase.com/blog/coinbase-obtains-major-payment-institution-licence-from-the-monetary">Coinbase — MPI licence from MAS</a> · <a href="https://www.coinbase.com/en-ca/blog/coinbase-officially-launches-in-canada">Coinbase launches in Canada</a></li>
+        </ul>
+      </div>
+
+      <div class="src-group">
+        <h4>Offshore venues · exits and enforcement</h4>
+        <ul>
+          <li><a href="https://www.justice.gov/usao-sdny/pr/okx-pleads-guilty-violating-us-anti-money-laundering-laws-and-agrees-pay-penalties">US DOJ — OKX pleads guilty to violating US anti-money-laundering laws</a> <span class="note">— primary</span></li>
+          <li><a href="https://www.theblock.co/post/296639/okx-withdraws-vasp-license-application-in-hong-kong">The Block — OKX withdraws VASP licence application in Hong Kong</a></li>
+          <li><a href="https://www.sfc.hk/en/alert-list/suspicious-virtual-asset-trading-platforms">SFC — Suspicious Virtual Asset Trading Platforms Alert List</a> <span class="note">— primary</span></li>
+          <li><a href="https://www.coindesk.com/policy/2024/03/14/hong-kongs-markets-regulator-issues-warning-against-crypto-exchange-bybit">CoinDesk — Hong Kong regulator issues warning against Bybit</a></li>
+          <li><a href="https://cointelegraph.com/news/hong-kong-unlicensed-crypto-exchanges">Cointelegraph — Hong Kong kicks out unlicensed crypto exchanges</a></li>
+          <li><a href="https://ambcrypto.com/bybit-says-it-blocks-singapore-users-after-mas-investor-alert-listing/">AMBCrypto — Bybit says it blocks Singapore users after MAS alert listing</a></li>
+        </ul>
+      </div>
+
+      <div class="src-group">
+        <h4>Singapore rails · OKX licensing</h4>
+        <ul>
+          <li><a href="https://fintechnews.sg/103954/digitalassets/okx-instant-deposits-singapore/">Fintech Singapore — OKX partners DBS for free instant SGD deposits</a></li>
+          <li><a href="https://www.okx.com/en-sg/help/how-do-i-deposit-sgd-with-fast-meps-and-international-wire-transfer">OKX SG — depositing SGD via FAST, MEPS and wire</a></li>
+          <li><a href="https://casptracker.eu/exchange/okx/">CASP Tracker — OKX MiCA authorisation (Malta MFSA)</a></li>
+          <li><a href="https://www.bitget.com/blog/articles/notice-regarding-monetary-authority-of-singapore-mas">Bitget — Important Notice regarding the Monetary Authority of Singapore</a> <span class="note">— primary, 21 Jul 2026</span></li>
+          <li><a href="https://crypto.news/bitget-confirms-no-mas-license-as-singapore-access-stays-restricted/">crypto.news — Bitget confirms no MAS licence as Singapore access stays restricted</a></li>
+          <li><a href="https://casptracker.eu/exchange/bitget/">CASP Tracker — Bitget MiCA application status (Austria FMA, pending)</a></li>
+          <li><a href="https://www.bitget.com/support/articles/12560603885949">Bitget — update on the MiCAR authorisation process</a></li>
+        </ul>
+      </div>
+
+      <div class="src-group">
+        <h4>Scale · size figures</h4>
+        <ul>
+          <li><a href="https://fortune.com/2025/12/16/hashkey-shares-debut-crypto-exchange-hong-kong/">Fortune — HashKey shares start trading in Hong Kong</a></li>
+          <li><a href="https://www.scmp.com/business/cryptocurrency/article/3335725/hashkey-aims-us214-million-hong-kong-ipo-amid-beijings-crypto-pressure">SCMP — HashKey aims for US$214m in Hong Kong IPO</a></li>
+          <li><a href="https://group.hashkey.com/en/newsroom/hashkey-holdings-officially-lists-on-the-main-board-of-hkex">HashKey Holdings — official HKEX Main Board listing</a></li>
+          <li><a href="https://www.coingecko.com/en/exchanges/hashkey-exchange">CoinGecko — HashKey Exchange statistics and trust score</a></li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/0001679788/000167978826000054/coin-20260331.htm">Coinbase Global — Form 10-Q, FY2026</a></li>
+        </ul>
+      </div>
+
+      <div class="src-group">
+        <h4>Banking · market context</h4>
+        <ul>
+          <li><a href="https://financefeeds.com/hsbc-and-crypto-wallets-whats-allowed/">HSBC and crypto wallets: what’s allowed and what’s not</a></li>
+          <li><a href="https://media.chase.com/news/jpmorganchase-coinbase-partnership">JPMorganChase — Coinbase partnership announcement</a> <span class="note">— primary</span></li>
+          <li><a href="https://www.coindesk.com/business/2025/07/30/jpmorgan-teams-with-coinbase-to-let-users-buy-crypto-with-bank-accounts-points-and-cards">CoinDesk — JPMorgan teams with Coinbase on accounts, points and cards</a></li>
+          <li><a href="https://financefeeds.com/60-percent-of-top-us-banks-are-now-bitcoin-ready/">FinanceFeeds — River: 60% of top US banks are Bitcoin-ready</a></li>
+          <li><a href="https://financefeeds.com/does-capital-one-allow-crypto-purchases/">FinanceFeeds — Does Capital One allow crypto purchases?</a></li>
+          <li><a href="https://www.scmp.com/tech/tech-trends/article/3216740/hong-kongs-za-bank-offers-crypto-conversions-accounts-citys-push">SCMP — ZA Bank offers crypto conversions</a></li>
+          <li><a href="https://www.coindesk.com/policy/2023/06/15/hong-kong-put-pressure-on-three-major-banks-to-take-on-crypto-exchanges-as-clients-report">CoinDesk — HK pressured three major banks to take on crypto exchanges as clients</a></li>
+          <li><a href="https://fintechnews.hk/licensed-crypto-exchanges-hong-kong/">Fintech Hong Kong — licensed crypto exchanges list</a></li>
+          <li><a href="https://fintechnews.sg/latest-list-licensed-cryptocurrency-providers-in-singapore/">Fintech Singapore — licensed cryptocurrency providers list</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="end">
+    <div>Research brief prepared 25 August 2026 · verifiable claims only, per editorial standard set at commission.</div>
+    <div>Regulatory rosters current as of this date. Re-verify the SFC, MAS and CSA registers before publication.</div>
+  </footer>
+
+</div>
