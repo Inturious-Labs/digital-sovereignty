@@ -444,6 +444,85 @@
   td.omit { color: var(--neutral-faint); }
   td.lead-cell { font-weight: 600; }
 
+  /* ---------- top-10 league table ---------- */
+
+  .league td.rank {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    color: var(--neutral);
+    font-size: 13px;
+    width: 2.5rem;
+  }
+
+  .league td.share {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .bar-cell { min-width: 6.5rem; }
+
+  .bar {
+    display: block;
+    height: 7px;
+    border-radius: 1px;
+    background: var(--accent);
+    opacity: .82;
+  }
+
+  .access {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .access::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex: none;
+  }
+
+  .access.open::before { background: var(--accent); }
+  .access.partial::before { background: var(--caution); }
+  .access.closed::before {
+    background: transparent;
+    border: 1.5px solid var(--neutral-faint);
+  }
+
+  .access.closed { color: var(--neutral); }
+
+  .tally {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .tally-cell {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .tally-cell .big {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1.7rem;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+  }
+
+  .tally-cell.muted .big { color: var(--neutral); }
+  .tally-cell .cap { font-size: 13px; color: var(--neutral); }
+
   /* ---------- exit timeline ---------- */
 
   .timeline {
@@ -777,6 +856,153 @@
     </div>
   </section>
 
+  <!-- ============ LEAGUE TABLE ============ -->
+  <section>
+    <div class="section-head">
+      <span class="kicker">The contrast</span>
+      <h2>The ten biggest exchanges, and who can use them</h2>
+    </div>
+
+    <div class="prose">
+      <p>This is the table that makes the article’s point without you having to argue it. Spot volume for the full 2025 calendar year, per CoinGecko — the top ten handled <strong>$18.7 trillion</strong> between them. Alongside each one, whether a reader in your audience could actually open an account and fund it.</p>
+      <p>Annual figures on purpose: a 24-hour snapshot would be stale before your newsletter went out.</p>
+    </div>
+
+    <div class="table-scroll">
+      <table class="league">
+        <thead>
+          <tr>
+            <th>#</th><th>Exchange</th><th colspan="2">2025 spot share</th><th>US</th><th>Hong Kong</th><th>Singapore</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rank">01</td><td class="name">Binance</td><td class="share">39.2%</td>
+            <td class="bar-cell"><span class="bar" style="width:100%"></span></td>
+            <td><span class="access partial">Binance.US only</span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">No</span></td>
+          </tr>
+          <tr>
+            <td class="rank">02</td><td class="name">Bybit</td><td class="share">8.1%</td>
+            <td class="bar-cell"><span class="bar" style="width:21%"></span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">No</span></td>
+          </tr>
+          <tr>
+            <td class="rank">03</td><td class="name">MEXC</td><td class="share">7.8%</td>
+            <td class="bar-cell"><span class="bar" style="width:20%"></span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">No</span></td>
+          </tr>
+          <tr>
+            <td class="rank">04</td><td class="name">Gate</td><td class="share">7.5%</td>
+            <td class="bar-cell"><span class="bar" style="width:19%"></span></td>
+            <td><span class="access partial">Gate US, ~30 states</span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">No</span></td>
+          </tr>
+          <tr>
+            <td class="rank">05</td><td class="name">Crypto.com</td><td class="share">7.2%</td>
+            <td class="bar-cell"><span class="bar" style="width:18%"></span></td>
+            <td><span class="access open">Yes</span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access open">Yes — MAS</span></td>
+          </tr>
+          <tr>
+            <td class="rank">06</td><td class="name">Bitget</td><td class="share">6.4%</td>
+            <td class="bar-cell"><span class="bar" style="width:16%"></span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">No</span></td>
+          </tr>
+          <tr>
+            <td class="rank">07</td><td class="name">OKX</td><td class="share">6.3%</td>
+            <td class="bar-cell"><span class="bar" style="width:16%"></span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">Withdrew 2024</span></td>
+            <td><span class="access open">Yes — MAS</span></td>
+          </tr>
+          <tr class="listed">
+            <td class="rank">08</td><td class="name">Coinbase</td><td class="share">6.1%</td>
+            <td class="bar-cell"><span class="bar" style="width:16%"></span></td>
+            <td><span class="access open">Yes</span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access open">Yes — MAS</span></td>
+          </tr>
+          <tr>
+            <td class="rank">09</td><td class="name">HTX</td><td class="share">6.0%</td>
+            <td class="bar-cell"><span class="bar" style="width:15%"></span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">Withdrew 2024</span></td>
+            <td><span class="access closed">No</span></td>
+          </tr>
+          <tr>
+            <td class="rank">10</td><td class="name">Upbit</td><td class="share">5.5%</td>
+            <td class="bar-cell"><span class="bar" style="width:14%"></span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">No</span></td>
+            <td><span class="access closed">No</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="legend"><span><span class="mk">◆</span> publicly listed</span><span>Share = 2025 full-year spot volume, CoinGecko</span></p>
+
+    <div class="tally">
+      <div class="tally-cell">
+        <span class="big">0</span>
+        <span class="cap">of the top 10 are usable in <strong>Hong Kong</strong></span>
+      </div>
+      <div class="tally-cell">
+        <span class="big">3</span>
+        <span class="cap">usable in <strong>Singapore</strong>: Crypto.com, OKX, Coinbase</span>
+      </div>
+      <div class="tally-cell">
+        <span class="big">4</span>
+        <span class="cap">usable in the <strong>US</strong>, two only via separate domestic entities</span>
+      </div>
+      <div class="tally-cell muted">
+        <span class="big">$18.7T</span>
+        <span class="cap">combined 2025 spot volume across all ten</span>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <span class="label">The headline number</span>
+      <p><strong>Zero.</strong> Every one of the world’s ten largest exchanges is unavailable to a Hong Kong retail buyer — while thirteen SFC-licensed platforms operate there that almost nobody outside Hong Kong has heard of. That single sentence may be the most useful thing in your article.</p>
+    </div>
+
+    <h3>Three details that make the contrast sharper</h3>
+
+    <div class="channels">
+      <div class="channel">
+        <div class="ch-n">01</div>
+        <div class="ch-t"><b>#1 and #10 are both walled gardens, for opposite reasons</b><span>Binance serves US customers only through the separate Binance.US entity — different liquidity, fewer coins, no transfers between them, and unavailable in New York, Alaska, Washington and Georgia. <strong>Upbit</strong> is #10 globally almost entirely on Korean domestic volume: KRW deposits require a real-name <strong>K-Bank</strong> account, which needs a Korean Resident Registration Number. Foreign nationals are functionally excluded.</span></div>
+      </div>
+      <div class="channel">
+        <div class="ch-n">02</div>
+        <div class="ch-t"><b>Several are shrinking their maps, not growing them</b><span><strong>HTX</strong> barred all 27 EU member states ahead of the July 2026 MiCA deadline, judging the licence more expensive than the market. <strong>MEXC</strong> prohibits eleven jurisdictions including the US, UK, Canada, Singapore, Hong Kong and mainland China. <strong>Gate</strong> restricts 30+ jurisdictions, then launched a separate US entity for roughly 30 states.</span></div>
+      </div>
+      <div class="channel">
+        <div class="ch-n">03</div>
+        <div class="ch-t"><b>Only one name appears on both lists</b><span><strong>Coinbase</strong> is the only top-ten exchange that is also a straightforward recommendation for a beginner in the US and Singapore — and it ranks <em>eighth</em> by volume, not first. Size and accessibility are close to uncorrelated.</span></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="label">How to use this in the article</span>
+      <p>Run the table early, then let it do the work: <em>“These are the ten biggest exchanges in the world. If you live in Hong Kong, you can use none of them.”</em> No accusation, no characterisation of any firm — just volume rank against local availability, both verifiable. It reframes the whole piece from “which exchange is best” to “which one will take you,” which is the question your friends are actually asking.</p>
+    </div>
+
+    <div class="callout">
+      <span class="label">Note on my earlier advice</span>
+      <p>I suggested cutting volume rankings in the first draft, on the grounds that they mislead beginners into equating size with safety. That still holds when rankings are presented <em>as a recommendation</em>. Used as a contrast device against local availability, they do the opposite — they dismantle the assumption instead of reinforcing it. Different job, so the objection doesn’t apply.</p>
+    </div>
+  </section>
   <!-- ============ REGIONAL MATRIX ============ -->
   <section>
     <div class="section-head">
@@ -1306,6 +1532,7 @@
       <div class="outline-item"><div class="n">01</div><div class="t"><b>The question I keep getting</b><span>Friends from TradFi, market’s up, “where do I buy?” Hook with the Singapore ad ban.</span></div></div>
       <div class="outline-item"><div class="n">02</div><div class="t"><b>The short answer</b><span>A licensed exchange where you legally live — then the reframe: not which is best, but which will take you.</span></div></div>
       <div class="outline-item"><div class="n">03</div><div class="t"><b>It’s residence, not passport</b><span>The load-bearing insight. Set it up early; it’s what the audience gets wrong.</span></div></div>
+      <div class="outline-item"><div class="n">03b</div><div class="t"><b>The ten biggest, and who can use them</b><span>The league table plus the availability columns. Zero of ten work in Hong Kong. Runs early — it reframes everything that follows.</span></div></div>
       <div class="outline-item"><div class="n">04</div><div class="t"><b>Hong Kong</b><span>The 13-name list, then the punchline that no famous name is on it. ZA Bank. The own-name first deposit.</span></div></div>
       <div class="outline-item"><div class="n">04b</div><div class="t"><b>Size and local licensing are different things</b><span>The reframe, stated positively: a platform can be huge and well-licensed elsewhere without being licensed where you live. No exit timeline, no naming and shaming.</span></div></div>
       <div class="outline-item"><div class="n">05</div><div class="t"><b>Singapore</b><span>MAS, the credit-card ban (and why it doesn’t lock locals out), the mandatory risk quiz, PayNow.</span></div></div>
@@ -1418,6 +1645,19 @@
           <li><a href="https://www.hashkey.com/en-US">HashKey Exchange</a> · <a href="https://support.hashkey.com/hc/en-gb/articles/51888081263641-FPS-ID-Deposit-Guide">FPS ID deposit guide</a> · <a href="https://support.hashkey.com/hc/en-gb/articles/39956622764697-Guidance-of-account-opening-on-HashKey-Exchange-using-a-Chinese-passport">Chinese passport account opening</a></li>
           <li><a href="https://www.osl.com/hk-en/support/account-verification-process-guide">OSL — Account verification process guide</a></li>
           <li><a href="https://www.coinbase.com/blog/coinbase-obtains-major-payment-institution-licence-from-the-monetary">Coinbase — MPI licence from MAS</a> · <a href="https://www.coinbase.com/en-ca/blog/coinbase-officially-launches-in-canada">Coinbase launches in Canada</a></li>
+        </ul>
+      </div>
+
+      <div class="src-group">
+        <h4>Volume rankings · availability</h4>
+        <ul>
+          <li><a href="https://www.coingecko.com/research/publications/centralized-crypto-exchanges-market-share">CoinGecko — Market share of centralized crypto exchanges by trading volume</a> <span class="note">— primary, full-year 2025</span></li>
+          <li><a href="https://www.coingecko.com/research/publications/spot-centralized-exchanges-report-2026">CoinGecko — Spot CEX Report 2026</a></li>
+          <li><a href="https://coinmarketcap.com/rankings/exchanges/">CoinMarketCap — exchange rankings by volume</a> <span class="note">— 24h snapshot, cross-check only</span></li>
+          <li><a href="https://www.datawallet.com/crypto/binance-restricted-countries">Binance supported and restricted countries</a></li>
+          <li><a href="https://www.coinperps.com/learn/htx-restricted-countries">HTX restricted countries — EU exit ahead of MiCA</a></li>
+          <li><a href="https://www.datawallet.com/crypto/gate-io-countries">Gate supported and restricted countries</a></li>
+          <li><a href="https://krinsider.com/blog/korea-stock-crypto-account-foreigner-2026">Opening a Korean crypto account as a foreigner — Upbit and K-Bank</a></li>
         </ul>
       </div>
 
