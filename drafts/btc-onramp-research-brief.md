@@ -379,3 +379,237 @@ and Coinbase both know. That's a clean bridge to self-custody without being prea
 - FinanceFeeds — River: 60% of top US banks bitcoin-ready: https://financefeeds.com/60-percent-of-top-us-banks-are-now-bitcoin-ready/
 - FinanceFeeds — Capital One crypto policy: https://financefeeds.com/does-capital-one-allow-crypto-purchases/
 - Coinbase Q1 FY2026 10-Q: https://www.sec.gov/Archives/edgar/data/0001679788/000167978826000054/coin-20260331.htm
+
+---
+
+# ADDENDUM v3 — League table, offshore venues, Bitget, tone (2026-08-25)
+
+## The contrast section — the ten biggest exchanges, and who can use them
+
+Spot volume, full calendar year 2025, per CoinGecko. Top ten handled **$18.7 trillion**
+combined. Annual figures on purpose — a 24h snapshot would be stale before the newsletter
+ships, and CoinMarketCap's live table ranks differently day to day.
+
+| # | Exchange | 2025 spot share | US | Hong Kong | Singapore |
+|---|---|---|---|---|---|
+| 1 | Binance | 39.2% | Binance.US only | No | No |
+| 2 | Bybit | 8.1% | No | No | No |
+| 3 | MEXC | 7.8% | No | No | No |
+| 4 | Gate | 7.5% | Gate US, ~30 states | No | No |
+| 5 | Crypto.com | 7.2% | **Yes** | No | **Yes — MAS** |
+| 6 | Bitget | 6.4% | No | No | No |
+| 7 | OKX | 6.3% | No | Withdrew 2024 | **Yes — MAS** |
+| 8 | Coinbase | 6.1% | **Yes** | No | **Yes — MAS** |
+| 9 | HTX | 6.0% | No | Withdrew 2024 | No |
+| 10 | Upbit | 5.5% | No | No | No |
+
+**Tally: 0 of 10 usable in Hong Kong. 3 in Singapore. 4 in the US** (two only via separate
+domestic entities).
+
+**The headline number is zero.** Every one of the world's ten largest exchanges is unavailable
+to a Hong Kong retail buyer — while thirteen SFC-licensed platforms operate there that almost
+nobody outside Hong Kong has heard of. That single sentence may be the most useful thing in
+the article.
+
+### Three details that sharpen the contrast
+
+1. **#1 and #10 are walled gardens for opposite reasons.** Binance serves US customers only
+   through the separate Binance.US entity — different liquidity, fewer coins, no transfers
+   between them, unavailable in NY/AK/WA/GA. **Upbit** is #10 globally almost entirely on
+   Korean domestic volume: KRW deposits require a real-name **K-Bank** account, which needs a
+   Korean Resident Registration Number. Foreign nationals are functionally excluded.
+2. **Several are shrinking their maps, not growing them.** **HTX** barred all 27 EU member
+   states ahead of the July 2026 MiCA deadline, judging the licence more expensive than the
+   market. **MEXC** prohibits eleven jurisdictions including US, UK, Canada, Singapore, Hong
+   Kong and mainland China. **Gate** restricts 30+ jurisdictions, then launched a separate US
+   entity covering ~30 states.
+3. **Only one name appears on both lists.** **Coinbase** is the only top-ten exchange that is
+   also a straightforward beginner recommendation in the US and Singapore — and it ranks
+   *eighth* by volume. Size and accessibility are close to uncorrelated.
+
+### How to use it
+
+Run the table early, then let it work: *"These are the ten biggest exchanges in the world. If
+you live in Hong Kong, you can use none of them."* No accusation, no characterisation of any
+firm — just volume rank against local availability, both verifiable. It reframes the piece
+from "which exchange is best" to "which one will take you."
+
+### Note on my earlier advice
+
+I said cut volume rankings in v1, because they teach beginners that big means safe. That holds
+when rankings are presented *as a recommendation*. Used as a contrast against availability they
+do the opposite — they dismantle the assumption. Different job, so the objection doesn't apply.
+
+## Why the big names are missing from Hong Kong — BACKGROUND, NOT ARTICLE COPY
+
+Not a grey area. A documented, orderly withdrawal conducted with the regulator:
+
+- **29 Feb 2024** — deadline to file a VATP application or close by 31 May 2024. OKX and Bybit
+  both applied.
+- **14 Mar 2024** — SFC places **Bybit on its Suspicious Virtual Asset Trading Platforms Alert
+  List**, flagging 11 products, stating no Bybit entity is licensed in HK. **MEXC** listed in
+  the same period.
+- **24 May 2024** — **OKX withdraws its application**, citing "careful consideration" of
+  business strategy.
+- **31 May 2024** — OKX halts centralized trading for HK residents; deposits stop
+  auto-crediting, orders cancelled, withdrawals only until 31 August. Self-custodial Web3
+  wallet unaffected.
+- **Same window** — also withdrawn: **Gate.io HK**, **HKVAEX** (reported Binance link),
+  **Huobi HK** (HTX affiliate).
+
+Firms weigh licensing costs against market size and sometimes decline. Ordinary commercial
+decision, not a scandal.
+
+### Where 120m users actually come from
+
+1. **Jurisdictions where they hold licences** — OKX has MiCA (Malta, Jan 2025), MiFID II
+   derivatives (Mar 2025), a Payment Institution licence (Feb 2026), Dubai VARA VASP, and an
+   **MAS Major Payment Institution licence in Singapore** since September 2024.
+2. **Jurisdictions with no licensing regime at all** — much of the world. Unregulated is not
+   the same as grey; there is simply no permission to seek.
+3. **Offshore entity structures** — OKX international runs through Aux Cayes FinTech
+   (Seychelles), with Seychelles/Bahamas/Dubai sister companies under a BVI parent. Bybit is
+   Dubai-based.
+4. **Users routing around restrictions themselves** — VPN access against terms of service.
+   Real, but that is *users* breaching terms, not the exchange operating illegally. **Not
+   article material.**
+
+**For the Chinese audience:** those user counts are no longer mainland users. Since Notice No.
+42 (Feb 2026), serving mainland persons is prohibited for offshore providers in any form —
+which is precisely how HashKey, a licensed HK venue, took ~75% of a market these giants left.
+
+## OKX — why it isn't the Singapore headline pick
+
+**For:** MAS Major Payment Institution licence since Sept 2024. **DBS partnership** for free
+instant SGD deposits and withdrawals. PayNow zero-fee, FAST across 27 banks, Singpass
+onboarding in ~1 minute. On rails alone it matches Coinbase SG — better than the v1 draft
+implied, and that omission was for the wrong reason.
+
+**Against:** In **February 2025 OKX pleaded guilty** to operating an unlicensed
+money-transmitting business and paid **$505 million** ($84m fine, $421m forfeiture). It
+processed **over $1 trillion** in US customer transactions while officially barring US users.
+DOJ found an employee coached US customers to lie about residency, and that OKX ran no
+commercial AML monitoring software until roughly May 2023. Operates under an **external
+compliance monitor through February 2027**.
+
+**Verdict:** "Most regulated of the large offshore venues" was true but incomplete — that
+licence portfolio was assembled *after, and partly because of*, the plea. A venue under an
+active DOJ compliance monitor shouldn't be the headline pick. **But you don't need to publish
+the reasoning.** "Coinbase is the most straightforward option for a first purchase in
+Singapore" is a positive recommendation requiring no comparison. The plea is public record if
+a reader asks directly.
+
+## Singapore — the credit-card ban does not lock locals out
+
+A natural misreading worth pre-empting: if locals hold locally issued credit cards and those
+can't buy crypto, it looks like MAS made crypto a foreigners-only product. It didn't.
+
+1. **The rule targets borrowed money, not local people.** It bans buying a volatile asset *on
+   credit*. Same rulebook as the bans on margin, leverage and financing for retail — one
+   principle, three expressions.
+2. **Locals use PayNow and FAST.** Instant transfers from their own SGD deposits, free, 24/7.
+   A local with a DBS or OCBC account is fully served, and PayNow is *more* convenient than a
+   card.
+3. **Causation runs the other way.** MAS could afford to close the credit rail *because*
+   Singapore's instant-payment infrastructure is excellent. The ban costs locals almost nothing.
+4. **If anyone is inconvenienced, it's foreigners** without a local bank account, who'd
+   otherwise reach for a card.
+
+**Transferable lesson worth a line:** when a regulation blocks one payment method, ask what the
+*remaining* methods are before concluding a class of people is excluded. Regulators usually
+close the risky rail and leave the safe one open.
+
+## Bitget — visible on Twitter, not available in Singapore
+
+- **MAS licence:** none. No licence, approval, registration or authorisation.
+- **Its own terms:** Singapore listed as a **Prohibited Country**; access blocked. Bitget
+  issued a formal notice confirming this on **21 July 2026**.
+- **MAS listing:** on the **Investor Alert List** — flags entities the public might wrongly
+  assume are regulated. **Not an enforcement action**, implies no finding of wrongdoing.
+- **Where it *is* licensed:** **El Salvador** (full DASP licence, April 2026 — spot,
+  derivatives, yield), **Georgia** (Tbilisi Free Zone, custodial wallet + trading), **EU**
+  (MiCAR filed with Austria's FMA 17 June 2026 from a Vienna HQ; *not yet authorised*, absent
+  from ESMA's register as of 22 Aug 2026).
+
+**The Gracy Chen point — a genuinely useful lesson.** Bitget's CEO holds an NUS degree and is
+Singapore-connected, which makes the exchange *feel* Singaporean. It isn't, in the only sense
+that matters: **where a company's executives live has no bearing on where the company is
+licensed.** Licensing follows the legal entity and the jurisdiction it serves, not the CEO's
+address. Exactly the reasonable-but-wrong proxy a non-crypto reader would rely on.
+
+**How to handle it without a swipe:** "Not currently available to Singapore residents — the
+platform blocks access itself." Accurate, sourced to Bitget's own notice, reads as availability
+rather than judgment. A firm with pending EU authorisation and licences in El Salvador and
+Georgia is *in transition*, which is fairer than anything sharper.
+
+## Editorial stance — writing this without burning your friends
+
+**The article's job and the exposé's job are different questions. Your article answers "where
+can I go?" It does not answer "where has everyone else been?"** A reader deciding where to make
+a first purchase needs the first answer completely and doesn't need the second at all. Roughly
+a third of this brief is background for your confidence, not copy for your readers.
+
+1. **Name where firms are licensed, not where they aren't.** "OKX holds licences in the EU,
+   Dubai and Singapore" carries the same decision-relevant information as "OKX is unlicensed in
+   Hong Kong," without reading as an accusation.
+2. **Let jurisdiction carry the structure.** "Different platforms are licensed in different
+   places — here's what's licensed where you live" is a fact about regulation, not a judgment
+   about any company.
+3. **Recommend positively, don't rank negatively.** "Coinbase is the most straightforward first
+   purchase in Singapore" needs no comparison and takes no shot. Every omitted venue is omitted
+   silently — you never have to say why.
+4. **Cut the exit timeline and the VPN channel.** Withdrawal dates, the SFC alert listing, the
+   DOJ plea and VPN routing are all real and public — and none help a reader choose a venue.
+5. **Where a firm blocks a market itself, quote the firm.** Bitget says Singapore is a
+   Prohibited Country in its own terms. Sourcing an availability fact to the company's own
+   notice is the least contentious form it can take.
+
+**The one line that does the heavy lifting:** *"Different platforms are licensed in different
+places. Here's what's licensed where you live."* Reader-useful, factually unimpeachable, and
+would not annoy a single person you work with.
+
+**One caveat:** the restraint is editorial fit, not suppression. The SFC alert list, the DOJ
+plea and MAS's Investor Alert List are matters of public record, and you have them sourced if a
+reader asks directly. You're choosing not to lead with them because they don't serve the
+reader's decision — a stronger reason than avoiding awkwardness, and it produces the same
+article.
+
+## Revised outline (v3)
+
+1. The question I keep getting — hook with the Singapore ad ban
+2. The short answer — a licensed exchange where you legally live
+3. It's residence, not passport
+3b. **The ten biggest, and who can use them** — league table; zero of ten work in HK
+4. Hong Kong — 13-name list, ZA Bank, own-name first deposit
+4b. Size and local licensing are different things — stated positively, no exit timeline
+5. Singapore — MAS, credit-card ban (and why it doesn't lock locals out), risk quiz, PayNow
+6. US and Canada — Coinbase/Kraken/Gemini, Binance.US state gaps, Interac
+7. The mainland question — one paragraph: illegal under Chinese law, full stop
+8. About banks — rail not bank; then 60% of top US banks now sell Bitcoin themselves
+9. First three steps
+10. The closer — an exchange is a custodian you rent
+
+## New sources (v3)
+
+**Volume rankings · availability**
+- CoinGecko — CEX market share by trading volume (primary, full-year 2025): https://www.coingecko.com/research/publications/centralized-crypto-exchanges-market-share
+- CoinGecko — Spot CEX Report 2026: https://www.coingecko.com/research/publications/spot-centralized-exchanges-report-2026
+- CoinMarketCap — exchange rankings (24h snapshot, cross-check only): https://coinmarketcap.com/rankings/exchanges/
+- Binance supported and restricted countries: https://www.datawallet.com/crypto/binance-restricted-countries
+- HTX restricted countries — EU exit ahead of MiCA: https://www.coinperps.com/learn/htx-restricted-countries
+- Gate supported and restricted countries: https://www.datawallet.com/crypto/gate-io-countries
+- Korean crypto account as a foreigner — Upbit and K-Bank: https://krinsider.com/blog/korea-stock-crypto-account-foreigner-2026
+
+**Offshore venues · exits and enforcement**
+- US DOJ — OKX pleads guilty (primary): https://www.justice.gov/usao-sdny/pr/okx-pleads-guilty-violating-us-anti-money-laundering-laws-and-agrees-pay-penalties
+- The Block — OKX withdraws VASP application in Hong Kong: https://www.theblock.co/post/296639/okx-withdraws-vasp-license-application-in-hong-kong
+- SFC — Suspicious Virtual Asset Trading Platforms Alert List (primary): https://www.sfc.hk/en/alert-list/suspicious-virtual-asset-trading-platforms
+- CoinDesk — HK regulator warning against Bybit: https://www.coindesk.com/policy/2024/03/14/hong-kongs-markets-regulator-issues-warning-against-crypto-exchange-bybit
+- AMBCrypto — Bybit blocks Singapore users after MAS alert: https://ambcrypto.com/bybit-says-it-blocks-singapore-users-after-mas-investor-alert-listing/
+
+**Singapore rails · Bitget**
+- Fintech Singapore — OKX partners DBS for free instant SGD: https://fintechnews.sg/103954/digitalassets/okx-instant-deposits-singapore/
+- OKX SG — depositing SGD via FAST, MEPS, wire: https://www.okx.com/en-sg/help/how-do-i-deposit-sgd-with-fast-meps-and-international-wire-transfer
+- Bitget — Important Notice re MAS (primary, 21 Jul 2026): https://www.bitget.com/blog/articles/notice-regarding-monetary-authority-of-singapore-mas
+- crypto.news — Bitget confirms no MAS licence: https://crypto.news/bitget-confirms-no-mas-license-as-singapore-access-stays-restricted/
+- CASP Tracker — Bitget MiCA application status (pending): https://casptracker.eu/exchange/bitget/
