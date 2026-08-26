@@ -613,3 +613,98 @@ article.
 - Bitget — Important Notice re MAS (primary, 21 Jul 2026): https://www.bitget.com/blog/articles/notice-regarding-monetary-authority-of-singapore-mas
 - crypto.news — Bitget confirms no MAS licence: https://crypto.news/bitget-confirms-no-mas-license-as-singapore-access-stays-restricted/
 - CASP Tracker — Bitget MiCA application status (pending): https://casptracker.eu/exchange/bitget/
+
+---
+
+# ADDENDUM v4 — Taiwan (2026-08-26)
+
+## Regime status — the thing that makes Taiwan hard to write about
+
+Taiwan is **mid-transition between two regulatory regimes**, so date-stamp this section
+especially clearly.
+
+- **New law:** the **Virtual Asset Service Act passed the Legislative Yuan on 30 June 2026**,
+  replacing self-regulatory AML registration with a full FSC licensing regime across seven
+  VASP categories (exchange, trading platform, transfer, custody, underwriting, lending, other).
+  **Commencement is still pending** promulgation by the Executive Yuan.
+- **What governs today:** the older **AML registration** regime. ~**26 businesses** had
+  completed compliance declarations as of late 2024 and moved into AML registration, which had
+  to be completed by **30 September 2025**.
+- **Transition window:** existing AML-registered VASPs must **apply within 12 months** and
+  **obtain a licence within 21 months** of commencement (one 3-month extension possible). So
+  through roughly 2027–28 any register a reader checks is a moving target.
+
+## Practical venues
+
+| Platform | Position | Notes |
+|---|---|---|
+| **BitoPro** | **>90% local market share**, 800,000+ members, founded 2014 | AML-registered; see breach below |
+| **MAX / MaiCoin** | Alternative | TWD held in **bank trust custody**, separated from operating funds |
+
+**MAX's trust structure is worth naming.** Customer TWD sits in a bank trust arrangement
+separate from the exchange's own funds — the same protective idea as Coinbase Singapore's
+statutory trust, and exactly the kind of feature a beginner should be taught to look for.
+
+## The caveat you cannot omit
+
+On **9 May 2025 BitoPro was breached for roughly US$11 million**, attributed to the North
+Korea–linked **Lazarus Group**. Attackers compromised a cloud operations employee, hijacked
+AWS session tokens to bypass MFA, and drained an old hot wallet during a system upgrade —
+across Ethereum, Tron, Solana and Polygon. Funds were laundered via Tornado Cash, ThorChain
+and Wasabi.
+
+BitoPro shut down the hot wallet system, rotated keys, notified authorities, and completed a
+third-party investigation (concluded 11 June 2025). **It remains the dominant venue and is
+AML-registered.** But if you name the market leader to beginners, this belongs in the same
+sentence — and it's a natural, non-preachy bridge to the self-custody closer.
+
+## Funding — and a second data point for the Singapore argument
+
+- **Credit cards cannot buy crypto.** The FSC directed the Bankers Association to stop
+  acquirers processing crypto card payments in **July 2022**. Treated in the same bracket as
+  online gambling; attempts on international exchanges are very likely declined outright.
+- **TWD bank transfer is the rail.** Local platforms hold direct banking relationships —
+  **Far Eastern, KGI, Cathay United** are named partners; users also fund from CTBC, Taishin,
+  Fubon.
+- **Institutional caution persists.** Since 2014 the FSC has treated Bitcoin as a "virtual
+  commodity" and barred banks from accepting it or offering fiat conversion. Crypto firms still
+  report difficulty getting ordinary corporate accounts.
+
+**Why this matters for the article:** Taiwan bans crypto on credit cards *too*, and like
+Singapore, locals are unaffected because the domestic transfer rail works. **Two independent
+regulators reaching the same answer** strengthens the point that closing the credit rail is
+about borrowed money, not about excluding anyone.
+
+## Foreign residents — an honest asterisk
+
+MAX and MaiCoin accept an **ARC or APRC**, with a passport as the second document (valid ≥3
+months). Verification requires a selfie holding the ID beside a handwritten note reading
+*"Only for MAX platform registration, YYYY/MM/DD"*, plus a bank statement whose name and phone
+number match the registration.
+
+**But:** community reports indicate **some ARC-holding foreign nationals have been declined
+anyway**, apparently on nationality grounds. A valid ARC makes an account *possible*, not
+*guaranteed*. Worth one honest line — this is the kind of promise that makes a reader trust or
+distrust the rest of the piece.
+
+## Why Taiwan earns its place
+
+It's the **counter-example to Hong Kong**. Hong Kong built a licensed register the global
+giants abandoned; Taiwan has a **domestic incumbent holding >90% share** that almost nobody
+outside Taiwan has heard of. Same lesson — *the venue that serves you is local, not famous* —
+reached from the opposite direction.
+
+## Revised verdict row
+
+| Market | Lead with | Mention | Omit |
+|---|---|---|---|
+| Taiwan | BitoPro, MAX | the 2025 breach; regime in transition | any offshore venue |
+
+## Sources (v4)
+
+- CryptoSlate — Taiwan Virtual Asset Service Act: https://cryptoslate.com/crypto-laws/taiwan-virtual-asset-service-act/
+- Lexology — FSC AML registration regulations for VASPs: https://www.lexology.com/library/detail.aspx?g=556a5670-c9b3-4228-a803-61916e0bb0ac
+- BleepingComputer — BitoPro links Lazarus to $11m heist: https://www.bleepingcomputer.com/news/security/bitopro-exchange-links-lazarus-hackers-to-11-million-crypto-heist/
+- Blockworks — Taiwan bans crypto purchases using credit cards: https://blockworks.com/news/taiwan-bans-crypto-purchases-using-credit-cards
+- MAX Exchange — identity verification (primary): https://support.maicoin.com/en/support/solutions/articles/32000017799-max-identity-verification
+- CoinGecko — BitoPro statistics: https://www.coingecko.com/en/exchanges/bitopro
