@@ -27,7 +27,7 @@ Moonglade (MacBook Pro M1)
        └─ Cleanup request over LAN
             ↓
 Stormwind (Mac mini M4 Pro, 48 GB)
-  └─ Ollama (LaunchAgent, under the `zelda` account)
+  └─ Ollama (LaunchDaemon, running as the `zelda` account)
        └─ gemma4:12b-mlx  ·  ~7.7 GB on disk, 8.2 GB resident, 100% GPU
             ↓
        cleaned text lands at your cursor
@@ -151,11 +151,25 @@ on `/v1`; `think:false` works only on native `/api/chat`.
 This one generalizes well beyond dictation: *any* local reasoning model behind an
 OpenAI-compatible endpoint has this failure mode.
 
-### Trap 2 — LaunchAgent under the wrong user
+### Trap 2 — LaunchAgent in the `gui/` domain (SUPERSEDED 2026-08-28)
 
-`gui/501` (the `zire` account) **fails to bootstrap** — zire has no console session. Only
-`zelda` (uid 502) holds the GUI session, so Ollama must run there:
-`launchctl kickstart -k gui/502/com.ollama.server`.
+**This brief's original advice was wrong and broke in production two days after it was written.**
+
+Original claim: run Ollama as a LaunchAgent under `gui/502` (the `zelda` account), because
+`gui/501` (zire) fails to bootstrap for lack of a console session.
+
+What actually happened: on 2026-08-27 12:09 enhancement silently stopped. Nobody was logged in at
+Stormwind's screen (`stat -f "%Su" /dev/console` returned `root`), so launchd tore down the
+`gui/502` domain and Ollama with it. It could not be revived over SSH either — an SSH session has
+no GUI domain to bootstrap into (`gui/502` → "Domain does not support specified action";
+`user/502` → I/O error).
+
+**Correct fix, installed 2026-08-28:** a LaunchDaemon at `/Library/LaunchDaemons/com.ollama.server.plist`
+with `UserName=zelda` and `HOME=/Users/zelda` (so it still finds models in `~zelda/.ollama`),
+plus `RunAtLoad` and `KeepAlive`. Starts at boot with no login required; restartable over SSH via
+`sudo launchctl kickstart -k system/com.ollama.server`.
+
+General lesson: on a headless always-on Mac, anything in `gui/` is a service waiting to disappear.
 
 ### Trap 3 — Stale Homebrew Ollama
 
@@ -195,7 +209,7 @@ change silently breaks dictation months later when you've forgotten why. You did
 |---|---|---|
 | `OLLAMA_HOST` | `<server-lan-ip>:11434` | LAN interface only — **not** `0.0.0.0` |
 | `OLLAMA_KEEP_ALIVE` | `24h` | Model stays warm on GPU; no cold start per utterance |
-| LaunchAgent | `com.ollama.server`, `gui/502` | Survives reboot |
+| LaunchDaemon | `com.ollama.server` in `/Library/LaunchDaemons/` | Starts at boot, no login needed (see Trap 2) |
 | Logs | `~zelda/Library/Logs/ollama.log` | Verify traffic: grep POSTs from Moonglade's IP |
 
 **Why LAN IP over Tailscale MagicDNS:** deliberate choice. Home-only use case, and **Astrill VPN
