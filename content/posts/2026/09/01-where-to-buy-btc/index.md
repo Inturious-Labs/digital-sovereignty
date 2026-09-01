@@ -78,8 +78,8 @@ USA has the most dynamic scene in crypto. Besides CEXs, traditional payment comp
 
 ## Where are the big-name CEXs?
 
-A counterintuitive surprise is that many leading crypto exchanges do not seem to have the license to sell crypto to retail customers in many Asian regions, such as **Binance**, **Bybit**, **Bitget**, **MEXC**, **HTX**, **KuCoin**, and **Gate**. They get users from many countries where jurisdictions are still being formulated and have yet to form a gate. 
+A counterintuitive surprise is that many leading crypto exchanges do not seem to have the license to sell crypto to retail customers in many Asian regions, such as **Binance**, **Bybit**, **Bitget**, **HTX**, **KuCoin**, and **Gate**. They get users from many countries where jurisdictions are still being formulated and have yet to form a gate. 
 
 Also, the biggest challenge for a crypto exchange is the on-ramp - getting fiat money into crypto. Some crypto exchanges choose to apply for that license with their own local entities, like OKX SG and Coinbase SG in Singapore. 
 
-Some crypto exchanges, like MEXC and Gate, rent access through licensed third-party processors and through P2P. Such a reliance does not lock them out of the market, but makes their fiat access borrowed and revocable.
+Some crypto exchanges, like Gate, rent access through licensed third-party processors and through P2P. Such a reliance does not lock them out of the market, but makes their fiat access borrowed and revocable.
