@@ -8,8 +8,7 @@ categories:
   - "Digital Life"
 series:
   - "Decoding the Crypto Ecosystem"
-images: [""]
-keywords: ["blockchain", "crypto", "decentralization", "digital sovereignty", "区块链", "bitcoin", "btc", "coinbase", "okx", "binance", "kraken", "gemini", "hong kong", "singapore", "china”, “ETF"]
+keywords: ["blockchain", "crypto", "decentralization", "digital sovereignty", "区块链", "bitcoin", "btc", "coinbase", "okx", "binance", "kraken", "gemini", "hong kong", "singapore", "china", "ETF"]
 enable_rapport: true
 ---
 

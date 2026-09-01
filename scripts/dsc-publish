@@ -209,14 +209,18 @@ else
 fi
 
 # Check for featured image
-if [ -f "$ARTICLE_DIR/featured-image.webp" ]; then
+if [ -f "$ARTICLE_DIR/featured-image.jpg" ]; then
+    ok "Featured image: featured-image.jpg"
+elif [ -f "$ARTICLE_DIR/featured-image.jpeg" ]; then
+    ok "Featured image: featured-image.jpeg"
+elif [ -f "$ARTICLE_DIR/featured-image.webp" ]; then
     ok "Featured image: featured-image.webp"
-elif [ -f "$ARTICLE_DIR/hero.webp" ]; then
-    ok "Featured image: hero.webp"
 elif [ -f "$ARTICLE_DIR/hero.jpeg" ] || [ -f "$ARTICLE_DIR/hero.jpg" ]; then
     ok "Featured image: hero.jpeg/jpg"
+elif [ -f "$ARTICLE_DIR/hero.webp" ]; then
+    ok "Featured image: hero.webp"
 else
-    warn "No featured image (featured-image.webp or hero.webp) found"
+    warn "No featured image (featured-image.jpg) found"
 fi
 
 # Check for broken image references in content
@@ -230,9 +234,20 @@ if [ -n "$REFERENCED_IMAGES" ]; then
 fi
 
 # Check images field in frontmatter
+# Absent is fine: Hugo auto-detects bundle images whose filename contains
+# "feature", "cover" or "thumbnail". Only warn when it is present but empty,
+# or absent with no auto-detectable image to fall back on.
 IMAGES_FIELD=$(echo "$FRONTMATTER" | grep "^images:" | sed 's/^images: //')
-if [ "$IMAGES_FIELD" = '[""]' ] || [ -z "$IMAGES_FIELD" ]; then
-    warn "images field in frontmatter is empty (used for social sharing)"
+if [ "$IMAGES_FIELD" = '[""]' ] || [ "$IMAGES_FIELD" = "[]" ]; then
+    warn "images field is empty - remove the line to let Hugo auto-detect"
+elif [ -z "$IMAGES_FIELD" ]; then
+    AUTO_IMG=$(find "$ARTICLE_DIR" -maxdepth 1 \( -iname "*feature*" -o -iname "*cover*" -o -iname "*thumbnail*" \) \
+        \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" -o -iname "*.gif" \) 2>/dev/null | head -1)
+    if [ -z "$AUTO_IMG" ]; then
+        warn "No images field and no auto-detectable image (name it featured-image.jpg) - social cards fall back to the site default"
+    else
+        ok "Social image: $(basename "$AUTO_IMG") (auto-detected)"
+    fi
 fi
 
 echo ""
