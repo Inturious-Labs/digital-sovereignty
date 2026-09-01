@@ -231,12 +231,11 @@ series:
 EOF
 
 cat >> "index.md" << EOF
-images: [""]
 keywords: $keyword_field
 enable_rapport: true
 ---
 
-![Featured Image](./featured-image.webp)
+![Featured Image](./featured-image.jpg)
 
 ## Introduction
 
@@ -249,7 +248,7 @@ echo ""
 echo -e "${GREEN}index.md created successfully!${NC}"
 echo ""
 echo -e "${BLUE}Next steps:${NC}"
-echo -e "  1. Add featured-image.webp to this folder"
+echo -e "  1. Add featured-image.jpg to this folder"
 echo -e "  2. Edit: ${YELLOW}cursor index.md${NC} (with quiet light theme)"
 echo -e "     or:  ${YELLOW}open -a MacDown index.md${NC}"
 echo -e "  3. Preview: ${YELLOW}hugo server -D${NC}"
