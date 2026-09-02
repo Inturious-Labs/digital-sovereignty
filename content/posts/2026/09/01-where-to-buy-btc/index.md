@@ -1,7 +1,9 @@
 ---
 title: "Where to Buy BTC"
-date: 2026-09-01T09:44:00+08:00
-slug: where-to-buy-btc
+date: 2026-09-02T14:00:00+08:00
+slug: where-to-buy-btc-in-2026
+aliases:
+  - "/p/where-to-buy-btc/"
 draft: false
 description: "where to buy Bitcoin for Chinese living outside oof China"
 categories:

@@ -204,7 +204,10 @@ Use `draft: true` for work that genuinely is not finished.
 - **Space articles at least a day apart** so only one enters the feed per rebuild.
 - **Never change the slug of an article in the newest 10** (the RSS window). The
   slug becomes the `<guid>`, so a new slug reads as a brand-new post and Buttondown
-  will send it again. Editing a title or body is safe — the guid does not move.
+  will send it again. Editing a title or body will not cause a second send — the
+  guid does not move. But do not read that as "an edit gets picked up": Buttondown
+  reads each guid exactly once, so an edit **cannot** change or trigger an email.
+  See [Recovering an article Buttondown refused](#recovering-an-article-buttondown-refused).
 - **Do not backdate.** Buttondown's "skip old items" setting ignores anything dated
   more than a day before discovery, so a backdated article silently never sends.
   `dsc-publish` rejects past dates for this reason.
@@ -242,6 +245,56 @@ the hook URL can trigger builds.
 
 To preview scheduled work locally, use `hugo serve -D -F` — `-F` includes
 future-dated posts, `-D` includes drafts.
+
+### Recovering an article Buttondown refused
+
+Buttondown screens incoming items for prohibited keywords — the names of some
+crypto exchanges are on that list. When an item trips the filter you get an email
+saying the send failed. **Nothing is saved.** Buttondown discards the item rather
+than keeping a draft you can fix, but it still records the guid as seen, so it
+never reads that URL again.
+
+The consequence is the part that costs a day: **editing the article does not fix
+it.** The site updates, the offending word is gone, and no email will ever be sent
+for that URL. Confirmed 2026-09-02 — the refused article had no email object in
+the account in any status (draft, blocked, errored), while the guid stayed
+suppressed.
+
+Two ways out:
+
+1. **Give the article a new address.** Change the `slug`, set `date` to earlier
+   today, and add an `aliases` entry so the old URL redirects instead of 404ing:
+
+   ```yaml
+   slug: where-to-buy-btc-in-2026
+   aliases:
+     - "/p/where-to-buy-btc/"
+   ```
+
+   The new slug is a new guid, so Buttondown treats it as a fresh post. Set the
+   date to a time that has **already passed** — a future timestamp makes Hugo omit
+   the article from the build entirely, and it fails silently. Keep it same-day so
+   "skip old items" does not reject it as stale. Edit the frontmatter by hand for
+   this; `dsc-publish` always writes 22:00, which is still ahead of you for most
+   of the working day.
+
+   Confirm with a production-equivalent build before merging — `hugo --gc` with no
+   `-F`. The page should exist at the new slug, the old path should contain a
+   redirect, and the feed's top `<guid>` should be the new URL.
+
+2. **Create and send the email directly through the API**, bypassing RSS. Leaves
+   the URL untouched, but you compose the email yourself.
+
+Check what Buttondown actually holds before assuming anything — note that
+`GET /v1/emails` returns only **sent** emails unless you ask for another status:
+
+```bash
+set -a; . ~/.config/buttondown.env; set +a   # key lives here on Moonglade, mode 600
+curl -s -H "Authorization: Token $BUTTONDOWN_API_KEY" \
+  "https://api.buttondown.com/v1/emails?status=draft" | python3 -m json.tool
+```
+
+The auth scheme is `Token`, not `Bearer`, and the host is `api.buttondown.com`.
 
 ## Git Branching Strategy
 
