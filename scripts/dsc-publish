@@ -208,21 +208,6 @@ else
     ok "Found $IMAGE_COUNT image(s)"
 fi
 
-# Check for featured image
-if [ -f "$ARTICLE_DIR/featured-image.jpg" ]; then
-    ok "Featured image: featured-image.jpg"
-elif [ -f "$ARTICLE_DIR/featured-image.jpeg" ]; then
-    ok "Featured image: featured-image.jpeg"
-elif [ -f "$ARTICLE_DIR/featured-image.webp" ]; then
-    ok "Featured image: featured-image.webp"
-elif [ -f "$ARTICLE_DIR/hero.jpeg" ] || [ -f "$ARTICLE_DIR/hero.jpg" ]; then
-    ok "Featured image: hero.jpeg/jpg"
-elif [ -f "$ARTICLE_DIR/hero.webp" ]; then
-    ok "Featured image: hero.webp"
-else
-    warn "No featured image (featured-image.jpg) found"
-fi
-
 # Check for broken image references in content
 REFERENCED_IMAGES=$(echo "$CONTENT" | grep -oE '!\[.*\]\(\./[^)]+\)' | sed 's/.*(\.\///' | sed 's/)$//' || true)
 if [ -n "$REFERENCED_IMAGES" ]; then
@@ -233,20 +218,26 @@ if [ -n "$REFERENCED_IMAGES" ]; then
     done <<< "$REFERENCED_IMAGES"
 fi
 
-# Check images field in frontmatter
-# Absent is fine: Hugo auto-detects bundle images whose filename contains
-# "feature", "cover" or "thumbnail". Only warn when it is present but empty,
-# or absent with no auto-detectable image to fall back on.
+# Social preview image. Mirrors layouts/partials/_funcs/get-page-images.html:
+#   1. images field in frontmatter
+#   2. bundle file named *feature*, *cover* or *thumbnail*
+#   3. first image embedded in the article body
+#   4. site default (warn: the card will show the generic hero)
 IMAGES_FIELD=$(echo "$FRONTMATTER" | grep "^images:" | sed 's/^images: //')
 if [ "$IMAGES_FIELD" = '[""]' ] || [ "$IMAGES_FIELD" = "[]" ]; then
-    warn "images field is empty - remove the line to let Hugo auto-detect"
-elif [ -z "$IMAGES_FIELD" ]; then
+    warn "images field is empty - remove the line so the first body image is used"
+elif [ -n "$IMAGES_FIELD" ]; then
+    ok "Social image: $IMAGES_FIELD (from images field - optional, the first body image works too)"
+else
     AUTO_IMG=$(find "$ARTICLE_DIR" -maxdepth 1 \( -iname "*feature*" -o -iname "*cover*" -o -iname "*thumbnail*" \) \
         \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" -o -iname "*.gif" \) 2>/dev/null | head -1)
-    if [ -z "$AUTO_IMG" ]; then
-        warn "No images field and no auto-detectable image (name it featured-image.jpg) - social cards fall back to the site default"
+    FIRST_IMG=$(echo "$REFERENCED_IMAGES" | head -1)
+    if [ -n "$AUTO_IMG" ]; then
+        ok "Social image: $(basename "$AUTO_IMG") (auto-detected by filename)"
+    elif [ -n "$FIRST_IMG" ]; then
+        ok "Social image: $FIRST_IMG (first image in the article)"
     else
-        ok "Social image: $(basename "$AUTO_IMG") (auto-detected)"
+        warn "No image in the article body - social cards fall back to the site default"
     fi
 fi
 
