@@ -1,0 +1,19 @@
+{{- /*
+  Body of one RSS item. Buttondown turns this into the newsletter email, so
+  everything here is inline-styled HTML. Relative image paths are rewritten to
+  absolute so they load inside the email.
+*/ -}}
+{{- .Content | replaceRE `src="\.\/([^"]+)"` (printf `src="%s%s"` .Permalink "$1") | safeHTML -}}
+<p><a href="{{ .Permalink }}" style="display: inline-block; background-color: #e5e7eb; color: #1f2937; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 20px; font-weight: 600;">🌐 Read on Website</a></p>
+{{- /* The three articles published before this one, newest first. */ -}}
+{{- $older := where site.RegularPages "Section" "posts" -}}
+{{- $older = where $older "Date" "lt" .Date | first 3 -}}
+{{- with $older }}
+<hr style="border: none; border-top: 1px solid #e5e7eb; margin: 32px 0 16px;">
+<p style="font-weight: 600; color: #1f2937; margin-bottom: 8px;">In case you missed it</p>
+<ul style="padding-left: 20px; margin-top: 0; color: #1f2937;">
+{{- range . }}
+  <li style="margin-bottom: 8px;"><a href="{{ .Permalink }}" style="color: #1f2937;">{{ .Title }}</a> <span style="color: #6b7280;">&middot; {{ .Date.Format "Jan 2, 2006" }}</span></li>
+{{- end }}
+</ul>
+{{- end }}
