@@ -104,9 +104,17 @@ check_field() {
     return 0
 }
 
+# A frontmatter field's value with any surrounding quotes removed.
+# Hand-edited articles sometimes leave a value bare or single-quoted, and
+# Hugo accepts all three forms, so the script has to as well.
+read_field() {
+    echo "$FRONTMATTER" | grep "^$1:" | head -1 \
+        | sed -E "s/^$1:[[:space:]]*//"'; s/^"(.*)"$/\1/; s/^'"'"'(.*)'"'"'$/\1/'
+}
+
 # Title
 if check_field "title"; then
-    TITLE=$(echo "$FRONTMATTER" | grep "^title:" | sed 's/^title: "//' | sed 's/"$//')
+    TITLE=$(read_field title)
     ok "Title: $TITLE"
 fi
 
@@ -138,7 +146,7 @@ else
 fi
 
 # Description
-DESC=$(echo "$FRONTMATTER" | grep "^description:" | sed 's/^description: "//' | sed 's/"$//')
+DESC=$(read_field description)
 if [ -z "$DESC" ] || [ "$DESC" = "Brief description of the post" ]; then
     warn "Description is missing or placeholder - add for SEO"
 else
@@ -289,15 +297,14 @@ echo -e "${BOLD}Prepare for Publishing${NC}"
 echo "─────────────────────────────────────"
 
 # Prompt for final title
-CURRENT_TITLE=$(echo "$FRONTMATTER" | grep "^title:" | sed 's/^title: "//' | sed 's/"$//')
+CURRENT_TITLE=$(read_field title)
 echo -e "${GREEN}Current title:${NC} $CURRENT_TITLE"
 printf "${GREEN}Final title${NC} ${GRAY}[Enter to keep]:${NC} "
 read -r new_title
 if [ -n "$new_title" ]; then
     # Escape special characters for sed
-    escaped_old=$(printf '%s\n' "$CURRENT_TITLE" | sed 's/[[\.*^$()+?{|]/\\&/g')
     escaped_new=$(printf '%s\n' "$new_title" | sed 's/[&/\]/\\&/g')
-    sed -i '' "s/^title: \"${escaped_old}\"/title: \"${escaped_new}\"/" "$INDEX_FILE"
+    sed -i '' "s/^title: .*/title: \"${escaped_new}\"/" "$INDEX_FILE"
     TITLE="$new_title"
     echo -e "${GREEN}[OK]${NC} Title updated to: ${PINK}$new_title${NC}"
 else
@@ -343,13 +350,13 @@ while true; do
         continue
     fi
 
-    # 22:00 matches the daily cron (14:00 UTC), so the article is already
+    # 20:00 matches the daily cron (12:00 UTC), so the article is already
     # eligible when the rebuild runs.
-    NEW_DATE="${date_input}T22:00:00+08:00"
+    NEW_DATE="${date_input}T20:00:00+08:00"
     if [ "$date_input" != "$TODAY" ]; then
         SCHEDULED=future
-    elif [ "$(date +%H%M)" -ge 2200 ]; then
-        # Today, and 22:00 has already passed - it goes out on the next build.
+    elif [ "$(date +%H%M)" -ge 2000 ]; then
+        # Today, and 20:00 has already passed - it goes out on the next build.
         SCHEDULED=now
     else
         SCHEDULED=tonight
@@ -364,7 +371,7 @@ case "$SCHEDULED" in
         echo -e "${BLUE}[i]${NC} Scheduled - stays hidden until ${PINK}${date_input}${NC}, then publishes on the daily rebuild."
         ;;
     tonight)
-        echo -e "${BLUE}[i]${NC} Dated today at ${PINK}22:00${NC} - it stays hidden until tonight."
+        echo -e "${BLUE}[i]${NC} Dated today at ${PINK}20:00${NC} - it stays hidden until tonight."
         echo -e "    Want it live now instead? Re-run and answer ${PINK}now${NC}."
         ;;
 esac
