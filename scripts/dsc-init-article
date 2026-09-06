@@ -16,7 +16,7 @@ NC='\033[0m'
 BOLD='\033[1m'
 
 # Standard keywords for all DSC articles (Part A)
-STANDARD_KEYWORDS="ICP, Internet Computer, 互联网计算机, Internet Computer Protocol, canister, blockchain, crypto, decentralization, digital sovereignty, 区块链"
+STANDARD_KEYWORDS="digital sovereignty, 数字主权, decentralization, AI"
 
 # Find repo root by looking for hugo.toml
 find_repo_root() {
