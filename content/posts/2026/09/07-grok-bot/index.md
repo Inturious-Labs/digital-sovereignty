@@ -1,6 +1,6 @@
 ---
 title: Between Claude Code and Hermes:The Persistent Cloud Agent
-date: 2026-09-07T22:00:00+08:00
+date: 2026-09-07T20:00:00+08:00
 slug: between-claude-code-and-hermes-persistent-cloud-agent
 draft: false
 description: "Claude Code is a local coding harness. Hermes is a self-hosted personal agent. Grok Bot sits between them: a persistent cloud agent with a remote runtime that keeps working when you’re away."

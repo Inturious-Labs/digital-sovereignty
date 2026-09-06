@@ -15,8 +15,8 @@ Three pieces make that work:
    the `-F` flag, so Hugo omits any article whose `date` is still in the future.
    A future-dated article is absent from the site *and* the RSS feed — not hidden,
    genuinely not built.
-2. **A daily rebuild checks.** A Vercel cron job runs every day at 14:00 UTC
-   (22:00 Shanghai) and triggers a rebuild. Whatever has crossed its date gets
+2. **A daily rebuild checks.** A Vercel cron job runs every day at 12:00 UTC
+   (20:00 Shanghai) and triggers a rebuild. Whatever has crossed its date gets
    published; everything else stays invisible.
 3. **Buttondown notices once.** It polls the RSS feed every 30 minutes and dedupes
    on `<guid>` (the article permalink), so a rebuild that changes nothing sends
@@ -117,7 +117,7 @@ This script:
 
 ```
 Publish date [now | YYYY-MM-DD]: 2026-09-22
-[OK] Date set to: 2026-09-22T22:00:00+08:00
+[OK] Date set to: 2026-09-22T20:00:00+08:00
 [i]  Scheduled - stays hidden until 2026-09-22, then publishes on the daily rebuild.
 ```
 
@@ -131,10 +131,10 @@ never reach subscribers.
 | You type | Date written | Goes live |
 |----------|--------------|-----------|
 | `now` | current timestamp | immediately, on the next build |
-| today's date | today at `22:00` | tonight, when the cron runs |
-| a future date | that day at `22:00` | on that day |
+| today's date | today at `20:00` | tonight, when the cron runs |
+| a future date | that day at `20:00` | on that day |
 
-Both are legitimate — typing today's date is how you publish "tonight at 22:00",
+Both are legitimate — typing today's date is how you publish "tonight at 20:00",
 which lines up with the daily rebuild. To go live right away, answer `now`.
 The script tells you which one you picked.
 
@@ -213,7 +213,7 @@ Use `draft: true` for work that genuinely is not finished.
   `dsc-publish` rejects past dates for this reason.
 - **Expect a fuzzy minute.** On the Hobby plan Vercel fires the cron at a random
   minute within the scheduled hour, so publication lands somewhere in
-  22:00–22:59 Shanghai.
+  20:00–20:59 Shanghai.
 
 ### Postponing an article
 
@@ -275,7 +275,7 @@ Two ways out:
    date to a time that has **already passed** — a future timestamp makes Hugo omit
    the article from the build entirely, and it fails silently. Keep it same-day so
    "skip old items" does not reject it as stale. Edit the frontmatter by hand for
-   this; `dsc-publish` always writes 22:00, which is still ahead of you for most
+   this; `dsc-publish` always writes 20:00, which is still ahead of you for most
    of the working day.
 
    Confirm with a production-equivalent build before merging — `hugo --gc` with no
@@ -389,7 +389,7 @@ Deployment is handled entirely by Vercel — there are no GitHub Actions in this
 | Trigger | What happens |
 |---------|--------------|
 | Push or PR merge to `main` | Vercel builds and deploys automatically |
-| Daily cron, 14:00 UTC | `/api/rebuild` fires a deploy hook; anything that has reached its date goes live |
+| Daily cron, 12:00 UTC | `/api/rebuild` fires a deploy hook; anything that has reached its date goes live |
 
 The build command is `hugo --minify --gc` (see `vercel.json`). It deliberately
 omits `-F`, which is what makes future-dated articles invisible until their day

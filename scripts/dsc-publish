@@ -343,13 +343,13 @@ while true; do
         continue
     fi
 
-    # 22:00 matches the daily cron (14:00 UTC), so the article is already
+    # 20:00 matches the daily cron (12:00 UTC), so the article is already
     # eligible when the rebuild runs.
-    NEW_DATE="${date_input}T22:00:00+08:00"
+    NEW_DATE="${date_input}T20:00:00+08:00"
     if [ "$date_input" != "$TODAY" ]; then
         SCHEDULED=future
-    elif [ "$(date +%H%M)" -ge 2200 ]; then
-        # Today, and 22:00 has already passed - it goes out on the next build.
+    elif [ "$(date +%H%M)" -ge 2000 ]; then
+        # Today, and 20:00 has already passed - it goes out on the next build.
         SCHEDULED=now
     else
         SCHEDULED=tonight
@@ -364,7 +364,7 @@ case "$SCHEDULED" in
         echo -e "${BLUE}[i]${NC} Scheduled - stays hidden until ${PINK}${date_input}${NC}, then publishes on the daily rebuild."
         ;;
     tonight)
-        echo -e "${BLUE}[i]${NC} Dated today at ${PINK}22:00${NC} - it stays hidden until tonight."
+        echo -e "${BLUE}[i]${NC} Dated today at ${PINK}20:00${NC} - it stays hidden until tonight."
         echo -e "    Want it live now instead? Re-run and answer ${PINK}now${NC}."
         ;;
 esac
