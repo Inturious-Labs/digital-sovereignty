@@ -104,17 +104,17 @@ check_field() {
     return 0
 }
 
-# Title as written in the frontmatter, with any surrounding quotes removed.
-# Hand-edited articles sometimes leave the title bare or single-quoted, and
+# A frontmatter field's value with any surrounding quotes removed.
+# Hand-edited articles sometimes leave a value bare or single-quoted, and
 # Hugo accepts all three forms, so the script has to as well.
-read_title() {
-    echo "$FRONTMATTER" | grep "^title:" | head -1 \
-        | sed -E 's/^title:[[:space:]]*//; s/^"(.*)"$/\1/; s/^'"'"'(.*)'"'"'$/\1/'
+read_field() {
+    echo "$FRONTMATTER" | grep "^$1:" | head -1 \
+        | sed -E "s/^$1:[[:space:]]*//"'; s/^"(.*)"$/\1/; s/^'"'"'(.*)'"'"'$/\1/'
 }
 
 # Title
 if check_field "title"; then
-    TITLE=$(read_title)
+    TITLE=$(read_field title)
     ok "Title: $TITLE"
 fi
 
@@ -146,7 +146,7 @@ else
 fi
 
 # Description
-DESC=$(echo "$FRONTMATTER" | grep "^description:" | sed 's/^description: "//' | sed 's/"$//')
+DESC=$(read_field description)
 if [ -z "$DESC" ] || [ "$DESC" = "Brief description of the post" ]; then
     warn "Description is missing or placeholder - add for SEO"
 else
@@ -297,7 +297,7 @@ echo -e "${BOLD}Prepare for Publishing${NC}"
 echo "─────────────────────────────────────"
 
 # Prompt for final title
-CURRENT_TITLE=$(read_title)
+CURRENT_TITLE=$(read_field title)
 echo -e "${GREEN}Current title:${NC} $CURRENT_TITLE"
 printf "${GREEN}Final title${NC} ${GRAY}[Enter to keep]:${NC} "
 read -r new_title
