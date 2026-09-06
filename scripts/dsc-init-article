@@ -15,9 +15,6 @@ GRAY='\033[0;90m'
 NC='\033[0m'
 BOLD='\033[1m'
 
-# Standard keywords for all DSC articles (Part A)
-STANDARD_KEYWORDS="digital sovereignty, 数字主权, decentralization, AI"
-
 # Find repo root by looking for hugo.toml
 find_repo_root() {
     local dir="$PWD"
@@ -197,22 +194,6 @@ category=$(select_category)
 # Series
 series=$(select_series)
 
-# Keywords - Part A (standard) is prefilled, Part B (article-specific) is optional
-printf "${GREEN}Article-specific keywords${NC} ${GRAY}(comma-separated, optional - standard keywords auto-added):${NC} "
-read -r extra_keywords
-
-# Build keywords array - combine standard + article-specific
-all_keywords="$STANDARD_KEYWORDS"
-[ -n "$extra_keywords" ] && all_keywords="$all_keywords, $extra_keywords"
-
-keyword_array=""
-IFS=',' read -ra kw_list <<< "$all_keywords"
-for kw in "${kw_list[@]}"; do
-    kw=$(echo "$kw" | sed 's/^[ \t]*//;s/[ \t]*$//')
-    [ -n "$keyword_array" ] && keyword_array="${keyword_array}, \"$kw\"" || keyword_array="\"$kw\""
-done
-keyword_field="[$keyword_array]"
-
 # Create index.md
 cat > "index.md" << EOF
 ---
@@ -231,7 +212,6 @@ series:
 EOF
 
 cat >> "index.md" << EOF
-keywords: $keyword_field
 enable_rapport: true
 ---
 

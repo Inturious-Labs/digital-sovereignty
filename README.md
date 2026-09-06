@@ -58,7 +58,6 @@ The wizard will prompt for:
 - **Description**: SEO description
 - **Category**: Choose from existing or create new
 - **Series**: Optional, choose from existing or create new
-- **Keywords**: Optional, comma-separated for SEO
 
 This creates `index.md` with proper frontmatter and template structure.
 
@@ -345,7 +344,6 @@ categories:
 series:
   - "Deep Dive Series"
 images: ["featured-image.webp"]
-keywords: ["keyword1", "keyword2"]
 enable_rapport: true
 ---
 ```
