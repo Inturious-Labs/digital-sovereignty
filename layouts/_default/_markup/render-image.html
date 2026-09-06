@@ -1,0 +1,17 @@
+{{- /*
+  Renders every markdown image. Accepts the bundle image as `./pic.jpg` or
+  `pic.jpg` and emits an absolute URL either way, so the same markup works on
+  the site, on localhost, and inside the newsletter email (Buttondown reads
+  .Content from the RSS feed, where a relative src would be a broken image).
+*/ -}}
+{{- $dst := .Destination -}}
+{{- $src := $dst -}}
+{{- $u := urls.Parse $dst -}}
+{{- if not $u.IsAbs -}}
+  {{- with .Page.Resources.Get (strings.TrimPrefix "./" $u.Path) -}}
+    {{- $src = .Permalink -}}
+  {{- else -}}
+    {{- $src = absURL $dst -}}
+  {{- end -}}
+{{- end -}}
+<img src="{{ $src }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">

@@ -1,9 +1,9 @@
 {{- /*
   Body of one RSS item. Buttondown turns this into the newsletter email, so
-  everything here is inline-styled HTML. Relative image paths are rewritten to
-  absolute so they load inside the email.
+  everything here is inline-styled HTML. Image URLs are already absolute: the
+  render hook in _default/_markup/render-image.html takes care of that.
 */ -}}
-{{- .Content | replaceRE `src="\.\/([^"]+)"` (printf `src="%s%s"` .Permalink "$1") | safeHTML -}}
+{{- .Content | safeHTML -}}
 <p><a href="{{ .Permalink }}" style="display: inline-block; background-color: #e5e7eb; color: #1f2937; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 20px; font-weight: 600;">🌐 Read on Website</a></p>
 {{- /* The three articles published before this one, newest first. */ -}}
 {{- $older := where site.RegularPages "Section" "posts" -}}
