@@ -104,9 +104,17 @@ check_field() {
     return 0
 }
 
+# Title as written in the frontmatter, with any surrounding quotes removed.
+# Hand-edited articles sometimes leave the title bare or single-quoted, and
+# Hugo accepts all three forms, so the script has to as well.
+read_title() {
+    echo "$FRONTMATTER" | grep "^title:" | head -1 \
+        | sed -E 's/^title:[[:space:]]*//; s/^"(.*)"$/\1/; s/^'"'"'(.*)'"'"'$/\1/'
+}
+
 # Title
 if check_field "title"; then
-    TITLE=$(echo "$FRONTMATTER" | grep "^title:" | sed 's/^title: "//' | sed 's/"$//')
+    TITLE=$(read_title)
     ok "Title: $TITLE"
 fi
 
@@ -289,15 +297,14 @@ echo -e "${BOLD}Prepare for Publishing${NC}"
 echo "─────────────────────────────────────"
 
 # Prompt for final title
-CURRENT_TITLE=$(echo "$FRONTMATTER" | grep "^title:" | sed 's/^title: "//' | sed 's/"$//')
+CURRENT_TITLE=$(read_title)
 echo -e "${GREEN}Current title:${NC} $CURRENT_TITLE"
 printf "${GREEN}Final title${NC} ${GRAY}[Enter to keep]:${NC} "
 read -r new_title
 if [ -n "$new_title" ]; then
     # Escape special characters for sed
-    escaped_old=$(printf '%s\n' "$CURRENT_TITLE" | sed 's/[[\.*^$()+?{|]/\\&/g')
     escaped_new=$(printf '%s\n' "$new_title" | sed 's/[&/\]/\\&/g')
-    sed -i '' "s/^title: \"${escaped_old}\"/title: \"${escaped_new}\"/" "$INDEX_FILE"
+    sed -i '' "s/^title: .*/title: \"${escaped_new}\"/" "$INDEX_FILE"
     TITLE="$new_title"
     echo -e "${GREEN}[OK]${NC} Title updated to: ${PINK}$new_title${NC}"
 else

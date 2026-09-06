@@ -1,5 +1,5 @@
 ---
-title: Between Claude Code and Hermes:The Persistent Cloud Agent
+title: "Between Claude Code and Hermes: The Persistent Cloud Agent"
 date: 2026-09-07T20:00:00+08:00
 slug: between-claude-code-and-hermes-persistent-cloud-agent
 draft: false
