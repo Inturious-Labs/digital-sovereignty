@@ -17,6 +17,7 @@
     "@id" (printf "%s#person" $siteURL)
     "name" site.Params.name
     "url" $bio
+    "image" ("img/herbert-yang.jpg" | absURL)
     "sameAs" (slice $bio (printf "https://x.com/%s" site.Params.twitter))
 -}}
 {{- $website := dict
