@@ -3,21 +3,32 @@
   /about/, and each series page (a curated reading path, unlike the
   auto-generated category lists). Index lists, category pages, /privacy/,
   and anything with `sitemap: { disable: true }` are left out.
+
+  The homepage and series pages are dated by their newest published
+  article. Hugo's own date for a list page also counts unpublished drafts
+  and articles scheduled for later (e.g. 2099-12-31), which would tell
+  search engines the page changed in the future.
 */ -}}
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{- $articles := where site.RegularPages "Section" "posts" }}
   {{- $pages := slice site.Home }}
-  {{- $pages = $pages | append (where site.RegularPages "Section" "posts") }}
+  {{- $pages = $pages | append $articles }}
   {{- with site.GetPage "/about" }}{{ $pages = $pages | append . }}{{ end }}
   {{- with site.Taxonomies.series }}
     {{- range . }}{{ $pages = $pages | append .Page }}{{ end }}
   {{- end }}
   {{- range $pages }}
   {{- if not .Sitemap.Disable }}
+  {{- $lastmod := .Lastmod }}
+  {{- if not .IsPage }}
+    {{- $members := cond .IsHome $articles .Pages }}
+    {{- range first 1 $members.ByLastmod.Reverse }}{{ $lastmod = .Lastmod }}{{ end }}
+  {{- end }}
   <url>
     <loc>{{ .Permalink }}</loc>
-    {{- if not .Lastmod.IsZero }}
-    <lastmod>{{ safeHTML (.Lastmod.Format "2006-01-02T15:04:05-07:00") }}</lastmod>
+    {{- if not $lastmod.IsZero }}
+    <lastmod>{{ safeHTML ($lastmod.Format "2006-01-02T15:04:05-07:00") }}</lastmod>
     {{- end }}
   </url>
   {{- end }}
