@@ -223,15 +223,19 @@ nothing was ever built, so nothing was sent.
 
 | Where | Setting |
 |-------|---------|
-| `vercel.json` | `crons` → `/api/rebuild` on `0 14 * * *` (UTC) |
+| `vercel.json` | `crons` → `/api/rebuild/` on `0 12 * * *` (UTC) |
 | `api/rebuild.js` | Verifies `CRON_SECRET`, then POSTs to the deploy hook |
 | Vercel env vars | `CRON_SECRET`, `DEPLOY_HOOK_URL` (Production) |
 | Buttondown | "Skip old items" enabled; RSS-to-email on the site feed |
 
 `CRON_SECRET` is the shared secret Vercel sends as `Authorization: Bearer …`;
-`/api/rebuild` returns 401 to anything else. `DEPLOY_HOOK_URL` is the deploy hook
+`/api/rebuild/` returns 401 to anything else. `DEPLOY_HOOK_URL` is the deploy hook
 from **Project → Settings → Git → Deploy Hooks**. Both are secrets — anyone holding
 the hook URL can trigger builds.
+
+The cron path keeps its trailing slash on purpose. `trailingSlash` in `vercel.json`
+redirects `/api/rebuild` to `/api/rebuild/`, and Vercel cron jobs do not follow
+redirects, so the no-slash path would silently stop the daily publish.
 
 ### If an article does not appear
 
@@ -387,7 +391,7 @@ Deployment is handled entirely by Vercel — there are no GitHub Actions in this
 | Trigger | What happens |
 |---------|--------------|
 | Push or PR merge to `main` | Vercel builds and deploys automatically |
-| Daily cron, 12:00 UTC | `/api/rebuild` fires a deploy hook; anything that has reached its date goes live |
+| Daily cron, 12:00 UTC | `/api/rebuild/` fires a deploy hook; anything that has reached its date goes live |
 
 The build command is `hugo --minify --gc` (see `vercel.json`). It deliberately
 omits `-F`, which is what makes future-dated articles invisible until their day

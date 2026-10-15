@@ -11,7 +11,7 @@
   "trailingSlash": true,
   "crons": [
     {
-      "path": "/api/rebuild",
+      "path": "/api/rebuild/",
       "schedule": "0 12 * * *"
     }
   ]
