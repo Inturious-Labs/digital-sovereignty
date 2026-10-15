@@ -12,7 +12,7 @@ enable_rapport: true
 
 ![odin](./odin.webp)
 
-In case you miss it, here are the top conversations on [my Twitter](https://x.com/herbertyang) (original tweets only, not including retweets) in the last few weeks, since [February 7, 2025](https://digitalsovereignty.herbertyang.xyz/p/herberts-top-tweets-feb-7-2025). These topics received the most attention from the crypto crowd.
+In case you miss it, here are the top conversations on [my Twitter](https://x.com/herbertyang) (original tweets only, not including retweets) in the last few weeks, since [February 7, 2025](https://digitalsovereignty.herbertyang.xyz/p/herberts-top-tweets-feb-7-2025/). These topics received the most attention from the crypto crowd.
 
 * This thread’s engagement level was off the chart, for my puny Twitter account that only has less than 9K followers. **Odin.fun** was catching on like wildfire. Could this be the iPhone 4 moment for ICP? Bob and the team have laid out a very exciting product roadmap in the coming months. Many are rooting for Odin.fun’s run at becoming the largest DEX on BTC.
 
@@ -30,7 +30,7 @@ In case you miss it, here are the top conversations on [my Twitter](https://x.co
 
 ![](././687019e0-e316-4312-aa6a-2d37e0be47a3_608x424.png))
 
-* Recounting my experiences with **[LLMs](https://digitalsovereignty.herbertyang.xyz/p/how-llms-supercharged-my-productivity)** seemed to resonate with a lot of folks. Though not a whole lot were converted into the subscribers of “**Digital Sovereignty Chronicle**”.
+* Recounting my experiences with **[LLMs](https://digitalsovereignty.herbertyang.xyz/p/how-llms-supercharged-my-productivity/)** seemed to resonate with a lot of folks. Though not a whole lot were converted into the subscribers of “**Digital Sovereignty Chronicle**”.
 
 [![](./816ad3f5-703d-42a8-a28c-0e8a6b9c2846_592x581.png)](https://x.com/herbertyang/status/1900563565867942350)
 
@@ -42,4 +42,4 @@ In case you miss it, here are the top conversations on [my Twitter](https://x.co
 
 Thanks for reading Digital Sovereignty Chronicle! This post is public so feel free to share it.
 
-[Share](https://digitalsovereignty.herbertyang.xyz/p/icymi-hot-topics-in-my-world-from?utm_source=substack&utm_medium=email&utm_content=share&action=share)
+[Share](https://digitalsovereignty.herbertyang.xyz/p/icymi-hot-topics-in-my-world-from/?utm_source=substack&utm_medium=email&utm_content=share&action=share)

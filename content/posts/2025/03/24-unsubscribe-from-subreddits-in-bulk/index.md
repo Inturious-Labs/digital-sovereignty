@@ -12,7 +12,7 @@ enable_rapport: true
 
 ![reddit](./reddit.webp)
 
-One of my takeaways from listening to the recent [5-hour podcast episode of](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on) **[Lex Fridman](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on)** [interviewing](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on) **[Marc Andreessen](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on)** is that **Reddit** matters and has become even more important than ever because all the LLMs crawl its vast public archives of subreddit discussions. Goold old BBS still rocks.
+One of my takeaways from listening to the recent [5-hour podcast episode of](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on/) **[Lex Fridman](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on/)** [interviewing](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on/) **[Marc Andreessen](https://digitalsovereignty.herbertyang.xyz/p/recap-of-marc-andreessens-talk-on/)** is that **Reddit** matters and has become even more important than ever because all the LLMs crawl its vast public archives of subreddit discussions. Goold old BBS still rocks.
 
 So I quickly returned to my 10-year-old Reddit account and freshened it up with updated links and a profile bio.
 

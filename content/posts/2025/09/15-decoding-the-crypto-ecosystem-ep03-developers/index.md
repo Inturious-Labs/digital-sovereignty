@@ -20,7 +20,7 @@ enable_rapport: true
 
 Previously from **Decoding the Crypto Ecosystem Series**
 
-1. [EP01 - Blockchains](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains)
+1. [EP01 - Blockchains](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains/)
 2. [EP02 - Miners](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep02-miners/)
 
 ---
@@ -33,7 +33,7 @@ Developers build applications. In the crypto industry, they build decentralized 
 
 ![ICP event in Shanghai, 2021](./speaker.jpg)
 
-That inspiration often happens at a serendipitous encounter with a [blockchain-hosted event](https://x.com/herbertyang/status/1452500111695638531). Developer Bob learns about an up-and-coming new blockchain, which usually boasts a grandiose vision to completely change the industry, the world, and the civilization. Maybe Bob is just intrigued by the speaker's passion and eloquence. He checks out the documentation for this [new blockchain](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains) and finds that the [foundation](https://digitalsovereignty.herbertyang.xyz/p/why-non-profit-in-crypto/) behind this blockchain just launched a grant program to incentive developers to try out the software development kit (SDK). Bob builds a Hello-World app using the SDK in five minutes. This looks legit. 
+That inspiration often happens at a serendipitous encounter with a [blockchain-hosted event](https://x.com/herbertyang/status/1452500111695638531). Developer Bob learns about an up-and-coming new blockchain, which usually boasts a grandiose vision to completely change the industry, the world, and the civilization. Maybe Bob is just intrigued by the speaker's passion and eloquence. He checks out the documentation for this [new blockchain](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains/) and finds that the [foundation](https://digitalsovereignty.herbertyang.xyz/p/why-non-profit-in-crypto/) behind this blockchain just launched a grant program to incentive developers to try out the software development kit (SDK). Bob builds a Hello-World app using the SDK in five minutes. This looks legit. 
 
 Bob starts building on this blockchain. He participates in a hackathon organized by the foundation, joins several online workshops, deepens his knowledge and skills for the particular smart contract of this blockchain and its preferred language (usually Rust), and makes the cut for the demo day. In a surreal moment, he meets the founder of the blockchain, who is like Jesus walking on water in the eyes of his feverish fans. Bob becomes a believer and wants to be part of that paradigm-shifting, greater success.
 

@@ -40,7 +40,7 @@ These big banyans are blockchains. There are a few thousand of them in Amazon bu
 
 ## What do blockchains do?
 
-The developer studios behind many large blockchains are non-profit foundations, as explained in [Why Non-Profit in Crypto](https://digitalsovereignty.herbertyang.xyz/p/why-non-profit-in-crypto). They primarily do two things, develop a blockchain and drive its adoption. A typical L1 foundation usually employs a team of 100 ~ 500 full-time employees. The majority would be in R&D to create new protocol features following the blockchain's public roadmap.
+The developer studios behind many large blockchains are non-profit foundations, as explained in [Why Non-Profit in Crypto](https://digitalsovereignty.herbertyang.xyz/p/why-non-profit-in-crypto/). They primarily do two things, develop a blockchain and drive its adoption. A typical L1 foundation usually employs a team of 100 ~ 500 full-time employees. The majority would be in R&D to create new protocol features following the blockchain's public roadmap.
 
 Most blockchains' technology is open source. Foundations engage in a variety of activities to recruit developers to build their dApps on their chains, such as publishing bounties, hosting hackathons, organizing hacker houses, conducting workshops, sponsoring industry events, giving out developer grants, etc.
 
@@ -112,7 +112,7 @@ This series will continue in the next episode on miners and node operators. Stay
 
 Next from **Decoding the Crypto Ecosystem Series**
 
-[EP02: Decoding the Crypto Ecosystem - EP02 - Miners](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep02-miners)
+[EP02: Decoding the Crypto Ecosystem - EP02 - Miners](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep02-miners/)
 
 ---
 

@@ -38,7 +38,7 @@ Asia is critical to the success of every blockchain ecosystem in crypto. If an e
 
 ### The Leading Blockchains
 
-[L1 blockchain](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains) is where the alpha lies in crypto. It is where technology innovations (decentralization and smart contracts) precipitate. While trendy dApps come and go, blockchains will persist for a long time. They're the backbones of the crypto industry.
+[L1 blockchain](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains/) is where the alpha lies in crypto. It is where technology innovations (decentralization and smart contracts) precipitate. While trendy dApps come and go, blockchains will persist for a long time. They're the backbones of the crypto industry.
 
 [![Layer 1 blockchains ranked by market cap on CoinMarketCap](./0cf7c6c4-0af1-433f-b90b-35454c121b23_1240x1110.webp "Layer 1 blockchains ranked by market cap on CoinMarketCap")](https://coinmarketcap.com)
 
