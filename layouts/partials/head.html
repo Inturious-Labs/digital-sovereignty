@@ -23,7 +23,7 @@
   {{- $site_author := or site.Author.name site.Params.name site.Title -}}
   <!---->
   {{- if eq .Kind "page" -}}
-  <meta name="description" content="{{- .Summary -}}" />
+  <meta name="description" content="{{- or .Description (.Summary | plainify | strings.TrimSpace | truncate 160) -}}" />
   <meta name="author" content="{{- or .Params.author $site_author -}}" />
   {{- else -}}
   <!---->
