@@ -2,8 +2,8 @@
 
 # Script to update all Substack image URLs to local file references
 # Usage: ./update_substack_urls.sh <folder_path>
-# Example: ./update_substack_urls.sh content/posts/2025/01
-# Example: ./update_substack_urls.sh content/posts/2025/02
+# Example: ./update_substack_urls.sh content/posts/2025
+# Example: ./update_substack_urls.sh content/posts/2025/0207-herberts-top-tweets-feb-7-2025
 
 set -e  # Exit on any error
 
@@ -83,8 +83,8 @@ main() {
     if [ $# -eq 0 ]; then
         echo -e "${RED}Error: No folder path specified.${NC}"
         echo "Usage: $0 <folder_path>"
-        echo "Example: $0 content/posts/2025/01"
-        echo "Example: $0 content/posts/2025/02"
+        echo "Example: $0 content/posts/2025"
+        echo "Example: $0 content/posts/2025/0207-herberts-top-tweets-feb-7-2025"
         exit 1
     fi
     

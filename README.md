@@ -39,9 +39,9 @@ git checkout main
 git pull
 git checkout -b draft/my-article-slug
 
-# Create the article folder (YYYY/MM/DD-slug format)
-mkdir -p content/posts/2025/12/09-my-article-slug
-cd content/posts/2025/12/09-my-article-slug
+# Create the article folder (YYYY/MMDD-slug format)
+mkdir -p content/posts/2025/1209-my-article-slug
+cd content/posts/2025/1209-my-article-slug
 ```
 
 ### 2. Initialize Article with Frontmatter
@@ -144,7 +144,7 @@ See [Scheduled Publishing](#scheduled-publishing) for the details.
 ```bash
 # Stage the article path explicitly — never `git add .`, which can sweep in
 # unrelated drafts sitting untracked in content/
-git add content/posts/YYYY/MM/DD-my-article-slug
+git add content/posts/YYYY/MMDD-my-article-slug
 git commit -m "Publish: My Article Title"
 git push -u origin draft/my-article-slug
 gh pr create --base main --title "Publish: My Article Title"
@@ -327,11 +327,10 @@ Articles use Hugo page bundles:
 ```
 content/posts/
 └── 2025/
-    └── 12/
-        └── 09-my-article-slug/
-            ├── index.md           # Article content
-            ├── featured-image.webp  # Social media preview
-            └── other-images.webp  # Additional images
+    └── 1209-my-article-slug/
+        ├── index.md           # Article content
+        ├── featured-image.webp  # Social media preview
+        └── other-images.webp  # Additional images
 ```
 
 **Frontmatter Example:**
@@ -359,7 +358,7 @@ Utility scripts for processing images (useful for Substack migration).
 ### HEIC to WebP Converter
 
 ```bash
-./scripts/convert_heic_to_webp.sh content/posts/2025/12
+./scripts/convert_heic_to_webp.sh content/posts/2025/1209-my-article-slug
 ```
 
 Converts HEIC images to WebP and updates markdown references.
@@ -369,7 +368,7 @@ Converts HEIC images to WebP and updates markdown references.
 ### Substack URL Updater
 
 ```bash
-./scripts/update_substack_urls.sh content/posts/2025/12
+./scripts/update_substack_urls.sh content/posts/2025/1209-my-article-slug
 ```
 
 Converts Substack CDN URLs to local file references.

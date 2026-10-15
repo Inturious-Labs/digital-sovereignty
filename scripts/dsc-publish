@@ -308,8 +308,8 @@ fi
 
 # Article folder name check
 FOLDER_NAME=$(basename "$ARTICLE_DIR")
-if [[ ! "$FOLDER_NAME" =~ ^[0-9]{2}- ]]; then
-    warn "Folder name doesn't follow DD-slug pattern: $FOLDER_NAME"
+if [[ ! "$FOLDER_NAME" =~ ^[0-9]{4}- ]]; then
+    warn "Folder name doesn't follow MMDD-slug pattern: $FOLDER_NAME"
 else
     ok "Folder naming: $FOLDER_NAME"
 fi

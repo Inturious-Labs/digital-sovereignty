@@ -2,8 +2,8 @@
 
 # Script to convert HEIC images to WebP and update markdown references
 # Usage: ./convert_heic_to_webp.sh <folder_path>
-# Example: ./convert_heic_to_webp.sh content/posts/2025/01
-# Example: ./convert_heic_to_webp.sh content/posts/2025/02
+# Example: ./convert_heic_to_webp.sh content/posts/2025
+# Example: ./convert_heic_to_webp.sh content/posts/2025/0207-herberts-top-tweets-feb-7-2025
 
 set -e  # Exit on any error
 
@@ -120,8 +120,8 @@ main() {
     if [ $# -eq 0 ]; then
         echo -e "${RED}Error: No folder path specified.${NC}"
         echo "Usage: $0 <folder_path>"
-        echo "Example: $0 content/posts/2025/01"
-        echo "Example: $0 content/posts/2025/02"
+        echo "Example: $0 content/posts/2025"
+        echo "Example: $0 content/posts/2025/0207-herberts-top-tweets-feb-7-2025"
         exit 1
     fi
     
