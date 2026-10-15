@@ -65,12 +65,6 @@ googleAnalytics = "G-JFQFKNFFR7"
     url = "/about/"
     weight = 20
 
-# Enhanced sitemap configuration for better SEO
-[sitemap]
-  changefreq = "weekly"
-  priority = 0.5
-  filename = "sitemap.xml"
-
 # Define URL links
 [permalinks]
   posts = "/p/:slug"

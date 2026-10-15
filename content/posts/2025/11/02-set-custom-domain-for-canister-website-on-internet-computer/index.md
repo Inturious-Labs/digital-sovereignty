@@ -30,7 +30,7 @@ You can configure an IC canister site to point to not only a domain like `hello-
 
 In the DNS zone of your domain registrar, create 3 records:
 
-If your site is a [root domain](herbertyang.xyz/), `hello-roddy.xyz`:
+If your site is a [root domain](https://herbertyang.xyz/), `hello-roddy.xyz`:
 
 | Host | Value | TTL (seconds) | Type|
 | --- |--- |--- |--- |

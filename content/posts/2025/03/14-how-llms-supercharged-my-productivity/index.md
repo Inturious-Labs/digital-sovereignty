@@ -46,7 +46,7 @@ I was an early **Roam Research** OG (5-year diamond membership) in 2019 and very
 
 However I was intimidated by the legacy library migrated from Roam Research. It contains a few thousand markdown files in month-day-year format, terrible for file organization. It would take a major open-chest surgery to put the house in order.
 
-[chatGPT 4o came to my rescue](https://digitalsovereignty.herbertyang.xyz/p/rename-daily-notes-in-obsidian-in) and wrote a bash script to rename all my legacy daily note markdown files in bulk, changing them into the graceful naming convention YYYY-MM-DD.md. It's only 30 lines of code, but not available anywhere on the Internet.
+[chatGPT 4o came to my rescue](https://digitalsovereignty.herbertyang.xyz/p/rename-daily-notes-in-obsidian-in/) and wrote a bash script to rename all my legacy daily note markdown files in bulk, changing them into the graceful naming convention YYYY-MM-DD.md. It's only 30 lines of code, but not available anywhere on the Internet.
 
 Now I have a streamlined, meticulously organized library of a few thousand daily notes to continue with this journey of building a digital garden.
 
@@ -56,7 +56,7 @@ Now I have a streamlined, meticulously organized library of a few thousand daily
 
 I do public speeches on web3, crypto, startups, and AI. Many of those happen on Twitter Spaces - a kind of public Zoom call with only voices. I've developed a workflow of downloading the audio files from those Twitter Spaces and uploading them to my podcast "**Web3 Tech in Asia**" for sharing with a much broader audience beyond just crypto Twitter.
 
-It's been a cat-and-mouse game with Twitter as Twitter changes its API and HTML structure every few months. Many scripts failed after a while. I've searched all over Stack Overflow, Reddit, Github issues, and personal blogs. Actually, I know which script it is, but [the script stopped working](https://digitalsovereignty.herbertyang.xyz/p/download-twitter-spaces-audio-for) all of a sudden and no one on the Internet could tell me how to fix it.
+It's been a cat-and-mouse game with Twitter as Twitter changes its API and HTML structure every few months. Many scripts failed after a while. I've searched all over Stack Overflow, Reddit, Github issues, and personal blogs. Actually, I know which script it is, but [the script stopped working](https://digitalsovereignty.herbertyang.xyz/p/download-twitter-spaces-audio-for/) all of a sudden and no one on the Internet could tell me how to fix it.
 
 I threw this question to **Grok** 3. Within seconds, it recommended 5 potential approaches to solve the issue. I went with the last one.
 

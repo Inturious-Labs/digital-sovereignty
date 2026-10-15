@@ -2,6 +2,8 @@
 title: "Why Non-Profit Foundation in Crypto?"
 date: 2025-02-27T22:00:37.998000+00:00
 slug: why-non-profit-foundation-in-crypto
+aliases:
+  - "/p/why-non-profit-in-crypto/"
 draft: false
 images: ["foundation.jpg"]
 description: "what is a non-profit foundation in crypto and what it does"

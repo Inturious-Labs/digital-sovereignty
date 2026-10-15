@@ -1,0 +1,67 @@
+{{- /*
+  JSON-LD structured data for search and AI answer engines.
+  - Articles (posts section) -> BlogPosting, Herbert as author and publisher
+  - Homepage                 -> WebSite + Person (Google reads the site
+                                name only from the homepage)
+  - Other pages              -> nothing; they are lists, not content
+  The newsletter is one person's journal, so the publisher is a Person, not
+  an Organization. The Person has a stable @id so every page joins the same
+  graph node. Built with dict + jsonify so titles are safely escaped.
+*/ -}}
+
+{{- $siteURL := site.BaseURL -}}
+{{- $lang := .Language.LanguageCode | default "en" -}}
+{{- $bio := "https://herbertyang.xyz/docs/about/herbert-yang/" -}}
+{{- $person := dict
+    "@type" "Person"
+    "@id" (printf "%s#person" $siteURL)
+    "name" site.Params.name
+    "url" $bio
+    "image" ("img/herbert-yang.jpg" | absURL)
+    "sameAs" (slice $bio (printf "https://x.com/%s" site.Params.twitter))
+-}}
+{{- $website := dict
+    "@type" "WebSite"
+    "@id" (printf "%s#website" $siteURL)
+    "name" site.Title
+    "alternateName" "DSC"
+    "url" $siteURL
+    "description" site.Params.description
+    "inLanguage" $lang
+    "publisher" (dict "@id" (index $person "@id"))
+-}}
+
+{{- if and .IsPage (eq .Section "posts") -}}
+  {{- $article := dict
+      "@context" "https://schema.org"
+      "@type" "BlogPosting"
+      "headline" .Title
+      "datePublished" (.PublishDate.Format "2006-01-02T15:04:05Z07:00")
+      "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+      "url" .Permalink
+      "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+      "author" $person
+      "publisher" (dict "@id" (index $person "@id"))
+      "isPartOf" (dict "@id" (index $website "@id"))
+      "inLanguage" $lang
+      "isAccessibleForFree" true
+  -}}
+  {{- with .Description -}}
+    {{- $article = merge $article (dict "description" .) -}}
+  {{- end -}}
+  {{- /* Same image the social cards use (first body image, then site default). */ -}}
+  {{- with partial "_funcs/get-page-images" . -}}
+    {{- $article = merge $article (dict "image" (slice (index . 0).Permalink)) -}}
+  {{- end -}}
+  {{- with .Params.categories -}}
+    {{- $article = merge $article (dict "articleSection" .) -}}
+  {{- end -}}
+  <script type="application/ld+json">{{ $article | jsonify (dict "indent" "  ") | safeJS }}</script>
+
+{{- else if .IsHome -}}
+  {{- $graph := dict
+      "@context" "https://schema.org"
+      "@graph" (slice $website $person)
+  -}}
+  <script type="application/ld+json">{{ $graph | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- end -}}

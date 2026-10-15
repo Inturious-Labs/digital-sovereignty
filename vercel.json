@@ -8,9 +8,10 @@
   "buildCommand": "hugo --minify --gc",
   "outputDirectory": "public",
   "framework": "hugo",
+  "trailingSlash": true,
   "crons": [
     {
-      "path": "/api/rebuild",
+      "path": "/api/rebuild/",
       "schedule": "0 12 * * *"
     }
   ]

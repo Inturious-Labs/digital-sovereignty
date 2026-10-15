@@ -129,3 +129,18 @@ blockquote p:first-of-type::before,
 blockquote p:last-of-type::after {
     content: none !important;
 }
+
+/* Author photo on /about/: a small circle, matching the editor photo on The Sunday Blender */
+img.author-avatar {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #8b5a2b;
+}
+
+.dark img.author-avatar {
+    border-color: #d4af37;
+}

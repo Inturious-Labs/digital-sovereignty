@@ -204,6 +204,47 @@ if echo "$CONTENT" | grep -q "## Conclusion" && ! echo "$CONTENT" | grep -A2 "##
 fi
 
 echo ""
+echo -e "${BOLD}Link Checks${NC}"
+echo "─────────────────────────────────────"
+
+# Links to other DSC articles. /p/slug and /p/slug/ are the same page; the
+# slash form is canonical and the other only reaches it through a redirect.
+# A slug that matches no article (or alias) is a 404 that Google reports.
+SITE_RE='https?://digitalsovereignty\.herbertyang\.xyz/p/[A-Za-z0-9_-]+/?'
+ARTICLE_LINKS=$(echo "$CONTENT" | grep -oE "$SITE_RE" || true)
+if [ -n "$ARTICLE_LINKS" ]; then
+    KNOWN_SLUGS=$(grep -rhE '^slug:|^  - "?/p/' "$REPO_ROOT/content/posts" --include=index.md \
+        | sed -E 's#^slug: *"?##; s#^  - "?/p/##; s#["/]*$##')
+    LINK_ERRORS=0
+    while IFS= read -r url; do
+        slug=$(echo "$url" | sed -E 's#.*/p/##; s#/$##')
+        if [[ "$url" != */ ]]; then
+            error "Article link missing trailing slash: $url → $url/"
+            ((LINK_ERRORS++)) || true
+        fi
+        if ! echo "$KNOWN_SLUGS" | grep -qxF "$slug"; then
+            error "Article link points to no article: $url"
+            ((LINK_ERRORS++)) || true
+        fi
+    done <<< "$ARTICLE_LINKS"
+    if [ "$LINK_ERRORS" -eq 0 ]; then
+        ok "All $(echo "$ARTICLE_LINKS" | wc -l | tr -d ' ') article link(s) resolve and end with a slash"
+    fi
+fi
+
+# A link like [site](example.com/) has no scheme, so it resolves relative to
+# the article and lands on a 404.
+SCHEMELESS=$(echo "$CONTENT" | grep -oE '\]\((www\.)?[A-Za-z0-9-]+\.[A-Za-z]{2,}[^)]*\)' \
+    | grep -vE '\]\([^)]*\.(webp|jpe?g|png|gif|svg|mp3|mp4|pdf)\)' || true)
+if [ -n "$SCHEMELESS" ]; then
+    while IFS= read -r link; do
+        error "Link missing https://: $link"
+    done <<< "$SCHEMELESS"
+else
+    ok "No links missing https://"
+fi
+
+echo ""
 echo -e "${BOLD}Image Checks${NC}"
 echo "─────────────────────────────────────"
 

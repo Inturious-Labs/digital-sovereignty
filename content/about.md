@@ -6,6 +6,8 @@ draft: false
 
 ## Writer
 
+{{< avatar >}}
+
 As a seasoned web3 investor and evangelist, I break down complex crypto concepts into simple terms, explore data hacks toward digital sovereignty, analyze little-known tech breakthroughs, and share my notes from tech podcasts. My full bio is here:
 
 https://herbertyang.xyz/docs/about/herbert-yang/

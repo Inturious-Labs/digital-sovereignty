@@ -47,7 +47,7 @@ AI has lowered the development barrier enough that I can now do all these by mys
 
 ## The Ironman moment of Claude
 
-I went on to create another [10+ projects](inturious.com/) with [Claude Code](https://claude.com/product/claude-code), by [Anthropic](https://www.anthropic.com/).
+I went on to create another [10+ projects](https://inturious.com/) with [Claude Code](https://claude.com/product/claude-code), by [Anthropic](https://www.anthropic.com/).
 
 Claude Code is not an IDE but a text-based CLI (Command Line Interface). It seamlessly integrates with the Terminal app on macOS. I can just focus on one screen and make decisions there, unlike Cursor, where I have to constantly look at 3 or even 4 screens to make sure AI doesn't over-engineer the task, or go down a rabbit hole that I do not approve. 
 

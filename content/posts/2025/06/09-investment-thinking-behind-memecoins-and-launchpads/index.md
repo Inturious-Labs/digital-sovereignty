@@ -14,7 +14,7 @@ enable_rapport: true
 
 ### About Web3 101
 
-Web3 101 is now my favorite [crypto podcast](https://digitalsovereignty.herbertyang.xyz/p/10-podcasts-on-tech-in-2025). Its host **[Liu Feng](https://x.com/fishkiller)** used to be the Editor-in-Chief of **[Chain News](https://x.com/ChainNewscom)**, the largest and best Chinese crypto news media until its closure in late 2021. Most podcast hosts lack of basic moderator skills - can’t articulate a clear question, asking very binary if not narrow-minded questions, interrupting guest’s flow, using imposing rhetorical question, enjoying his own talking too much at the expense of his guests, etc. Liu is anything but those. He’s a real pro.
+Web3 101 is now my favorite [crypto podcast](https://digitalsovereignty.herbertyang.xyz/p/10-podcasts-on-tech-in-2025/). Its host **[Liu Feng](https://x.com/fishkiller)** used to be the Editor-in-Chief of **[Chain News](https://x.com/ChainNewscom)**, the largest and best Chinese crypto news media until its closure in late 2021. Most podcast hosts lack of basic moderator skills - can’t articulate a clear question, asking very binary if not narrow-minded questions, interrupting guest’s flow, using imposing rhetorical question, enjoying his own talking too much at the expense of his guests, etc. Liu is anything but those. He’s a real pro.
 
 This podcast features some of smartest thinkers from the Chinese crypto circle. Every episode is a treat.
 
@@ -27,7 +27,7 @@ This podcast features some of smartest thinkers from the Chinese crypto circle. 
 
 ### Memecoin
 
-* Usually the memecoin ecosystem is valued at about 1-5% of its underlying [L1 blockchai](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains)n's market cap.
+* Usually the memecoin ecosystem is valued at about 1-5% of its underlying [L1 blockchai](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains/)n's market cap.
 * The key is to track the No. 1 memecoin (“Grand Dragon”) in an L1 blockchain. Even after a drop, Grand Dragon can still rebound to ATH (all-time high).
 * Most memecoins valued at above $1 billion have been around longer than six months. There is a positive correlation between a memecoin's market cap and its listing history.
 * $BONK and $TRUMP's meteoric ascend to $1 billion is NOT the norm.
@@ -85,7 +85,7 @@ This podcast features some of smartest thinkers from the Chinese crypto circle. 
 
 ### Crypto Industry
 
-* [L1 Blockchain](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains)'s landscape is more or less settled. What is not settled, is how much your L1 bag is.
+* [L1 Blockchain](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains/)'s landscape is more or less settled. What is not settled, is how much your L1 bag is.
 * Between Solana and Ethereum, Solana will win out.
 * Ethereum's L2 has major problems. They compromise the value of Ethereum L1 and their growth doesn't circle back to Ethereum L1.
 * Public chain's profit margin can be calculated. It's about 90%.
@@ -111,7 +111,7 @@ This podcast features some of smartest thinkers from the Chinese crypto circle. 
 
 ### My Reactions
 
-Pima offers very thought-provoking insights. It’s a great conversation that would help people understand why memecoin has become a global movement. I particularly like his analogy of memecoin launchpads to [L1 blockchains](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains).
+Pima offers very thought-provoking insights. It’s a great conversation that would help people understand why memecoin has become a global movement. I particularly like his analogy of memecoin launchpads to [L1 blockchains](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains/).
 
 I was mildly surprised that when they discussed which blockchain would challenge Solana’s speed and cost, neither Liu Feng or Pima seemed to remember there is another major L1 blockchain the Internet Computer (“ICP”). I met Liu Feng at ICP’s highly-anticipated road show in Shanghai in May 2021 before its mainnet launch and Pima was once very favorable on ICP too. Guess they have moved on.
 

@@ -20,7 +20,7 @@ Crypto miners, in very broad strokes, keep blockchains alive.
 
 Previously from **Decoding the Crypto Ecosystem Series**
 
-1. [EP01 - Blockchains](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains)
+1. [EP01 - Blockchains](https://digitalsovereignty.herbertyang.xyz/p/decoding-the-crypto-ecosystem-ep01-blockchains/)
 
 ---
 

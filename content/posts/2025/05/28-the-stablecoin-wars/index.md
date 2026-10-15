@@ -12,7 +12,7 @@ enable_rapport: true
 
 ![Stablecoin Wars](./stablecoin.webp)
 
-**Web3 101** is growing into one of the [best crypto podcasts](https://digitalsovereignty.herbertyang.xyz/p/10-podcasts-on-tech-in-2025). If **Wu Blockchain** were the CNN for crypto - it recaps breaking events of the moment; Web3 101 would be the Atlantic or the New Yorker of crypto. The hosts are not only knowledgeable but also know how to ask the right questions in the right way (a major weakness for many podcast hosts).
+**Web3 101** is growing into one of the [best crypto podcasts](https://digitalsovereignty.herbertyang.xyz/p/10-podcasts-on-tech-in-2025/). If **Wu Blockchain** were the CNN for crypto - it recaps breaking events of the moment; Web3 101 would be the Atlantic or the New Yorker of crypto. The hosts are not only knowledgeable but also know how to ask the right questions in the right way (a major weakness for many podcast hosts).
 
 [This episode](https://open.spotify.com/episode/6F7ltXvDJDT52vCwvAkSYy) talks about stablecoin and how it might impact the financial industry.
 
