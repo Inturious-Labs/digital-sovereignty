@@ -1,7 +1,9 @@
 {{- /*
   JSON-LD structured data for search and AI answer engines.
   - Articles (posts section) -> BlogPosting, Herbert as author and publisher
-  - Everything else          -> WebSite + Person
+  - Homepage                 -> WebSite + Person (Google reads the site
+                                name only from the homepage)
+  - Other pages              -> nothing; they are lists, not content
   The newsletter is one person's journal, so the publisher is a Person, not
   an Organization. The Person has a stable @id so every page joins the same
   graph node. Built with dict + jsonify so titles are safely escaped.
@@ -55,7 +57,7 @@
   {{- end -}}
   <script type="application/ld+json">{{ $article | jsonify (dict "indent" "  ") | safeJS }}</script>
 
-{{- else -}}
+{{- else if .IsHome -}}
   {{- $graph := dict
       "@context" "https://schema.org"
       "@graph" (slice $website $person)
