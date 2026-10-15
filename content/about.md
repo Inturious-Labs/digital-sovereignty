@@ -4,9 +4,9 @@ date: 2025-01-28T00:00:00+00:00
 draft: false
 ---
 
-{{< avatar >}}
-
 ## Writer
+
+{{< avatar >}}
 
 As a seasoned web3 investor and evangelist, I break down complex crypto concepts into simple terms, explore data hacks toward digital sovereignty, analyze little-known tech breakthroughs, and share my notes from tech podcasts. My full bio is here:
 
